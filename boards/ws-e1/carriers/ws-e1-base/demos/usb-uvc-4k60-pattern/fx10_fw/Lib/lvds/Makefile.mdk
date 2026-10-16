@@ -1,0 +1,58 @@
+
+######################################################################################################
+ifeq ($(CM4),yes)
+TARGET_SEL = --cpu=Cortex-M4
+TGTFLAGS = $(TARGET_SEL) --fpu=vfp
+endif
+
+ifeq ($(CM0),yes)
+TARGET_SEL = --cpu=Cortex-M0plus
+TGTFLAGS =  $(TARGET_SEL)
+endif
+######################################################################################################
+
+CFILES = \
+	 cy_lvds.c \
+
+CFLAGS = \
+	 -O3 $(TGTFLAGS) \
+	 -I. \
+	 -I../pdl/COMPONENT_CAT1E/include \
+	 -I../pdl/drivers/include \
+	 -I../pdl/cmsis/include \
+	 -I../pdl/COMPONENT_CAT1E/templates/COMPONENT_MTB \
+	 -I../core-lib/include \
+	 -I../fx3g2_utils \
+	 --diag_suppress=L6471E,9931,9933 -g --c99 --output_dir=out \
+	 -DCYUSB4024_BZXI -DBCLK__BUS_CLK__HZ=75000000 -DDEBUG_INFRA_EN=1
+
+# Path to compiler/linker tools.
+CC = armcc
+AS = armasm
+LD = armlink
+FE = fromelf
+
+DONE=@if [ -f $(1) ]; then echo Build completed.; fi
+RM=rm -f $(1)
+
+.SUFFIXES: .o .c .s
+.PHONY: all clean build
+
+all: clean ofiles
+
+clean:
+	rm -rf out
+	mkdir out
+
+ofiles : $(CFILES)
+	@echo "---------------------"
+	@echo "Building LVDS file"
+	@echo "-------------------"
+	for f in $(CFILES); do \
+		echo "Compiling $$f"; \
+		$(CC) $(CFLAGS) -c $$f ; \
+	done
+	@echo "----------------------"
+	@echo "Done compiling LVDS file"
+	@echo "----------------------"
+

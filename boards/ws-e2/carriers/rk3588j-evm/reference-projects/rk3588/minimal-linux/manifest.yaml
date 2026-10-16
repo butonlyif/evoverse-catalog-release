@@ -1,0 +1,26 @@
+schema_version: '1.0'
+id: ws-e2-rk3588j-minimal-linux
+board: ws-e2
+carrier: rk3588j-evm
+target: rk3588
+status: CANDIDATE
+build_status: NOT_RUN
+flash_status: NOT_RUN
+hardware_status: NOT_RUN
+platform: ../../../platforms/rk3588.yaml
+selection: customer-selection.yaml
+owned_files:
+  - README.md
+  - dts/ws-e2-rk3588j-evm.dts
+  - dts/ws-e2-rk3588j-evm.dtsi
+  - configs/kernel-minimal.fragment
+  - configs/buildroot-minimal.fragment
+  - customer-selection.yaml
+required_before_build_ready:
+  - immutable BSP manifest and commits
+  - BSP redistribution decision
+  - fitted LPDDR4x capacity and rank confirmation
+  - eMMC capacity confirmation
+  - loader and partition-layout hashes
+  - pinned build container and toolchain hashes
+  - native U-Boot, kernel/DTB, rootfs and package receipts

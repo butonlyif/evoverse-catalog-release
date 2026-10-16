@@ -1,0 +1,17 @@
+# sources.yaml - t20f256-xd-ps-eval
+schema_version: '1.0'
+sources:
+  - id: t20f256-xd-ps-eval-schematic
+    type: board_document
+    owner: ws-e2-hardware
+    location: boards/t20f256-xd-ps-eval/t20f256-xd-ps-eval.md
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: t20f256-efinity-pinout
+    type: tool_output
+    owner: efinix
+    location: devices/T20F256.pinout.csv
+    version: '2026.1.132.1.15'
+    section: Efinity Pinout Report
+    observed_at: '2026-09-22'
+    state: CONFIRMED

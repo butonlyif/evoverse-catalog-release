@@ -1,0 +1,22 @@
+# board.yaml - ws-e3 (single-FPGA module, Titanium TJ375N484X)
+schema_version: '1.0'
+id: ws-e3
+kind: standalone
+display_name: WS-E3 Titanium TJ375N484X Module
+revision: '1'
+material_version: '1.0.0'
+status: validated
+composition:
+  mode: standalone
+development_targets:
+  - id: fpga
+    type: fpga
+    adapter: efinity
+    device: {manufacturer: Efinix, part: TJ375N484X, family: Titanium, timing_model: C4}
+    artifacts: {pinout: pinout/ws-e3-v1.csv}
+    source_refs: [ws-e3-schematic, ws-e3-stage0-isf]
+    validation_state: CONFIRMED
+artifacts:
+  hardware: hardware.yaml
+  sources: sources.yaml
+  generated_docs: docs/generated

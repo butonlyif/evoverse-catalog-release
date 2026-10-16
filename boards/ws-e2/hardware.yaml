@@ -1,0 +1,89 @@
+schema_version: '1.0'
+components:
+  - id: tj375
+    part: TJ375N1156X
+    role: fpga
+    source_refs: [tj375-efinity-pinout, ws-e2-som-schematic]
+    validation_state: CONFIRMED
+  - id: rk3588j
+    part: RK3588J
+    role: application_processor
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+  - id: rk806-1
+    part: RK806-1
+    role: power_management
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    notes: SPI-attached PMIC on schematic pages 13-14; powers RK3588J domains and selected FPGA rails
+interfaces: []
+power_domains:
+  - id: rk-vcc-5v0-input
+    voltage: 5.0
+    provider: rk3588j-evm
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    notes: EVM supplies VCC_5V0 through the BTB connector to RK806-1 and discrete regulators
+  - id: rk806-regulated-domains
+    provider: RK806-1
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    notes: Includes CPU little, GPU, VENC, DDR, 3.3V, 2.0V, 1.8V and low-voltage analog/core rails; exact suspend policy remains BSP-owned
+clocks:
+  - id: rk-xin24m
+    signal: XIN24M
+    frequency_hz: 24000000
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    notes: SOM crystal Y1100 on schematic page 4
+memories:
+  - id: rk-lpddr4x
+    device: ATL4X8G32M2D-46 IT
+    type: LPDDR4X
+    topology: 2x 2-channel x32 devices
+    source_refs: [ws-e2-som-schematic]
+    validation_state: UNVERIFIED
+    notes: Schematic page 15 labels two devices and each symbol says 4GB; existing board prose says RK DDR 4GB. Confirm fitted BOM and total capacity before freezing loader.
+  - id: rk-emmc
+    device: FEMDRW128G-88A19
+    type: eMMC
+    bus_width: 8
+    modes: [HS400, enhanced-strobe]
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    notes: SOM eMMC on schematic page 16; usable capacity must be confirmed from the vendor datasheet or fitted BOM
+debug_chains:
+  - id: rk-uart2-m0-debug
+    device: RK3588J
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    notes: UART2 M0 TX/RX is routed through the EVM MAX3232 to the debug connector
+capabilities:
+  - id: rk-emmc-boot
+    kind: boot_storage
+    device: RK3588J
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+  - id: rk-debug-console
+    kind: uart
+    device: RK3588J
+    signals: [RK_UART2_TX_M0_DEBUG_3V3, RK_UART2_RX_M0_DEBUG_3V3]
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+cross_chip_links:
+  - id: mipi0-tx
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]
+  - id: mipi1-tx
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]
+  - id: mipi2-tx
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]
+  - id: rk-gpio-spi-iic
+    source_refs: [ws-e2-som-schematic]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]

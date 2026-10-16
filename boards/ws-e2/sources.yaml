@@ -1,0 +1,32 @@
+schema_version: '1.0'
+sources:
+  - id: ws-e2-som-schematic
+    type: board_document
+    owner: ws-e2-hardware
+    location: boards/ws-e2/ws-e2.md
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: tj375-efinity-pinout
+    type: tool_output
+    owner: efinix
+    location: devices/TJ375N1156X.pinout.csv
+    version: '2026.1.132.1.15'
+    section: Efinity Pinout Report
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: rockchip-kernel-rk3588-6.1
+    type: web_page
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/kernel/tree/develop-6.1/arch/arm64/boot/dts/rockchip
+    version: develop-6.1
+    section: rk3588.dtsi and rk3588-rk806-single.dtsi
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: rockchip-rkbin-rk3588
+    type: web_page
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/rkbin/blob/master/doc/release/RK3588_EN.md
+    version: master
+    section: RK3588 DDR, BL31 and BL32 release notes
+    observed_at: '2026-09-22'
+    state: CONFIRMED

@@ -1,0 +1,55 @@
+
+BUILD_CM4=make -f Makefile CM4=yes
+CLEAN=make -f Makefile clean
+
+# RTOS enabled by default.
+export RTOS_EN=1
+
+# Select the output folder.
+ifeq ($(RTOS_EN),0)
+    OP_FOLDER=FX10_FW_LIB_BareMetal
+else
+    OP_FOLDER=FX10_FW_LIB
+endif
+
+BUILD_TIMESTAMP = $(shell date +'(Time)%H:%M:%S. (DATE)%d-%m-%Y.')
+
+.SUFFIXES = .c .o .s
+.PHONY = all clean
+
+ARCHIVE_CM4 = arm-none-eabi-ar -v -r $(OP_FOLDER)/fx10-fw-lib.a $(OP_FOLDER)/*.o
+
+# Path to compiler/linker tools.
+CC = arm-none-eabi-gcc
+AS = arm-none-eabi-gcc
+LD = arm-none-eabi-gcc
+
+all:
+	@echo "###### BUILDING for CORTEX-M4 ########"
+	+(rm -rf $(OP_FOLDER))
+	+(mkdir $(OP_FOLDER))
+ifeq ($(RTOS_EN),1)
+	+(cd FreeRTOS; $(BUILD_CM4))
+	+(mv FreeRTOS/out/*.o $(OP_FOLDER))
+endif
+	+(cd pdl; $(BUILD_CM4))
+	+(mv pdl/out/*.o $(OP_FOLDER))
+	+(cd lvds; $(BUILD_CM4))
+	+(mv lvds/out/*.o $(OP_FOLDER))
+	+(cd fx3g2_usb_common; $(BUILD_CM4))
+	+(mv fx3g2_usb_common/out/*.o $(OP_FOLDER))
+	+(cd fx3g2_utils; $(BUILD_CM4))	
+	+(mv fx3g2_utils/out/*.o $(OP_FOLDER))
+	+(cd hb_dma; $(BUILD_CM4))
+	+(mv hb_dma/out/*.o $(OP_FOLDER))
+	+($(ARCHIVE_CM4))
+	+(rm -rf lvds/out FreeRTOS/out fx3g2_usb_common/out hb_dma/out pdl/out fx3g2_utils/out)
+	+(rm $(OP_FOLDER)/*.o)
+	@echo "CM4 build completed at = $(BUILD_TIMESTAMP)"
+
+clean:
+	@echo "###### CLEAN STUFF ########"
+	+(rm -rf FX10_FW_LIB)
+	+(rm -rf FX10_FW_LIB_BareMetal)
+
+##[]

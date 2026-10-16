@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1",
+  "minimumAdapterVersion": "1.0.0",
+  "licensePolicy": {
+    "acceptanceRequired": true,
+    "distribution": "customer-request-only"
+  },
+  "packages": [
+    {
+      "packageId": "rk3588-toolchain",
+      "packageType": "rk3588-toolchain",
+      "version": "2026.09",
+      "fileName": "rk3588-toolchain-2026.09.evopkg",
+      "bytes": 256584627,
+      "sha256": "d05eaff178a72f6764e75f52418ee3e642a74cb15ca182c93a03cdc005fc28f2",
+      "manifestSha256": "b229bc303af136d305f88579fa184e206930312a9694b041d4845314b273fece",
+      "boardIds": []
+    },
+    {
+      "packageId": "ws-e2-rk3588-bsp",
+      "packageType": "rk3588-bsp",
+      "version": "b8f5dda5",
+      "fileName": "ws-e2-rk3588-bsp-b8f5dda5.evopkg",
+      "bytes": 344225733,
+      "sha256": "b3107d7bfeabc1fc29bf013bbc980d3d6b883d7ce4e5ef97881b42d2fc43f118",
+      "manifestSha256": "4673f93f0a042373bf14c69ea61acf1387ecc9855702244485561b6f9f758aaa",
+      "boardIds": ["ws-e2"]
+    }
+  ]
+}

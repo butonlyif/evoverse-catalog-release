@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "0.9.6",
+  "channel": "stable",
+  "minimumSdkVersion": "0.9.0",
+  "repositoryId": "butonlyif/evoverse-catalog",
+  "releaseTag": "catalog-v0.9.6",
+  "signatureMode": "git-ssh-ed25519-tag",
+  "signingKeyId": "evoverse-catalog-release-1",
+  "treeDigest": "289546997c0c34005a37245132442abc3b1f3a87a75bb97cb40917809b642ff6",
+  "items": {
+    "boards": [
+      {
+        "id": "board.t20f256-xd-ps-eval",
+        "path": "boards/t20f256-xd-ps-eval",
+        "version": "0.9.0",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "board.ws-e1",
+        "path": "boards/ws-e1",
+        "version": "0.9.0",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "board.ws-e2",
+        "path": "boards/ws-e2",
+        "version": "0.9.0",
+        "provenance": "ws-e2@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "board.ws-e3",
+        "path": "boards/ws-e3",
+        "version": "0.9.0",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ],
+    "carriers": [
+      {
+        "id": "carrier.ws-e1-base",
+        "path": "boards/ws-e1/carriers/ws-e1-base",
+        "version": "0.9.0",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "carrier.ws-e2-rk3588j-evm",
+        "path": "boards/ws-e2/carriers/rk3588j-evm",
+        "version": "0.9.0",
+        "provenance": "ws-e2@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ],
+    "jackets": [
+      {
+        "id": "jacket.ws-e1-base.cam-ddr-csi2-demo",
+        "path": "boards/ws-e1/carriers/ws-e1-base/jackets/ws-e1-cam-ddr-csi2-demo",
+        "version": "0.9.5",
+        "provenance": "ws-e1@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "jacket.ws-e1-base.stage0",
+        "path": "boards/ws-e1/carriers/ws-e1-base/jackets/stage0",
+        "version": "0.9.1",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ],
+    "devices": [
+      {
+        "id": "device.rk3588j",
+        "path": "devices/RK3588J.authority.json",
+        "version": "0.9.0",
+        "provenance": "ws-e2@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "device.t20f256",
+        "path": "devices/T20F256.authority.json",
+        "version": "0.9.0",
+        "provenance": "t20f256-xd-ps-eval@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "device.t20f256.legacy-peri",
+        "path": "devices/T20F256.peri.xml",
+        "version": "0.9.0",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "deprecated"
+      },
+      {
+        "id": "device.t20f256c4",
+        "path": "devices/T20F256C4.peri.xml",
+        "version": "0.9.0",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "device.tj180a484s",
+        "path": "devices/TJ180A484S.pinout.csv",
+        "version": "0.9.0",
+        "provenance": "awesomsdk@542d21d4",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "device.tj375n1156x",
+        "path": "devices/TJ375N1156X.authority.json",
+        "version": "0.9.0",
+        "provenance": "ws-e2@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "device.tj375n484x",
+        "path": "devices/TJ375N484X.authority.json",
+        "version": "0.9.0",
+        "provenance": "ws-e3@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "device.tj375n484x.pinout",
+        "path": "devices/TJ375N484X.pinout.csv",
+        "version": "0.9.0",
+        "provenance": "ws-e3@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "device.tj180a484s.authority",
+        "path": "devices/TJ180A484S.authority.json",
+        "version": "0.9.0",
+        "provenance": "ws-e1@local",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ],
+    "ips": [
+      {
+        "id": "ip.apb3-to-axi4lite",
+        "path": "ips/apb3-to-axi4lite",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.axi-memory-checker",
+        "path": "ips/axi-memory-checker",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.axi4-stream-mux",
+        "path": "ips/axi4-stream-mux",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.axi4-to-axi4lite",
+        "path": "ips/axi4-to-axi4lite",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.dual-clock-fifo",
+        "path": "ips/dual-clock-fifo",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.i2c-master-rtl",
+        "path": "ips/i2c-master-rtl",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.reset-sync",
+        "path": "ips/reset-sync",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.vga-timing-gen",
+        "path": "ips/vga-timing-gen",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ip.video-pattern-gen",
+        "path": "ips/video-pattern-gen",
+        "version": "0.9.0",
+        "provenance": "ws-ip@ba4ed25c698d5422c8556d25cfef3d9575badbde",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ],
+    "boardIps": [
+      {
+        "id": "ws-e1.ip.bmi088-imu",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/bmi088-imu",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.ddr-bist",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/ddr-bist",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.ethernet-rgmii",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/ethernet-rgmii",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.mipi-csi-rx-sc850",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/mipi-csi-rx-sc850",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.mipi-csi-tx-2p5g",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/mipi-csi-tx-2p5g",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.mipi-loopback-test",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/mipi-loopback-test",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.sdcard-host",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/sdcard-host",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.si5338-clkgen",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/si5338-clkgen",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.ip.uvc-usb-video",
+        "path": "boards/ws-e1/carriers/ws-e1-base/ips/uvc-usb-video",
+        "version": "0.9.0",
+        "provenance": "ws-e1-ips@744dfdd46e9e20e629026e56a286c2afdc76e6e6",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ],
+    "baselines": [
+      {
+        "id": "baseline.ws-e2-rk3588j-minimal",
+        "path": "boards/ws-e2/carriers/rk3588j-evm/baselines/ws-e2-rk3588j-minimal",
+        "version": "0.9.3",
+        "provenance": "ws-e2-rk3588j-minimal@build-ready-2026-09-24",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ],
+    "demos": [
+      {
+        "id": "ws-e1.demo.ddr-memtest",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/ddr-memtest",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.ethernet-tse-udp-test",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/ethernet-tse-udp-test",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.imu-bmi088-readout",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/imu-bmi088-readout",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.mipi-csi-rx-sc850sl",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/mipi-csi-rx-sc850sl",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.mipi-csi-tx-4k-pattern",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/mipi-csi-tx-4k-pattern",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.mipi-loopback-test",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/mipi-loopback-test",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.sd-ddr-csi2",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/sd-ddr-csi2",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.sdcard-powercycle-retention",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/sdcard-powercycle-retention",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.si5338-clock-config",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/si5338-clock-config",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      },
+      {
+        "id": "ws-e1.demo.usb-uvc-4k60-pattern",
+        "path": "boards/ws-e1/carriers/ws-e1-base/demos/usb-uvc-4k60-pattern",
+        "version": "0.9.0",
+        "provenance": "ws-e1-demos@d7a95608530407f6033b8feff1a97334ed3fdc2f",
+        "license": "LicenseRef-EvoVerse-Catalog",
+        "status": "active"
+      }
+    ]
+  },
+  "withdrawn": []
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1",
+  "boardId": "ws-e2",
+  "carrierId": "rk3588j-evm",
+  "referenceProjectId": "minimal-linux",
+  "boardRevision": "r1",
+  "platform": {
+    "part": "RK3588J",
+    "compatible": [
+      "evoverse,ws-e2-rk3588j-minimal",
+      "rockchip,rk3588j"
+    ],
+    "bsp": {
+      "baseDtsInclude": "dts/rk3588j-minimal.dtsi"
+    },
+    "boot": {
+      "device": "emmc",
+      "uart": "serial2"
+    },
+    "peripherals": []
+  },
+  "stages": {
+    "uboot": {
+      "commands": [
+        {
+          "executable": "docker",
+          "args": ["run", "--rm", "-v", "{sourceRoot}:/bsp", "-w", "/bsp/u-boot", "{containerDigest}", "bash", "-ec", "./make.sh rk3588 CROSS_COMPILE=aarch64-linux-gnu-"],
+          "cwd": "u-boot",
+          "timeoutMs": 3600000
+        }
+      ],
+      "artifacts": [{"name": "uboot.img", "path": "u-boot/uboot.img"}]
+    },
+    "kernel": {
+      "commands": [
+        {
+          "executable": "docker",
+          "args": ["run", "--rm", "-v", "{sourceRoot}:/bsp", "-w", "/bsp/kernel", "{containerDigest}", "bash", "-ec", "make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- rockchip_linux_defconfig && make -j\"$(nproc)\" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- Image"],
+          "cwd": "kernel",
+          "timeoutMs": 7200000
+        },
+        {
+          "executable": "docker",
+          "args": ["run", "--rm", "-v", "{sourceRoot}:/bsp", "-w", "/bsp/.evoverse-scratch/dts", "{containerDigest}", "bash", "-ec", "cpp -nostdinc -undef -D__DTS__ -I/bsp -I/bsp/kernel/include -x assembler-with-cpp rk3588j-evoverse.dts -o rk3588j-evoverse.pp.dts && dtc -I dts -O dtb -o rk3588j-evoverse.dtb rk3588j-evoverse.pp.dts"],
+          "cwd": ".evoverse-scratch/dts",
+          "timeoutMs": 300000
+        }
+      ],
+      "artifacts": [
+        {"name": "kernel-image", "path": "kernel/arch/arm64/boot/Image"},
+        {"name": "board-dtb", "path": ".evoverse-scratch/dts/rk3588j-evoverse.dtb"}
+      ]
+    },
+    "rootfs": {
+      "commands": [
+        {
+          "executable": "docker",
+          "args": ["run", "--rm", "-v", "{sourceRoot}:/bsp", "-w", "/bsp/buildroot", "{containerDigest}", "bash", "-ec", "export FORCE_UNSAFE_CONFIGURE=1 && mkdir -p /work/buildroot-out && make O=/work/buildroot-out qemu_aarch64_virt_defconfig && echo BR2_LINUX_KERNEL=n >> /work/buildroot-out/.config && make O=/work/buildroot-out olddefconfig && make O=/work/buildroot-out -j\"$(nproc)\" && mkdir -p /bsp/.evoverse-scratch/buildroot/images && cp /work/buildroot-out/images/rootfs.ext2 /bsp/.evoverse-scratch/buildroot/images/rootfs.ext2"],
+          "cwd": "buildroot",
+          "timeoutMs": 7200000
+        }
+      ],
+      "artifacts": [{"name": "rootfs.ext2", "path": ".evoverse-scratch/buildroot/images/rootfs.ext2"}]
+    },
+    "package": {
+      "commands": [
+        {
+          "executable": "docker",
+          "args": ["run", "--rm", "-v", "{sourceRoot}:/bsp", "-v", "{outputDir}:/out", "-w", "/bsp", "{containerDigest}", "tar", "-czf", "/out/ws-e2-rk3588j-minimal-firmware.tar.gz", "u-boot/uboot.img", "kernel/arch/arm64/boot/Image", ".evoverse-scratch/dts/rk3588j-evoverse.dtb", ".evoverse-scratch/buildroot/images/rootfs.ext2"],
+          "cwd": ".",
+          "timeoutMs": 600000
+        }
+      ],
+      "artifacts": [{"name": "firmware-bundle", "path": "ws-e2-rk3588j-minimal-firmware.tar.gz", "root": "output"}]
+    }
+  },
+  "capabilities": {
+    "build": "experimental",
+    "package": "experimental",
+    "flash": "unsupported",
+    "debug": "unsupported"
+  }
+}

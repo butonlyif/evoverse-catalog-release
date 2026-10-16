@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<efxpt:design_db name="cam_uvc" device_def="TJ180A484S" version="2026.1.132.1.15" db_version="20261009" last_change_date="Tue Jul 14 01:04:47 2026" xmlns:efxpt="http://www.efinixinc.com/peri_design_db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/peri_design_db peri_design_db.xsd ">
+    <efxpt:device_info>
+        <efxpt:iobank_info>
+            <efxpt:iobank name="2A_2B" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="2A_2B_MODE_SEL"/>
+            <efxpt:iobank name="2C" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="2C_MODE_SEL"/>
+            <efxpt:iobank name="3A" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="3A_MODE_SEL"/>
+            <efxpt:iobank name="3B" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="3B_MODE_SEL"/>
+            <efxpt:iobank name="3C" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="3C_MODE_SEL"/>
+            <efxpt:iobank name="4A" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="4A_MODE_SEL"/>
+            <efxpt:iobank name="4B" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="4B_MODE_SEL"/>
+            <efxpt:iobank name="4C" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="4C_MODE_SEL"/>
+            <efxpt:iobank name="BL" iostd="3.3 V LVCMOS" is_dyn_voltage="false" mode_sel_name="BL_MODE_SEL"/>
+            <efxpt:iobank name="BR" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="BR_MODE_SEL"/>
+            <efxpt:iobank name="TL" iostd="3.3 V LVCMOS" is_dyn_voltage="false" mode_sel_name="TL_MODE_SEL"/>
+            <efxpt:iobank name="TR" iostd="1.8 V LVCMOS" is_dyn_voltage="false" mode_sel_name="TR_MODE_SEL"/>
+        </efxpt:iobank_info>
+        <efxpt:ctrl_info>
+            <efxpt:ctrl name="cfg" ctrl_def="CONFIG_CTRL0" clock_name="" is_clk_invert="false" cbsel_bus_name="cfg_CBSEL" config_ctrl_name="cfg_CONFIG" ena_capture_name="cfg_ENA" error_status_name="cfg_ERROR" um_signal_status_name="cfg_USR_STATUS" is_remote_update_enable="false" is_user_mode_enable="false"/>
+        </efxpt:ctrl_info>
+        <efxpt:seu_info>
+            <efxpt:seu name="seu" block_def="CONFIG_SEU0" mode="auto" ena_detect="false" wait_interval="16500000">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="seu_START" type_name="START" is_bus="false"/>
+                    <efxpt:pin name="seu_INJECT_ERROR" type_name="INJECT_ERROR" is_bus="false"/>
+                    <efxpt:pin name="seu_RST" type_name="RST" is_bus="false"/>
+                    <efxpt:pin name="seu_CONFIG" type_name="CONFIG" is_bus="false"/>
+                    <efxpt:pin name="seu_ERROR" type_name="ERROR" is_bus="false"/>
+                    <efxpt:pin name="seu_DONE" type_name="DONE" is_bus="false"/>
+                </efxpt:gen_pin>
+            </efxpt:seu>
+        </efxpt:seu_info>
+        <efxpt:clkmux_info>
+            <efxpt:clkmux name="GCLKMUX_B" block_def="GCLKMUX_B" is_mux_bot0_dyn="false" is_mux_bot7_dyn="false">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="" type_name="ROUTE0" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE1" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE2" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE3" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_0" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_7" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_0" is_bus="true"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_7" is_bus="true"/>
+                </efxpt:gen_pin>
+            </efxpt:clkmux>
+            <efxpt:clkmux name="GCLKMUX_L" block_def="GCLKMUX_L" is_mux_bot0_dyn="false" is_mux_bot7_dyn="false">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="" type_name="ROUTE0" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE1" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE2" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE3" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_0" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_7" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_0" is_bus="true"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_7" is_bus="true"/>
+                </efxpt:gen_pin>
+            </efxpt:clkmux>
+            <efxpt:clkmux name="GCLKMUX_R" block_def="GCLKMUX_R" is_mux_bot0_dyn="false" is_mux_bot7_dyn="false">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="" type_name="ROUTE0" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE1" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE2" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE3" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_0" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_7" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_0" is_bus="true"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_7" is_bus="true"/>
+                </efxpt:gen_pin>
+            </efxpt:clkmux>
+            <efxpt:clkmux name="GCLKMUX_T" block_def="GCLKMUX_T" is_mux_bot0_dyn="false" is_mux_bot7_dyn="false">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="" type_name="ROUTE0" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE1" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE2" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="ROUTE3" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_0" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_OUT_7" is_bus="false"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_0" is_bus="true"/>
+                    <efxpt:pin name="" type_name="DYN_MUX_SEL_7" is_bus="true"/>
+                </efxpt:gen_pin>
+            </efxpt:clkmux>
+        </efxpt:clkmux_info>
+    </efxpt:device_info>
+    <efxpt:gpio_info>
+        <efxpt:comp_gpio name="ddr_clk_ref" gpio_def="GPIOL_32" mode="input" bus_name="" io_standard="3.3 V LVCMOS">
+            <efxpt:input_config name="ddr_clk_ref" name_ddio_lo="" conn_type="pll_clkin" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="ddr_clk_ref_PULL_UP_ENA" dyn_delay_en_name="ddr_clk_ref_DLY_ENA" dyn_delay_reset_name="ddr_clk_ref_DLY_RST" dyn_delay_ctrl_name="ddr_clk_ref_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_gpif_lvds0_ctl0" gpio_def="GPIOT_P_24" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_gpif_lvds0_ctl0" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_gpif_lvds0_ctl0_PULL_UP_ENA" dyn_delay_en_name="fx10_gpif_lvds0_ctl0_DLY_ENA" dyn_delay_reset_name="fx10_gpif_lvds0_ctl0_DLY_RST" dyn_delay_ctrl_name="fx10_gpif_lvds0_ctl0_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_gpif_lvds0_ctl1" gpio_def="GPIOT_N_24" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_gpif_lvds0_ctl1" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_gpif_lvds0_ctl1_PULL_UP_ENA" dyn_delay_en_name="fx10_gpif_lvds0_ctl1_DLY_ENA" dyn_delay_reset_name="fx10_gpif_lvds0_ctl1_DLY_RST" dyn_delay_ctrl_name="fx10_gpif_lvds0_ctl1_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_gpif_lvds0_ctl2" gpio_def="GPIOT_P_25" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_gpif_lvds0_ctl2" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_gpif_lvds0_ctl2_PULL_UP_ENA" dyn_delay_en_name="fx10_gpif_lvds0_ctl2_DLY_ENA" dyn_delay_reset_name="fx10_gpif_lvds0_ctl2_DLY_RST" dyn_delay_ctrl_name="fx10_gpif_lvds0_ctl2_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_gpif_lvds0_ctl3" gpio_def="GPIOT_N_25" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_gpif_lvds0_ctl3" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_gpif_lvds0_ctl3_PULL_UP_ENA" dyn_delay_en_name="fx10_gpif_lvds0_ctl3_DLY_ENA" dyn_delay_reset_name="fx10_gpif_lvds0_ctl3_DLY_RST" dyn_delay_ctrl_name="fx10_gpif_lvds0_ctl3_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_gpif_lvds0_ctl4" gpio_def="GPIOT_P_26" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_gpif_lvds0_ctl4" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_gpif_lvds0_ctl4_PULL_UP_ENA" dyn_delay_en_name="fx10_gpif_lvds0_ctl4_DLY_ENA" dyn_delay_reset_name="fx10_gpif_lvds0_ctl4_DLY_RST" dyn_delay_ctrl_name="fx10_gpif_lvds0_ctl4_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_gpif_lvds0_ctl5" gpio_def="GPIOT_N_26" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_gpif_lvds0_ctl5" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_gpif_lvds0_ctl5_PULL_UP_ENA" dyn_delay_en_name="fx10_gpif_lvds0_ctl5_DLY_ENA" dyn_delay_reset_name="fx10_gpif_lvds0_ctl5_DLY_RST" dyn_delay_ctrl_name="fx10_gpif_lvds0_ctl5_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_gpif_lvds0_ctl6" gpio_def="GPIOT_P_27" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_gpif_lvds0_ctl6" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_gpif_lvds0_ctl6_PULL_UP_ENA" dyn_delay_en_name="fx10_gpif_lvds0_ctl6_DLY_ENA" dyn_delay_reset_name="fx10_gpif_lvds0_ctl6_DLY_RST" dyn_delay_ctrl_name="fx10_gpif_lvds0_ctl6_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_spi_csn" gpio_def="GPIOB_P_01" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_spi_csn" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="weak pullup" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_spi_csn_PULL_UP_ENA" dyn_delay_en_name="fx10_spi_csn_DLY_ENA" dyn_delay_reset_name="fx10_spi_csn_DLY_RST" dyn_delay_ctrl_name="fx10_spi_csn_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_spi_miso" gpio_def="GPIOR_P_17" mode="output" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:output_config name="fx10_spi_miso" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" delay="0" is_serial="false" drive_strength="16" fastclk_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_spi_mosi" gpio_def="GPIOR_N_17" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_spi_mosi" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="weak pullup" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_spi_mosi_PULL_UP_ENA" dyn_delay_en_name="fx10_spi_mosi_DLY_ENA" dyn_delay_reset_name="fx10_spi_mosi_DLY_RST" dyn_delay_ctrl_name="fx10_spi_mosi_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="fx10_spi_sck" gpio_def="GPIOB_P_00" mode="input" bus_name="" io_standard="1.8 V LVCMOS">
+            <efxpt:input_config name="fx10_spi_sck" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="weak pullup" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="fx10_spi_sck_PULL_UP_ENA" dyn_delay_en_name="fx10_spi_sck_DLY_ENA" dyn_delay_reset_name="fx10_spi_sck_DLY_RST" dyn_delay_ctrl_name="fx10_spi_sck_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="gpif_clk_ref" gpio_def="GPIOL_26" mode="input" bus_name="" io_standard="3.3 V LVCMOS">
+            <efxpt:input_config name="gpif_clk_ref" name_ddio_lo="" conn_type="pll_clkin" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="gpif_clk_ref_PULL_UP_ENA" dyn_delay_en_name="gpif_clk_ref_DLY_ENA" dyn_delay_reset_name="gpif_clk_ref_DLY_RST" dyn_delay_ctrl_name="gpif_clk_ref_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:comp_gpio name="pllin27m" gpio_def="GPIOL_06" mode="input" bus_name="" io_standard="3.3 V LVCMOS">
+            <efxpt:input_config name="pllin27m" name_ddio_lo="" conn_type="gclk" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none" is_bus_hold="false" delay="0" is_serial="false" is_dyn_delay="false" fastclk_name="" pullup_ena_name="pllin27m_PULL_UP_ENA" dyn_delay_en_name="pllin27m_DLY_ENA" dyn_delay_reset_name="pllin27m_DLY_RST" dyn_delay_ctrl_name="pllin27m_DLY_CTRL" clkmux_buf_name=""/>
+        </efxpt:comp_gpio>
+        <efxpt:global_unused_config state="input with weak pullup"/>
+    </efxpt:gpio_info>
+    <efxpt:pll_info>
+        <efxpt:pll name="pll_ddr" pll_def="PLL_TL2" ref_clock_name="" ref_clock_freq="33.3300" multiplier="4" pre_divider="1" post_divider="1" reset_name="pll_ddr_rstn" locked_name="ddr_pll_lock" is_ipfrz="false" is_bypass_lock="true">
+            <efxpt:adv_prop ref_clock_mode="external" ref_clock1_name="" ext_ref_clock_id="3" clksel_name="" feedback_clock_name="ddr_clk" feedback_mode="local"/>
+            <efxpt:gen_pin>
+                <efxpt:pin name="" type_name="SHIFT" is_bus="true"/>
+                <efxpt:pin name="" type_name="SHIFT_SEL" is_bus="true"/>
+                <efxpt:pin name="" type_name="SHIFT_ENA" is_bus="false"/>
+                <efxpt:pin name="" type_name="DESKEWED" is_bus="false"/>
+            </efxpt:gen_pin>
+            <efxpt:comp_output_clock name="ddr_clk" number="0" out_divider="29" is_dyn_phase="false" phase_setting="0" is_inverted="false" conn_type="gclk" clkmux_buf_name=""/>
+            <efxpt:comp_output_clock name="pll_ddr_ref" number="4" out_divider="5" is_dyn_phase="false" phase_setting="0" is_inverted="false" conn_type="gclk" clkmux_buf_name=""/>
+            <efxpt:comp_prop/>
+        </efxpt:pll>
+        <efxpt:pll name="pll0" pll_def="PLL_TR0" ref_clock_name="pllin27m" ref_clock_freq="27.0000" multiplier="1" pre_divider="1" post_divider="2" reset_name="pll0_rstn" locked_name="pll0_locked" is_ipfrz="false" is_bypass_lock="true">
+            <efxpt:adv_prop ref_clock_mode="core" ref_clock1_name="" ext_ref_clock_id="2" clksel_name="" feedback_clock_name="esc_clk" feedback_mode="local"/>
+            <efxpt:gen_pin>
+                <efxpt:pin name="" type_name="SHIFT" is_bus="true"/>
+                <efxpt:pin name="" type_name="SHIFT_SEL" is_bus="true"/>
+                <efxpt:pin name="" type_name="SHIFT_ENA" is_bus="false"/>
+                <efxpt:pin name="" type_name="DESKEWED" is_bus="false"/>
+            </efxpt:gen_pin>
+            <efxpt:comp_output_clock name="esc_clk" number="0" out_divider="88" is_dyn_phase="false" phase_setting="0" is_inverted="false" conn_type="gclk" clkmux_buf_name=""/>
+            <efxpt:comp_output_clock name="fx10_gpif_lvds_sclk" number="1" out_divider="8" is_dyn_phase="false" phase_setting="4" is_inverted="false" conn_type="gclk" clkmux_buf_name=""/>
+            <efxpt:comp_output_clock name="fx10_gpif_lvds_ck" number="2" out_divider="4" is_dyn_phase="false" phase_setting="4" is_inverted="false" conn_type="gclk" clkmux_buf_name=""/>
+            <efxpt:comp_output_clock name="fx10_gpif_lvds_pclk" number="3" out_divider="32" is_dyn_phase="false" phase_setting="0" is_inverted="false" conn_type="gclk" clkmux_buf_name=""/>
+            <efxpt:comp_prop/>
+        </efxpt:pll>
+        <efxpt:pll name="pll1" pll_def="PLL_TL0" ref_clock_name="" ref_clock_freq="50.0000" multiplier="2" pre_divider="1" post_divider="2" reset_name="pll1_rstn" locked_name="pll1_locked" is_ipfrz="false" is_bypass_lock="true">
+            <efxpt:adv_prop ref_clock_mode="external" ref_clock1_name="" ext_ref_clock_id="3" clksel_name="" feedback_clock_name="clk_100m" feedback_mode="local"/>
+            <efxpt:gen_pin>
+                <efxpt:pin name="" type_name="SHIFT" is_bus="true"/>
+                <efxpt:pin name="" type_name="SHIFT_SEL" is_bus="true"/>
+                <efxpt:pin name="" type_name="SHIFT_ENA" is_bus="false"/>
+                <efxpt:pin name="" type_name="DESKEWED" is_bus="false"/>
+            </efxpt:gen_pin>
+            <efxpt:comp_output_clock name="clk_100m" number="0" out_divider="27" is_dyn_phase="false" phase_setting="0" is_inverted="false" conn_type="gclk" clkmux_buf_name=""/>
+            <efxpt:comp_prop/>
+        </efxpt:pll>
+    </efxpt:pll_info>
+    <efxpt:osc_info/>
+    <efxpt:lvds_info>
+        <efxpt:lvds name="fx10_gpif_lvds0_ctrl" lvds_def="GPIOT_PN_20" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_ctrl_rst" out_bname="fx10_gpif_lvds0_pctrl" oe_name="fx10_gpif_lvds0_ctrl_oe" delay="29" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pctrl" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_ctrl_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_ctrl_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data0" lvds_def="GPIOT_PN_11" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data0_rst" out_bname="fx10_gpif_lvds0_pdata0" oe_name="fx10_gpif_lvds0_data0_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata0" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data0_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data0_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data1" lvds_def="GPIOT_PN_14" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data1_rst" out_bname="fx10_gpif_lvds0_pdata1" oe_name="fx10_gpif_lvds0_data1_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata1" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data1_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data1_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data2" lvds_def="GPIOT_PN_17" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data2_rst" out_bname="fx10_gpif_lvds0_pdata2" oe_name="fx10_gpif_lvds0_data2_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata2" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data2_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data2_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data3" lvds_def="GPIOT_PN_18" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data3_rst" out_bname="fx10_gpif_lvds0_pdata3" oe_name="fx10_gpif_lvds0_data3_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata3" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data3_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data3_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data4" lvds_def="GPIOT_PN_19" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data4_rst" out_bname="fx10_gpif_lvds0_pdata4" oe_name="fx10_gpif_lvds0_data4_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata4" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data4_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data4_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data5" lvds_def="GPIOT_PN_12" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data5_rst" out_bname="fx10_gpif_lvds0_pdata5" oe_name="fx10_gpif_lvds0_data5_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata5" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data5_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data5_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data6" lvds_def="GPIOT_PN_16" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data6_rst" out_bname="fx10_gpif_lvds0_pdata6" oe_name="fx10_gpif_lvds0_data6_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata6" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data6_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data6_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_data7" lvds_def="GPIOT_PN_13" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds0_data7_rst" out_bname="fx10_gpif_lvds0_pdata7" oe_name="fx10_gpif_lvds0_data7_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pdata7" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data7_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_data7_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds0_pclk" lvds_def="GPIOT_PN_15" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_ck" slow_clock_name="fx10_gpif_lvds_ck" reset_name="fx10_gpif_lvds0_clk_rst" out_bname="fx10_gpif_lvds0_pclk_data" oe_name="fx10_gpif_lvds0_clk_oe" delay="30" is_half_rate="true" is_serial="false" serial_width="8" mode="clkout" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds0_pclk_data" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_clk_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds0_clk_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_ck" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_ck" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_ctrl" lvds_def="GPIOR_PN_16" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_ctrl_rst" out_bname="fx10_gpif_lvds1_pctrl" oe_name="fx10_gpif_lvds1_ctrl_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pctrl" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_ctrl_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_ctrl_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data0" lvds_def="GPIOR_PN_31" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data0_rst" out_bname="fx10_gpif_lvds1_pdata0" oe_name="fx10_gpif_lvds1_data0_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata0" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data0_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data0_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data1" lvds_def="GPIOR_PN_29" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data1_rst" out_bname="fx10_gpif_lvds1_pdata1" oe_name="fx10_gpif_lvds1_data1_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata1" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data1_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data1_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data2" lvds_def="GPIOR_PN_28" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data2_rst" out_bname="fx10_gpif_lvds1_pdata2" oe_name="fx10_gpif_lvds1_data2_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata2" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data2_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data2_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data3" lvds_def="GPIOR_PN_27" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data3_rst" out_bname="fx10_gpif_lvds1_pdata3" oe_name="fx10_gpif_lvds1_data3_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata3" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data3_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data3_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data4" lvds_def="GPIOR_PN_24" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data4_rst" out_bname="fx10_gpif_lvds1_pdata4" oe_name="fx10_gpif_lvds1_data4_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata4" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data4_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data4_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data5" lvds_def="GPIOR_PN_21" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data5_rst" out_bname="fx10_gpif_lvds1_pdata5" oe_name="fx10_gpif_lvds1_data5_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata5" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data5_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data5_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data6" lvds_def="GPIOR_PN_20" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data6_rst" out_bname="fx10_gpif_lvds1_pdata6" oe_name="fx10_gpif_lvds1_data6_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata6" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data6_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data6_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_data7" lvds_def="GPIOR_PN_19" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_sclk" slow_clock_name="fx10_gpif_lvds_pclk" reset_name="fx10_gpif_lvds1_data7_rst" out_bname="fx10_gpif_lvds1_pdata7" oe_name="fx10_gpif_lvds1_data7_oe" delay="30" is_half_rate="true" is_serial="true" serial_width="8" mode="out" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pdata7" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data7_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_data7_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_sclk" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_pclk" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+        <efxpt:lvds name="fx10_gpif_lvds1_pclk" lvds_def="GPIOR_PN_25" ops_type="tx">
+            <efxpt:adv_ltx_info pll_instance="" fast_clock_name="fx10_gpif_lvds_ck" slow_clock_name="fx10_gpif_lvds_ck" reset_name="fx10_gpif_lvds1_clk_rst" out_bname="fx10_gpif_lvds1_pclk_data" oe_name="fx10_gpif_lvds1_clk_oe" delay="30" is_half_rate="true" is_serial="false" serial_width="8" mode="clkout" diff_type="lvds" vod="large" pre_emphasis="medium high">
+                <efxpt:gen_pin>
+                    <efxpt:pin name="fx10_gpif_lvds1_pclk_data" type_name="OUT" is_bus="true"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_clk_oe" type_name="OE" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds1_clk_rst" type_name="OUTRST" is_bus="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_ck" type_name="OUTFASTCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                    <efxpt:pin name="fx10_gpif_lvds_ck" type_name="OUTSLOWCLK" is_bus="false" is_clk="true" is_clk_invert="false"/>
+                </efxpt:gen_pin>
+            </efxpt:adv_ltx_info>
+        </efxpt:lvds>
+    </efxpt:lvds_info>
+    <efxpt:mipi_info/>
+    <efxpt:jtag_info/>
+    <efxpt:ddr_info/>
+    <efxpt:mipi_dphy_info/>
+    <efxpt:pll_ssc_info/>
+</efxpt:design_db>
