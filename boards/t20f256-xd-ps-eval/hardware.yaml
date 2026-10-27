@@ -1,0 +1,177 @@
+# hardware.yaml - t20f256-xd-ps-eval (single-FPGA evaluation board)
+schema_version: '1.0'
+components:
+  - id: t20f256
+    part: T20F256
+    role: fpga
+    source_refs: [t20f256-efinity-pinout, t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+interfaces: []
+power_domains: []
+clocks:
+  - id: clk_50m_osc
+    signal: clk_50m
+    ball: H13
+    frequency_hz: 50000000
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: clk_50m_aux
+    signal: clk_50m_aux
+    ball: L13
+    frequency_hz: 50000000
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+memories: []
+debug_chains:
+  - id: jtag_ft232hl_chain
+    device: T20F256
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+capabilities:
+  - id: jtag_ft232hl
+    kind: jtag
+    device: T20F256
+    signals: [jtag_tck, jtag_tdi, jtag_tdo, jtag_tms]
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: uart_ch340n
+    kind: uart
+    device: T20F256
+    signals: [uart_tx, uart_rx]
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: spi_flash_w25q32
+    kind: spi_flash
+    device: T20F256
+    signals: [flash_miso, flash_mosi, flash_sclk, flash_cs_n, flash_hold]
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: i2c_eeprom_at24c01c
+    kind: i2c
+    device: T20F256
+    signals: [i2c_sda, i2c_scl]
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: vga_resistor_dac
+    kind: vga
+    device: T20F256
+    signals:
+      - vga_r0
+      - vga_r1
+      - vga_r2
+      - vga_r3
+      - vga_r4
+      - vga_g0
+      - vga_g1
+      - vga_g2
+      - vga_g3
+      - vga_g4
+      - vga_g5
+      - vga_b0
+      - vga_b1
+      - vga_b2
+      - vga_b3
+      - vga_b4
+      - vga_hs
+      - vga_vs
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: seg_digit_display
+    kind: seven_seg
+    device: T20F256
+    signals:
+      - seg_a
+      - seg_b
+      - seg_c
+      - seg_d
+      - seg_e
+      - seg_f
+      - seg_g
+      - seg_dp
+      - seg_sel1
+      - seg_sel2
+      - seg_sel3
+      - seg_sel4
+      - seg_sel5
+      - seg_sel6
+      - seg_sel7
+      - seg_sel8
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: lvds_exp_cn1
+    kind: lvds_pair
+    device: T20F256
+    signals:
+      - lvds1_p
+      - lvds1_n
+      - lvds2_p
+      - lvds2_n
+      - lvds3_p
+      - lvds3_n
+      - lvds4_p
+      - lvds4_n
+      - lvds5_p
+      - lvds5_n
+      - lvds6_p
+      - lvds6_n
+      - lvds7_p
+      - lvds7_n
+      - lvds8_p
+      - lvds8_n
+      - lvds9_p
+      - lvds9_n
+      - lvds10_p
+      - lvds10_n
+      - lvds11_p
+      - lvds11_n
+      - lvds12_p
+      - lvds12_n
+      - lvds13_p
+      - lvds13_n
+      - lvds14_p
+      - lvds14_n
+      - lvds15_p
+      - lvds15_n
+      - lvds16_p
+      - lvds16_n
+      - lvds17_p
+      - lvds17_n
+      - lvds18_p
+      - lvds18_n
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: user_leds
+    kind: led
+    device: T20F256
+    signals:
+      - led_user
+      - led_user2
+      - led_user3
+      - led_user4
+      - led_user5
+      - led_user6
+      - led_user7
+      - led_user8
+      - led_user9
+      - led_user10
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: user_buttons
+    kind: button
+    device: T20F256
+    signals: [arst_n, user_btn2, user_btn3, user_btn4]
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: dip_switches
+    kind: dip_switch
+    device: T20F256
+    signals: [dip_sw1, dip_sw2, dip_sw3, dip_sw4, dip_sw5, dip_sw6, dip_sw7, dip_sw8, dip_sw9, dip_sw10]
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+  - id: buzzer
+    kind: buzzer
+    device: T20F256
+    signals: [buzzer]
+    source_refs: [t20f256-xd-ps-eval-schematic]
+    validation_state: CONFIRMED
+cross_chip_links: []

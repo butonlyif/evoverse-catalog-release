@@ -1,0 +1,31 @@
+schema_version: '1.0'
+id: ws-e2
+kind: module
+display_name: WS-E2 Heterogeneous System-on-Module
+revision: '1'
+material_version: '1.0.0'
+status: validated
+composition:
+  mode: module
+  carriers:
+    - rk3588j-evm
+development_targets:
+  - id: fpga
+    type: fpga
+    adapter: efinity
+    device: {manufacturer: Efinix, part: TJ375N1156X, family: Titanium, timing_model: C4}
+    artifacts: {pinout: pinout/ws-e2-fpga-v1.csv}
+    source_refs: [ws-e2-som-schematic, tj375-efinity-pinout]
+    validation_state: CONFIRMED
+  - id: rk3588
+    type: soc
+    adapter: rk3588
+    device: {manufacturer: Rockchip, part: RK3588J}
+    artifacts: {pinout: pinout/ws-e2-rk3588j-v1.csv, platform: platforms/rk3588.yaml}
+    baseline: baselines/ws-e2-rk3588j-minimal
+    source_refs: [rockchip-kernel-rk3588-6.1, rockchip-rkbin-rk3588]
+    validation_state: CONFIRMED
+artifacts:
+  hardware: hardware.yaml
+  sources: sources.yaml
+  generated_docs: docs/generated

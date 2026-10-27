@@ -1,0 +1,497 @@
+
+# Efinity Pinout Report
+# Version: 2026.1.132.1.15
+# Date: 2026-07-27 21:09
+
+# Copyright (C) 2013 - 2026 Efinix Inc. All rights reserved.
+
+# Device: TJ180A484S
+# Package status: final
+# Project: probe_TJ180A484S
+# Configuration mode: active (x1)
+
+Pin Number,Pin Name,Signal Name,Direction,Bank,I/O Bank Voltage,I/O Standard,Pull Type,Function
+A1,GND,,Power,,,,,Ground
+A2,GPIOR_N_09,,,3C,1.8 V,,,User IO
+A3,VCCIO3C,,Power,3C,1.8 V,,,VCCIO Power
+A4,GPIOR_N_12,,,3C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+A5,GPIOR_N_13,,,3C,1.8 V,,,User IO
+A6,GPIOR_P_14,,,3C,1.8 V,,,User IO
+A7,GPIOR_N_14,,,3C,1.8 V,,,User IO
+A8,GND,,Power,,,,,Ground
+A9,GPIOR_N_22_CLK13_N,,,3B,1.8 V,,,User IO/GCLK
+A10,GPIOR_N_23_CLK12_N,,,3B,1.8 V,,,User IO/GCLK
+A11,GPIOR_N_24_CLK11_N,,,3B,1.8 V,,,User IO/GCLK
+A12,GPIOR_P_24_CLK11_P,,,3B,1.8 V,,,User IO/GCLK
+A13,VCCIO3B,,Power,3B,1.8 V,,,VCCIO Power
+A14,GPIOR_N_28,,,3B,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+A15,GPIOR_P_32,,,3A,1.8 V,,,User IO/RCLK
+A16,GPIOR_P_33,,,3A,1.8 V,,,User IO/RCLK
+A17,GPIOR_N_33,,,3A,1.8 V,,,User IO/RCLK
+A18,GPIOR_P_34,,,3A,1.8 V,,,User IO
+A19,VCCIO3A,,Power,3A,1.8 V,,,VCCIO Power
+A20,GPIOR_P_35,,,3A,1.8 V,,,User IO
+A21,GPIOR_P_40,,,3A,1.8 V,,,User IO
+A22,GND,,Power,,,,,Ground
+AA1,GPIOB_N_10_CDI2,,,4C,1.8 V,,,User IO
+AA2,GPIOB_P_02_CSI,,,4C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK/Configuration
+AA3,GPIOB_N_01_CCK,,,4C,1.8 V,,,User IO/PLL_EXTFB/Configuration
+AA4,MIPI0_TXDN1,,,BL,3.3 V,,,
+AA5,MIPI0_TXDP3,,,BL,3.3 V,,,
+AA6,MIPI0_TXDN3,,,BL,3.3 V,,,
+AA7,MIPI0_RXDN1,,,BL,3.3 V,,,
+AA8,GND,,Power,,,,,Ground
+AA9,GPIOL_05_CLK26,,Input,BL,3.3 V,,weak pullup,User IO/GCLK
+AA10,GPIOL_06_CLK27,,Input,BL,3.3 V,,weak pullup,User IO/GCLK/MIPI_CLKIN
+AA11,GPIOL_20_PLLIN1,,Input,BL,3.3 V,,weak pullup,User IO/PLL_CLKIN
+AA12,GPIOL_30_CLK31,,Input,TL,3.3 V,,weak pullup,User IO/GCLK
+AA13,VCCIO33_TL,,Power,TL,3.3 V,,,VCCIO Power
+AA14,GPIOL_29_CLK30,,Input,TL,3.3 V,,weak pullup,User IO/GCLK
+AA15,GPIOL_27_CLK28,,Input,TL,3.3 V,,weak pullup,User IO/GCLK/MIPI_CLKIN
+AA16,GPIOL_35,,Input,TL,3.3 V,,weak pullup,User IO
+AA17,GPIOL_53,,Input,TL,3.3 V,,weak pullup,User IO
+AA18,MIPI2_TXDP4,,,TL,3.3 V,,,
+AA19,GND,,Power,,,,,Ground
+AA20,MIPI2_TXDP1,,,TL,3.3 V,,,
+AA21,MIPI2_RXDN3,,,TL,3.3 V,,,
+AA22,MIPI2_RXDP3,,,TL,3.3 V,,,
+AB1,GND,,Power,,,,,Ground
+AB2,GPIOB_N_02_CSO,,,4C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK/Configuration
+AB3,GPIOB_P_01_EXTFB,,,4C,1.8 V,,,User IO/PLL_EXTFB
+AB4,MIPI0_TXDP1,,,BL,3.3 V,,,
+AB5,GND,,Power,,,,,Ground
+AB6,MIPI0_TXDP2,,,BL,3.3 V,,,
+AB7,MIPI0_TXDN2,,,BL,3.3 V,,,
+AB8,MIPI0_TXDP4,,,BL,3.3 V,,,
+AB9,MIPI0_TXDN4,,,BL,3.3 V,,,
+AB10,GPIOL_00_PLLIN1,,Input,BL,3.3 V,,weak pullup,User IO/PLL_CLKIN
+AB11,GND,,Power,,,,,Ground
+AB12,GPIOL_31,,Input,TL,3.3 V,,weak pullup,User IO
+AB13,GPIOL_49,,Input,TL,3.3 V,,weak pullup,User IO
+AB14,GPIOL_50,,Input,TL,3.3 V,,weak pullup,User IO
+AB15,GPIOL_51,,Input,TL,3.3 V,,weak pullup,User IO
+AB16,VCCIO33_TL,,Power,TL,3.3 V,,,VCCIO Power
+AB17,GPIOL_52,,Input,TL,3.3 V,,weak pullup,User IO
+AB18,MIPI2_TXDN4,,,TL,3.3 V,,,
+AB19,MIPI2_TXDN3,,,TL,3.3 V,,,
+AB20,MIPI2_TXDP3,,,TL,3.3 V,,,
+AB21,MIPI2_TXDN1,,,TL,3.3 V,,,
+AB22,GND,,Power,,,,,Ground
+B1,GPIOR_P_09,,,3C,1.8 V,,,User IO
+B2,GPIOR_P_11,,,3C,1.8 V,,,User IO
+B3,GPIOR_N_11,,,3C,1.8 V,,,User IO
+B4,GPIOR_P_12,,,3C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+B5,GPIOR_P_13,,,3C,1.8 V,,,User IO
+B6,GND,,Power,,,,,Ground
+B7,GPIOR_P_10,,,3C,1.8 V,,,User IO
+B8,GPIOR_N_10,,,3C,1.8 V,,,User IO
+B9,GPIOR_P_22_CLK13_P,,,3B,1.8 V,,,User IO/GCLK
+B10,GPIOR_P_23_CLK12_P,,,3B,1.8 V,,,User IO/GCLK/VREF
+B11,GND,,Power,,,,,Ground
+B12,GPIOR_N_25_CLK10_N,,,3B,1.8 V,,,User IO/GCLK
+B13,GPIOR_P_25_CLK10_P,,,3B,1.8 V,,,User IO/GCLK
+B14,GPIOR_P_28,,,3B,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+B15,GPIOR_N_32,,,3A,1.8 V,,,User IO/RCLK
+B16,GND,,Power,,,,,Ground
+B17,GPIOR_P_37,,,3A,1.8 V,,,User IO
+B18,GPIOR_N_37,,,3A,1.8 V,,,User IO
+B19,GPIOR_N_34,,,3A,1.8 V,,,User IO
+B20,GPIOR_N_35,,,3A,1.8 V,,,User IO
+B21,GPIOR_N_40,,,3A,1.8 V,,,User IO
+B22,GPIOR_P_41,,,3A,1.8 V,,,User IO/VREF
+C1,GPIOR_N_04,,,3C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+C2,GPIOR_P_05,,,3C,1.8 V,,,User IO/RCLK
+C3,GPIOR_N_05,,,3C,1.8 V,,,User IO/RCLK
+C4,VCCIO3C,,Power,3C,1.8 V,,,VCCIO Power
+C5,GPIOR_P_07,,,3C,1.8 V,,,User IO/VREF
+C6,GPIOR_P_08,,,3C,1.8 V,,,User IO
+C7,GPIOR_N_08,,,3C,1.8 V,,,User IO
+C8,REF_RES_3C,,Input,3C,1.8 V,,,
+C9,VCCIO3B,,Power,3B,1.8 V,,,VCCIO Power
+C10,GPIOR_N_20_CLK15_N,,,3B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+C11,GPIOR_N_21_CLK14_N,,,3B,1.8 V,,,User IO/GCLK
+C12,GPIOR_N_27_CLK8_N,,,3B,1.8 V,,,User IO/GCLK
+C13,GPIOR_P_27_CLK8_P,,,3B,1.8 V,,,User IO/GCLK
+C14,VCCIO3A,,Power,3A,1.8 V,,,VCCIO Power
+C15,GPIOR_P_36,,,3A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+C16,GPIOR_P_39,,,3A,1.8 V,,,User IO
+C17,GPIOR_P_38,,,3A,1.8 V,,,User IO
+C18,GPIOR_N_38,,,3A,1.8 V,,,User IO
+C19,VCCIO3A,,Power,3A,1.8 V,,,VCCIO Power
+C20,GPIOR_P_44_EXTFB,,,3A,1.8 V,,,User IO/PLL_EXTFB
+C21,GPIOR_P_42,,,3A,1.8 V,,,User IO
+C22,GPIOR_N_41,,,3A,1.8 V,,,User IO
+D1,GPIOR_P_04,,,3C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+D2,GND,,Power,,,,,Ground
+D3,GPIOR_N_03,,,3C,1.8 V,,,User IO/RCLK
+D4,GPIOR_P_06,,,3C,1.8 V,,,User IO/RCLK
+D5,GPIOR_N_06,,,3C,1.8 V,,,User IO/RCLK
+D6,GPIOR_N_07,,,3C,1.8 V,,,User IO
+D7,GND,,Power,,,,,Ground
+D8,GPIOR_N_17,,,3B,1.8 V,,,User IO
+D9,GPIOR_P_17,,,3B,1.8 V,,,User IO
+D10,GPIOR_P_20_CLK15_P,,,3B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+D11,GPIOR_P_21_CLK14_P,,,3B,1.8 V,,,User IO/GCLK
+D12,GND,,Power,,,,,Ground
+D13,GPIOR_N_29,,,3B,1.8 V,,,User IO
+D14,GPIOR_P_29,,,3B,1.8 V,,,User IO
+D15,GPIOR_N_36,,,3A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+D16,GPIOR_N_39,,,3A,1.8 V,,,User IO
+D17,GND,,Power,,,,,Ground
+D18,GPIOR_P_43,,,3A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+D19,GPIOR_N_43,,,3A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+D20,GPIOR_N_44,,,3A,1.8 V,,,User IO/PLL_EXTFB
+D21,GPIOR_N_42,,,3A,1.8 V,,,User IO
+D22,GND,,Power,,,,,Ground
+E1,GPIOR_P_02,,,3C,1.8 V,,,User IO/RCLK
+E2,GPIOR_N_02,,,3C,1.8 V,,,User IO/RCLK
+E3,GPIOR_N_01,,,3C,1.8 V,,,User IO/PLL_EXTFB
+E4,GPIOR_P_03,,,3C,1.8 V,,,User IO/RCLK
+E5,VCCIO3C,,Power,3C,1.8 V,,,VCCIO Power
+E6,GPIOR_66,,Input,BR,3.3 V,,weak pullup,User IO
+E7,GPIOR_65,,Input,BR,3.3 V,,weak pullup,User IO
+E8,GPIOR_N_16,,,3B,1.8 V,,,User IO/PLL_CLKIN
+E9,GPIOR_P_16_PLLIN1,,,3B,1.8 V,,,User IO/PLL_CLKIN
+E10,GPIOR_N_19,,,3B,1.8 V,,,User IO
+E11,GPIOR_P_19,,,3B,1.8 V,,,User IO
+E12,REF_RES_3B,,Input,3B,1.8 V,,,
+E13,GPIOR_N_31,,,3B,1.8 V,,,User IO/PLL_CLKIN
+E14,GPIOR_P_31_PLLIN1,,,3B,1.8 V,,,User IO/PLL_CLKIN
+E15,GND,,Power,,,,,Ground
+E16,GPIOR_59,,Input,TR,3.3 V,,weak pullup,User IO
+E17,GPIOR_60,,Input,TR,3.3 V,,weak pullup,User IO
+E18,GPIOR_56,,Input,TR,3.3 V,,weak pullup,User IO
+E19,REF_RES_3A,,Input,3A,1.8 V,,,
+E20,VCCIO33_TR,,Power,TR,3.3 V,,,VCCIO Power
+E21,GPIOR_P_45_PLLIN0,,,3A,1.8 V,,,User IO/PLL_CLKIN
+E22,GPIOR_N_45,,,3A,1.8 V,,,User IO/PLL_CLKIN
+F1,GPIOR_P_00_PLLIN0,,,3C,1.8 V,,,User IO/PLL_CLKIN
+F2,GPIOR_N_00,,,3C,1.8 V,,,User IO/PLL_CLKIN
+F3,GND,,Power,,,,,Ground
+F4,GPIOR_P_01_EXTFB,,,3C,1.8 V,,,User IO/PLL_EXTFB
+F5,GPIOR_69,,Input,BR,3.3 V,,weak pullup,User IO
+F6,GPIOR_68,,Input,BR,3.3 V,,weak pullup,User IO
+F7,GPIOR_73,,Input,BR,3.3 V,,weak pullup,User IO
+F8,GPIOR_71,,Input,BR,3.3 V,,weak pullup,User IO
+F9,VCCIO3B,,Power,3B,1.8 V,,,VCCIO Power
+F10,GPIOR_N_18,,,3B,1.8 V,,,User IO
+F11,GPIOR_P_18,,,3B,1.8 V,,,User IO
+F12,GPIOR_N_26_CLK9_N,,,3B,1.8 V,,,User IO/GCLK
+F13,GPIOR_P_26_CLK9_P,,,3B,1.8 V,,,User IO/GCLK
+F14,GPIOR_58,,Input,TR,3.3 V,,weak pullup,User IO
+F15,GPIOR_64,,Input,TR,3.3 V,,weak pullup,User IO
+F16,GPIOR_61,,Input,TR,3.3 V,,weak pullup,User IO
+F17,GPIOR_63,,Input,TR,3.3 V,,weak pullup,User IO
+F18,GND,,Power,,,,,Ground
+F19,GPIOT_N_33,,,2C,1.8 V,,,User IO/RCLK
+F20,GPIOT_P_33,,,2C,1.8 V,,,User IO/RCLK
+F21,GPIOT_N_34,,,2C,1.8 V,,,User IO
+F22,GPIOT_P_34,,,2C,1.8 V,,,User IO
+G1,VCCIO4A,,Power,4A,1.8 V,,,VCCIO Power
+G2,GPIOB_P_34,,,4A,1.8 V,,,User IO
+G3,GPIOB_P_33_CDI31,,,4A,1.8 V,,,User IO/RCLK
+G4,GPIOR_70,,Input,BR,3.3 V,,weak pullup,User IO
+G5,REF_RES_4A,,Input,4A,1.8 V,,,
+G6,GPIOR_72,,Input,BR,3.3 V,,weak pullup,User IO
+G7,VCCIO33_BR,,Power,BR,3.3 V,,,VCCIO Power
+G8,VCCA_BR,,Power,,,,,0.95 V PLL Power
+G9,GND,,Power,,,,,Ground
+G10,VCCAUX,,Power,4C,1.8 V,,,
+G11,GND,,Power,,,,,Ground
+G12,VCC,,Power,,,,,0.95 V VCC Power
+G13,GND,,Power,,,,,Ground
+G14,VCC,,Power,,,,,0.95 V VCC Power
+G15,GND,,Power,,,,,Ground
+G16,GPIOR_57,,Input,TR,3.3 V,,weak pullup,User IO
+G17,VCCA_TR,,Power,,,,,0.95 V PLL Power
+G18,GPIOT_P_30,,,2C,1.8 V,,,User IO
+G19,GPIOT_N_32,,,2C,1.8 V,,,User IO/RCLK
+G20,GPIOT_P_32,,,2C,1.8 V,,,User IO/RCLK
+G21,VCCIO2C,,Power,2C,1.8 V,,,VCCIO Power
+G22,GPIOT_P_31,,,2C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+H1,GPIOB_P_32_CDI28,,,4A,1.8 V,,,User IO/RCLK
+H2,GPIOB_N_34,,,4A,1.8 V,,,User IO
+H3,GPIOB_N_33_CDI30,,,4A,1.8 V,,,User IO/RCLK
+H4,GND,,Power,,,,,Ground
+H5,GPIOB_N_29_CDI23,,,4A,1.8 V,,,User IO
+H6,TDO,,Output,BL,3.3 V,,,Configuration
+H7,VCC,,Power,,,,,0.95 V VCC Power
+H8,GND,,Power,,,,,Ground
+H9,VCC,,Power,,,,,0.95 V VCC Power
+H10,GND,,Power,,,,,Ground
+H11,VCC,,Power,,,,,0.95 V VCC Power
+H12,GND,,Power,,,,,Ground
+H13,VCC,,Power,,,,,0.95 V VCC Power
+H14,GND,,Power,,,,,Ground
+H15,VCC,,Power,,,,,0.95 V VCC Power
+H16,GND,,Power,,,,,Ground
+H17,VCCAUX,,Power,4C,1.8 V,,,
+H18,GPIOT_N_30,,,2C,1.8 V,,,User IO
+H19,GND,,Power,,,,,Ground
+H20,GPIOT_P_27,,,2C,1.8 V,,,User IO
+H21,GPIOT_P_29,,,2C,1.8 V,,,User IO
+H22,GPIOT_N_31,,,2C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+J1,GPIOB_N_32_CDI29,,,4A,1.8 V,,,User IO/RCLK
+J2,VCCIO4A,,Power,4A,1.8 V,,,VCCIO Power
+J3,GPIOB_P_27_CDI19,,,4A,1.8 V,,,User IO
+J4,GPIOB_N_27_CDI18,,,4A,1.8 V,,,User IO
+J5,GPIOB_P_29_CDI22,,,4A,1.8 V,,,User IO
+J6,TMS,,Input,BL,3.3 V,,,Configuration
+J7,GND,,Power,,,,,Ground
+J8,VCC,,Power,,,,,0.95 V VCC Power
+J9,GND,,Power,,,,,Ground
+J10,VCC,,Power,,,,,0.95 V VCC Power
+J11,GND,,Power,,,,,Ground
+J12,VCC,,Power,,,,,0.95 V VCC Power
+J13,GND,,Power,,,,,Ground
+J14,VCC,,Power,,,,,0.95 V VCC Power
+J15,GND,,Power,,,,,Ground
+J16,VCC,,Power,,,,,0.95 V VCC Power
+J17,REF_RES_2C,,Input,2C,1.8 V,,,
+J18,GPIOT_P_23_PLLIN0,,,2C,1.8 V,,,User IO/PLL_CLKIN
+J19,GPIOT_P_24_EXTFB,,,2C,1.8 V,,,User IO/PLL_EXTFB
+J20,GPIOT_N_27,,,2C,1.8 V,,,User IO
+J21,GPIOT_N_29,,,2C,1.8 V,,,User IO
+J22,VCCIO2C,,Power,2C,1.8 V,,,VCCIO Power
+K1,GPIOB_P_31_CDI27,,,4A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+K2,GPIOB_N_31_CDI26,,,4A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+K3,GPIOB_P_25_CDI15,,,4A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+K4,GPIOB_N_25_CDI14,,,4A,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+K5,GND,,Power,,,,,Ground
+K6,TDI,,Input,BL,3.3 V,,,Configuration
+K7,VCC,,Power,,,,,0.95 V VCC Power
+K8,GND,,Power,,,,,Ground
+K9,VCC,,Power,,,,,0.95 V VCC Power
+K10,GND,,Power,,,,,Ground
+K11,VCC,,Power,,,,,0.95 V VCC Power
+K12,GND,,Power,,,,,Ground
+K13,VCC,,Power,,,,,0.95 V VCC Power
+K14,GND,,Power,,,,,Ground
+K15,VCC,,Power,,,,,0.95 V VCC Power
+K16,GND,,Power,,,,,Ground
+K17,GND,,Power,,,,,Ground
+K18,GPIOT_N_23,,,2C,1.8 V,,,User IO/PLL_CLKIN
+K19,GPIOT_N_24,,,2C,1.8 V,,,User IO/PLL_EXTFB
+K20,VCCIO2C,,Power,2C,1.8 V,,,VCCIO Power
+K21,GPIOT_N_28,,,2C,1.8 V,,,User IO
+K22,GPIOT_P_28,,,2C,1.8 V,,,User IO/VREF
+L1,GPIOB_P_30_CDI25,,,4A,1.8 V,,,User IO
+L2,GPIOB_N_30_CDI24,,,4A,1.8 V,,,User IO
+L3,VCCIO4A,,Power,4A,1.8 V,,,VCCIO Power
+L4,GPIOB_P_23_PLLIN0,,,4A,1.8 V,,,User IO/PLL_CLKIN
+L5,GPIOB_N_23_CDI12,,,4A,1.8 V,,,User IO/PLL_CLKIN
+L6,TCK,,Input,BL,3.3 V,,,Configuration
+L7,GND,,Power,,,,,Ground
+L8,VCC,,Power,,,,,0.95 V VCC Power
+L9,GND,,Power,,,,,Ground
+L10,VDD_PHY,,Power,DDR,,,,
+L11,GND,,Power,,,,,Ground
+L12,VDD_PHY,,Power,DDR,,,,
+L13,GND,,Power,,,,,Ground
+L14,VDD_PHY,,Power,DDR,,,,
+L15,GND,,Power,,,,,Ground
+L16,VCC,,Power,,,,,0.95 V VCC Power
+L17,REF_RES_2B,,Input,2A_2B,1.8 V,,,
+L18,GPIOT_P_13_CLK16_P,,,2A_2B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+L19,GPIOT_N_25,,,2C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+L20,GPIOT_P_25,,,2C,1.8 V,,,User IO/MIPI_GCLK/MIPI_RCLK
+L21,GPIOT_N_26,,,2C,1.8 V,,,User IO
+L22,GPIOT_P_26,,,2C,1.8 V,,,User IO
+M1,GND,,Power,,,,,Ground
+M2,GPIOB_P_26_CDI16,,,4A,1.8 V,,,User IO
+M3,GPIOB_P_24_EXTFB,,,4A,1.8 V,,,User IO/PLL_EXTFB
+M4,GPIOB_P_15_CLK2_P,,,4B,1.8 V,,,User IO/GCLK
+M5,GPIOB_N_15_CLK2_N,,,4B,1.8 V,,,User IO/GCLK
+M6,VCCAUX,,Power,4C,1.8 V,,,
+M7,VCC,,Power,,,,,0.95 V VCC Power
+M8,GND,,Power,,,,,Ground
+M9,VDD_PHY,,Power,DDR,,,,
+M10,GND,,Power,,,,,Ground
+M11,VDD_PHY,,Power,DDR,,,,
+M12,VDD_PHY,,Power,DDR,,,,
+M13,VDD_PHY,,Power,DDR,,,,
+M14,GND,,Power,,,,,Ground
+M15,VDD_PHY,,Power,DDR,,,,
+M16,GND,,Power,,,,,Ground
+M17,VCCAUX,,Power,4C,1.8 V,,,
+M18,GPIOT_N_13_CLK16_N,,,2A_2B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+M19,GPIOT_P_16_CLK19_P,,,2A_2B,1.8 V,,,User IO/GCLK/VREF
+M20,GPIOT_N_16_CLK19_N,,,2A_2B,1.8 V,,,User IO/GCLK
+M21,GND,,Power,,,,,Ground
+M22,GPIOT_P_19_CLK22_P,,,2A_2B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+N1,GPIOB_P_28_CDI21,,,4A,1.8 V,,,User IO/VREF
+N2,GPIOB_N_26_CDI17,,,4A,1.8 V,,,User IO
+N3,GPIOB_N_24_CDI13,,,4A,1.8 V,,,User IO/PLL_EXTFB
+N4,VCCIO4B,,Power,4B,1.8 V,,,VCCIO Power
+N5,GPIOB_P_12_EXTFB,,,4B,1.8 V,,,User IO/PLL_EXTFB
+N6,GPIOB_P_11_PLLIN0,,,4B,1.8 V,,,User IO/PLL_CLKIN
+N7,GND,,Power,,,,,Ground
+N8,VDDQ_PHY,,Power,DDR,,,,
+N9,VDD_PHY,,Power,DDR,,,,
+N10,VDDQ_PHY,,Power,DDR,,,,
+N11,GND,,Power,,,,,Ground
+N12,VDD_PHY,,Power,DDR,,,,
+N13,GND,,Power,,,,,Ground
+N14,VDDQ_PHY,,Power,DDR,,,,
+N15,VDDQ_PHY,,Power,DDR,,,,
+N16,VDDQ_CK_PHY,,Power,DDR,,,,
+N17,VCCA_TL,,Power,,,,,0.95 V PLL Power
+N18,GPIOT_P_11_PLLIN0,,,2A_2B,1.8 V,,,User IO/PLL_CLKIN
+N19,VCCIO2A_2B,,Power,2A_2B,1.8 V,,,VCCIO Power
+N20,GPIOT_P_15_CLK18_P,,,2A_2B,1.8 V,,,User IO/GCLK
+N21,GPIOT_P_18_CLK21_P,,,2A_2B,1.8 V,,,User IO/GCLK
+N22,GPIOT_N_19_CLK22_N,,,2A_2B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+P1,GPIOB_N_28_CDI20,,,4A,1.8 V,,,User IO
+P2,GND,,Power,,,,,Ground
+P3,GPIOB_P_17_CLK4_P,,,4B,1.8 V,,,User IO/GCLK
+P4,GPIOB_N_17_CLK4_N,,,4B,1.8 V,,,User IO/GCLK
+P5,GPIOB_N_12_SSU_N,,,4B,1.8 V,,,User IO/PLL_EXTFB/Configuration
+P6,GPIOB_N_11,,,4B,1.8 V,,,User IO/PLL_CLKIN
+P7,VDDQX_PHY,,Power,DDR,,,,
+P8,GND,,Power,,,,,Ground
+P9,VDDQ_PHY,,Power,DDR,,,,
+P10,GND,,Power,,,,,Ground
+P11,VDDQ_PHY,,Power,DDR,,,,
+P12,GND,,Power,,,,,Ground
+P13,VDDQ_PHY,,Power,DDR,,,,
+P14,GND,,Power,,,,,Ground
+P15,VDD2,,Power,,,,,
+P16,VDDPLL_MCB_TOP_PHY,,Power,DDR,,,,
+P17,GPIOL_46,,Input,TL,3.3 V,,weak pullup,User IO
+P18,GPIOT_N_11,,,2A_2B,1.8 V,,,User IO/PLL_CLKIN
+P19,GPIOT_P_12_EXTFB,,,2A_2B,1.8 V,,,User IO/PLL_EXTFB
+P20,GPIOT_N_15_CLK18_N,,,2A_2B,1.8 V,,,User IO/GCLK
+P21,GPIOT_N_18_CLK21_N,,,2A_2B,1.8 V,,,User IO/GCLK
+P22,GND,,Power,,,,,Ground
+R1,GPIOB_P_22_CDI11,,,4B,1.8 V,,,User IO
+R2,GPIOB_N_22_CDI10,,,4B,1.8 V,,,User IO
+R3,GPIOB_P_16_EXTSPICLK_CLK3_P,,,4B,1.8 V,,,User IO/GCLK/VREF/Configuration
+R4,GPIOB_N_16_CLK3_N,,,4B,1.8 V,,,User IO/GCLK
+R5,GPIOB_P_14_NSTATUS_CLK1_P,,,4B,1.8 V,,,User IO/GCLK/Configuration
+R6,GPIOB_P_13_CBSEL0_CLK0_P,,,4B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+R7,GND,,Power,,,,,Ground
+R8,VDDQX_PHY,,Power,DDR,,,,
+R9,VDDQX_PHY,,Power,DDR,,,,
+R10,VDDQX_PHY,,Power,DDR,,,,
+R11,GND,,Power,,,,,Ground
+R12,VDD2,,Power,,,,,
+R13,GND,,Power,,,,,Ground
+R14,VDD2,,Power,,,,,
+R15,GND,,Power,,,,,Ground
+R16,VDDQ,,Power,,,,,
+R17,GND,,Power,,,,,Ground
+R18,GPIOL_34,,Input,TL,3.3 V,,weak pullup,User IO
+R19,GPIOT_N_12,,,2A_2B,1.8 V,,,User IO/PLL_EXTFB
+R20,VCCIO2A_2B,,Power,2A_2B,1.8 V,,,VCCIO Power
+R21,GPIOT_N_17_CLK20_N,,,2A_2B,1.8 V,,,User IO/GCLK
+R22,GPIOT_P_17_CLK20_P,,,2A_2B,1.8 V,,,User IO/GCLK
+T1,GPIOB_P_21_CDI9,,,4B,1.8 V,,,User IO
+T2,GPIOB_N_21_CDI8,,,4B,1.8 V,,,User IO
+T3,VCCIO4B,,Power,4B,1.8 V,,,VCCIO Power
+T4,GPIOB_P_18_CLK5_P,,,4B,1.8 V,,,User IO/GCLK/Configuration
+T5,GPIOB_N_14_TEST_N_CLK1_N,,,4B,1.8 V,,,User IO/GCLK/Configuration
+T6,GPIOB_N_13_CBSEL1_CLK0_N,,,4B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+T7,VCCA_BL,,Power,,,,,0.95 V PLL Power
+T8,GND,,Power,,,,,Ground
+T9,CRESET_N,,Input,4C,1.8 V,,,Configuration
+T10,GND,,Power,,,,,Ground
+T11,VDD2,,Power,,,,,
+T12,GND,,Power,,,,,Ground
+T13,VDD2,,Power,,,,,
+T14,GND,,Power,,,,,Ground
+T15,VDDQ,,Power,,,,,
+T16,GND,,Power,,,,,Ground
+T17,GPIOL_44,,Input,TL,3.3 V,,weak pullup,User IO
+T18,GPIOL_26_PLLIN1,,Input,TL,3.3 V,,weak pullup,User IO/PLL_CLKIN
+T19,GPIOT_P_14_CLK17_P,,,2A_2B,1.8 V,,,User IO/GCLK
+T20,GPIOT_N_14_CLK17_N,,,2A_2B,1.8 V,,,User IO/GCLK
+T21,GPIOT_P_20_CLK23_P,,,2A_2B,1.8 V,,,User IO/GCLK
+T22,GPIOT_N_20_CLK23_N,,,2A_2B,1.8 V,,,User IO/GCLK
+U1,VCCIO4B,,Power,4B,1.8 V,,,VCCIO Power
+U2,GPIOB_P_19_CDI5_CLK6_P,,,4B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+U3,GPIOB_N_18_CLK5_N,,,4B,1.8 V,,,User IO/GCLK/Configuration
+U4,REF_RES_4C,,Input,4C,1.8 V,,,
+U5,VQPS,,Power,,,,,
+U6,REF_RES_4B,,Input,4B,1.8 V,,,
+U7,VCC18A_MIPI0_1_RX,,Power,BL,3.3 V,,,1.8 V MIPI RX Power
+U8,CDONE,,Bidirectional,4C,1.8 V,,,Configuration
+U9,GPIOL_04_CLK25,,Input,BL,3.3 V,,weak pullup,User IO/GCLK
+U10,VDD2,,Power,,,,,
+U11,DDR_CAL,,,DDR,,,,
+U12,VDD1,,Power,,,,,
+U13,GND,,Power,,,,,Ground
+U14,VDDQ,,Power,,,,,
+U15,GND,,Power,,,,,Ground
+U16,VDDQ,,Power,,,,,
+U17,VDDQ,,Power,,,,,
+U18,GPIOL_39,,Input,TL,3.3 V,,weak pullup,User IO
+U19,REF_RES_2A,,Input,2A_2B,1.8 V,,,
+U20,MIPI2_RXDP4,,,TL,3.3 V,,,
+U21,GND,,Power,,,,,Ground
+U22,MIPI2_RXDP0,,,TL,3.3 V,,,
+V1,GPIOB_P_20_CDI6_CLK7_P,,,4B,1.8 V,,,User IO/GCLK
+V2,GPIOB_N_19_CDI4_CLK6_N,,,4B,1.8 V,,,User IO/GCLK/MIPI_GCLK/MIPI_RCLK
+V3,GPIOB_P_00_PLLIN0,,,4C,1.8 V,,,User IO/PLL_CLKIN
+V4,GND,,Power,,,,,Ground
+V5,MIPI0_RXDN2,,,BL,3.3 V,,,
+V6,MIPI0_RXDP4,,,BL,3.3 V,,,
+V7,MIPI0_RXDN4,,,BL,3.3 V,,,
+V8,MIPI0_RXDN0,,,BL,3.3 V,,,
+V9,GND,,Power,,,,,Ground
+V10,GPIOL_01,,Input,BL,3.3 V,,weak pullup,User IO
+V11,ZQ,,Input,,,,,
+V12,NC,,,,,,,
+V13,NC,,,,,,,
+V14,GPIOL_40,,Input,TL,3.3 V,,weak pullup,User IO
+V15,GPIOL_55,,Input,TL,3.3 V,,weak pullup,User IO
+V16,GPIOL_43,,Input,TL,3.3 V,,weak pullup,User IO
+V17,GPIOL_41,,Input,TL,3.3 V,,weak pullup,User IO
+V18,GPIOL_28_CLK29,,Input,TL,3.3 V,,weak pullup,User IO/GCLK/MIPI_CLKIN
+V19,VCC18A_MIPI2_3_TX,,Power,TL,3.3 V,,,1.8 V MIPI TX Power
+V20,MIPI2_RXDN4,,,TL,3.3 V,,,
+V21,MIPI2_RXDP2,,,TL,3.3 V,,,
+V22,MIPI2_RXDN0,,,TL,3.3 V,,,
+W1,GPIOB_N_20_CDI7_CLK7_N,,,4B,1.8 V,,,User IO/GCLK
+W2,GPIOB_P_09_CDI0,,,4C,1.8 V,,,User IO/Configuration
+W3,GPIOB_N_09_CDI1,,,4C,1.8 V,,,User IO/Configuration
+W4,MIPI0_TXDN0,,,BL,3.3 V,,,
+W5,MIPI0_RXDP2,,,BL,3.3 V,,,
+W6,VCC18A_MIPI0_1_TX,,Power,BL,3.3 V,,,1.8 V MIPI TX Power
+W7,GND,,Power,,,,,Ground
+W8,MIPI0_RXDP0,,,BL,3.3 V,,,
+W9,GPIOL_03_CLK24,,Input,BL,3.3 V,,weak pullup,User IO/GCLK
+W10,GPIOL_02,,Input,BL,3.3 V,,weak pullup,User IO
+W11,NC,,,,,,,
+W12,NC,,,,,,,
+W13,NC,,,,,,,
+W14,GPIOL_42,,Input,TL,3.3 V,,weak pullup,User IO
+W15,GPIOL_45,,Input,TL,3.3 V,,weak pullup,User IO
+W16,GPIOL_54,,Input,TL,3.3 V,,weak pullup,User IO
+W17,VCCIO33_TL,,Power,TL,3.3 V,,,VCCIO Power
+W18,GPIOL_36_PLLIN1,,Input,TL,3.3 V,,weak pullup,User IO/PLL_CLKIN
+W19,MIPI2_TXDN0,,,TL,3.3 V,,,
+W20,GND,,Power,,,,,Ground
+W21,MIPI2_RXDN2,,,TL,3.3 V,,,
+W22,VCC18A_MIPI2_3_RX,,Power,TL,3.3 V,,,1.8 V MIPI RX Power
+Y1,GPIOB_P_10_CDI3,,,4C,1.8 V,,,User IO
+Y2,VCCIO4C,,Power,4C,1.8 V,,,VCCIO Power
+Y3,GPIOB_P_08_SSL_N,,,4C,1.8 V,,,User IO/VREF/Configuration
+Y4,MIPI0_TXDP0,,,BL,3.3 V,,,
+Y5,GND,,Power,,,,,Ground
+Y6,MIPI0_RXDP1,,,BL,3.3 V,,,
+Y7,MIPI0_RXDP3,,,BL,3.3 V,,,
+Y8,MIPI0_RXDN3,,,BL,3.3 V,,,
+Y9,GPIOL_07,,Input,BL,3.3 V,,weak pullup,User IO/MIPI_CLKIN
+Y10,VCCIO33_BL,,Power,BL,3.3 V,,,VCCIO Power
+Y11,GPIOL_10_PLLIN1,,Input,BL,3.3 V,,weak pullup,User IO/PLL_CLKIN
+Y12,NC,,,,,,,
+Y13,GPIOL_38,,Input,TL,3.3 V,,weak pullup,User IO
+Y14,GPIOL_32_PLLIN1,,Input,TL,3.3 V,,weak pullup,User IO/PLL_CLKIN
+Y15,GND,,Power,,,,,Ground
+Y16,GPIOL_37,,Input,TL,3.3 V,,weak pullup,User IO
+Y17,GPIOL_33,,Input,TL,3.3 V,,weak pullup,User IO
+Y18,MIPI2_TXDN2,,,TL,3.3 V,,,
+Y19,MIPI2_TXDP2,,,TL,3.3 V,,,
+Y20,MIPI2_TXDP0,,,TL,3.3 V,,,
+Y21,MIPI2_RXDN1,,,TL,3.3 V,,,
+Y22,MIPI2_RXDP1,,,TL,3.3 V,,,

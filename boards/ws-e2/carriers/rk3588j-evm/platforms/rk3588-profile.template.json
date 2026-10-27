@@ -1,0 +1,18 @@
+{
+  "boardId": "ws-e2+rk3588j-evm",
+  "boardRevision": "1",
+  "bspBinding": "required",
+  "device": "RK3588J",
+  "expectedDtb": "ws-e2-rk3588j-evm.dtb",
+  "readiness": "PROFILE_READY",
+  "schemaVersion": "1.0",
+  "targetId": "rk3588",
+  "unresolvedFields": [
+    "sourceRoot",
+    "bspCommit",
+    "buildEnvironment",
+    "loader",
+    "partitionLayout",
+    "artifacts"
+  ]
+}

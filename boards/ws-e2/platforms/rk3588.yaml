@@ -1,0 +1,39 @@
+schema_version: '1.0'
+id: ws-e2-rk3588j-evm
+part: RK3588J
+compatible:
+  - evoverse,ws-e2-rk3588j-evm
+  - rockchip,rk3588
+expected_dtb: ws-e2-rk3588j-evm.dtb
+boot:
+  device: emmc
+  uart: UART2_M0_DEBUG
+  console: ttyS2,1500000n8
+  storage_bus_width: 8
+  storage_mode: HS400
+memory:
+  type: lpddr4x
+  devices: 2
+  device_part: ATL4X8G32M2D-46 IT
+  size_state: CUSTOMER_CONFIRMATION_REQUIRED
+  notes: Schematic and existing prose disagree on total installed capacity; loader selection must follow the fitted BOM.
+power:
+  pmic: RK806-1
+  topology: single-pmic-plus-discrete-big-core-npu-regulators
+  base_dtsi_recommendation: rk3588-rk806-single.dtsi
+os:
+  bsp_status: BASELINE_BOUND
+  baseline: baselines/ws-e2-rk3588j-minimal
+  recommended_bsp_family: rockchip-linux-6.1-vendor
+  recommended_rootfs: buildroot-minimal
+  initial_scope: serial-console-emmc-rootfs
+  build_status: BUILD_READY
+  hardware_status: NOT_RUN
+environment:
+  deployment: OFFLINE_PACKAGES_AVAILABLE
+  declaration: platforms/environment/offline-packages.json
+  health_policy: platforms/environment/health-policy.json
+  instructions: platforms/environment/README.md
+  required_packages:
+    - rk3588-toolchain-2026.09.evopkg
+    - ws-e2-rk3588-bsp-b8f5dda5.evopkg

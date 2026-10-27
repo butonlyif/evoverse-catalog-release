@@ -1,0 +1,145 @@
+######################################################################################################
+TARGET_SEL = --cpu=Cortex-M4
+TGTFLAGS = $(TARGET_SEL) --fpu=vfp \
+	-I../Lib/FreeRTOS/portable/RVDS/ARM_CM4F
+######################################################################################################
+
+FX3G2_TARGET = out/fx3g2_uvc
+
+# C source files
+CFILES += \
+	 cy_usb_app.c \
+	 cy_uac_app.c \
+	 fx3g2_descriptors.c \
+	 main.c
+
+# Compiler command line arguments.
+CFLAGS              = \
+	-O3 $(TGTFLAGS) \
+	-I. \
+	-I../Lib/FreeRTOS \
+	-I../Lib/FreeRTOS/include \
+	-I../Lib/pdl/COMPONENT_CAT1E/include \
+	-I../Lib/pdl/drivers/include \
+	-I../Lib/pdl/cmsis/include \
+	-I../Lib/pdl/COMPONENT_CAT1E/templates/COMPONENT_MTB \
+	-I../Lib/hb_dma \
+	-I../Lib/lvds \
+	-I../Lib/fx3g2_utils \
+	-I../Lib/fx3g2_usb_common \
+	-I../Lib/core-lib/include \
+	--diag_suppress=L6471E -g --c99 --output_dir=out \
+	-DCYUSB4014_BZXI -DBCLK__BUS_CLK__HZ=75000000 \
+	-DFREERTOS_ENABLE=1 -DDEBUG_INFRA_EN=1
+
+ifeq ($(LPBK_EN), yes)
+# Loopback is only supported in LVDS narrow link use case with Insert Metadata disabled.
+CFLAGS += -DLVDS_LB_EN=1 -DLVCMOS_EN=0 -DPORT1_EN=0 -DINMD_EN=0 -DWL_EN=0
+else
+# Loopback mode is disabled
+CFLAGS += -DLVDS_LB_EN=0
+
+# Set to 1 for using LVCMOS, 0 for LVDS
+CFLAGS += -DLVCMOS_EN=1
+
+# Set to 1 for using LVCMOS DDR, 0 for LVCMOS SDR
+CFLAGS += -DLVCMOS_DDR_EN=1
+
+# Set to 1 for using port_1, 0 for port_0
+CFLAGS += -DPORT1_EN=0
+
+# Set to 1 for Metadata insertion, 0 for FW header addition
+CFLAGS += -DINMD_EN=0
+
+# Set to 1 for WideLink, 0 for NarrowLink mode
+CFLAGS += -DWL_EN=1
+
+# Set to 1 for enabling thread interleaving for TH0 & TH1
+CFLAGS += -DPORT0_THREAD_INTLV=0
+endif
+
+# Enable both for Precision Time Measurement, Vendor IF is required to send LDM request using control center.
+CFLAGS += -DPTM_ENABLE=0
+CFLAGS += -DCY_VENDOR_IF_EN=0
+
+# Set to 1 to enable integrated Audio Interface
+CFLAGS += -DAUDIO_IF_EN=1 -DSTEREO_ENABLE=0
+
+# Set to 1 to restrict USB connection to USBHS.
+CFLAGS += -DFORCE_USBHS=0
+
+############################ Make command arguments ###########################
+# Compile for Gen2 operation unless GEN1=yes switch is used.
+ifeq ($(GEN1),yes)
+    CFLAGS += -DUSBSS_GEN2_ENABLE=0
+else
+    CFLAGS += -DUSBSS_GEN2_ENABLE=1
+endif
+
+FX3G2_SCAT = fx3g2_cm4_dual.sct
+
+############################    Object Files       ############################
+OBJECTS += \
+	out/fx3g2_descriptors.o \
+	out/cy_usb_app.o \
+	out/cy_uac_app.o \
+	out/main.o
+
+###################### Path to compiler/linker tools ##########################
+#
+CC                  = armcc
+AS                  = armasm
+LD                  = armlink
+FE                  = fromelf
+
+
+DONE=@if [ -f $(1) ]; then echo Build completed.; fi
+RM=rm -f $(1)
+
+.SUFFIXES: .o .c .s
+.PHONY: all clean build
+
+all: prep ofiles $(FX3G2_TARGET).axf $(FX3G2_TARGET).hex
+	$(call DONE,$(FX3G2_TARGET).hex)
+
+rebuild: clean all
+
+clean:
+	rm -rf out
+	mkdir out
+prep:
+	@echo '#### Preparing to build ####'
+	+(rm -rf out)
+	+(mkdir out)
+	+(cp ../Lib/FX10_FW_LIB/fx10-fw-lib.a out)
+
+ofiles : $(CFILES)
+	 @echo "-------------------"
+	 @echo "Building the C files"
+	 @echo "-------------------"
+	 for f in $(CFILES); do \
+	     echo "Compiling $$f"; \
+	     $(CC) $(CFLAGS) -c $$f ; \
+	 done
+	 @echo "----------------------"
+	 @echo "Done compiling C files"
+	 @echo "----------------------"
+
+$(FX3G2_TARGET).axf : $(OBJECTS) $(FX3G2_SCAT)
+	@echo "--------------------"
+	@echo "Linking the AXF file obj" $@
+	@echo "--------------------"
+	$(LD) $(TARGET_SEL) --diag_suppress=L6471E,L6314W,9931,9933 --entry=Reset_Handler --callgraph --map --list $(FX3G2_TARGET).map --remove --scatter $(FX3G2_SCAT) -o $(FX3G2_TARGET).axf $(OBJECTS) out/fx10-fw-lib.a
+
+$(FX3G2_TARGET).hex : $(FX3G2_TARGET).axf
+	@echo "-------------------------"
+	@echo "Building the hex file" $@
+	@echo "-------------------------"
+	$(FE) $(TARGET_SEL) --i32combined --base=0x10000000 -o $(FX3G2_TARGET).hex $(FX3G2_TARGET).axf
+	@echo "-------------------------"
+	@echo "Building the list file" $@
+	@echo "--------------------------"
+	$(FE) -c -s -o $(FX3G2_TARGET).lst $(FX3G2_TARGET).axf
+
+##[]
+

@@ -1,0 +1,13 @@
+{
+    "core": {
+      "id": "c0688bed-ec45-4dab-9521-10f5283a6ead",
+      "name": "openocd"
+    },
+    "opt": {
+      "tool": {
+        "openocd_BASE": "openocd",
+        "openocd_EXE": "$$FULLPATH:bin/openocd$$",
+        "openocd_scripts_SCRIPT": "$$FULLPATH:scripts$$"
+      }
+    }
+}

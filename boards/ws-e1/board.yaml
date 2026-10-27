@@ -1,0 +1,23 @@
+# board.yaml - ws-e1 (core module, Titanium TJ180A484S, carrier: ws-e1-base)
+schema_version: '1.0'
+id: ws-e1
+kind: module
+display_name: WS-E1 Titanium TJ180A484S Core Module
+revision: '1'
+material_version: 1.0.0
+status: validated
+composition:
+  mode: module
+  carriers: [ws-e1-base]
+development_targets:
+  - id: fpga
+    type: fpga
+    adapter: efinity
+    device: {manufacturer: Efinix, part: TJ180A484S, family: Titanium, timing_model: C4}
+    artifacts: {pinout: pinout/ws-e1-fpga-v1.csv}
+    source_refs: [ws-e1-schematic, tj180a484s-efinity-pinout]
+    validation_state: CONFIRMED
+artifacts:
+  hardware: hardware.yaml
+  sources: sources.yaml
+  generated_docs: docs/generated

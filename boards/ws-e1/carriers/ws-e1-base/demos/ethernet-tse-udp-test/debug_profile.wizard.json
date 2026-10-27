@@ -1,0 +1,1501 @@
+{
+    "debug_cores": [
+        {
+            "name": "la0",
+            "type": "la",
+            "uuid": "1f350a246fec43cd81c1eaa34d2d29d5",
+            "trigin_en": false,
+            "trigout_en": false,
+            "auto_inserted": true,
+            "capture_control": false,
+            "data_depth": 512,
+            "input_pipeline": 2,
+            "probes": [
+                {
+                    "name": "u_tsemac/rx_axis_mac_tvalid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_tsemac/rx_axis_mac_tready",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_tsemac/rx_axis_mac_tstrb",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_tsemac/rx_axis_mac_tlast",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_tsemac/rx_axis_mac_tdata",
+                    "width": 8,
+                    "probe_type": 1
+                }
+            ]
+        },
+        {
+            "name": "la1",
+            "type": "la",
+            "uuid": "f1f26efc63eb453290222e30c8a8ade9",
+            "trigin_en": false,
+            "trigout_en": false,
+            "auto_inserted": true,
+            "capture_control": false,
+            "data_depth": 512,
+            "input_pipeline": 2,
+            "probes": [
+                {
+                    "name": "u_tsemac/u_tsemac/genblk2.u_rgmii_if/gm_rx_err",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_tsemac/u_tsemac/genblk2.u_rgmii_if/gm_rx_dv",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "u_tsemac/u_tsemac/genblk2.u_rgmii_if/gm_rx_d",
+                    "width": 8,
+                    "probe_type": 1
+                }
+            ]
+        },
+        {
+            "name": "la2",
+            "type": "la",
+            "uuid": "0469371af6144beeb54bc526b58bc969",
+            "trigin_en": false,
+            "trigout_en": false,
+            "auto_inserted": true,
+            "capture_control": false,
+            "data_depth": 512,
+            "input_pipeline": 2,
+            "probes": [
+                {
+                    "name": "tx_axis_mac_tlast",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "tx_axis_mac_tready",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "tx_axis_mac_tuser",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "tx_axis_mac_tvalid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "tx_axis_mac_tdata",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "udp_tx_axis_mac_tdata",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "udp_tx_axis_mac_tvalid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "udp_tx_axis_mac_tready",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "udp_tx_axis_mac_tlast",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mac_tx_axis_mac_tready",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mac_tx_axis_mac_tvalid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mac_tx_axis_mac_tdata",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mac_tx_axis_mac_tlast",
+                    "width": 1,
+                    "probe_type": 1
+                }
+            ]
+        },
+        {
+            "name": "la3",
+            "type": "la",
+            "uuid": "eaea3917ecd247a4a9986645e7c69810",
+            "trigin_en": false,
+            "trigout_en": false,
+            "auto_inserted": true,
+            "capture_control": false,
+            "data_depth": 512,
+            "input_pipeline": 2,
+            "probes": [
+                {
+                    "name": "pat_src_ip",
+                    "width": 32,
+                    "probe_type": 1
+                },
+                {
+                    "name": "pat_dst_mac",
+                    "width": 48,
+                    "probe_type": 1
+                },
+                {
+                    "name": "axi4_st_mux_select",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "pat_mux_select",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "udp_pat_gen_en",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mac_pat_gen_en",
+                    "width": 1,
+                    "probe_type": 1
+                }
+            ]
+        },
+        {
+            "name": "la4",
+            "type": "la",
+            "uuid": "ebfea9497d2f44c48fccbf3d37c0a7fc",
+            "trigin_en": false,
+            "trigout_en": false,
+            "auto_inserted": true,
+            "capture_control": false,
+            "data_depth": 512,
+            "input_pipeline": 2,
+            "probes": [
+                {
+                    "name": "rgmii_tx_ctl_HI",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "rgmii_tx_ctl_LO",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "rgmii_txd_HI",
+                    "width": 4,
+                    "probe_type": 1
+                },
+                {
+                    "name": "rgmii_txd_LO",
+                    "width": 4,
+                    "probe_type": 1
+                }
+            ]
+        }
+    ],
+    "connections": [
+        {
+            "command": "add_ports",
+            "id": 1,
+            "args": {
+                "netlist": "temac_ex",
+                "ports": [
+                    {
+                        "name": "jtag_inst2_CAPTURE",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_DRCK",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_RESET",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_RUNTEST",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_SEL",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_SHIFT",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_TCK",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_TDI",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_TMS",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_UPDATE",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_TDO",
+                        "dir": "out",
+                        "width": 1
+                    }
+                ]
+            }
+        },
+        {
+            "command": "instantiate",
+            "netlist": "edb_top",
+            "id": 2,
+            "instance": "edb_top_inst"
+        },
+        {
+            "command": "connect",
+            "id": 3,
+            "args": {
+                "instance": "edb_top_inst",
+                "ports": [
+                    {
+                        "name": "bscan_CAPTURE",
+                        "net": "jtag_inst2_CAPTURE"
+                    },
+                    {
+                        "name": "bscan_DRCK",
+                        "net": "jtag_inst2_DRCK"
+                    },
+                    {
+                        "name": "bscan_RESET",
+                        "net": "jtag_inst2_RESET"
+                    },
+                    {
+                        "name": "bscan_RUNTEST",
+                        "net": "jtag_inst2_RUNTEST"
+                    },
+                    {
+                        "name": "bscan_SEL",
+                        "net": "jtag_inst2_SEL"
+                    },
+                    {
+                        "name": "bscan_SHIFT",
+                        "net": "jtag_inst2_SHIFT"
+                    },
+                    {
+                        "name": "bscan_TCK",
+                        "net": "jtag_inst2_TCK"
+                    },
+                    {
+                        "name": "bscan_TDI",
+                        "net": "jtag_inst2_TDI"
+                    },
+                    {
+                        "name": "bscan_TMS",
+                        "net": "jtag_inst2_TMS"
+                    },
+                    {
+                        "name": "bscan_UPDATE",
+                        "net": "jtag_inst2_UPDATE"
+                    },
+                    {
+                        "name": "bscan_TDO",
+                        "net": "jtag_inst2_TDO"
+                    },
+                    {
+                        "name": "la0_clk",
+                        "net": "rx_axis_clk",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe0",
+                        "net": "rx_axis_mac_tvalid",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe1",
+                        "net": "rx_axis_mac_tready",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe2",
+                        "net": "rx_axis_mac_tstrb[0]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe3",
+                        "net": "rx_axis_mac_tlast",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[0]",
+                        "net": "rx_axis_mac_tdata[0]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[1]",
+                        "net": "rx_axis_mac_tdata[1]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[2]",
+                        "net": "rx_axis_mac_tdata[2]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[3]",
+                        "net": "rx_axis_mac_tdata[3]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[4]",
+                        "net": "rx_axis_mac_tdata[4]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[5]",
+                        "net": "rx_axis_mac_tdata[5]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[6]",
+                        "net": "rx_axis_mac_tdata[6]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la0_probe4[7]",
+                        "net": "rx_axis_mac_tdata[7]",
+                        "path": [
+                            "u_tsemac"
+                        ]
+                    },
+                    {
+                        "name": "la1_clk",
+                        "net": "rx_mac_aclk",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe0",
+                        "net": "gm_rx_err",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe1",
+                        "net": "gm_rx_dv",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[0]",
+                        "net": "gm_rx_d[0]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[1]",
+                        "net": "gm_rx_d[1]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[2]",
+                        "net": "gm_rx_d[2]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[3]",
+                        "net": "gm_rx_d[3]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[4]",
+                        "net": "gm_rx_d[4]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[5]",
+                        "net": "gm_rx_d[5]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[6]",
+                        "net": "gm_rx_d[6]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la1_probe2[7]",
+                        "net": "gm_rx_d[7]",
+                        "path": [
+                            "u_tsemac",
+                            "u_tsemac",
+                            "genblk2.u_rgmii_if"
+                        ]
+                    },
+                    {
+                        "name": "la2_clk",
+                        "net": "tx_axis_clk",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe0",
+                        "net": "tx_axis_mac_tlast",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe1",
+                        "net": "tx_axis_mac_tready",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe2",
+                        "net": "tx_axis_mac_tuser",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe3",
+                        "net": "tx_axis_mac_tvalid",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[0]",
+                        "net": "tx_axis_mac_tdata[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[1]",
+                        "net": "tx_axis_mac_tdata[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[2]",
+                        "net": "tx_axis_mac_tdata[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[3]",
+                        "net": "tx_axis_mac_tdata[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[4]",
+                        "net": "tx_axis_mac_tdata[4]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[5]",
+                        "net": "tx_axis_mac_tdata[5]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[6]",
+                        "net": "tx_axis_mac_tdata[6]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe4[7]",
+                        "net": "tx_axis_mac_tdata[7]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[0]",
+                        "net": "udp_tx_axis_mac_tdata[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[1]",
+                        "net": "udp_tx_axis_mac_tdata[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[2]",
+                        "net": "udp_tx_axis_mac_tdata[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[3]",
+                        "net": "udp_tx_axis_mac_tdata[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[4]",
+                        "net": "udp_tx_axis_mac_tdata[4]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[5]",
+                        "net": "udp_tx_axis_mac_tdata[5]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[6]",
+                        "net": "udp_tx_axis_mac_tdata[6]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe5[7]",
+                        "net": "udp_tx_axis_mac_tdata[7]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe6",
+                        "net": "udp_tx_axis_mac_tvalid",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe7",
+                        "net": "udp_tx_axis_mac_tready",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe8",
+                        "net": "udp_tx_axis_mac_tlast",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe9",
+                        "net": "mac_tx_axis_mac_tready",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe10",
+                        "net": "mac_tx_axis_mac_tvalid",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[0]",
+                        "net": "mac_tx_axis_mac_tdata[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[1]",
+                        "net": "mac_tx_axis_mac_tdata[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[2]",
+                        "net": "mac_tx_axis_mac_tdata[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[3]",
+                        "net": "mac_tx_axis_mac_tdata[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[4]",
+                        "net": "mac_tx_axis_mac_tdata[4]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[5]",
+                        "net": "mac_tx_axis_mac_tdata[5]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[6]",
+                        "net": "mac_tx_axis_mac_tdata[6]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe11[7]",
+                        "net": "mac_tx_axis_mac_tdata[7]",
+                        "path": []
+                    },
+                    {
+                        "name": "la2_probe12",
+                        "net": "mac_tx_axis_mac_tlast",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_clk",
+                        "net": "clk_50m",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[0]",
+                        "net": "pat_src_ip[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[1]",
+                        "net": "pat_src_ip[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[2]",
+                        "net": "pat_src_ip[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[3]",
+                        "net": "pat_src_ip[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[4]",
+                        "net": "pat_src_ip[4]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[5]",
+                        "net": "pat_src_ip[5]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[6]",
+                        "net": "pat_src_ip[6]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[7]",
+                        "net": "pat_src_ip[7]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[8]",
+                        "net": "pat_src_ip[8]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[9]",
+                        "net": "pat_src_ip[9]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[10]",
+                        "net": "pat_src_ip[10]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[11]",
+                        "net": "pat_src_ip[11]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[12]",
+                        "net": "pat_src_ip[12]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[13]",
+                        "net": "pat_src_ip[13]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[14]",
+                        "net": "pat_src_ip[14]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[15]",
+                        "net": "pat_src_ip[15]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[16]",
+                        "net": "pat_src_ip[16]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[17]",
+                        "net": "pat_src_ip[17]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[18]",
+                        "net": "pat_src_ip[18]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[19]",
+                        "net": "pat_src_ip[19]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[20]",
+                        "net": "pat_src_ip[20]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[21]",
+                        "net": "pat_src_ip[21]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[22]",
+                        "net": "pat_src_ip[22]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[23]",
+                        "net": "pat_src_ip[23]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[24]",
+                        "net": "pat_src_ip[24]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[25]",
+                        "net": "pat_src_ip[25]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[26]",
+                        "net": "pat_src_ip[26]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[27]",
+                        "net": "pat_src_ip[27]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[28]",
+                        "net": "pat_src_ip[28]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[29]",
+                        "net": "pat_src_ip[29]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[30]",
+                        "net": "pat_src_ip[30]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe0[31]",
+                        "net": "pat_src_ip[31]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[0]",
+                        "net": "pat_dst_mac[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[1]",
+                        "net": "pat_dst_mac[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[2]",
+                        "net": "pat_dst_mac[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[3]",
+                        "net": "pat_dst_mac[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[4]",
+                        "net": "pat_dst_mac[4]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[5]",
+                        "net": "pat_dst_mac[5]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[6]",
+                        "net": "pat_dst_mac[6]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[7]",
+                        "net": "pat_dst_mac[7]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[8]",
+                        "net": "pat_dst_mac[8]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[9]",
+                        "net": "pat_dst_mac[9]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[10]",
+                        "net": "pat_dst_mac[10]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[11]",
+                        "net": "pat_dst_mac[11]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[12]",
+                        "net": "pat_dst_mac[12]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[13]",
+                        "net": "pat_dst_mac[13]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[14]",
+                        "net": "pat_dst_mac[14]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[15]",
+                        "net": "pat_dst_mac[15]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[16]",
+                        "net": "pat_dst_mac[16]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[17]",
+                        "net": "pat_dst_mac[17]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[18]",
+                        "net": "pat_dst_mac[18]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[19]",
+                        "net": "pat_dst_mac[19]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[20]",
+                        "net": "pat_dst_mac[20]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[21]",
+                        "net": "pat_dst_mac[21]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[22]",
+                        "net": "pat_dst_mac[22]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[23]",
+                        "net": "pat_dst_mac[23]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[24]",
+                        "net": "pat_dst_mac[24]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[25]",
+                        "net": "pat_dst_mac[25]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[26]",
+                        "net": "pat_dst_mac[26]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[27]",
+                        "net": "pat_dst_mac[27]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[28]",
+                        "net": "pat_dst_mac[28]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[29]",
+                        "net": "pat_dst_mac[29]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[30]",
+                        "net": "pat_dst_mac[30]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[31]",
+                        "net": "pat_dst_mac[31]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[32]",
+                        "net": "pat_dst_mac[32]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[33]",
+                        "net": "pat_dst_mac[33]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[34]",
+                        "net": "pat_dst_mac[34]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[35]",
+                        "net": "pat_dst_mac[35]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[36]",
+                        "net": "pat_dst_mac[36]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[37]",
+                        "net": "pat_dst_mac[37]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[38]",
+                        "net": "pat_dst_mac[38]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[39]",
+                        "net": "pat_dst_mac[39]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[40]",
+                        "net": "pat_dst_mac[40]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[41]",
+                        "net": "pat_dst_mac[41]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[42]",
+                        "net": "pat_dst_mac[42]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[43]",
+                        "net": "pat_dst_mac[43]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[44]",
+                        "net": "pat_dst_mac[44]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[45]",
+                        "net": "pat_dst_mac[45]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[46]",
+                        "net": "pat_dst_mac[46]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe1[47]",
+                        "net": "pat_dst_mac[47]",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe2",
+                        "net": "axi4_st_mux_select",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe3",
+                        "net": "pat_mux_select",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe4",
+                        "net": "udp_pat_gen_en",
+                        "path": []
+                    },
+                    {
+                        "name": "la3_probe5",
+                        "net": "mac_pat_gen_en",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_clk",
+                        "net": "clk_125m",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe0",
+                        "net": "rgmii_tx_ctl_HI",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe1",
+                        "net": "rgmii_tx_ctl_LO",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe2[0]",
+                        "net": "rgmii_txd_HI[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe2[1]",
+                        "net": "rgmii_txd_HI[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe2[2]",
+                        "net": "rgmii_txd_HI[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe2[3]",
+                        "net": "rgmii_txd_HI[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe3[0]",
+                        "net": "rgmii_txd_LO[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe3[1]",
+                        "net": "rgmii_txd_LO[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe3[2]",
+                        "net": "rgmii_txd_LO[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la4_probe3[3]",
+                        "net": "rgmii_txd_LO[3]",
+                        "path": []
+                    }
+                ]
+            }
+        }
+    ],
+    "vdbs": [
+        {
+            "file": "debug_top.post.vdb",
+            "instance": "edb_top_inst"
+        }
+    ],
+    "session": {
+        "wizard": {
+            "data_depth": 512,
+            "capture_control": false,
+            "selected_nets": [
+                {
+                    "name": "rx_axis_mac_tvalid",
+                    "width": 1,
+                    "clk_domain": "rx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac"
+                    ]
+                },
+                {
+                    "name": "rx_axis_mac_tready",
+                    "width": 1,
+                    "clk_domain": "rx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac"
+                    ]
+                },
+                {
+                    "name": "rx_axis_mac_tstrb",
+                    "width": 1,
+                    "clk_domain": "rx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac"
+                    ],
+                    "net_idx_left": 0,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "rx_axis_mac_tlast",
+                    "width": 1,
+                    "clk_domain": "rx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac"
+                    ]
+                },
+                {
+                    "name": "rx_axis_mac_tdata",
+                    "width": 8,
+                    "clk_domain": "rx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac"
+                    ],
+                    "net_idx_left": 7,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "gm_rx_err",
+                    "width": 1,
+                    "clk_domain": "u_tsemac/u_tsemac/genblk2.u_rgmii_if/rx_mac_aclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac",
+                        "u_tsemac",
+                        "genblk2.u_rgmii_if"
+                    ]
+                },
+                {
+                    "name": "gm_rx_dv",
+                    "width": 1,
+                    "clk_domain": "u_tsemac/u_tsemac/genblk2.u_rgmii_if/rx_mac_aclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac",
+                        "u_tsemac",
+                        "genblk2.u_rgmii_if"
+                    ]
+                },
+                {
+                    "name": "gm_rx_d",
+                    "width": 8,
+                    "clk_domain": "u_tsemac/u_tsemac/genblk2.u_rgmii_if/rx_mac_aclk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [
+                        "u_tsemac",
+                        "u_tsemac",
+                        "genblk2.u_rgmii_if"
+                    ],
+                    "net_idx_left": 7,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "tx_axis_mac_tlast",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "tx_axis_mac_tready",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "tx_axis_mac_tuser",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "tx_axis_mac_tvalid",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "tx_axis_mac_tdata",
+                    "width": 8,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 7,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "pat_src_ip",
+                    "width": 32,
+                    "clk_domain": "clk_50m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 31,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "pat_dst_mac",
+                    "width": 48,
+                    "clk_domain": "clk_50m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 47,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "udp_tx_axis_mac_tdata",
+                    "width": 8,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 7,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "udp_tx_axis_mac_tvalid",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "udp_tx_axis_mac_tready",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "udp_tx_axis_mac_tlast",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "mac_tx_axis_mac_tready",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "mac_tx_axis_mac_tvalid",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "mac_tx_axis_mac_tdata",
+                    "width": 8,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 7,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "mac_tx_axis_mac_tlast",
+                    "width": 1,
+                    "clk_domain": "tx_axis_clk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "axi4_st_mux_select",
+                    "width": 1,
+                    "clk_domain": "clk_50m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "pat_mux_select",
+                    "width": 1,
+                    "clk_domain": "clk_50m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "udp_pat_gen_en",
+                    "width": 1,
+                    "clk_domain": "clk_50m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "mac_pat_gen_en",
+                    "width": 1,
+                    "clk_domain": "clk_50m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "rgmii_tx_ctl_HI",
+                    "width": 1,
+                    "clk_domain": "clk_125m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "rgmii_tx_ctl_LO",
+                    "width": 1,
+                    "clk_domain": "clk_125m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "rgmii_txd_HI",
+                    "width": 4,
+                    "clk_domain": "clk_125m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 3,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "rgmii_txd_LO",
+                    "width": 4,
+                    "clk_domain": "clk_125m",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 3,
+                    "net_idx_right": 0
+                }
+            ],
+            "top_module": "temac_ex",
+            "db_checksum": "ba5fce12098a2c03e7bae2e9a172d1842464edfca8e284870b3519e987537970",
+            "src": "elaborate",
+            "jtag_user": "USER2",
+            "input_pipeline": 2
+        }
+    }
+}
