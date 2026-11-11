@@ -1,0 +1,148 @@
+pin_name,ball,bank,default_io_std,direction,signal_class,function,notes,interface
+# ====== Jacket essentials (3) ======
+clk_50m,T18,TL,3.3V_LVCMOS,IN,CLK,main_clock,"50MHz OSC U13 on core, ball T18 = GPIOL_26_PLLIN1 (weak pullup)",OSC_50M
+arst_n,H21,2C,1.8V_LVCMOS,IN,RST,reset,"ELECTRICAL RISK: S1 has 10K pullup to D3V3 but bank 2C is 1.8V HSIO (Ti180 absolute max 1.98V); hardware review required. Ball H21 = GPIOT_P_29",USER_BTN_S1
+led_user,F21,2C,1.8V_LVCMOS,OUT,GP_IO,user_led,"D25 user LED on base via Q4 (MMBT3904T-7-F NPN), ball F21 = GPIOT_N_34",USER_LED_D25
+# ====== User LEDs + Buttons ======
+led_user2,F22,2C,1.8V_LVCMOS,OUT,GP_IO,user_led2,"D26 user LED on base via Q5 NPN, ball F22 = GPIOT_P_34",USER_LED_D26
+user_btn2,J21,2C,1.8V_LVCMOS,IN,GP_IO,user_btn2,"ELECTRICAL RISK: S2 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball J21 = GPIOT_N_29",USER_BTN_S2
+user_btn3,H22,2C,1.8V_LVCMOS,IN,GP_IO,user_btn3,"ELECTRICAL RISK: S3 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball H22 = GPIOT_N_31",USER_BTN_S3
+user_btn4,G22,2C,1.8V_LVCMOS,IN,GP_IO,user_btn4,"ELECTRICAL RISK: S4 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball G22 = GPIOT_P_31",USER_BTN_S4
+# ====== PMOD2 (8) on 2C bank ======
+pmod2_io1,F20,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io1,"J11.1 PMOD2 IO17 -> 2C_GPIOT_P_33 (ball F20)",PMOD2_J11
+pmod2_io2,F19,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io2,"J11.2 PMOD2 IO18 -> 2C_GPIOT_N_33 (ball F19)",PMOD2_J11
+pmod2_io3,K22,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io3,"J11.3 PMOD2 IO19 -> 2C_GPIOT_P_28 (ball K22)",PMOD2_J11
+pmod2_io4,K21,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io4,"J11.4 PMOD2 IO20 -> 2C_GPIOT_N_28 (ball K21)",PMOD2_J11
+pmod2_io5,G18,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io5,"J11.5 PMOD2 IO21 -> 2C_GPIOT_P_30 (ball G18)",PMOD2_J11
+pmod2_io6,H18,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io6,"J11.6 PMOD2 IO22 -> 2C_GPIOT_N_30 (ball H18)",PMOD2_J11
+pmod2_io7,G20,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io7,"J11.7 PMOD2 IO23 -> 2C_GPIOT_P_32 (ball G20)",PMOD2_J11
+pmod2_io8,G19,2C,1.8V_LVCMOS,INOUT,GP_IO,pmod2_io8,"J11.8 PMOD2 IO24 -> 2C_GPIOT_N_32 (ball G19)",PMOD2_J11
+# ====== JTAG (5) ======
+jtag_tck,L6,BL,-,IN,JTAG,jtag_tck,"JTAG TCK -> ball L6, 4K7 pullup",JTAG
+jtag_tdi,K6,BL,-,IN,JTAG,jtag_tdi,"JTAG TDI -> ball K6, 4K7 pullup",JTAG
+jtag_tms,J6,BL,-,IN,JTAG,jtag_tms,"JTAG TMS -> ball J6, 4K7 pullup",JTAG
+jtag_tdo,H6,BL,-,OUT,JTAG,jtag_tdo,"JTAG TDO -> ball H6",JTAG
+creset_n,T9,4C,1.8V_LVCMOS,IN,RST,creset_n,"CRESET_N config reset -> ball T9",CONFIG
+# ====== Config SPI Flash W25Q256JWPIQ (6) on 4A/4B/4C bank ======
+flash_csn,Y3,4C,1.8V_LVCMOS,OUT,GP_IO,flash_csn,"QSPI CS# (SSL_N) -> GPIOB_P_08_SSL_N (ball Y3)",QSPI_FLASH
+flash_clk,R3,4B,1.8V_LVCMOS,OUT,GP_IO,flash_clk,"QSPI CLK -> GPIOB_P_16_EXTSPICLK_CLK3_P (ball R3, also SI5338 LVDS clock P after config)",QSPI_FLASH
+flash_io0,W2,4C,1.8V_LVCMOS,INOUT,GP_IO,flash_io0,"QSPI IO0/DI -> GPIOB_P_09_CDI0 (ball W2)",QSPI_FLASH
+flash_io1,W3,4C,1.8V_LVCMOS,INOUT,GP_IO,flash_io1,"QSPI IO1/DO -> GPIOB_N_09_CDI1 (ball W3)",QSPI_FLASH
+flash_io2,AA1,4C,1.8V_LVCMOS,INOUT,GP_IO,flash_io2,"QSPI IO2/WP# -> GPIOB_N_10_CDI2 (ball AA1)",QSPI_FLASH
+flash_io3,Y1,4C,1.8V_LVCMOS,INOUT,GP_IO,flash_io3,"QSPI IO3/HOLD# -> GPIOB_P_10_CDI3 (ball Y1)",QSPI_FLASH
+# ====== DIP switches (4) on TL bank ======
+dip_sw1,Y16,TL,3.3V_LVCMOS,IN,GP_IO,dip_sw1,"SW1.1 -> GPIOL_37 (ball Y16), 10K pullup to D3V3",DIP_SW1
+dip_sw2,AB15,TL,3.3V_LVCMOS,IN,GP_IO,dip_sw2,"SW1.2 -> GPIOL_51 (ball AB15), 10K pullup to D3V3",DIP_SW1
+dip_sw3,AB17,TL,3.3V_LVCMOS,IN,GP_IO,dip_sw3,"SW1.3 -> GPIOL_52 (ball AB17), 10K pullup to D3V3",DIP_SW1
+dip_sw4,AA16,TL,3.3V_LVCMOS,IN,GP_IO,dip_sw4,"SW1.4 -> GPIOL_35 (ball AA16), 10K pullup to D3V3",DIP_SW1
+# ====== eMMC KLMBG2JETD-B041 (12) on 3A bank (per base page 13) ======
+emmc_dat0,A15,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat0,"eMMC DAT0 -> 3A_GPIOR_P_32",EMMC
+emmc_dat1,B15,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat1,"eMMC DAT1 -> 3A_GPIOR_N_32",EMMC
+emmc_dat2,C16,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat2,"eMMC DAT2 -> 3A_GPIOR_P_39",EMMC
+emmc_dat3,D16,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat3,"eMMC DAT3 -> 3A_GPIOR_N_39",EMMC
+emmc_dat4,A18,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat4,"eMMC DAT4 -> 3A_GPIOR_P_34",EMMC
+emmc_dat5,B19,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat5,"eMMC DAT5 -> 3A_GPIOR_N_34",EMMC
+emmc_dat6,C17,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat6,"eMMC DAT6 -> 3A_GPIOR_P_38",EMMC
+emmc_dat7,C18,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat7,"eMMC DAT7 -> 3A_GPIOR_N_38",EMMC
+emmc_clk,D15,3A,1.8V_LVCMOS,OUT,GP_IO,emmc_clk,"eMMC CLK -> 3A_GPIOR_N_36",EMMC
+emmc_ds,C15,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_ds,"eMMC DS (Data Strobe) -> 3A_GPIOR_P_36",EMMC
+emmc_cmd,A16,3A,1.8V_LVCMOS,INOUT,GP_IO,emmc_cmd,"eMMC CMD -> 3A_GPIOR_P_33",EMMC
+emmc_rstn,A17,3A,1.8V_LVCMOS,OUT,GP_IO,emmc_rstn,"eMMC RSTN -> 3A_GPIOR_N_33",EMMC
+# ====== Ethernet RGMII (13) — corrected per TJ180A484_TSE reference design ======
+eth_txd0,A21,3A,1.8V_LVCMOS,OUT,GP_IO,eth_txd0,"RGMII TXD0 -> GPIOR_P_40 (DDIO)",ETH_RGMII
+eth_txd1,B21,3A,1.8V_LVCMOS,OUT,GP_IO,eth_txd1,"RGMII TXD1 -> GPIOR_N_40 (DDIO)",ETH_RGMII
+eth_txd2,D19,3A,1.8V_LVCMOS,OUT,GP_IO,eth_txd2,"RGMII TXD2 -> GPIOR_N_43 (DDIO)",ETH_RGMII
+eth_txd3,D18,3A,1.8V_LVCMOS,OUT,GP_IO,eth_txd3,"RGMII TXD3 -> GPIOR_P_43 (DDIO)",ETH_RGMII
+eth_tx_ctl,C21,3A,1.8V_LVCMOS,OUT,GP_IO,eth_tx_ctl,"RGMII TX_CTL (TX_EN/TX_ERR DDIO) -> GPIOR_P_42",ETH_RGMII
+eth_txc,D21,3A,1.8V_LVCMOS,OUT,GP_IO,eth_txc,"RGMII TX_CLK (125MHz DDIO) -> GPIOR_N_42",ETH_RGMII
+eth_rxd0,C20,3A,1.8V_LVCMOS,IN,GP_IO,eth_rxd0,"RGMII RXD0 -> GPIOR_P_44_EXTFB (DDIO)",ETH_RGMII
+eth_rxd1,D20,3A,1.8V_LVCMOS,IN,GP_IO,eth_rxd1,"RGMII RXD1 -> GPIOR_N_44 (DDIO)",ETH_RGMII
+eth_rxd2,B22,3A,1.8V_LVCMOS,IN,GP_IO,eth_rxd2,"RGMII RXD2 -> GPIOR_P_41 (DDIO)",ETH_RGMII
+eth_rxd3,C22,3A,1.8V_LVCMOS,IN,GP_IO,eth_rxd3,"RGMII RXD3 -> GPIOR_N_41 (DDIO)",ETH_RGMII
+eth_rx_ctl,E22,3A,1.8V_LVCMOS,IN,GP_IO,eth_rx_ctl,"RGMII RX_CTL (RX_DV/RX_ERR DDIO) -> GPIOR_N_45",ETH_RGMII
+eth_rxc,AA14,TL,3.3V_LVCMOS,IN,GP_IO,eth_rxc,"RGMII RX_CLK (125MHz) -> GPIOL_29_CLK30",ETH_RGMII
+eth_mdc,A20,3A,1.8V_LVCMOS,OUT,GP_IO,eth_mdc,"MDC -> GPIOR_P_35",ETH_MDC_MDIO
+eth_mdio,B20,3A,1.8V_LVCMOS,INOUT,GP_IO,eth_mdio,"MDIO -> GPIOR_N_35",ETH_MDC_MDIO
+# ====== IMU BMI088 I2C (2) on 3A bank ======
+imu_sda,B17,3A,1.8V_LVCMOS,INOUT,GP_IO,imu_sda,"IMU SDA -> 3A_GPIOR_P_37",IMU_I2C
+imu_scl,B18,3A,1.8V_LVCMOS,INOUT,GP_IO,imu_scl,"IMU SCL -> 3A_GPIOR_N_37",IMU_I2C
+# ====== Si5338A clock chip I2C+FB (3) — corrected per SI5338 reference design ======
+clkchip_sda,AB14,TL,3.3V_LVCMOS,INOUT,GP_IO,clkchip_sda,"Si5338A SDA -> GPIOL_50 (separate I2C bus from IMU)",CLK_CHIP
+clkchip_scl,W14,TL,3.3V_LVCMOS,INOUT,GP_IO,clkchip_scl,"Si5338A SCL -> GPIOL_42 (separate I2C bus from IMU)",CLK_CHIP
+clkchip_clkout,Y17,TL,3.3V_LVCMOS,OUT,CLK,clkchip_clkout,"Si5338A PLL reference output (156.25MHz) -> GPIOL_33",CLK_CHIP
+# ====== USB2.0 / USB Type-C CC (4) - via FX10 connector to core ======
+# ====== Fan (2) ======
+fan_det,Y13,TL,3.3V_LVCMOS,IN,GP_IO,fan_det,"J7 tach; sheet 6 GPIOL_38 -> Efinity Y13",FAN
+fan_pwm,V14,TL,3.3V_LVCMOS,OUT,GP_IO,fan_pwm,"J7 PWM; sheet 6 GPIOL_40 -> Efinity V14",FAN
+# ====== SD card (7) — corrected per TJ180A484S_SDHOST reference design ======
+sdio1_d0,AA9,BL,3.3V_LVCMOS,INOUT,GP_IO,sdio1_d0,"microSD J8 SDIO1_D0 -> GPIOL_05_CLK25",SDIO1
+sdio1_d1,AB13,TL,3.3V_LVCMOS,INOUT,GP_IO,sdio1_d1,"microSD J8 SDIO1_D1 -> GPIOL_49",SDIO1
+sdio1_d2,U9,BL,3.3V_LVCMOS,INOUT,GP_IO,sdio1_d2,"microSD J8 SDIO1_D2 -> GPIOL_04_CLK25",SDIO1
+sdio1_d3,AB12,TL,3.3V_LVCMOS,INOUT,GP_IO,sdio1_d3,"microSD J8 SDIO1_D3 -> GPIOL_31",SDIO1
+sdio1_cmd,W9,BL,3.3V_LVCMOS,INOUT,GP_IO,sdio1_cmd,"microSD J8 SDIO1_CMD -> GPIOL_03_CLK24",SDIO1
+sdio1_clk,AA12,TL,3.3V_LVCMOS,OUT,GP_IO,sdio1_clk,"microSD J8 SDIO1_CLK -> GPIOL_30_CLK31",SDIO1
+sdio1_cd,Y11,BL,3.3V_LVCMOS,IN,GP_IO,sdio1_cd,"microSD J8 SDIO1_CD card detect -> GPIOL_10_PLLIN1",SDIO1
+# ====== MIPI0 RX+TX (20) on BL bank ======
+mipi0_rxdp0,W8,BL,MIPI,IN,MIPI,mipi0_rxdp0,"MIPI0 RXDP0 (MIPI0_RXDP0)",MIPI0_RX
+mipi0_rxdn0,V8,BL,MIPI,IN,MIPI,mipi0_rxdn0,"MIPI0 RXDN0 (MIPI0_RXDN0)",MIPI0_RX
+mipi0_rxdp1,Y6,BL,MIPI,IN,MIPI,mipi0_rxdp1,"MIPI0 RXDP1 (MIPI0_RXDP1)",MIPI0_RX
+mipi0_rxdn1,AA7,BL,MIPI,IN,MIPI,mipi0_rxdn1,"MIPI0 RXDN1 (MIPI0_RXDN1)",MIPI0_RX
+mipi0_rxdp2,W5,BL,MIPI,IN,MIPI,mipi0_rxdp2,"MIPI0 RXDP2 (MIPI0_RXDP2)",MIPI0_RX
+mipi0_rxdn2,V5,BL,MIPI,IN,MIPI,mipi0_rxdn2,"MIPI0 RXDN2 (MIPI0_RXDN2)",MIPI0_RX
+mipi0_rxdp3,Y7,BL,MIPI,IN,MIPI,mipi0_rxdp3,"MIPI0 RXDP3 (MIPI0_RXDP3)",MIPI0_RX
+mipi0_rxdn3,Y8,BL,MIPI,IN,MIPI,mipi0_rxdn3,"MIPI0 RXDN3 (MIPI0_RXDN3)",MIPI0_RX
+mipi0_rxdp4,V6,BL,MIPI,IN,MIPI,mipi0_rxdp4,"MIPI0 RXDP4 (MIPI0_RXDP4)",MIPI0_RX
+mipi0_rxdn4,V7,BL,MIPI,IN,MIPI,mipi0_rxdn4,"MIPI0 RXDN4 (MIPI0_RXDN4)",MIPI0_RX
+mipi0_txdp0,Y4,BL,MIPI,OUT,MIPI,mipi0_txdp0,"MIPI0 TXDP0 (MIPI0_TXDP0)",MIPI0_TX
+mipi0_txdn0,W4,BL,MIPI,OUT,MIPI,mipi0_txdn0,"MIPI0 TXDN0 (MIPI0_TXDN0)",MIPI0_TX
+mipi0_txdp1,AB4,BL,MIPI,OUT,MIPI,mipi0_txdp1,"MIPI0 TXDP1 (MIPI0_TXDP1)",MIPI0_TX
+mipi0_txdn1,AA4,BL,MIPI,OUT,MIPI,mipi0_txdn1,"MIPI0 TXDN1 (MIPI0_TXDN1)",MIPI0_TX
+mipi0_txdp2,AB6,BL,MIPI,OUT,MIPI,mipi0_txdp2,"MIPI0 TXDP2 (MIPI0_TXDP2)",MIPI0_TX
+mipi0_txdn2,AB7,BL,MIPI,OUT,MIPI,mipi0_txdn2,"MIPI0 TXDN2 (MIPI0_TXDN2)",MIPI0_TX
+mipi0_txdp3,AA5,BL,MIPI,OUT,MIPI,mipi0_txdp3,"MIPI0 TXDP3 (MIPI0_TXDP3)",MIPI0_TX
+mipi0_txdn3,AA6,BL,MIPI,OUT,MIPI,mipi0_txdn3,"MIPI0 TXDN3 (MIPI0_TXDN3)",MIPI0_TX
+mipi0_txdp4,AB8,BL,MIPI,OUT,MIPI,mipi0_txdp4,"MIPI0 TXDP4 (MIPI0_TXDP4)",MIPI0_TX
+mipi0_txdn4,AB9,BL,MIPI,OUT,MIPI,mipi0_txdn4,"MIPI0 TXDN4 (MIPI0_TXDN4)",MIPI0_TX
+# ====== MIPI2 RX+TX (20) on TL bank ======
+mipi2_rxdp0,U22,TL,MIPI,IN,MIPI,mipi2_rxdp0,"MIPI2 RXDP0 (MIPI2_RXDP0)",MIPI2_RX
+mipi2_rxdn0,V22,TL,MIPI,IN,MIPI,mipi2_rxdn0,"MIPI2 RXDN0 (MIPI2_RXDN0)",MIPI2_RX
+mipi2_rxdp1,Y22,TL,MIPI,IN,MIPI,mipi2_rxdp1,"MIPI2 RXDP1 (MIPI2_RXDP1)",MIPI2_RX
+mipi2_rxdn1,Y21,TL,MIPI,IN,MIPI,mipi2_rxdn1,"MIPI2 RXDN1 (MIPI2_RXDN1)",MIPI2_RX
+mipi2_rxdp2,V21,TL,MIPI,IN,MIPI,mipi2_rxdp2,"MIPI2 RXDP2 (MIPI2_RXDP2)",MIPI2_RX
+mipi2_rxdn2,W21,TL,MIPI,IN,MIPI,mipi2_rxdn2,"MIPI2 RXDN2 (MIPI2_RXDN2)",MIPI2_RX
+mipi2_rxdp3,AA22,TL,MIPI,IN,MIPI,mipi2_rxdp3,"MIPI2 RXDP3 (MIPI2_RXDP3)",MIPI2_RX
+mipi2_rxdn3,AA21,TL,MIPI,IN,MIPI,mipi2_rxdn3,"MIPI2 RXDN3 (MIPI2_RXDN3)",MIPI2_RX
+mipi2_rxdp4,U20,TL,MIPI,IN,MIPI,mipi2_rxdp4,"MIPI2 RXDP4 (MIPI2_RXDP4)",MIPI2_RX
+mipi2_rxdn4,V20,TL,MIPI,IN,MIPI,mipi2_rxdn4,"MIPI2 RXDN4 (MIPI2_RXDN4)",MIPI2_RX
+mipi2_txdp0,Y20,TL,MIPI,OUT,MIPI,mipi2_txdp0,"MIPI2 TXDP0 (MIPI2_TXDP0)",MIPI2_TX
+mipi2_txdn0,W19,TL,MIPI,OUT,MIPI,mipi2_txdn0,"MIPI2 TXDN0 (MIPI2_TXDN0)",MIPI2_TX
+mipi2_txdp1,AA20,TL,MIPI,OUT,MIPI,mipi2_txdp1,"MIPI2 TXDP1 (MIPI2_TXDP1)",MIPI2_TX
+mipi2_txdn1,AB21,TL,MIPI,OUT,MIPI,mipi2_txdn1,"MIPI2 TXDN1 (MIPI2_TXDN1)",MIPI2_TX
+mipi2_txdp2,Y19,TL,MIPI,OUT,MIPI,mipi2_txdp2,"MIPI2 TXDP2 (MIPI2_TXDP2)",MIPI2_TX
+mipi2_txdn2,Y18,TL,MIPI,OUT,MIPI,mipi2_txdn2,"MIPI2 TXDN2 (MIPI2_TXDN2)",MIPI2_TX
+mipi2_txdp3,AB20,TL,MIPI,OUT,MIPI,mipi2_txdp3,"MIPI2 TXDP3 (MIPI2_TXDP3)",MIPI2_TX
+mipi2_txdn3,AB19,TL,MIPI,OUT,MIPI,mipi2_txdn3,"MIPI2 TXDN3 (MIPI2_TXDN3)",MIPI2_TX
+mipi2_txdp4,AA18,TL,MIPI,OUT,MIPI,mipi2_txdp4,"MIPI2 TXDP4 (MIPI2_TXDP4)",MIPI2_TX
+mipi2_txdn4,AB18,TL,MIPI,OUT,MIPI,mipi2_txdn4,"MIPI2 TXDN4 (MIPI2_TXDN4)",MIPI2_TX
+# ====== Camera connector P5 control lines (6) — net names confirmed against Efinity package map (gmsl 2-cam review 2026-09-26) ======
+cam_i2c_scl,V16,TL,3.3V_LVCMOS,INOUT,GP_IO,cam_i2c_scl,"QSE P5 IO0 -> GPIOL_43 (camera I2C SCL shared by both sensors)",CAM_CTRL_P5
+cam_i2c_sda,W10,BL,3.3V_LVCMOS,INOUT,GP_IO,cam_i2c_sda,"QSE P5 IO1 -> GPIOL_02 (camera I2C SDA shared by both sensors)",CAM_CTRL_P5
+cam_clk_24m,P17,TL,3.3V_LVCMOS,OUT,CLK,cam_clk_24m,"QSE P5 IO2 -> GPIOL_46 (24MHz camera master clock; sc850sl demo usage)",CAM_CTRL_P5
+cam_xshutdn,V10,BL,3.3V_LVCMOS,OUT,GP_IO,cam_xshutdn,"QSE P5 IO3 -> GPIOL_01 (camera XSHUTDOWN)",CAM_CTRL_P5
+cam_io4_spare,T17,TL,3.3V_LVCMOS,INOUT,GP_IO,cam_io4_spare,"QSE P5 IO4 -> GPIOL_44 (spare control line)",CAM_CTRL_P5
+cam_trig,Y9,BL,3.3V_LVCMOS,OUT,GP_IO,cam_trig,"QSE P5 IO5 -> GPIOL_07 (frame-sync trigger; ball has MIPI_CLKIN capability)",CAM_CTRL_P5
+# ====== HDMI/DSI connector P6 control lines (6) — net names confirmed against Efinity package map (gmsl 2-cam review 2026-09-26) ======
+mipi_tx_io0,V18,TL,3.3V_LVCMOS,INOUT,GP_IO,mipi_tx_io0,"QSE P6 IO0 -> GPIOL_28_CLK29 (GCLK/MIPI_CLKIN capable)",HDMI_CTRL_P6
+mipi_tx_io1,W16,TL,3.3V_LVCMOS,INOUT,GP_IO,mipi_tx_io1,"QSE P6 IO1 -> GPIOL_54",HDMI_CTRL_P6
+mipi_tx_io2,V17,TL,3.3V_LVCMOS,INOUT,GP_IO,mipi_tx_io2,"QSE P6 IO2 -> GPIOL_41",HDMI_CTRL_P6
+mipi_tx_io3,V15,TL,3.3V_LVCMOS,INOUT,GP_IO,mipi_tx_io3,"QSE P6 IO3 -> GPIOL_55",HDMI_CTRL_P6
+mipi_tx_io4,W18,TL,3.3V_LVCMOS,INOUT,GP_IO,mipi_tx_io4,"QSE P6 IO4 -> GPIOL_36_PLLIN1 (PLL_CLKIN capable)",HDMI_CTRL_P6
+mipi_tx_io5,W15,TL,3.3V_LVCMOS,INOUT,GP_IO,mipi_tx_io5,"QSE P6 IO5 -> GPIOL_45",HDMI_CTRL_P6
+# ====== DDR reference clock (1) — per DDR_TEST/SI5338/SDHOST reference designs ======
+ddr_clk_ref,Y14,TL,3.3V_LVCMOS,IN,CLK,ddr_clk_ref,"DDR PLL reference clock (33.33MHz) -> GPIOL_32_PLLIN1",DDR_CLK
+# ====== MIPI PLL reference clocks (2) — per MIPI/CSI reference designs ======
+mipi0_refclk,AA10,BL,3.3V_LVCMOS,IN,CLK,mipi0_refclk,"MIPI0 PLL reference clock (27MHz) -> GPIOL_06_CLK27",MIPI_CLK
+mipi2_refclk,AA15,TL,3.3V_LVCMOS,IN,CLK,mipi2_refclk,"MIPI2 PLL reference clock (mipi_clkin) -> GPIOL_27_CLK28",MIPI_CLK
+# ====== UART (2) — per imu_bmi088/SI5338 reference designs (via FX10 to USB-UART bridge) ======
+uart_rxd,F16,TR,3.3V_LVCMOS,IN,GP_IO,uart_rxd,"UART RXD -> GPIOR_61 (FX10 to USB-UART bridge)",UART
+uart_txd,G16,TR,3.3V_LVCMOS,OUT,GP_IO,uart_txd,"UART TXD -> GPIOR_57 (FX10 to USB-UART bridge)",UART

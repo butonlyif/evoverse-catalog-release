@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/* EvoVerse generated candidate. Validate against the selected BSP before use. */
+/dts-v1/;
+
+#include "rk3588.dtsi"
+#include "rk3588-rk806-single.dtsi"
+#include "ws-e2-rk3588j-evm.dtsi"
+
+/ {
+	model = "EvoVerse WS-E2 RK3588J EVM";
+	compatible = "evoverse,ws-e2-rk3588j-evm", "rockchip,rk3588";
+};

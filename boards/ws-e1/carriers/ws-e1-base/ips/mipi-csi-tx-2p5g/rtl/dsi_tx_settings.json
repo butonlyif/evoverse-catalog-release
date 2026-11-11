@@ -1,0 +1,79 @@
+{
+    "args": [
+        "-o",
+        "dsi_tx",
+        "--base_path",
+        "D:\\wrw\\Project\\nantian_demo_tj180\\Ti180J484_CSI_LOOPBACK_2.5G_v6\\project_new\\ip",
+        "--vlnv",
+        {
+            "vendor": "efinixinc.com",
+            "library": "mipi",
+            "name": "efx_dsi_tx",
+            "version": "5.15"
+        }
+    ],
+    "conf": {
+        "tLPX_NS": "50",
+        "tINIT_NS": "100000",
+        "NUM_DATA_LANE": "4",
+        "HS_BYTECLK_MHZ": "125",
+        "CLOCK_FREQ_MHZ": "100",
+        "DPHY_CLOCK_MODE": "\"Continuous\"",
+        "PIXEL_FIFO_DEPTH": "2048",
+        "tLP_EXIT_NS": "100",
+        "tCLK_ZERO_NS": "262",
+        "tCLK_TRAIL_NS": "60",
+        "tCLK_PRE_NS": "10",
+        "tCLK_POST_NS": "60",
+        "tCLK_PREPARE_NS": "38",
+        "tWAKEUP_NS": "1000",
+        "tHS_ZERO_NS": "105",
+        "tHS_TRAIL_NS": "60",
+        "tHS_EXIT_NS": "100",
+        "Pack_48": "1'b1",
+        "Pack_64": "1'b0",
+        "tHS_PREPARE_NS": "40",
+        "BTA_TIMEOUT_NS": "100000",
+        "tD_TERM_EN_NS": "35",
+        "tHS_PREPARE_ZERO_NS": "145",
+        "ENABLE_V_LPM_BTA": "1'b0",
+        "PACKET_SEQUENCES": "1",
+        "HS_CMD_WDATAFIFO_DEPTH": "64",
+        "LP_CMD_WDATAFIFO_DEPTH": "64",
+        "LP_CMD_RDATAFIFO_DEPTH": "64",
+        "MAX_HRES": "1080",
+        "ENABLE_BIDIR": "1'b1",
+        "ENABLE_EOTP": "1'b0",
+        "Pack_60": "1'b0",
+        "Pack_36": "1'b0",
+        "MIPI_DSI_TX_DEBUG": "1'b0"
+    },
+    "output": {
+        "external_source_source": [
+            "dsi_tx\\dsi_tx_tmpl.sv",
+            "dsi_tx\\dsi_tx.sv",
+            "dsi_tx\\dsi_tx_define.svh",
+            "dsi_tx\\dsi_tx_tmpl.vhd"
+        ],
+        "external_example_example": [
+            "dsi_tx\\Ti60F225_devkit\\ti60f225_demo.peri.xml",
+            "dsi_tx\\Ti60F225_devkit\\ti60f225_demo.xml",
+            "dsi_tx\\Ti60F225_devkit\\data_pack.v",
+            "dsi_tx\\Ti60F225_devkit\\dual_clock_fifo.v",
+            "dsi_tx\\Ti60F225_devkit\\panel_config.v",
+            "dsi_tx\\Ti60F225_devkit\\reset.v",
+            "dsi_tx\\Ti60F225_devkit\\shift_reg.v",
+            "dsi_tx\\Ti60F225_devkit\\simple_dual_port_ram.v",
+            "dsi_tx\\Ti60F225_devkit\\TI60F225_MIPI_dsi.v",
+            "dsi_tx\\Ti60F225_devkit\\true_dual_port_ram.v",
+            "dsi_tx\\Ti60F225_devkit\\vga_gen.v",
+            "dsi_tx\\Ti60F225_devkit\\Panel_1080p_reg.mem",
+            "dsi_tx\\Ti60F225_devkit\\ti60f225_demo.sdc",
+            "dsi_tx\\Ti60F225_devkit\\dsi_tx.sv",
+            "dsi_tx\\Ti60F225_devkit\\dsi_tx_define.svh"
+        ]
+    },
+    "ooc_synthesis": {},
+    "sw_version": "2025.2.288.4.15",
+    "generated_date": "2026-06-11T14:09:22.162523+00:00"
+}

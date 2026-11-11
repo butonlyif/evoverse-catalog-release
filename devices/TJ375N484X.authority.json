@@ -1,0 +1,797 @@
+{
+  "part": "TJ375N484X",
+  "package": "N484",
+  "family": "Titanium",
+  "timing_model": "C4",
+  "pins": {
+    "R3": {
+      "name": "GPIOB_P_03_PLLIN0",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gclk",
+        "pll_refclk",
+        "pll_clkin",
+        "gpio"
+      ]
+    },
+    "A3": {
+      "name": "GPIOB_P_43_CSO_CLK10_P",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "C1": {
+      "name": "GPIOB_N_38_SSL_N",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R2": {
+      "name": "GPIOB_N_03_CDI31",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gclk",
+        "pll_refclk",
+        "pll_clkin",
+        "gpio"
+      ]
+    },
+    "G10": {
+      "name": "CRESET_N",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "creset_n",
+        "gpio"
+      ]
+    },
+    "F6": {
+      "name": "JTAG_TDO",
+      "bank": "BR3_BR4",
+      "voltage_domain": "3.3",
+      "functions": [
+        "jtag_tdo",
+        "configuration"
+      ],
+      "reserved_for": "JTAG"
+    },
+    "F7": {
+      "name": "JTAG_TMS",
+      "bank": "BR3_BR4",
+      "voltage_domain": "3.3",
+      "functions": [
+        "jtag_tms",
+        "configuration"
+      ],
+      "reserved_for": "JTAG"
+    },
+    "F8": {
+      "name": "JTAG_TCK",
+      "bank": "BR3_BR4",
+      "voltage_domain": "3.3",
+      "functions": [
+        "jtag_tck",
+        "configuration"
+      ],
+      "reserved_for": "JTAG"
+    },
+    "H10": {
+      "name": "CDONE",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "cdone",
+        "gpio"
+      ]
+    },
+    "G4": {
+      "name": "GPIOB_P_39_CCK_PLLIN0",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk",
+        "pll_clkin"
+      ]
+    },
+    "J4": {
+      "name": "GPIOB_N_40_CDI0",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "J5": {
+      "name": "GPIOB_P_40_CDI1_EXTFB",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "G3": {
+      "name": "GPIOB_N_39_CDI2",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "C2": {
+      "name": "GPIOB_P_38_CDI3",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "T17": {
+      "name": "GPIOT_P_29",
+      "bank": "2A_2B_2C",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R16": {
+      "name": "GPIOT_N_29",
+      "bank": "2A_2B_2C",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N17": {
+      "name": "GPIOT_P_32",
+      "bank": "2A_2B_2C",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N16": {
+      "name": "GPIOT_N_32",
+      "bank": "2A_2B_2C",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "F22": {
+      "name": "MIPI2_TXDP0",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane0_p"
+      ]
+    },
+    "F21": {
+      "name": "MIPI2_TXDN0",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane0_n"
+      ]
+    },
+    "E22": {
+      "name": "MIPI2_TXDP1",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane1_p"
+      ]
+    },
+    "E21": {
+      "name": "MIPI2_TXDN1",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane1_n"
+      ]
+    },
+    "D21": {
+      "name": "MIPI2_TXDP2",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane2_p"
+      ]
+    },
+    "C21": {
+      "name": "MIPI2_TXDN2",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane2_n"
+      ]
+    },
+    "C22": {
+      "name": "MIPI2_TXDP3",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane3_p"
+      ]
+    },
+    "B22": {
+      "name": "MIPI2_TXDN3",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane3_n"
+      ]
+    },
+    "B21": {
+      "name": "MIPI2_TXDP4",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane4_p"
+      ]
+    },
+    "A21": {
+      "name": "MIPI2_TXDN4",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_tx_lane4_n"
+      ]
+    },
+    "G20": {
+      "name": "MIPI2_RXDP4",
+      "bank": "TR",
+      "voltage_domain": "1.8",
+      "functions": [
+        "mipi2_rx_lane4_p"
+      ]
+    },
+    "P16": {
+      "name": "REF_RES_2A",
+      "bank": "2A_2B_2C",
+      "voltage_domain": "1.8",
+      "functions": [
+        "ref_res",
+        "gpio"
+      ]
+    },
+    "G5": {
+      "name": "REF_RES_4A",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "ref_res",
+        "gpio"
+      ]
+    },
+    "H5": {
+      "name": "REF_RES_4B",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "ref_res",
+        "gpio"
+      ]
+    },
+    "M7": {
+      "name": "REF_RES_4D",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "ref_res",
+        "gpio"
+      ]
+    },
+    "C4": {
+      "name": "Q2_TXDP0",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx0_p"
+      ]
+    },
+    "D4": {
+      "name": "Q2_TXDN0",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx0_n"
+      ]
+    },
+    "A5": {
+      "name": "Q2_RXDP0",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx0_p"
+      ]
+    },
+    "B5": {
+      "name": "Q2_RXDN0",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx0_n"
+      ]
+    },
+    "C6": {
+      "name": "Q2_TXDP1",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx1_p"
+      ]
+    },
+    "D6": {
+      "name": "Q2_TXDN1",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx1_n"
+      ]
+    },
+    "A7": {
+      "name": "Q2_RXDP1",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx1_p"
+      ]
+    },
+    "B7": {
+      "name": "Q2_RXDN1",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx1_n"
+      ]
+    },
+    "C8": {
+      "name": "Q2_TXDP2",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx2_p"
+      ]
+    },
+    "D8": {
+      "name": "Q2_TXDN2",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx2_n"
+      ]
+    },
+    "A9": {
+      "name": "Q2_RXDP2",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx2_p"
+      ]
+    },
+    "B9": {
+      "name": "Q2_RXDN2",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx2_n"
+      ]
+    },
+    "C10": {
+      "name": "Q2_TXDP3",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx3_p"
+      ]
+    },
+    "D10": {
+      "name": "Q2_TXDN3",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_tx3_n"
+      ]
+    },
+    "A11": {
+      "name": "Q2_RXDP3",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx3_p"
+      ]
+    },
+    "B11": {
+      "name": "Q2_RXDN3",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_rx3_n"
+      ]
+    },
+    "E11": {
+      "name": "Q2_REFCLK0_P",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_refclk0_p"
+      ]
+    },
+    "F11": {
+      "name": "Q2_REFCLK0_N",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_refclk0_n"
+      ]
+    },
+    "E13": {
+      "name": "Q2_REFCLK1_P",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_refclk1_p"
+      ]
+    },
+    "F13": {
+      "name": "Q2_REFCLK1_N",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "pcie_refclk1_n"
+      ]
+    },
+    "G13": {
+      "name": "Q2_CAL_RES",
+      "bank": "Q2",
+      "voltage_domain": "1.8",
+      "functions": [
+        "qse2_calibration",
+        "pcie2_calibration",
+        "gpio"
+      ]
+    },
+    "J6": {
+      "name": "GPIOR_144_PERST_Q2_N",
+      "bank": "BR0",
+      "voltage_domain": "3.3",
+      "functions": [
+        "pcie_perstn",
+        "gpio"
+      ]
+    },
+    "N1": {
+      "name": "GPIOB_P_04_CDI30_EXTFB",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P1": {
+      "name": "GPIOB_N_04_CDI29",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P4": {
+      "name": "GPIOB_P_05_CDI28_PLLIN0",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk",
+        "pll_clkin"
+      ]
+    },
+    "P3": {
+      "name": "GPIOB_N_05_CDI27",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R6": {
+      "name": "GPIOB_P_06_CDI26_EXTFB",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "T6": {
+      "name": "GPIOB_N_06_CDI25",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L2": {
+      "name": "GPIOB_P_07_CDI24_PLLIN0",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk",
+        "pll_clkin"
+      ]
+    },
+    "M2": {
+      "name": "GPIOB_N_07_CDI23",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N7": {
+      "name": "GPIOB_P_08_CDI22_EXTFB",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P6": {
+      "name": "GPIOB_N_08",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N6": {
+      "name": "GPIOB_P_09",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N5": {
+      "name": "GPIOB_N_09",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N3": {
+      "name": "GPIOB_P_12",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N2": {
+      "name": "GPIOB_N_12",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K1": {
+      "name": "GPIOB_P_13_CDI21_CLK0_P",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "L1": {
+      "name": "GPIOB_N_13_CDI20_CLK0_N",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "P5": {
+      "name": "GPIOB_P_14_CDI19_CLK1_P",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "R4": {
+      "name": "GPIOB_N_14_CDI18_CLK1_N",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "E2": {
+      "name": "GPIOB_P_36_CDI7",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "D2": {
+      "name": "GPIOB_N_36_CDI6",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "F3": {
+      "name": "GPIOB_P_37_CDI5",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "F2": {
+      "name": "GPIOB_N_37_CDI4",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "B2": {
+      "name": "GPIOB_P_41",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "B1": {
+      "name": "GPIOB_N_41",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "T16": {
+      "name": "GPIOT_N_14",
+      "bank": "2A_2B_2C",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L8": {
+      "name": "GPIOR_140_PLLIN1",
+      "bank": "BR0",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk",
+        "pll_clkin"
+      ]
+    },
+    "K8": {
+      "name": "GPIOR_141",
+      "bank": "BR0",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M8": {
+      "name": "GPIOR_142_CLK8",
+      "bank": "BR0",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "K7": {
+      "name": "GPIOR_143_CLK9",
+      "bank": "BR0",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "K6": {
+      "name": "GPIOR_145_PLLIN1",
+      "bank": "BR0",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk",
+        "pll_clkin"
+      ]
+    },
+    "M20": {
+      "name": "GPIOR_93_PLLIN1",
+      "bank": "TR1",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk",
+        "pll_clkin"
+      ]
+    },
+    "N20": {
+      "name": "GPIOR_94",
+      "bank": "TR1",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N21": {
+      "name": "GPIOR_95_CLK12",
+      "bank": "TR1",
+      "voltage_domain": "3.3",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "M4": {
+      "name": "GPIOB_P_15_CDI17_CLK2_P",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "M3": {
+      "name": "GPIOB_N_15_CDI16_CLK2_N",
+      "bank": "4D",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    },
+    "A2": {
+      "name": "GPIOB_N_43_CSI_CLK10_N",
+      "bank": "4A_4B",
+      "voltage_domain": "1.8",
+      "functions": [
+        "gpio",
+        "gclk",
+        "pll_refclk"
+      ]
+    }
+  }
+}

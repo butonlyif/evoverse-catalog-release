@@ -1,0 +1,7051 @@
+{
+  "part": "TJ375N1156X",
+  "pins": {
+    "A1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A2": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane0_p",
+        "qse0_rx0_p",
+        "pcie0_lane0_p"
+      ]
+    },
+    "A3": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A4": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane1_p",
+        "qse0_rx1_p",
+        "pcie0_lane1_p"
+      ]
+    },
+    "A5": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A6": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane2_p",
+        "qse0_rx2_p",
+        "pcie0_lane2_p"
+      ]
+    },
+    "A7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A8": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane3_p",
+        "qse0_rx3_p",
+        "pcie0_lane3_p"
+      ]
+    },
+    "A9": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A10": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane0_p",
+        "qse1_rx0_p",
+        "pcie1_lane0_p"
+      ]
+    },
+    "A11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A12": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane1_p",
+        "qse1_rx1_p",
+        "pcie1_lane1_p"
+      ]
+    },
+    "A13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A14": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane2_p",
+        "qse1_rx2_p",
+        "pcie1_lane2_p"
+      ]
+    },
+    "A15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A16": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane3_p",
+        "qse1_rx3_p",
+        "pcie1_lane3_p"
+      ]
+    },
+    "A17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A18": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane0_p",
+        "qse2_rx0_p",
+        "pcie2_lane0_p"
+      ]
+    },
+    "A19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A20": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane1_p",
+        "qse2_rx1_p",
+        "pcie2_lane1_p"
+      ]
+    },
+    "A21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A22": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane2_p",
+        "qse2_rx2_p",
+        "pcie2_lane2_p"
+      ]
+    },
+    "A23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A24": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane3_p",
+        "qse2_rx3_p",
+        "pcie2_lane3_p"
+      ]
+    },
+    "A25": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A26": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane0_p",
+        "qse3_rx0_p",
+        "pcie3_lane0_p"
+      ]
+    },
+    "A27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A28": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane1_p",
+        "qse3_rx1_p",
+        "pcie3_lane1_p"
+      ]
+    },
+    "A29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A30": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane2_p",
+        "qse3_rx2_p",
+        "pcie3_lane2_p"
+      ]
+    },
+    "A31": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A32": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane3_p",
+        "qse3_rx3_p",
+        "pcie3_lane3_p"
+      ]
+    },
+    "A33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "A34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA1": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AA2": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA3": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AA4": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AA5": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AA6": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AA7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA8": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA9": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA10": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA11": {
+      "bank": "BL1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA12": {
+      "bank": "BL",
+      "functions": [
+        "power"
+      ]
+    },
+    "AA13": {
+      "bank": "BL",
+      "functions": [
+        "power"
+      ]
+    },
+    "AA14": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AA15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AA17": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AA18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AA20": {
+      "functions": [
+        "power"
+      ]
+    },
+    "AA21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA22": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA24": {
+      "bank": "2B",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "AA25": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA26": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA27": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AA28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA29": {
+      "bank": "2A",
+      "functions": [
+        "ref_res"
+      ]
+    },
+    "AA30": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AA31": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AA32": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AA33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AA34": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AB1": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AB2": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AB3": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AB4": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AB5": {
+      "bank": "4D",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB6": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AB7": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "AB8": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "AB9": {
+      "bank": "BL2",
+      "functions": [
+        "gpio",
+        "mipi_clkin"
+      ]
+    },
+    "AB10": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AB11": {
+      "bank": "BL1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AB12": {
+      "bank": "BL1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB13": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AB15": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AB18": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AB21": {
+      "bank": "TL0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB22": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AB23": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AB24": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AB25": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AB26": {
+      "bank": "2B",
+      "functions": [
+        "power"
+      ]
+    },
+    "AB27": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AB28": {
+      "bank": "2D",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "AB29": {
+      "bank": "2A",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AB30": {
+      "bank": "2A",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AB31": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AB32": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AB33": {
+      "bank": "2A",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AB34": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC1": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC2": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC3": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AC4": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AC5": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AC6": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC7": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC8": {
+      "bank": "4D",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC9": {
+      "bank": "BL2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC10": {
+      "bank": "BL1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC11": {
+      "bank": "BL1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AC13": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC14": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AC16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC17": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AC19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC20": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AC22": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC23": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AC24": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AC25": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk",
+        "rclk"
+      ]
+    },
+    "AC26": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk",
+        "rclk"
+      ]
+    },
+    "AC27": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC28": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AC30": {
+      "bank": "2A",
+      "functions": [
+        "power"
+      ]
+    },
+    "AC31": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC32": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AC33": {
+      "bank": "2A",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AC34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD2": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD3": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "AD4": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AD5": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "AD6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD7": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD8": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD9": {
+      "bank": "BL2",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AD10": {
+      "bank": "BL2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD11": {
+      "bank": "BL1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD12": {
+      "bank": "BL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD13": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AD14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD15": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AD16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AD17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD18": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AD19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AD20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD21": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AD22": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD23": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AD24": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_refclk"
+      ]
+    },
+    "AD25": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_refclk"
+      ]
+    },
+    "AD26": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk",
+        "rclk"
+      ]
+    },
+    "AD27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD28": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD29": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD30": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD31": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD32": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AD33": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AD34": {
+      "bank": "2A",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "AE1": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane0_n"
+      ]
+    },
+    "AE2": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane0_p"
+      ]
+    },
+    "AE3": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane2_p"
+      ]
+    },
+    "AE4": {
+      "bank": "BL",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE5": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane3_p"
+      ]
+    },
+    "AE6": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane4_p"
+      ]
+    },
+    "AE7": {
+      "bank": "BL3",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AE8": {
+      "bank": "BL3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE9": {
+      "bank": "BL2",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE10": {
+      "bank": "BL2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE11": {
+      "bank": "BL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE12": {
+      "bank": "BL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AE14": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AE16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE17": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AE19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE20": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AE22": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE23": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE24": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE25": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE26": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AE27": {
+      "bank": "2B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk",
+        "rclk"
+      ]
+    },
+    "AE28": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE29": {
+      "bank": "2A",
+      "functions": [
+        "power"
+      ]
+    },
+    "AE30": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AE31": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE32": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AE33": {
+      "bank": "2A",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "AE34": {
+      "bank": "2A",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "AF1": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane1_p"
+      ]
+    },
+    "AF2": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AF3": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane2_n"
+      ]
+    },
+    "AF4": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane2_n"
+      ]
+    },
+    "AF5": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane3_n"
+      ]
+    },
+    "AF6": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane4_n"
+      ]
+    },
+    "AF7": {
+      "bank": "BL3",
+      "functions": [
+        "power"
+      ]
+    },
+    "AF8": {
+      "bank": "BL3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF9": {
+      "bank": "BL3",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AF10": {
+      "bank": "BL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF11": {
+      "bank": "BL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF12": {
+      "bank": "BL0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AF13": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AF14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AF15": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AF16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AF17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AF18": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AF19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AF20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AF21": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AF22": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AF24": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF25": {
+      "bank": "TL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF26": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF27": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF28": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AF29": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF30": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF31": {
+      "bank": "2A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AF32": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane2_p"
+      ]
+    },
+    "AF33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AF34": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane0_p"
+      ]
+    },
+    "AG1": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_rx_lane1_n"
+      ]
+    },
+    "AG2": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane1_n"
+      ]
+    },
+    "AG3": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane1_p"
+      ]
+    },
+    "AG4": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane2_p"
+      ]
+    },
+    "AG5": {
+      "bank": "BL",
+      "functions": [
+        "power"
+      ]
+    },
+    "AG6": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane4_n"
+      ]
+    },
+    "AG7": {
+      "bank": "BL3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AG8": {
+      "bank": "BL3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AG9": {
+      "bank": "BL3",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "AG10": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AG11": {
+      "bank": "BL0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AG12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AG13": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AG14": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AG15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AG16": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AG17": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AG18": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_cal"
+      ]
+    },
+    "AG19": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AG20": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AG21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AG22": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AG23": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AG24": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AG25": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AG26": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AG27": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "power"
+      ]
+    },
+    "AG28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AG29": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AG30": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane4_p"
+      ]
+    },
+    "AG31": {
+      "bank": "TL",
+      "functions": [
+        "power"
+      ]
+    },
+    "AG32": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane2_n"
+      ]
+    },
+    "AG33": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane1_p"
+      ]
+    },
+    "AG34": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane0_n"
+      ]
+    },
+    "AH1": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane0_n"
+      ]
+    },
+    "AH2": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane0_p"
+      ]
+    },
+    "AH3": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AH4": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane3_n"
+      ]
+    },
+    "AH5": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane3_p"
+      ]
+    },
+    "AH6": {
+      "bank": "BL",
+      "functions": [
+        "mipi0_tx_lane4_p"
+      ]
+    },
+    "AH7": {
+      "bank": "BL3",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AH8": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AH9": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AH10": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AH11": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AH12": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_cal"
+      ]
+    },
+    "AH13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AH14": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AH15": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AH16": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AH17": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AH18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AH19": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AH20": {
+      "functions": [
+        "nc"
+      ]
+    },
+    "AH21": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AH22": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AH23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AH24": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AH25": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AH26": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AH27": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "AH28": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gpio",
+        "mipi_clkin"
+      ]
+    },
+    "AH29": {
+      "bank": "TL1_TL5",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "AH30": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane4_n"
+      ]
+    },
+    "AH31": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane3_n"
+      ]
+    },
+    "AH32": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane3_p"
+      ]
+    },
+    "AH33": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_rx_lane1_n"
+      ]
+    },
+    "AH34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ2": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ3": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ4": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ5": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ7": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ8": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_rst_n"
+      ]
+    },
+    "AJ9": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AJ10": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AJ11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ12": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ13": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ14": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ15": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ17": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ18": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ19": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ20": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AJ21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ22": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AJ23": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AJ24": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_rst_n"
+      ]
+    },
+    "AJ25": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AJ26": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ27": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ29": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ30": {
+      "bank": "TL",
+      "functions": [
+        "power"
+      ]
+    },
+    "AJ31": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane2_p"
+      ]
+    },
+    "AJ32": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AJ33": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane0_n"
+      ]
+    },
+    "AJ34": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane0_p"
+      ]
+    },
+    "AK1": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK2": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK3": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK4": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AK5": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK6": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK7": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AK8": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_cke"
+      ]
+    },
+    "AK9": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AK10": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AK11": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK12": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AK13": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AK15": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AK16": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK17": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AK18": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AK20": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AK21": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK22": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AK23": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AK24": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AK25": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AK26": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK27": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK28": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AK29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AK30": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AK31": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane2_n"
+      ]
+    },
+    "AK32": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane1_n"
+      ]
+    },
+    "AK33": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane1_p"
+      ]
+    },
+    "AK34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AL1": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL2": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AL3": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AL4": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL5": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AL6": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AL8": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AL9": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_cke"
+      ]
+    },
+    "AL10": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AL11": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AL13": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL14": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL15": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AL16": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AL18": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL19": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL20": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL21": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AL22": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AL23": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AL24": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_cke"
+      ]
+    },
+    "AL25": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AL26": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AL28": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL29": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AL30": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AL31": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane4_n"
+      ]
+    },
+    "AL32": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane4_p"
+      ]
+    },
+    "AL33": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane3_n"
+      ]
+    },
+    "AL34": {
+      "bank": "TL",
+      "functions": [
+        "mipi1_tx_lane3_p"
+      ]
+    },
+    "AM1": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AM2": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AM3": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM4": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM5": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AM6": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM7": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AM8": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM9": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_ck_n"
+      ]
+    },
+    "AM10": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AM11": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM12": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AM13": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM14": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AM16": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM17": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM18": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM19": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AM21": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM22": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM23": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM24": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_cke"
+      ]
+    },
+    "AM25": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AM26": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM27": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM28": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM29": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AM30": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AM31": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM32": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AM33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AM34": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AN1": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AN2": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN3": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AN4": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AN5": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AN6": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AN7": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AN8": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AN9": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_ck_p"
+      ]
+    },
+    "AN10": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AN11": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AN12": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AN13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AN14": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN15": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AN16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AN17": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AN19": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AN20": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN21": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AN22": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AN24": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_ck_n"
+      ]
+    },
+    "AN25": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN26": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AN27": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AN28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AN29": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN30": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AN31": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN32": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AN33": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AN34": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP2": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP3": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP4": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP5": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP6": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP7": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP8": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_cs_n"
+      ]
+    },
+    "AP9": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP10": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AP11": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AP12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP13": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AP14": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "AP15": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AP16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP17": {
+      "bank": "DDR0",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP18": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AP19": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AP20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP21": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AP22": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP23": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_addr"
+      ]
+    },
+    "AP24": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_ck_p"
+      ]
+    },
+    "AP25": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP26": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AP27": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_n"
+      ]
+    },
+    "AP28": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "AP30": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dqs_p"
+      ]
+    },
+    "AP31": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "AP32": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dm"
+      ]
+    },
+    "AP33": {
+      "bank": "DDR1",
+      "functions": [
+        "ddr_dq"
+      ]
+    },
+    "AP34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B2": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane0_n",
+        "qse0_rx0_n",
+        "pcie0_lane0_n"
+      ]
+    },
+    "B3": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B4": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane1_n",
+        "qse0_rx1_n",
+        "pcie0_lane1_n"
+      ]
+    },
+    "B5": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B6": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane2_n",
+        "qse0_rx2_n",
+        "pcie0_lane2_n"
+      ]
+    },
+    "B7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B8": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_rx_lane3_n",
+        "qse0_rx3_n",
+        "pcie0_lane3_n"
+      ]
+    },
+    "B9": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B10": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane0_n",
+        "qse1_rx0_n",
+        "pcie1_lane0_n"
+      ]
+    },
+    "B11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B12": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane1_n",
+        "qse1_rx1_n",
+        "pcie1_lane1_n"
+      ]
+    },
+    "B13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B14": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane2_n",
+        "qse1_rx2_n",
+        "pcie1_lane2_n"
+      ]
+    },
+    "B15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B16": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_rx_lane3_n",
+        "qse1_rx3_n",
+        "pcie1_lane3_n"
+      ]
+    },
+    "B17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B18": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane0_n",
+        "qse2_rx0_n",
+        "pcie2_lane0_n"
+      ]
+    },
+    "B19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B20": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane1_n",
+        "qse2_rx1_n",
+        "pcie2_lane1_n"
+      ]
+    },
+    "B21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B22": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane2_n",
+        "qse2_rx2_n",
+        "pcie2_lane2_n"
+      ]
+    },
+    "B23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B24": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_rx_lane3_n",
+        "qse2_rx3_n",
+        "pcie2_lane3_n"
+      ]
+    },
+    "B25": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B26": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane0_n",
+        "qse3_rx0_n",
+        "pcie3_lane0_n"
+      ]
+    },
+    "B27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B28": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane1_n",
+        "qse3_rx1_n",
+        "pcie3_lane1_n"
+      ]
+    },
+    "B29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B30": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane2_n",
+        "qse3_rx2_n",
+        "pcie3_lane2_n"
+      ]
+    },
+    "B31": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B32": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_rx_lane3_n",
+        "qse3_rx3_n",
+        "pcie3_lane3_n"
+      ]
+    },
+    "B33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "B34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane4_n"
+      ]
+    },
+    "C1": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane0_p",
+        "qse0_tx0_p",
+        "pcie0_lane0_p"
+      ]
+    },
+    "C2": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C3": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane1_p",
+        "qse0_tx1_p",
+        "pcie0_lane1_p"
+      ]
+    },
+    "C4": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C5": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane2_p",
+        "qse0_tx2_p",
+        "pcie0_lane2_p"
+      ]
+    },
+    "C6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C7": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane3_p",
+        "qse0_tx3_p",
+        "pcie0_lane3_p"
+      ]
+    },
+    "C8": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C9": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane0_p",
+        "qse1_tx0_p",
+        "pcie1_lane0_p"
+      ]
+    },
+    "C10": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C11": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane1_p",
+        "qse1_tx1_p",
+        "pcie1_lane1_p"
+      ]
+    },
+    "C12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C13": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane2_p",
+        "qse1_tx2_p",
+        "pcie1_lane2_p"
+      ]
+    },
+    "C14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C15": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane3_p",
+        "qse1_tx3_p",
+        "pcie1_lane3_p"
+      ]
+    },
+    "C16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C17": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane0_p",
+        "qse2_tx0_p",
+        "pcie2_lane0_p"
+      ]
+    },
+    "C18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C19": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane1_p",
+        "qse2_tx1_p",
+        "pcie2_lane1_p"
+      ]
+    },
+    "C20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C21": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane2_p",
+        "qse2_tx2_p",
+        "pcie2_lane2_p"
+      ]
+    },
+    "C22": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C23": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane3_p",
+        "qse2_tx3_p",
+        "pcie2_lane3_p"
+      ]
+    },
+    "C24": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C25": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane0_p",
+        "qse3_tx0_p",
+        "pcie3_lane0_p"
+      ]
+    },
+    "C26": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C27": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane1_p",
+        "qse3_tx1_p",
+        "pcie3_lane1_p"
+      ]
+    },
+    "C28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C29": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane2_p",
+        "qse3_tx2_p",
+        "pcie3_lane2_p"
+      ]
+    },
+    "C30": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C31": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane3_p",
+        "qse3_tx3_p",
+        "pcie3_lane3_p"
+      ]
+    },
+    "C32": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "C34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane4_p"
+      ]
+    },
+    "D1": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane0_n",
+        "qse0_tx0_n",
+        "pcie0_lane0_n"
+      ]
+    },
+    "D2": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D3": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane1_n",
+        "qse0_tx1_n",
+        "pcie0_lane1_n"
+      ]
+    },
+    "D4": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D5": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane2_n",
+        "qse0_tx2_n",
+        "pcie0_lane2_n"
+      ]
+    },
+    "D6": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D7": {
+      "bank": "Q0",
+      "functions": [
+        "mipi0_tx_lane3_n",
+        "qse0_tx3_n",
+        "pcie0_lane3_n"
+      ]
+    },
+    "D8": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D9": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane0_n",
+        "qse1_tx0_n",
+        "pcie1_lane0_n"
+      ]
+    },
+    "D10": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D11": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane1_n",
+        "qse1_tx1_n",
+        "pcie1_lane1_n"
+      ]
+    },
+    "D12": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D13": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane2_n",
+        "qse1_tx2_n",
+        "pcie1_lane2_n"
+      ]
+    },
+    "D14": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D15": {
+      "bank": "Q1",
+      "functions": [
+        "mipi1_tx_lane3_n",
+        "qse1_tx3_n",
+        "pcie1_lane3_n"
+      ]
+    },
+    "D16": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "D17": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane0_n",
+        "qse2_tx0_n",
+        "pcie2_lane0_n"
+      ]
+    },
+    "D18": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D19": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane1_n",
+        "qse2_tx1_n",
+        "pcie2_lane1_n"
+      ]
+    },
+    "D20": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D21": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane2_n",
+        "qse2_tx2_n",
+        "pcie2_lane2_n"
+      ]
+    },
+    "D22": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D23": {
+      "bank": "Q2",
+      "functions": [
+        "mipi2_tx_lane3_n",
+        "qse2_tx3_n",
+        "pcie2_lane3_n"
+      ]
+    },
+    "D24": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D25": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane0_n",
+        "qse3_tx0_n",
+        "pcie3_lane0_n"
+      ]
+    },
+    "D26": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D27": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane1_n",
+        "qse3_tx1_n",
+        "pcie3_lane1_n"
+      ]
+    },
+    "D28": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D29": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane2_n",
+        "qse3_tx2_n",
+        "pcie3_lane2_n"
+      ]
+    },
+    "D30": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D31": {
+      "bank": "Q3",
+      "functions": [
+        "mipi3_tx_lane3_n",
+        "qse3_tx3_n",
+        "pcie3_lane3_n"
+      ]
+    },
+    "D32": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "D33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "D34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane3_n"
+      ]
+    },
+    "E1": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E2": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E3": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E4": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E5": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E7": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E8": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E9": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E10": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E11": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E13": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E15": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "E16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E17": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E19": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E21": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E22": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E23": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E24": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E25": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E26": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E27": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E29": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E30": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E31": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "E32": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "E34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane3_p"
+      ]
+    },
+    "F1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F2": {
+      "bank": "4A",
+      "functions": [
+        "cdone"
+      ]
+    },
+    "F3": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F4": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F5": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F8": {
+      "bank": "Q0",
+      "functions": [
+        "qse0_refclkn",
+        "pcie0_refclkn"
+      ]
+    },
+    "F9": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F10": {
+      "bank": "Q0",
+      "functions": [
+        "qse0_refclkn",
+        "pcie0_refclkn"
+      ]
+    },
+    "F11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F12": {
+      "bank": "Q1",
+      "functions": [
+        "qse1_refclkn",
+        "pcie1_refclkn"
+      ]
+    },
+    "F13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F14": {
+      "bank": "Q1",
+      "functions": [
+        "qse1_refclkn",
+        "pcie1_refclkn"
+      ]
+    },
+    "F15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F16": {
+      "bank": "Q2",
+      "functions": [
+        "qse2_refclkn",
+        "pcie2_refclkn"
+      ]
+    },
+    "F17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F18": {
+      "bank": "Q2",
+      "functions": [
+        "qse2_refclkn",
+        "pcie2_refclkn"
+      ]
+    },
+    "F19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F20": {
+      "bank": "Q3",
+      "functions": [
+        "qse3_refclkn",
+        "pcie3_refclkn"
+      ]
+    },
+    "F21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F22": {
+      "bank": "Q3",
+      "functions": [
+        "qse3_refclkn",
+        "pcie3_refclkn"
+      ]
+    },
+    "F23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F24": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F25": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F26": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F30": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F31": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F32": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "F33": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane2_n"
+      ]
+    },
+    "F34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane2_p"
+      ]
+    },
+    "G1": {
+      "bank": "4A",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "G2": {
+      "bank": "4A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "G3": {
+      "bank": "4A",
+      "functions": [
+        "power"
+      ]
+    },
+    "G4": {
+      "bank": "4A",
+      "functions": [
+        "creset_n"
+      ]
+    },
+    "G5": {
+      "bank": "BR4",
+      "functions": [
+        "jtag_tdi"
+      ],
+      "reserved_for": "JTAG"
+    },
+    "G6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "G7": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "G8": {
+      "bank": "Q0",
+      "functions": [
+        "qse0_refclkp",
+        "pcie0_refclkp"
+      ]
+    },
+    "G9": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "G10": {
+      "bank": "Q0",
+      "functions": [
+        "qse0_refclkp",
+        "pcie0_refclkp"
+      ]
+    },
+    "G11": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "G12": {
+      "bank": "Q1",
+      "functions": [
+        "qse1_refclkp",
+        "pcie1_refclkp"
+      ]
+    },
+    "G13": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "G14": {
+      "bank": "Q1",
+      "functions": [
+        "qse1_refclkp",
+        "pcie1_refclkp"
+      ]
+    },
+    "G15": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "G16": {
+      "bank": "Q2",
+      "functions": [
+        "qse2_refclkp",
+        "pcie2_refclkp"
+      ]
+    },
+    "G17": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "G18": {
+      "bank": "Q2",
+      "functions": [
+        "qse2_refclkp",
+        "pcie2_refclkp"
+      ]
+    },
+    "G19": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "G20": {
+      "bank": "Q3",
+      "functions": [
+        "qse3_refclkp",
+        "pcie3_refclkp"
+      ]
+    },
+    "G21": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "G22": {
+      "bank": "Q3",
+      "functions": [
+        "qse3_refclkp",
+        "pcie3_refclkp"
+      ]
+    },
+    "G23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "G24": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "G25": {
+      "bank": "TR5",
+      "functions": [
+        "power"
+      ]
+    },
+    "G26": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "G27": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "G28": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "G29": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "G30": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane1_n"
+      ]
+    },
+    "G31": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane1_p"
+      ]
+    },
+    "G32": {
+      "bank": "TR",
+      "functions": [
+        "power"
+      ]
+    },
+    "G33": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane4_n"
+      ]
+    },
+    "G34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane4_p"
+      ]
+    },
+    "H1": {
+      "bank": "4A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H2": {
+      "bank": "4A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H3": {
+      "bank": "4A",
+      "functions": [
+        "power"
+      ]
+    },
+    "H4": {
+      "bank": "4A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H5": {
+      "bank": "BR4",
+      "functions": [
+        "jtag_tck"
+      ],
+      "reserved_for": "JTAG"
+    },
+    "H6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "H7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "H8": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "H9": {
+      "bank": "Q0",
+      "functions": [
+        "qse0_calibration",
+        "pcie0_calibration"
+      ]
+    },
+    "H10": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "H11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "H12": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "H13": {
+      "bank": "Q1",
+      "functions": [
+        "qse1_calibration",
+        "pcie1_calibration"
+      ]
+    },
+    "H14": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "H15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "H16": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "H17": {
+      "bank": "Q2",
+      "functions": [
+        "qse2_calibration",
+        "pcie2_calibration"
+      ]
+    },
+    "H18": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "H19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "H20": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "H21": {
+      "bank": "Q3",
+      "functions": [
+        "qse3_calibration",
+        "pcie3_calibration"
+      ]
+    },
+    "H22": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "H23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "H24": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H25": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H26": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H27": {
+      "bank": "TR5",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H28": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "H29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "H30": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane0_n"
+      ]
+    },
+    "H31": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_tx_lane0_p"
+      ]
+    },
+    "H32": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane3_n"
+      ]
+    },
+    "H33": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane3_p"
+      ]
+    },
+    "H34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J2": {
+      "bank": "4A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "J3": {
+      "bank": "4A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "J4": {
+      "bank": "4A",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "J5": {
+      "bank": "BR4",
+      "functions": [
+        "jtag_tms"
+      ],
+      "reserved_for": "JTAG"
+    },
+    "J6": {
+      "bank": "BR4",
+      "functions": [
+        "jtag_tdo"
+      ],
+      "reserved_for": "JTAG"
+    },
+    "J7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J8": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J9": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J10": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J13": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "J14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J15": {
+      "bank": "Q0_Q1",
+      "functions": [
+        "power"
+      ]
+    },
+    "J16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J17": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "J18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J19": {
+      "bank": "Q2_Q3",
+      "functions": [
+        "power"
+      ]
+    },
+    "J20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J22": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J24": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "J25": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "J26": {
+      "bank": "TR3",
+      "functions": [
+        "power"
+      ]
+    },
+    "J27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J28": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "J29": {
+      "bank": "2E",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "J30": {
+      "bank": "2E",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "J31": {
+      "bank": "2E",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "J32": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "J33": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane2_n"
+      ]
+    },
+    "J34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane2_p"
+      ]
+    },
+    "K1": {
+      "bank": "4A",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "K2": {
+      "bank": "4A",
+      "functions": [
+        "power"
+      ]
+    },
+    "K3": {
+      "bank": "4A",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "K4": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "K5": {
+      "bank": "4A",
+      "functions": [
+        "ref_res"
+      ]
+    },
+    "K6": {
+      "bank": "BR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K7": {
+      "bank": "BR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K8": {
+      "bank": "BR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K9": {
+      "bank": "BR4",
+      "functions": [
+        "power"
+      ]
+    },
+    "K10": {
+      "bank": "BR4",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K11": {
+      "bank": "BR4",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K12": {
+      "bank": "BR4",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K13": {
+      "functions": [
+        "power"
+      ]
+    },
+    "K14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "K15": {
+      "bank": "BR",
+      "functions": [
+        "power"
+      ]
+    },
+    "K16": {
+      "functions": [
+        "power"
+      ]
+    },
+    "K17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "K18": {
+      "functions": [
+        "power"
+      ]
+    },
+    "K19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "K20": {
+      "functions": [
+        "power"
+      ]
+    },
+    "K21": {
+      "functions": [
+        "power"
+      ]
+    },
+    "K22": {
+      "bank": "TR",
+      "functions": [
+        "power"
+      ]
+    },
+    "K23": {
+      "bank": "TR2",
+      "functions": [
+        "power"
+      ]
+    },
+    "K24": {
+      "bank": "TR2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K25": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "K26": {
+      "bank": "TR2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K27": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K28": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "K29": {
+      "bank": "2E",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "K30": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "K31": {
+      "bank": "TR",
+      "functions": [
+        "power"
+      ]
+    },
+    "K32": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane0_n"
+      ]
+    },
+    "K33": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane1_n"
+      ]
+    },
+    "K34": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane1_p"
+      ]
+    },
+    "L1": {
+      "bank": "4A",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "L2": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L3": {
+      "bank": "4A",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "L4": {
+      "bank": "4A",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "L5": {
+      "bank": "4A",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "L6": {
+      "bank": "BR3",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "L7": {
+      "bank": "BR3",
+      "functions": [
+        "power"
+      ]
+    },
+    "L8": {
+      "bank": "BR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L9": {
+      "bank": "BR4",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L10": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L11": {
+      "bank": "BR4",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L12": {
+      "bank": "BR",
+      "functions": [
+        "power"
+      ]
+    },
+    "L13": {
+      "functions": [
+        "power"
+      ]
+    },
+    "L14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L15": {
+      "functions": [
+        "power"
+      ]
+    },
+    "L16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L17": {
+      "functions": [
+        "power"
+      ]
+    },
+    "L18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L19": {
+      "functions": [
+        "power"
+      ]
+    },
+    "L20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L21": {
+      "functions": [
+        "power"
+      ]
+    },
+    "L22": {
+      "bank": "TR2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L23": {
+      "bank": "TR2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L24": {
+      "bank": "TR2",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L25": {
+      "bank": "TR2",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "L26": {
+      "bank": "TR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L27": {
+      "bank": "TR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "L28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L29": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "L30": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "L31": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "L32": {
+      "bank": "TR",
+      "functions": [
+        "mipi2_rx_lane0_p"
+      ]
+    },
+    "L33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "L34": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_extfb"
+      ]
+    },
+    "M1": {
+      "bank": "4B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "M2": {
+      "bank": "4B",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "M3": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M4": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M5": {
+      "bank": "4B",
+      "functions": [
+        "power"
+      ]
+    },
+    "M6": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M7": {
+      "bank": "BR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M8": {
+      "bank": "BR3",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M9": {
+      "bank": "BR4",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M10": {
+      "bank": "BR0",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "M11": {
+      "bank": "BR0",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "M12": {
+      "bank": "BR0",
+      "functions": [
+        "gpio",
+        "pcie_perstn"
+      ]
+    },
+    "M13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "M14": {
+      "functions": [
+        "power"
+      ]
+    },
+    "M15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "M16": {
+      "functions": [
+        "power"
+      ]
+    },
+    "M17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "M18": {
+      "functions": [
+        "power"
+      ]
+    },
+    "M19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "M20": {
+      "functions": [
+        "power"
+      ]
+    },
+    "M21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "M22": {
+      "bank": "TR0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M23": {
+      "bank": "TR0",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "M24": {
+      "bank": "TR0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M25": {
+      "bank": "TR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M26": {
+      "bank": "TR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "M27": {
+      "bank": "TR1",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "M28": {
+      "bank": "TR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M29": {
+      "bank": "2E",
+      "functions": [
+        "power"
+      ]
+    },
+    "M30": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "M31": {
+      "bank": "2E",
+      "functions": [
+        "power"
+      ]
+    },
+    "M32": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "M33": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "M34": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_extfb"
+      ]
+    },
+    "N1": {
+      "bank": "4B",
+      "functions": [
+        "configuration",
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "N2": {
+      "bank": "4B",
+      "functions": [
+        "configuration",
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "N3": {
+      "bank": "4B",
+      "functions": [
+        "power"
+      ]
+    },
+    "N4": {
+      "bank": "4B",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "N5": {
+      "bank": "4B",
+      "functions": [
+        "configuration",
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "N6": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N7": {
+      "bank": "BR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N8": {
+      "bank": "BR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "N9": {
+      "bank": "BR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N10": {
+      "bank": "BR0",
+      "functions": [
+        "gpio",
+        "pcie_perstn"
+      ]
+    },
+    "N11": {
+      "bank": "BR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "N12": {
+      "bank": "BR0",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "N13": {
+      "functions": [
+        "power"
+      ]
+    },
+    "N14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "N15": {
+      "functions": [
+        "power"
+      ]
+    },
+    "N16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "N17": {
+      "functions": [
+        "power"
+      ]
+    },
+    "N18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "N19": {
+      "functions": [
+        "power"
+      ]
+    },
+    "N20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "N21": {
+      "bank": "2D",
+      "functions": [
+        "power"
+      ]
+    },
+    "N22": {
+      "bank": "TR0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N23": {
+      "bank": "TR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "N24": {
+      "bank": "TR0",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N25": {
+      "bank": "TR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N26": {
+      "bank": "TR1",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "N27": {
+      "bank": "TR1",
+      "functions": [
+        "gpio",
+        "mipi_clkin"
+      ]
+    },
+    "N28": {
+      "bank": "TR1",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "N29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "N30": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N31": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "N32": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "N33": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "N34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P2": {
+      "bank": "4B",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "P3": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P4": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P5": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P7": {
+      "bank": "4B",
+      "functions": [
+        "ref_res"
+      ]
+    },
+    "P8": {
+      "bank": "4C",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "P9": {
+      "bank": "4C",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "P10": {
+      "bank": "BR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P12": {
+      "bank": "BR0",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "P13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P14": {
+      "functions": [
+        "power"
+      ]
+    },
+    "P15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P16": {
+      "functions": [
+        "power"
+      ]
+    },
+    "P17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P18": {
+      "functions": [
+        "power"
+      ]
+    },
+    "P19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P20": {
+      "functions": [
+        "power"
+      ]
+    },
+    "P21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P22": {
+      "bank": "2D",
+      "functions": [
+        "power"
+      ]
+    },
+    "P23": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P24": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P25": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P26": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "P28": {
+      "bank": "2E",
+      "functions": [
+        "ref_res"
+      ]
+    },
+    "P29": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P30": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P31": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P32": {
+      "bank": "2E",
+      "functions": [
+        "power"
+      ]
+    },
+    "P33": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "P34": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R1": {
+      "bank": "4B",
+      "functions": [
+        "configuration",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_extfb"
+      ]
+    },
+    "R2": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R3": {
+      "bank": "4B",
+      "functions": [
+        "configuration",
+        "gpio"
+      ]
+    },
+    "R4": {
+      "bank": "4B",
+      "functions": [
+        "power"
+      ]
+    },
+    "R5": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R6": {
+      "bank": "4B",
+      "functions": [
+        "power"
+      ]
+    },
+    "R7": {
+      "bank": "4C",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "R8": {
+      "bank": "4C",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "R9": {
+      "bank": "4C",
+      "functions": [
+        "power"
+      ]
+    },
+    "R10": {
+      "bank": "BR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R11": {
+      "bank": "BR1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R12": {
+      "functions": [
+        "power"
+      ]
+    },
+    "R13": {
+      "functions": [
+        "power"
+      ]
+    },
+    "R14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "R15": {
+      "functions": [
+        "power"
+      ]
+    },
+    "R16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "R17": {
+      "functions": [
+        "power"
+      ]
+    },
+    "R18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "R19": {
+      "functions": [
+        "power"
+      ]
+    },
+    "R20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "R21": {
+      "functions": [
+        "power"
+      ]
+    },
+    "R22": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R23": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R24": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_refclk"
+      ]
+    },
+    "R25": {
+      "bank": "2D",
+      "functions": [
+        "power"
+      ]
+    },
+    "R26": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "R27": {
+      "bank": "2D",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "R28": {
+      "bank": "2D",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "R29": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R30": {
+      "bank": "2E",
+      "functions": [
+        "power"
+      ]
+    },
+    "R31": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R32": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R33": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "R34": {
+      "bank": "2E",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "T1": {
+      "bank": "4B",
+      "functions": [
+        "configuration",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_extfb"
+      ]
+    },
+    "T2": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T3": {
+      "bank": "4B",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "T4": {
+      "bank": "4B",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "T5": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "T6": {
+      "bank": "4C",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    },
+    "T7": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T8": {
+      "bank": "4C",
+      "functions": [
+        "configuration",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "T9": {
+      "bank": "4C",
+      "functions": [
+        "configuration",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "T10": {
+      "bank": "4C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T11": {
+      "bank": "4C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T12": {
+      "bank": "4C",
+      "functions": [
+        "power"
+      ]
+    },
+    "T13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T14": {
+      "functions": [
+        "power"
+      ]
+    },
+    "T15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T16": {
+      "functions": [
+        "power"
+      ]
+    },
+    "T17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T18": {
+      "functions": [
+        "power"
+      ]
+    },
+    "T19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T20": {
+      "functions": [
+        "power"
+      ]
+    },
+    "T21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T22": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "T23": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T24": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_refclk"
+      ]
+    },
+    "T25": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T26": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T27": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "T28": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T29": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T30": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T31": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T32": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "T33": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "T34": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "U1": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U2": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U3": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U4": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U5": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "U6": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U7": {
+      "bank": "4C",
+      "functions": [
+        "configuration",
+        "gclk",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_refclk"
+      ]
+    },
+    "U8": {
+      "bank": "4C",
+      "functions": [
+        "configuration",
+        "gclk",
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_refclk"
+      ]
+    },
+    "U9": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U10": {
+      "bank": "4C",
+      "functions": [
+        "power"
+      ]
+    },
+    "U11": {
+      "bank": "4C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "U12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "U13": {
+      "functions": [
+        "power"
+      ]
+    },
+    "U14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "U15": {
+      "functions": [
+        "power"
+      ]
+    },
+    "U16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "U17": {
+      "functions": [
+        "power"
+      ]
+    },
+    "U18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "U19": {
+      "functions": [
+        "power"
+      ]
+    },
+    "U20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "U21": {
+      "functions": [
+        "power"
+      ]
+    },
+    "U22": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U23": {
+      "bank": "2B",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "U24": {
+      "bank": "2B",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "U25": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "U26": {
+      "bank": "2D",
+      "functions": [
+        "power"
+      ]
+    },
+    "U27": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "U28": {
+      "bank": "2D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "U29": {
+      "bank": "2C",
+      "functions": [
+        "power"
+      ]
+    },
+    "U30": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "U31": {
+      "bank": "2C",
+      "functions": [
+        "power"
+      ]
+    },
+    "U32": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "U33": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "U34": {
+      "bank": "2E",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "V1": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V2": {
+      "bank": "4B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V3": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V4": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "V5": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V6": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V7": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V8": {
+      "bank": "4C",
+      "functions": [
+        "power"
+      ]
+    },
+    "V9": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V10": {
+      "bank": "4C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "V11": {
+      "bank": "4C",
+      "functions": [
+        "configuration",
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "V12": {
+      "bank": "SOC",
+      "functions": [
+        "power"
+      ]
+    },
+    "V13": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V14": {
+      "functions": [
+        "power"
+      ]
+    },
+    "V15": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V16": {
+      "functions": [
+        "power"
+      ]
+    },
+    "V17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V18": {
+      "functions": [
+        "power"
+      ]
+    },
+    "V19": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V20": {
+      "functions": [
+        "power"
+      ]
+    },
+    "V21": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V22": {
+      "bank": "2B",
+      "functions": [
+        "power"
+      ]
+    },
+    "V23": {
+      "bank": "2B",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "V24": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V25": {
+      "bank": "2B",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "V26": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V27": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V28": {
+      "bank": "2D",
+      "functions": [
+        "gpio",
+        "pll_extfb"
+      ]
+    },
+    "V29": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "V30": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V31": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V32": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "V33": {
+      "bank": "2C",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "V34": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W1": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W2": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "W3": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "W4": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "W5": {
+      "bank": "4D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W6": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W7": {
+      "bank": "4D",
+      "functions": [
+        "ref_res"
+      ]
+    },
+    "W8": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W9": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W10": {
+      "bank": "4C",
+      "functions": [
+        "configuration",
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "W11": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W12": {
+      "bank": "SOC",
+      "functions": [
+        "power"
+      ]
+    },
+    "W13": {
+      "functions": [
+        "power"
+      ]
+    },
+    "W14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W15": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "W16": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W17": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "W18": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "W20": {
+      "functions": [
+        "power"
+      ]
+    },
+    "W21": {
+      "bank": "2B",
+      "functions": [
+        "power"
+      ]
+    },
+    "W22": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W23": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W24": {
+      "bank": "2B",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "W25": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W26": {
+      "bank": "2D",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W27": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "W28": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W29": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W30": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "W31": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "W32": {
+      "bank": "2C",
+      "functions": [
+        "power"
+      ]
+    },
+    "W33": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "W34": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "Y1": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "Y2": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "Y3": {
+      "bank": "4D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "Y4": {
+      "bank": "4D",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y5": {
+      "bank": "4D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "Y6": {
+      "bank": "4D",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y7": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "Y8": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "Y9": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "Y10": {
+      "bank": "4C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "Y11": {
+      "bank": "BL1",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "Y12": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "Y13": {
+      "functions": [
+        "power"
+      ]
+    },
+    "Y14": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "Y15": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y16": {
+      "bank": "DDR0",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y17": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "Y18": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y19": {
+      "bank": "DDR1",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y20": {
+      "functions": [
+        "ground"
+      ]
+    },
+    "Y21": {
+      "bank": "TL",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y22": {
+      "bank": "TL",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y23": {
+      "bank": "2B",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "Y24": {
+      "bank": "2B",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "Y25": {
+      "bank": "2B",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y26": {
+      "bank": "2D",
+      "functions": [
+        "gclk",
+        "gpio",
+        "pll_refclk"
+      ]
+    },
+    "Y27": {
+      "bank": "2D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "Y28": {
+      "bank": "2D",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "Y29": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "pll_clkin",
+        "pll_refclk"
+      ]
+    },
+    "Y30": {
+      "bank": "2C",
+      "functions": [
+        "power"
+      ]
+    },
+    "Y31": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "mipi_gclk",
+        "mipi_rclk"
+      ]
+    },
+    "Y32": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "Y33": {
+      "bank": "2C",
+      "functions": [
+        "gpio"
+      ]
+    },
+    "Y34": {
+      "bank": "2C",
+      "functions": [
+        "gpio",
+        "vref"
+      ]
+    }
+  }
+}

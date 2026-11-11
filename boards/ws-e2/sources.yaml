@@ -1,0 +1,76 @@
+schema_version: '1.0'
+sources:
+  - id: ws-e2-som-schematic
+    type: board_document
+    owner: ws-e2-hardware
+    location: boards/ws-e2/ws-e2.md
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: tj375-efinity-pinout
+    type: tool_output
+    owner: efinix
+    location: devices/TJ375N1156X.pinout.csv
+    version: '2026.1.132.1.15'
+    section: Efinity Pinout Report
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: rockchip-kernel-rk3588-6.1
+    type: web_page
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/kernel/tree/develop-6.1/arch/arm64/boot/dts/rockchip
+    version: develop-6.1
+    section: rk3588.dtsi and rk3588-rk806-single.dtsi
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: rockchip-rkbin-rk3588
+    type: web_page
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/rkbin/blob/master/doc/release/RK3588_EN.md
+    version: master
+    section: RK3588 DDR, BL31 and BL32 release notes
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: rockchip-linux-sdk-org
+    type: web_page
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux
+    version: master
+    section: Official Rockchip Linux BSP organization (kernel BSP source, u-boot, rkbin firmware/tools)
+    observed_at: '2026-11-10'
+    state: CONFIRMED
+  - id: rockchip-kernel-repo
+    type: git_repository
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/kernel
+    commit: 77168c8d5ab82399f65a80e9f807b50ba37cf483
+    branch: develop-6.1
+    section: Vendor kernel source; observed commit used by ws-e2 public-source BSP assembly (superproject root f3ca80d7, 2026-11-11)
+    observed_at: '2026-11-11'
+    state: CONFIRMED
+  - id: rockchip-u-boot-repo
+    type: git_repository
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/u-boot
+    commit: 1c535d65b8509f388d09e49fb6961f49fda35a1d
+    branch: next-dev
+    section: Vendor u-boot source (default branch next-dev); observed commit used by ws-e2 public-source BSP assembly
+    observed_at: '2026-11-11'
+    state: CONFIRMED
+  - id: buildroot-upstream-repo
+    type: git_repository
+    owner: buildroot
+    location: https://github.com/buildroot/buildroot
+    commit: 7fdeadb3b9f12f78e5fccca914d7fef47090ab9a
+    tag: 2026.08.1
+    section: Official upstream buildroot stable release (rockchip-linux org has no buildroot fork; GitHub API 404 verified 2026-11-11)
+    observed_at: '2026-11-11'
+    state: CONFIRMED
+  - id: rockchip-rkbin-repo
+    type: git_repository
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/rkbin
+    commit: 3e288fe814e059dd06833495f845cab04ac20a5c
+    branch: master
+    section: Loader firmware source; rk3588_spl_v1.14.bin sha256 b811b90b6847dc251838e82036c328f00eaacefe94659432265a0ccb0fc8f4e5 verified byte-identical to legacy health-policy registration
+    observed_at: '2026-11-11'
+    state: CONFIRMED

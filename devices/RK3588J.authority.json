@@ -1,0 +1,1755 @@
+{
+  "part": "RK3588J",
+  "pins": {
+    "K29": {
+      "functions": [
+        "GPIO0_B2"
+      ]
+    },
+    "K30": {
+      "functions": [
+        "GPIO0_B1"
+      ]
+    },
+    "L30": {
+      "functions": [
+        "GPIO0_B0"
+      ]
+    },
+    "M30": {
+      "functions": [
+        "GPIO0_A7"
+      ]
+    },
+    "M31": {
+      "functions": [
+        "NPOR"
+      ]
+    },
+    "N28": {
+      "functions": [
+        "PMUIO1_1V8"
+      ]
+    },
+    "N30": {
+      "functions": [
+        "GPIO0_A6"
+      ]
+    },
+    "N31": {
+      "functions": [
+        "GPIO0_A5"
+      ]
+    },
+    "P27": {
+      "functions": [
+        "PMU_0V75"
+      ]
+    },
+    "P31": {
+      "functions": [
+        "GPIO0_A4"
+      ]
+    },
+    "P32": {
+      "functions": [
+        "GPIO0_A1"
+      ]
+    },
+    "P33": {
+      "functions": [
+        "GPIO0_A0"
+      ]
+    },
+    "N27": {
+      "functions": [
+        "VCCA_1V8_S0"
+      ]
+    },
+    "C60": {
+      "functions": [
+        "CRY4_1R60X1R20X0R35"
+      ]
+    },
+    "P28": {
+      "functions": [
+        "PMUIO2"
+      ]
+    },
+    "P29": {
+      "functions": [
+        "GPIO0_B5"
+      ]
+    },
+    "P30": {
+      "functions": [
+        "GPIO0_C5"
+      ]
+    },
+    "AF2": {
+      "functions": [
+        "SDMMC_D2"
+      ]
+    },
+    "AF1": {
+      "functions": [
+        "SDMMC_D3"
+      ]
+    },
+    "AE2": {
+      "functions": [
+        "SDMMC_CMD"
+      ]
+    },
+    "AE1": {
+      "functions": [
+        "SDMMC_CLK"
+      ]
+    },
+    "AD2": {
+      "functions": [
+        "SDMMC_D0"
+      ]
+    },
+    "AD1": {
+      "functions": [
+        "SDMMC_D1"
+      ]
+    },
+    "AA32": {
+      "functions": [
+        "EMMC_D5"
+      ]
+    },
+    "AA33": {
+      "functions": [
+        "EMMC_D3"
+      ]
+    },
+    "AA34": {
+      "functions": [
+        "EMMC_RST_N"
+      ]
+    },
+    "V32": {
+      "functions": [
+        "EMMC_D2"
+      ]
+    },
+    "Y33": {
+      "functions": [
+        "EMMC_D0"
+      ]
+    },
+    "Y34": {
+      "functions": [
+        "EMMC_DATA_STROBE"
+      ]
+    },
+    "W34": {
+      "functions": [
+        "EMMC_CMD"
+      ]
+    },
+    "V33": {
+      "functions": [
+        "EMMC_D7"
+      ]
+    },
+    "W32": {
+      "functions": [
+        "EMMC_D6"
+      ]
+    },
+    "W33": {
+      "functions": [
+        "EMMC_D1"
+      ]
+    },
+    "V34": {
+      "functions": [
+        "EMMC_CLK"
+      ]
+    },
+    "Y32": {
+      "functions": [
+        "EMMC_D4"
+      ]
+    },
+    "V26": {
+      "functions": [
+        "EMMCIO_1V8"
+      ]
+    },
+    "AG13": {
+      "functions": [
+        "TYPEC1_DP1_VDDH_1V8"
+      ]
+    },
+    "AG14": {
+      "functions": [
+        "TYPEC0_DP0_VDDH_1V8"
+      ]
+    },
+    "AG16": {
+      "functions": [
+        "TYPEC1_DP1_REXT"
+      ]
+    },
+    "AH13": {
+      "functions": [
+        "TYPEC1_DP1_VDD_0V85"
+      ]
+    },
+    "AH16": {
+      "functions": [
+        "TYPEC0_DP0_REXT"
+      ]
+    },
+    "AJ14": {
+      "functions": [
+        "TYPEC0_DP0_VDD_0V85"
+      ]
+    },
+    "AL10": {
+      "functions": [
+        "TYPEC1_SBU1/DP1_AUXP"
+      ]
+    },
+    "AL15": {
+      "functions": [
+        "TYPEC0_SBU1/DP0_AUXP"
+      ]
+    },
+    "AM10": {
+      "functions": [
+        "TYPEC1_SBU2/DP1_AUXN"
+      ]
+    },
+    "AM15": {
+      "functions": [
+        "TYPEC0_SBU2/DP0_AUXN"
+      ]
+    },
+    "AN8": {
+      "functions": [
+        "TYPEC1_SSRX1P/DP1_TX0P"
+      ]
+    },
+    "AN9": {
+      "functions": [
+        "TYPEC1_SSTX1N/DP1_TX1N"
+      ]
+    },
+    "AN10": {
+      "functions": [
+        "TYPEC1_SSRX2P/DP1_TX2P"
+      ]
+    },
+    "AN11": {
+      "functions": [
+        "TYPEC1_SSTX2N/DP1_TX3N"
+      ]
+    },
+    "AN13": {
+      "functions": [
+        "TYPEC0_SSRX1P/DP0_TX0P"
+      ]
+    },
+    "AN14": {
+      "functions": [
+        "TYPEC0_SSTX1N/DP0_TX1N"
+      ]
+    },
+    "AN15": {
+      "functions": [
+        "TYPEC0_SSRX2P/DP0_TX2P"
+      ]
+    },
+    "AN16": {
+      "functions": [
+        "TYPEC0_SSTX2N/DP0_TX3N"
+      ]
+    },
+    "AP8": {
+      "functions": [
+        "TYPEC1_SSRX1N/DP1_TX0N"
+      ]
+    },
+    "AP9": {
+      "functions": [
+        "TYPEC1_SSTX1P/DP1_TX1P"
+      ]
+    },
+    "AP10": {
+      "functions": [
+        "TYPEC1_SSRX2N/DP1_TX2N"
+      ]
+    },
+    "AP11": {
+      "functions": [
+        "TYPEC1_SSTX2P/DP1_TX3P"
+      ]
+    },
+    "AP13": {
+      "functions": [
+        "TYPEC0_SSRX1N/DP0_TX0N"
+      ]
+    },
+    "AP14": {
+      "functions": [
+        "TYPEC0_SSTX1P/DP0_TX1P"
+      ]
+    },
+    "AP15": {
+      "functions": [
+        "TYPEC0_SSRX2N/DP0_TX2N"
+      ]
+    },
+    "AP16": {
+      "functions": [
+        "TYPEC0_SSTX2P/DP0_TX3P"
+      ]
+    },
+    "AG9": {
+      "functions": [
+        "USB20_HOST0_REXT"
+      ]
+    },
+    "AG11": {
+      "functions": [
+        "USB20_AVDD_1V8"
+      ]
+    },
+    "AH9": {
+      "functions": [
+        "USB20_HOST1_REXT"
+      ]
+    },
+    "AH10": {
+      "functions": [
+        "USB20_DVDD_0V75"
+      ]
+    },
+    "AJ10": {
+      "functions": [
+        "USB20_AVDD_3V3"
+      ]
+    },
+    "AK6": {
+      "functions": [
+        "USB20_HOST0_DP"
+      ]
+    },
+    "AK8": {
+      "functions": [
+        "TYPEC1_USB20_OTG_ID"
+      ]
+    },
+    "AK9": {
+      "functions": [
+        "TYPEC1_USB20_OTG_DP"
+      ]
+    },
+    "AL6": {
+      "functions": [
+        "USB20_HOST0_DM"
+      ]
+    },
+    "AL7": {
+      "functions": [
+        "USB20_HOST1_DP"
+      ]
+    },
+    "AL8": {
+      "functions": [
+        "TYPEC1_USB20_VBUSDET"
+      ]
+    },
+    "AL9": {
+      "functions": [
+        "TYPEC1_USB20_OTG_DM"
+      ]
+    },
+    "AL12": {
+      "functions": [
+        "TYPEC0_USB20_OTG_DP"
+      ]
+    },
+    "AL14": {
+      "functions": [
+        "TYPEC0_USB20_OTG_ID"
+      ]
+    },
+    "AM7": {
+      "functions": [
+        "USB20_HOST1_DM"
+      ]
+    },
+    "AM12": {
+      "functions": [
+        "TYPEC0_USB20_OTG_DM"
+      ]
+    },
+    "AM14": {
+      "functions": [
+        "TYPEC0_USB20_VBUSDET"
+      ]
+    },
+    "AP7": {
+      "functions": [
+        "TYPEC1_USB20_OTG1_REXT"
+      ]
+    },
+    "AP12": {
+      "functions": [
+        "TYPEC0_USB20_OTG0_REXT"
+      ]
+    },
+    "AD3": {
+      "functions": [
+        "OTP_VDDOTP_0V75"
+      ]
+    },
+    "AH18": {
+      "functions": [
+        "SARADC_AVDD_1V8"
+      ]
+    },
+    "AK15": {
+      "functions": [
+        "SARADC_IN5"
+      ]
+    },
+    "AK16": {
+      "functions": [
+        "SARADC_IN2"
+      ]
+    },
+    "AL16": {
+      "functions": [
+        "SARADC_IN1"
+      ]
+    },
+    "AM16": {
+      "functions": [
+        "SARADC_IN0_BOOT"
+      ]
+    },
+    "AN17": {
+      "functions": [
+        "SARADC_IN3"
+      ]
+    },
+    "AB30": {
+      "functions": [
+        "GPIO2_B5"
+      ]
+    },
+    "AB31": {
+      "functions": [
+        "GPIO2_B4"
+      ]
+    },
+    "AB33": {
+      "functions": [
+        "GPIO4_C5"
+      ]
+    },
+    "AB34": {
+      "functions": [
+        "GPIO4_C4"
+      ]
+    },
+    "AC30": {
+      "functions": [
+        "GPIO2_C4"
+      ]
+    },
+    "AC31": {
+      "functions": [
+        "GPIO2_A7"
+      ]
+    },
+    "AC32": {
+      "functions": [
+        "GPIO2_A6"
+      ]
+    },
+    "AC33": {
+      "functions": [
+        "GPIO2_B1"
+      ]
+    },
+    "AC34": {
+      "functions": [
+        "GPIO2_B2"
+      ]
+    },
+    "AD30": {
+      "functions": [
+        "GPIO2_C3"
+      ]
+    },
+    "AD31": {
+      "functions": [
+        "GPIO2_C2"
+      ]
+    },
+    "AD32": {
+      "functions": [
+        "GPIO2_C1"
+      ]
+    },
+    "AD33": {
+      "functions": [
+        "GPIO2_B6"
+      ]
+    },
+    "AD34": {
+      "functions": [
+        "GPIO2_B7"
+      ]
+    },
+    "AE31": {
+      "functions": [
+        "GPIO4_C2"
+      ]
+    },
+    "AE32": {
+      "functions": [
+        "GPIO2_B0"
+      ]
+    },
+    "AE33": {
+      "functions": [
+        "GPIO2_B3"
+      ]
+    },
+    "AE34": {
+      "functions": [
+        "GPIO2_C0"
+      ]
+    },
+    "AF33": {
+      "functions": [
+        "GPIO4_C6"
+      ]
+    },
+    "AF34": {
+      "functions": [
+        "GPIO4_C3"
+      ]
+    },
+    "D28": {
+      "functions": [
+        "GPIO1_D4"
+      ]
+    },
+    "D29": {
+      "functions": [
+        "GPIO1_C6"
+      ]
+    },
+    "D30": {
+      "functions": [
+        "GPIO1_C5"
+      ]
+    },
+    "E28": {
+      "functions": [
+        "GPIO1_D3"
+      ]
+    },
+    "E29": {
+      "functions": [
+        "GPIO1_C7"
+      ]
+    },
+    "E30": {
+      "functions": [
+        "GPIO1_C4"
+      ]
+    },
+    "E31": {
+      "functions": [
+        "GPIO1_C3"
+      ]
+    },
+    "F26": {
+      "functions": [
+        "GPIO1_D0"
+      ]
+    },
+    "F27": {
+      "functions": [
+        "GPIO1_D1"
+      ]
+    },
+    "F28": {
+      "functions": [
+        "GPIO1_D2"
+      ]
+    },
+    "F30": {
+      "functions": [
+        "GPIO1_C2"
+      ]
+    },
+    "G20": {
+      "functions": [
+        "VCCIO1_1V8"
+      ]
+    },
+    "G26": {
+      "functions": [
+        "GPIO1_D5"
+      ]
+    },
+    "G27": {
+      "functions": [
+        "GPIO1_C1"
+      ]
+    },
+    "G29": {
+      "functions": [
+        "GPIO1_C0"
+      ]
+    },
+    "AF19": {
+      "functions": [
+        "MIPI_D/C_PHY1_VREG"
+      ]
+    },
+    "AG19": {
+      "functions": [
+        "MIPI_D/C_PHY1_VDD"
+      ]
+    },
+    "AH19": {
+      "functions": [
+        "MIPI_D/C_PHY1_VDD_1V2"
+      ]
+    },
+    "AJ19": {
+      "functions": [
+        "MIPI_D/C_PHY1_VDD_1V8"
+      ]
+    },
+    "AK18": {
+      "functions": [
+        "MIPI_DPHY1_RX_D0P/MIPI_CPHY1_RX_TRIO0_B"
+      ]
+    },
+    "AK19": {
+      "functions": [
+        "MIPI_DPHY1_RX_D1P/MIPI_CPHY1_RX_TRIO1_A"
+      ]
+    },
+    "AK20": {
+      "functions": [
+        "MIPI_DPHY1_RX_CLKP/MIPI_CPHY1_RX_TRIO1_C"
+      ]
+    },
+    "AK21": {
+      "functions": [
+        "MIPI_DPHY1_RX_D2P/MIPI_CPHY1_RX_TRIO2_B"
+      ]
+    },
+    "AK22": {
+      "functions": [
+        "MIPI_DPHY1_RX_D3P/NO_USE"
+      ]
+    },
+    "AL18": {
+      "functions": [
+        "MIPI_DPHY1_RX_D0N/MIPI_CPHY1_RX_TRIO0_A"
+      ]
+    },
+    "AL19": {
+      "functions": [
+        "MIPI_DPHY1_RX_D1N/MIPI_CPHY1_RX_TRIO0_C"
+      ]
+    },
+    "AL20": {
+      "functions": [
+        "MIPI_DPHY1_RX_CLKN/MIPI_CPHY1_RX_TRIO1_B"
+      ]
+    },
+    "AL21": {
+      "functions": [
+        "MIPI_DPHY1_RX_D2N/MIPI_CPHY1_RX_TRIO2_A"
+      ]
+    },
+    "AL22": {
+      "functions": [
+        "MIPI_DPHY1_RX_D3N/MIPI_CPHY1_RX_TRIO2_C"
+      ]
+    },
+    "AN18": {
+      "functions": [
+        "MIPI_DPHY1_TX_D0P/MIPI_CPHY1_TX_TRIO0_B"
+      ]
+    },
+    "AN19": {
+      "functions": [
+        "MIPI_DPHY1_TX_D1P/MIPI_CPHY1_TX_TRIO1_A"
+      ]
+    },
+    "AN20": {
+      "functions": [
+        "MIPI_DPHY1_TX_CLKP/MIPI_CPHY1_TX_TRIO1_C"
+      ]
+    },
+    "AN21": {
+      "functions": [
+        "MIPI_DPHY1_TX_D2P/MIPI_CPHY1_TX_TRIO2_B"
+      ]
+    },
+    "AN22": {
+      "functions": [
+        "MIPI_DPHY1_TX_D3P/NO_USE"
+      ]
+    },
+    "AP18": {
+      "functions": [
+        "MIPI_DPHY1_TX_D0N/MIPI_CPHY1_TX_TRIO0_A"
+      ]
+    },
+    "AP19": {
+      "functions": [
+        "MIPI_DPHY1_TX_D1N/MIPI_CPHY1_TX_TRIO0_C"
+      ]
+    },
+    "AP20": {
+      "functions": [
+        "MIPI_DPHY1_TX_CLKN/MIPI_CPHY1_TX_TRIO1_B"
+      ]
+    },
+    "AP21": {
+      "functions": [
+        "MIPI_DPHY1_TX_D2N/MIPI_CPHY1_TX_TRIO2_A"
+      ]
+    },
+    "AP22": {
+      "functions": [
+        "MIPI_DPHY1_TX_D3N/MIPI_CPHY1_TX_TRIO2_C"
+      ]
+    },
+    "AA25": {
+      "functions": [
+        "MIPI_CSI1_AVCC0V75"
+      ]
+    },
+    "AA26": {
+      "functions": [
+        "MIPI_CSI1_AVCC1V8"
+      ]
+    },
+    "AB25": {
+      "functions": [
+        "MIPI_CSI0_AVCC0V75"
+      ]
+    },
+    "AB26": {
+      "functions": [
+        "MIPI_CSI0_AVCC1V8"
+      ]
+    },
+    "AG31": {
+      "functions": [
+        "MIPI_CSI1_D0P"
+      ]
+    },
+    "AG32": {
+      "functions": [
+        "MIPI_CSI1_D0N"
+      ]
+    },
+    "AG33": {
+      "functions": [
+        "MIPI_CSI0_D0P"
+      ]
+    },
+    "AG34": {
+      "functions": [
+        "MIPI_CSI0_D0N"
+      ]
+    },
+    "AH31": {
+      "functions": [
+        "MIPI_CSI1_D1P"
+      ]
+    },
+    "AH32": {
+      "functions": [
+        "MIPI_CSI1_D1N"
+      ]
+    },
+    "AH33": {
+      "functions": [
+        "MIPI_CSI0_D1P"
+      ]
+    },
+    "AH34": {
+      "functions": [
+        "MIPI_CSI0_D1N"
+      ]
+    },
+    "AJ31": {
+      "functions": [
+        "MIPI_CSI1_CLK0P"
+      ]
+    },
+    "AJ32": {
+      "functions": [
+        "MIPI_CSI1_CLK0N"
+      ]
+    },
+    "AJ33": {
+      "functions": [
+        "MIPI_CSI0_CLK0P"
+      ]
+    },
+    "AJ34": {
+      "functions": [
+        "MIPI_CSI0_CLK0N"
+      ]
+    },
+    "AK31": {
+      "functions": [
+        "MIPI_CSI1_D2P"
+      ]
+    },
+    "AK32": {
+      "functions": [
+        "MIPI_CSI1_D2N"
+      ]
+    },
+    "AK33": {
+      "functions": [
+        "MIPI_CSI0_D2P"
+      ]
+    },
+    "AK34": {
+      "functions": [
+        "MIPI_CSI0_D2N"
+      ]
+    },
+    "AL31": {
+      "functions": [
+        "MIPI_CSI1_D3P"
+      ]
+    },
+    "AL32": {
+      "functions": [
+        "MIPI_CSI1_D3N"
+      ]
+    },
+    "AL33": {
+      "functions": [
+        "MIPI_CSI0_D3P"
+      ]
+    },
+    "AL34": {
+      "functions": [
+        "MIPI_CSI0_D3N"
+      ]
+    },
+    "AM34": {
+      "functions": [
+        "MIPI_CSI0_CLK1N"
+      ]
+    },
+    "AF20": {
+      "functions": [
+        "MIPI_D/C_PHY0_VREG"
+      ]
+    },
+    "AG20": {
+      "functions": [
+        "MIPI_D/C_PHY0_VDD"
+      ]
+    },
+    "AH20": {
+      "functions": [
+        "MIPI_D/C_PHY0_VDD_1V2"
+      ]
+    },
+    "AJ20": {
+      "functions": [
+        "MIPI_D/C_PHY0_VDD_1V8"
+      ]
+    },
+    "AN24": {
+      "functions": [
+        "MIPI_DPHY0_TX_D0P/MIPI_CPHY0_TX_TRIO0_B"
+      ]
+    },
+    "AN25": {
+      "functions": [
+        "MIPI_DPHY0_TX_D1P/MIPI_CPHY0_TX_TRIO1_A"
+      ]
+    },
+    "AN26": {
+      "functions": [
+        "MIPI_DPHY0_TX_CLKP/MIPI_CPHY0_TX_TRIO1_C"
+      ]
+    },
+    "AN27": {
+      "functions": [
+        "MIPI_DPHY0_TX_D2P/MIPI_CPHY0_TX_TRIO2_B"
+      ]
+    },
+    "AN28": {
+      "functions": [
+        "MIPI_DPHY0_TX_D3P/NO_USE"
+      ]
+    },
+    "AN29": {
+      "functions": [
+        "MIPI_DPHY0_RX_D0P/MIPI_CPHY0_RX_TRIO0_B"
+      ]
+    },
+    "AN30": {
+      "functions": [
+        "MIPI_DPHY0_RX_D1P/MIPI_CPHY0_RX_TRIO1_A"
+      ]
+    },
+    "AN32": {
+      "functions": [
+        "MIPI_DPHY0_RX_CLKP/MIPI_CPHY0_RX_TRIO1_C"
+      ]
+    },
+    "AN33": {
+      "functions": [
+        "MIPI_DPHY0_RX_D2P/MIPI_CPHY0_RX_TRIO2_B"
+      ]
+    },
+    "AN34": {
+      "functions": [
+        "MIPI_DPHY0_RX_D3P/NO_USE"
+      ]
+    },
+    "AP24": {
+      "functions": [
+        "MIPI_DPHY0_TX_D0N/MIPI_CPHY0_TX_TRIO0_A"
+      ]
+    },
+    "AP25": {
+      "functions": [
+        "MIPI_DPHY0_TX_D1N/MIPI_CPHY0_TX_TRIO0_C"
+      ]
+    },
+    "AP26": {
+      "functions": [
+        "MIPI_DPHY0_TX_CLKN/MIPI_CPHY0_TX_TRIO1_B"
+      ]
+    },
+    "AP27": {
+      "functions": [
+        "MIPI_DPHY0_TX_D2N/MIPI_CPHY0_TX_TRIO2_A"
+      ]
+    },
+    "AP28": {
+      "functions": [
+        "MIPI_DPHY0_TX_D3N/MIPI_CPHY0_TX_TRIO2_C"
+      ]
+    },
+    "AP29": {
+      "functions": [
+        "MIPI_DPHY0_RX_D0N/MIPI_CPHY0_RX_TRIO0_A"
+      ]
+    },
+    "AP30": {
+      "functions": [
+        "MIPI_DPHY0_RX_D1N/MIPI_CPHY0_RX_TRIO0_C"
+      ]
+    },
+    "AP31": {
+      "functions": [
+        "MIPI_DPHY0_RX_CLKN/MIPI_CPHY0_RX_TRIO1_B"
+      ]
+    },
+    "AP32": {
+      "functions": [
+        "MIPI_DPHY0_RX_D2N/MIPI_CPHY0_RX_TRIO2_A"
+      ]
+    },
+    "AP33": {
+      "functions": [
+        "MIPI_DPHY0_RX_D3N/MIPI_CPHY0_RX_TRIO2_C"
+      ]
+    },
+    "C32": {
+      "functions": [
+        "MIPI_D/C_PHY0_VREG"
+      ]
+    },
+    "C59": {
+      "functions": [
+        "MIPI_D/C_PHY1_VREG"
+      ]
+    },
+    "AE4": {
+      "functions": [
+        "HDMI_RX_VPH3V3"
+      ]
+    },
+    "AE8": {
+      "functions": [
+        "HDMI_RX_AVDD0V75"
+      ]
+    },
+    "AF3": {
+      "functions": [
+        "HDMI_RX_REXT"
+      ]
+    },
+    "AF5": {
+      "functions": [
+        "HDMI_RX_CLKN"
+      ]
+    },
+    "AF6": {
+      "functions": [
+        "HDMI_RX_CLKP"
+      ]
+    },
+    "AG4": {
+      "functions": [
+        "HDMI_RX_D0N"
+      ]
+    },
+    "AG5": {
+      "functions": [
+        "HDMI_RX_D0P"
+      ]
+    },
+    "AH5": {
+      "functions": [
+        "HDMI_RX_D1N"
+      ]
+    },
+    "AH6": {
+      "functions": [
+        "HDMI_RX_D1P"
+      ]
+    },
+    "AJ4": {
+      "functions": [
+        "HDMI_RX_D2N"
+      ]
+    },
+    "AJ5": {
+      "functions": [
+        "HDMI_RX_D2P"
+      ]
+    },
+    "AA9": {
+      "functions": [
+        "HDMI/EDP_TX0_VDD_0V75"
+      ]
+    },
+    "AC7": {
+      "functions": [
+        "HDMI/EDP_TX0_VDD_IO_1V8"
+      ]
+    },
+    "AD7": {
+      "functions": [
+        "HDMI/EDP_TX1_VDD_IO_1V8"
+      ]
+    },
+    "AD9": {
+      "functions": [
+        "HDMI/EDP_TX1_VDD_0V75"
+      ]
+    },
+    "AG1": {
+      "functions": [
+        "HDMI_TX0_SBDN/EDP_TX0_AUXN"
+      ]
+    },
+    "AG2": {
+      "functions": [
+        "HDMI_TX0_SBDP/EDP_TX0_AUXP"
+      ]
+    },
+    "AH2": {
+      "functions": [
+        "HDMI_TX0_D3N/EDP_TX0_D3N"
+      ]
+    },
+    "AH3": {
+      "functions": [
+        "HDMI_TX0_D3P/EDP_TX0_D3P"
+      ]
+    },
+    "AJ1": {
+      "functions": [
+        "HDMI_TX0_D0N/EDP_TX0_D0N"
+      ]
+    },
+    "AJ2": {
+      "functions": [
+        "HDMI_TX0_D0P/EDP_TX0_D0P"
+      ]
+    },
+    "AK2": {
+      "functions": [
+        "HDMI_TX0_D1N/EDP_TX0_D1N"
+      ]
+    },
+    "AK3": {
+      "functions": [
+        "HDMI_TX0_D1P/EDP_TX0_D1P"
+      ]
+    },
+    "AL1": {
+      "functions": [
+        "HDMI_TX0_D2N/EDP_TX0_D2N"
+      ]
+    },
+    "AL2": {
+      "functions": [
+        "HDMI_TX0_D2P/EDP_TX0_D2P"
+      ]
+    },
+    "AM2": {
+      "functions": [
+        "HDMI/EDP_TX0_REXT"
+      ]
+    },
+    "AM3": {
+      "functions": [
+        "HDMI_TX1_D3P/EDP_TX1_D3P"
+      ]
+    },
+    "AM5": {
+      "functions": [
+        "HDMI_TX1_D1P/EDP_TX1_D1P"
+      ]
+    },
+    "AN1": {
+      "functions": [
+        "HDMI/EDP_TX1_REXT"
+      ]
+    },
+    "AN2": {
+      "functions": [
+        "HDMI_TX1_SBDP/EDP_TX1_AUXP"
+      ]
+    },
+    "AN3": {
+      "functions": [
+        "HDMI_TX1_D3N/EDP_TX1_D3N"
+      ]
+    },
+    "AN4": {
+      "functions": [
+        "HDMI_TX1_D0P/EDP_TX1_D0P"
+      ]
+    },
+    "AN5": {
+      "functions": [
+        "HDMI_TX1_D1N/EDP_TX1_D1N"
+      ]
+    },
+    "AN6": {
+      "functions": [
+        "HDMI_TX1_D2P/EDP_TX1_D2P"
+      ]
+    },
+    "AP2": {
+      "functions": [
+        "HDMI_TX1_SBDN/EDP_TX1_AUXN"
+      ]
+    },
+    "AP4": {
+      "functions": [
+        "HDMI_TX1_D0N/EDP_TX1_D0N"
+      ]
+    },
+    "AP6": {
+      "functions": [
+        "HDMI_TX1_D2N/EDP_TX1_D2N"
+      ]
+    },
+    "G30": {
+      "functions": [
+        "PCIE20_2_REFCLKN"
+      ]
+    },
+    "G31": {
+      "functions": [
+        "PCIE20_2_REFCLKP"
+      ]
+    },
+    "H29": {
+      "functions": [
+        "PCIE20_2_TXN/SATA30_2_TXN/USB30_2_SSTXN"
+      ]
+    },
+    "H30": {
+      "functions": [
+        "PCIE20_2_TXP/SATA30_2_TXP/USB30_2_SSTXP"
+      ]
+    },
+    "H32": {
+      "functions": [
+        "PCIE20_1_REFCLKP"
+      ]
+    },
+    "H33": {
+      "functions": [
+        "PCIE20_1_REFCLKN"
+      ]
+    },
+    "J30": {
+      "functions": [
+        "PCIE20_2_RXN/SATA30_2_RXN/USB30_2_SSRXN"
+      ]
+    },
+    "J31": {
+      "functions": [
+        "PCIE20_2_RXP/SATA30_2_RXP/USB30_2_SSRXP"
+      ]
+    },
+    "J33": {
+      "functions": [
+        "PCIE20_1_RXP/SATA30_1_RXP"
+      ]
+    },
+    "J34": {
+      "functions": [
+        "PCIE20_1_RXN/SATA30_1_RXN"
+      ]
+    },
+    "K27": {
+      "functions": [
+        "PCIE20_SATA30_USB30_2_AVDD_1V8"
+      ]
+    },
+    "K28": {
+      "functions": [
+        "PCIE20_SATA30_USB30_2_AVDD_0V85"
+      ]
+    },
+    "K33": {
+      "functions": [
+        "PCIE20_1_TXP/SATA30_1_TXP"
+      ]
+    },
+    "K34": {
+      "functions": [
+        "PCIE20_1_TXN/SATA30_1_TXN"
+      ]
+    },
+    "L27": {
+      "functions": [
+        "PCIE20_SATA30_1_AVDD_1V8"
+      ]
+    },
+    "L28": {
+      "functions": [
+        "PCIE20_SATA30_1_AVDD_0V85"
+      ]
+    },
+    "L32": {
+      "functions": [
+        "PCIE20_0_REFCLKP"
+      ]
+    },
+    "L33": {
+      "functions": [
+        "PCIE20_0_REFCLKN"
+      ]
+    },
+    "M27": {
+      "functions": [
+        "PCIE20_SATA30_0_AVDD_1V8"
+      ]
+    },
+    "M28": {
+      "functions": [
+        "PCIE20_SATA30_0_AVDD_0V85"
+      ]
+    },
+    "M33": {
+      "functions": [
+        "PCIE20_0_TXN/SATA30_0_TXN"
+      ]
+    },
+    "M34": {
+      "functions": [
+        "PCIE20_0_TXP/SATA30_0_TXP"
+      ]
+    },
+    "N33": {
+      "functions": [
+        "PCIE20_0_RXP/SATA30_0_RXP"
+      ]
+    },
+    "N34": {
+      "functions": [
+        "PCIE20_0_RXN/SATA30_0_RXN"
+      ]
+    },
+    "A28": {
+      "functions": [
+        "PCIE30_PORT1_REF_CLKP"
+      ]
+    },
+    "A30": {
+      "functions": [
+        "PCIE30_PORT1_TX0N"
+      ]
+    },
+    "A32": {
+      "functions": [
+        "PCIE30_PORT1_RX0N"
+      ]
+    },
+    "A33": {
+      "functions": [
+        "PCIE30_PORT1_RESREF"
+      ]
+    },
+    "B28": {
+      "functions": [
+        "PCIE30_PORT1_REF_CLKN"
+      ]
+    },
+    "B29": {
+      "functions": [
+        "PCIE30_PORT1_TX1N"
+      ]
+    },
+    "B30": {
+      "functions": [
+        "PCIE30_PORT1_TX0P"
+      ]
+    },
+    "B31": {
+      "functions": [
+        "PCIE30_PORT1_RX1N"
+      ]
+    },
+    "B32": {
+      "functions": [
+        "PCIE30_PORT1_RX0P"
+      ]
+    },
+    "B34": {
+      "functions": [
+        "PCIE30_PORT0_RESREF"
+      ]
+    },
+    "C29": {
+      "functions": [
+        "PCIE30_PORT1_TX1P"
+      ]
+    },
+    "C31": {
+      "functions": [
+        "PCIE30_PORT1_RX1P"
+      ]
+    },
+    "C33": {
+      "functions": [
+        "PCIE30_PORT0_TX1P"
+      ]
+    },
+    "C34": {
+      "functions": [
+        "PCIE30_PORT0_TX1N"
+      ]
+    },
+    "D32": {
+      "functions": [
+        "PCIE30_PORT0_TX0P"
+      ]
+    },
+    "D33": {
+      "functions": [
+        "PCIE30_PORT0_TX0N"
+      ]
+    },
+    "E33": {
+      "functions": [
+        "PCIE30_PORT0_REF_CLKP"
+      ]
+    },
+    "E34": {
+      "functions": [
+        "PCIE30_PORT0_REF_CLKN"
+      ]
+    },
+    "F32": {
+      "functions": [
+        "PCIE30_PORT0_RX1P"
+      ]
+    },
+    "F33": {
+      "functions": [
+        "PCIE30_PORT0_RX1N"
+      ]
+    },
+    "G23": {
+      "functions": [
+        "PCIE30_PORT0_AVDD1V8"
+      ]
+    },
+    "G24": {
+      "functions": [
+        "PCIE30_PORT0_AVDD0V75"
+      ]
+    },
+    "G33": {
+      "functions": [
+        "PCIE30_PORT0_RX0P"
+      ]
+    },
+    "G34": {
+      "functions": [
+        "PCIE30_PORT0_RX0N"
+      ]
+    },
+    "H23": {
+      "functions": [
+        "PCIE30_PORT1_AVDD1V8"
+      ]
+    },
+    "H24": {
+      "functions": [
+        "PCIE30_PORT1_AVDD0V75"
+      ]
+    },
+    "AC25": {
+      "functions": [
+        "VCCIO6_1V8"
+      ]
+    },
+    "AC26": {
+      "functions": [
+        "VCCIO6"
+      ]
+    },
+    "AJ25": {
+      "functions": [
+        "GPIO4_C0"
+      ]
+    },
+    "AJ26": {
+      "functions": [
+        "GPIO4_B5"
+      ]
+    },
+    "AJ27": {
+      "functions": [
+        "GPIO4_B6"
+      ]
+    },
+    "AJ28": {
+      "functions": [
+        "GPIO4_B7"
+      ]
+    },
+    "AK24": {
+      "functions": [
+        "GPIO4_C1"
+      ]
+    },
+    "AK25": {
+      "functions": [
+        "GPIO4_B2"
+      ]
+    },
+    "AK26": {
+      "functions": [
+        "GPIO4_B0"
+      ]
+    },
+    "AK27": {
+      "functions": [
+        "GPIO4_A5"
+      ]
+    },
+    "AK30": {
+      "functions": [
+        "GPIO4_A0"
+      ]
+    },
+    "AL24": {
+      "functions": [
+        "GPIO4_B1"
+      ]
+    },
+    "AL26": {
+      "functions": [
+        "GPIO4_B4"
+      ]
+    },
+    "AL27": {
+      "functions": [
+        "GPIO4_A6"
+      ]
+    },
+    "AL28": {
+      "functions": [
+        "GPIO4_A4"
+      ]
+    },
+    "AL29": {
+      "functions": [
+        "GPIO4_A3"
+      ]
+    },
+    "AL30": {
+      "functions": [
+        "GPIO4_A1"
+      ]
+    },
+    "AM25": {
+      "functions": [
+        "GPIO4_B3"
+      ]
+    },
+    "AM27": {
+      "functions": [
+        "GPIO4_A7"
+      ]
+    },
+    "AM29": {
+      "functions": [
+        "GPIO4_A2"
+      ]
+    },
+    "A24": {
+      "functions": [
+        "GPIO1_A0"
+      ]
+    },
+    "A25": {
+      "functions": [
+        "GPIO1_A1"
+      ]
+    },
+    "A26": {
+      "functions": [
+        "GPIO1_A2"
+      ]
+    },
+    "A27": {
+      "functions": [
+        "GPIO1_A3"
+      ]
+    },
+    "B25": {
+      "functions": [
+        "GPIO1_A4"
+      ]
+    },
+    "B26": {
+      "functions": [
+        "GPIO1_A5"
+      ]
+    },
+    "C24": {
+      "functions": [
+        "GPIO1_A6"
+      ]
+    },
+    "C25": {
+      "functions": [
+        "GPIO1_A7"
+      ]
+    },
+    "C27": {
+      "functions": [
+        "GPIO1_B0"
+      ]
+    },
+    "D25": {
+      "functions": [
+        "GPIO1_B1"
+      ]
+    },
+    "D26": {
+      "functions": [
+        "GPIO1_B2"
+      ]
+    },
+    "D27": {
+      "functions": [
+        "GPIO1_B3"
+      ]
+    },
+    "E24": {
+      "functions": [
+        "GPIO1_B4"
+      ]
+    },
+    "E25": {
+      "functions": [
+        "GPIO1_B5"
+      ]
+    },
+    "E26": {
+      "functions": [
+        "GPIO1_B6"
+      ]
+    },
+    "E27": {
+      "functions": [
+        "GPIO1_B7"
+      ]
+    },
+    "F24": {
+      "functions": [
+        "GPIO1_D6"
+      ]
+    },
+    "F25": {
+      "functions": [
+        "GPIO1_D7"
+      ]
+    },
+    "H20": {
+      "functions": [
+        "VCCIO4_1V8"
+      ]
+    },
+    "AA27": {
+      "functions": [
+        "GPIO3_D4"
+      ]
+    },
+    "AA28": {
+      "functions": [
+        "GPIO3_B7"
+      ]
+    },
+    "AA29": {
+      "functions": [
+        "GPIO3_A0"
+      ]
+    },
+    "AA30": {
+      "functions": [
+        "GPIO3_A1"
+      ]
+    },
+    "AB28": {
+      "functions": [
+        "GPIO3_D5"
+      ]
+    },
+    "AC28": {
+      "functions": [
+        "GPIO3_B3"
+      ]
+    },
+    "AC29": {
+      "functions": [
+        "GPIO3_B4"
+      ]
+    },
+    "AD27": {
+      "functions": [
+        "GPIO3_A2"
+      ]
+    },
+    "AD28": {
+      "functions": [
+        "GPIO3_A4"
+      ]
+    },
+    "AD29": {
+      "functions": [
+        "GPIO3_B5"
+      ]
+    },
+    "AE27": {
+      "functions": [
+        "GPIO3_A3"
+      ]
+    },
+    "AE28": {
+      "functions": [
+        "GPIO3_B2"
+      ]
+    },
+    "AE29": {
+      "functions": [
+        "GPIO3_B6"
+      ]
+    },
+    "AG23": {
+      "functions": [
+        "GPIO3_D1"
+      ]
+    },
+    "AG24": {
+      "functions": [
+        "GPIO3_D3"
+      ]
+    },
+    "AG25": {
+      "functions": [
+        "GPIO3_D2"
+      ]
+    },
+    "AG26": {
+      "functions": [
+        "GPIO3_C6"
+      ]
+    },
+    "AG28": {
+      "functions": [
+        "GPIO3_B0"
+      ]
+    },
+    "AG29": {
+      "functions": [
+        "GPIO3_A7"
+      ]
+    },
+    "AH24": {
+      "functions": [
+        "GPIO3_D0"
+      ]
+    },
+    "AH25": {
+      "functions": [
+        "GPIO3_C5"
+      ]
+    },
+    "AH26": {
+      "functions": [
+        "GPIO3_C4"
+      ]
+    },
+    "AH27": {
+      "functions": [
+        "GPIO3_A6"
+      ]
+    },
+    "AH29": {
+      "functions": [
+        "GPIO3_B1"
+      ]
+    },
+    "AH30": {
+      "functions": [
+        "GPIO3_A5"
+      ]
+    },
+    "AJ24": {
+      "functions": [
+        "GPIO3_C7"
+      ]
+    }
+  }
+}

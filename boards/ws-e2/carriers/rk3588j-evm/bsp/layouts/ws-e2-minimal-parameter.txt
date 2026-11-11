@@ -1,0 +1,16 @@
+FIRMWARE_VER: 1.0.0
+MACHINE_MODEL: ws-e2-rk3588j-evm
+MACHINE_ID: 007
+MANUFACTURER: EvoVerse
+MAGIC: 0x5041524B
+ATAG: 0x00200800
+MACHINE: 3588
+CHECK_MASK: 0x80
+#KERNEL_IMG: 0x00280000
+#FDT_NAME: rk-kernel.dtb
+# Units: 512-byte sectors (per section 512 (0x200) bytes).
+# idbloader (TPL+SPL) is written at sector 0x40 (64) before the partition
+# table; the first named partition is uboot (u-boot.itb) at 0x4000 (16384).
+# ws-e2 minimal scope: eMMC 128GB, serial console, LPDDR4X 8GB, rootfs grows
+# to end of device. Format follows rkbin/tools/parameter_gpt.txt.
+CMDLINE: mtdparts=rk29xxnand:0x00002000@0x00004000(uboot),0x00008000@0x00006000(resource),0x00008000@0x0000E000(boot),-@0x00016000(rootfs:grow)

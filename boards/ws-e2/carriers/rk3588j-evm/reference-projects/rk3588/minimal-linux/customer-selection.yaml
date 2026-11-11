@@ -1,0 +1,36 @@
+schema_version: '1.0'
+board: ws-e2
+carrier: rk3588j-evm
+recommendations:
+  bsp_family: rockchip-linux-6.1-vendor
+  bsp_source_priority:
+    - ws-e2-hardware-supplier-sdk
+    - rockchip-official-public-components
+  rootfs: buildroot-minimal
+  boot_storage: emmc
+  console: ttyS2,1500000n8
+  first_boot_scope: serial-console-and-emmc-rootfs
+decisions:
+  bsp:
+    state: CUSTOMER_SELECTION_REQUIRED
+    recommended: Obtain the WS-E2 supplier's complete Rockchip Linux SDK and freeze its repo manifest and every project commit.
+    alternative: Assemble official Rockchip public kernel, U-Boot and rkbin components; this requires extra integration and does not prove WS-E2 DDR training.
+  licenses:
+    state: CUSTOMER_SELECTION_REQUIRED
+    recommended: Keep restricted loader and firmware binaries outside Catalog; record only origin, license decision and hashes.
+  lpddr4x_capacity:
+    state: CUSTOMER_CONFIRMATION_REQUIRED
+    candidates_gib: [4, 8]
+    evidence: Schematic page 15 shows two ATL4X8G32M2D-46 IT symbols marked 4GB, while ws-e2.md currently states RK DDR 4GB.
+  emmc_capacity:
+    state: CUSTOMER_CONFIRMATION_REQUIRED
+    evidence: Fitted part is labeled FEMDRW128G-88A19; capacity must be confirmed from the part datasheet or BOM.
+  partition_layout:
+    state: CUSTOMER_SELECTION_REQUIRED
+    recommended: Rockchip GPT layout with redundant boot metadata, boot, rootfs and persistent data partitions.
+  networking:
+    state: DEFERRED
+    recommended: Keep GMAC1/RTL8211FI disabled for the first serial-console boot; enable after reset GPIO, PHY address and delay values are verified.
+  fpga_links:
+    state: DEFERRED
+    recommended: Keep PCIe, MIPI CSI, RGMII-to-FPGA and SPI/I2C/GPIO links disabled until the minimal RK boot is stable and the shared interface contract is frozen.
