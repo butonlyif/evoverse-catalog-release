@@ -1,0 +1,64 @@
+# hardware.yaml - ws-e1-base (carrier)
+schema_version: '1.0'
+components:
+  - id: yt8512h
+    part: YT8512H
+    role: ethernet_phy
+    source_refs: [ws-e1-base-schematic]
+    validation_state: CONFIRMED
+    notes: RGMII PHY (eth_txd0..3/tx_ctl/txc, rxd0..3/rx_ctl/rxc, mdc/mdio)
+  - id: klmbg2jetd_b041
+    part: KLMBG2JETD-B041
+    role: emmc
+    source_refs: [ws-e1-base-schematic]
+    validation_state: CONFIRMED
+    notes: eMMC on 3A bank (emmc_dat0..7/clk/ds/cmd/rstn)
+  - id: si5338a
+    part: Si5338A
+    role: clock_generator
+    source_refs: [ws-e1-base-schematic]
+    validation_state: CONFIRMED
+    notes: I2C clkchip_sda/scl + 156.25MHz clkchip_clkout into GPIOL_33
+  - id: bmi088
+    part: BMI088
+    role: imu
+    source_refs: [ws-e1-base-schematic]
+    validation_state: CONFIRMED
+    notes: IMU I2C imu_sda/imu_scl on 3A bank
+  - id: ch224q
+    part: CH224Q
+    role: usb_pd_controller
+    source_refs: [ws-e1-base-schematic]
+    validation_state: CONFIRMED
+    notes: USB-C CC via FX10; usb_dp/dn balls unmapped in legacy data
+interfaces:
+  - id: fmc_hpc_j3
+    source_refs: [ws-e1-base-schematic-pdf, ws-e1-core-schematic-pdf]
+    validation_state: CONFIRMED
+    notes: >-
+      J3 = ASP-134486-01 x2, 400-pin FMC HPC (base p4); LPC-vs-HPC doc
+      discrepancy resolved: connector P/N confirms HPC. 135 FPGA nets routed
+      P4<->P10 B2B to J3 extracted from base p4 red labels and matched to
+      core balls on core p13 (2B/2C/3B, SPI) / p14 (3C) / p15 (4A/4B);
+      every ball cross-checked against devices/TJ180A484S.pinout.csv.
+      FMC rows appended in pinout/ws-e1-fpga-v1.csv (endpoint fmc_hpc_j3).
+  - id: mipi_rx_p5
+    source_refs: [ws-e1-base-schematic]
+    validation_state: CONFIRMED
+    notes: >-
+      P5 = QSE-020-01-F-D-A, MIPI_RX to sensor (base p7); left odd column
+      MIPI0_RX lanes 0-4, right even column MIPI2_RX lanes 0-4; pins matched
+      by row y-coordinate with inner pin-name labels as cross-check.
+  - id: mipi_tx_p6
+    source_refs: [ws-e1-base-schematic]
+    validation_state: CONFIRMED
+    notes: >-
+      P6 = QSE-020-01-F-D-A, MIPI_TX to HDMI (base p7); left odd column
+      MIPI0_TX lanes 0-4, right even column MIPI2_TX lanes 0-4; pins matched
+      by row y-coordinate with inner pin-name labels as cross-check.
+power_domains: []
+clocks: []
+memories: []
+debug_chains: []
+capabilities: []
+cross_chip_links: []

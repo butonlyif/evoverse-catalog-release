@@ -1,0 +1,623 @@
+{
+    "debug_cores": [
+        {
+            "name": "la0",
+            "type": "la",
+            "uuid": "ea52c5ca459846b5b9f766053b740b26",
+            "trigin_en": false,
+            "trigout_en": false,
+            "auto_inserted": true,
+            "capture_control": false,
+            "data_depth": 1024,
+            "input_pipeline": 1,
+            "probes": [
+                {
+                    "name": "reset",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "io_systemReset",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "io_asyncResetn",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "systemClk_locked",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "si5338_pll_locked",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "sys_cnt",
+                    "width": 32,
+                    "probe_type": 1
+                }
+            ]
+        },
+        {
+            "name": "la1",
+            "type": "la",
+            "uuid": "f776a755de914bf7bd616d4afcce21d6",
+            "trigin_en": false,
+            "trigout_en": false,
+            "auto_inserted": true,
+            "capture_control": false,
+            "data_depth": 1024,
+            "input_pipeline": 1,
+            "probes": [
+                {
+                    "name": "si5338_cnt",
+                    "width": 32,
+                    "probe_type": 1
+                }
+            ]
+        }
+    ],
+    "connections": [
+        {
+            "command": "add_ports",
+            "id": 1,
+            "args": {
+                "netlist": "top_soc",
+                "ports": [
+                    {
+                        "name": "jtag_inst2_autodbg_CAPTURE__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_DRCK__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_RESET__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_RUNTEST__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_SEL__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_SHIFT__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_TCK__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_TDI__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_TMS__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_UPDATE__",
+                        "dir": "in",
+                        "width": 1
+                    },
+                    {
+                        "name": "jtag_inst2_autodbg_TDO__",
+                        "dir": "out",
+                        "width": 1
+                    }
+                ]
+            }
+        },
+        {
+            "command": "instantiate",
+            "netlist": "edb_top",
+            "id": 2,
+            "instance": "edb_top_autodbg_inst__"
+        },
+        {
+            "command": "connect",
+            "id": 3,
+            "args": {
+                "instance": "edb_top_autodbg_inst__",
+                "ports": [
+                    {
+                        "name": "bscan_CAPTURE",
+                        "net": "jtag_inst2_autodbg_CAPTURE__"
+                    },
+                    {
+                        "name": "bscan_DRCK",
+                        "net": "jtag_inst2_autodbg_DRCK__"
+                    },
+                    {
+                        "name": "bscan_RESET",
+                        "net": "jtag_inst2_autodbg_RESET__"
+                    },
+                    {
+                        "name": "bscan_RUNTEST",
+                        "net": "jtag_inst2_autodbg_RUNTEST__"
+                    },
+                    {
+                        "name": "bscan_SEL",
+                        "net": "jtag_inst2_autodbg_SEL__"
+                    },
+                    {
+                        "name": "bscan_SHIFT",
+                        "net": "jtag_inst2_autodbg_SHIFT__"
+                    },
+                    {
+                        "name": "bscan_TCK",
+                        "net": "jtag_inst2_autodbg_TCK__"
+                    },
+                    {
+                        "name": "bscan_TDI",
+                        "net": "jtag_inst2_autodbg_TDI__"
+                    },
+                    {
+                        "name": "bscan_TMS",
+                        "net": "jtag_inst2_autodbg_TMS__"
+                    },
+                    {
+                        "name": "bscan_UPDATE",
+                        "net": "jtag_inst2_autodbg_UPDATE__"
+                    },
+                    {
+                        "name": "bscan_TDO",
+                        "net": "jtag_inst2_autodbg_TDO__"
+                    },
+                    {
+                        "name": "la0_clk",
+                        "net": "io_systemClk",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe0",
+                        "net": "reset",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe1",
+                        "net": "io_systemReset",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe2",
+                        "net": "io_asyncResetn",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe3",
+                        "net": "systemClk_locked",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe4",
+                        "net": "si5338_pll_locked",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[0]",
+                        "net": "sys_cnt[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[1]",
+                        "net": "sys_cnt[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[2]",
+                        "net": "sys_cnt[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[3]",
+                        "net": "sys_cnt[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[4]",
+                        "net": "sys_cnt[4]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[5]",
+                        "net": "sys_cnt[5]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[6]",
+                        "net": "sys_cnt[6]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[7]",
+                        "net": "sys_cnt[7]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[8]",
+                        "net": "sys_cnt[8]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[9]",
+                        "net": "sys_cnt[9]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[10]",
+                        "net": "sys_cnt[10]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[11]",
+                        "net": "sys_cnt[11]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[12]",
+                        "net": "sys_cnt[12]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[13]",
+                        "net": "sys_cnt[13]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[14]",
+                        "net": "sys_cnt[14]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[15]",
+                        "net": "sys_cnt[15]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[16]",
+                        "net": "sys_cnt[16]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[17]",
+                        "net": "sys_cnt[17]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[18]",
+                        "net": "sys_cnt[18]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[19]",
+                        "net": "sys_cnt[19]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[20]",
+                        "net": "sys_cnt[20]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[21]",
+                        "net": "sys_cnt[21]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[22]",
+                        "net": "sys_cnt[22]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[23]",
+                        "net": "sys_cnt[23]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[24]",
+                        "net": "sys_cnt[24]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[25]",
+                        "net": "sys_cnt[25]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[26]",
+                        "net": "sys_cnt[26]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[27]",
+                        "net": "sys_cnt[27]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[28]",
+                        "net": "sys_cnt[28]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[29]",
+                        "net": "sys_cnt[29]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[30]",
+                        "net": "sys_cnt[30]",
+                        "path": []
+                    },
+                    {
+                        "name": "la0_probe5[31]",
+                        "net": "sys_cnt[31]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_clk",
+                        "net": "si5338_pll_clk_156m25",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[0]",
+                        "net": "si5338_cnt[0]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[1]",
+                        "net": "si5338_cnt[1]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[2]",
+                        "net": "si5338_cnt[2]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[3]",
+                        "net": "si5338_cnt[3]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[4]",
+                        "net": "si5338_cnt[4]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[5]",
+                        "net": "si5338_cnt[5]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[6]",
+                        "net": "si5338_cnt[6]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[7]",
+                        "net": "si5338_cnt[7]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[8]",
+                        "net": "si5338_cnt[8]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[9]",
+                        "net": "si5338_cnt[9]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[10]",
+                        "net": "si5338_cnt[10]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[11]",
+                        "net": "si5338_cnt[11]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[12]",
+                        "net": "si5338_cnt[12]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[13]",
+                        "net": "si5338_cnt[13]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[14]",
+                        "net": "si5338_cnt[14]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[15]",
+                        "net": "si5338_cnt[15]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[16]",
+                        "net": "si5338_cnt[16]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[17]",
+                        "net": "si5338_cnt[17]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[18]",
+                        "net": "si5338_cnt[18]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[19]",
+                        "net": "si5338_cnt[19]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[20]",
+                        "net": "si5338_cnt[20]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[21]",
+                        "net": "si5338_cnt[21]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[22]",
+                        "net": "si5338_cnt[22]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[23]",
+                        "net": "si5338_cnt[23]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[24]",
+                        "net": "si5338_cnt[24]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[25]",
+                        "net": "si5338_cnt[25]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[26]",
+                        "net": "si5338_cnt[26]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[27]",
+                        "net": "si5338_cnt[27]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[28]",
+                        "net": "si5338_cnt[28]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[29]",
+                        "net": "si5338_cnt[29]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[30]",
+                        "net": "si5338_cnt[30]",
+                        "path": []
+                    },
+                    {
+                        "name": "la1_probe0[31]",
+                        "net": "si5338_cnt[31]",
+                        "path": []
+                    }
+                ]
+            }
+        }
+    ],
+    "vdbs": [
+        {
+            "file": "debug_top.post.vdb",
+            "instance": "edb_top_autodbg_inst__"
+        }
+    ],
+    "session": {
+        "wizard": {
+            "data_depth": 1024,
+            "capture_control": false,
+            "selected_nets": [
+                {
+                    "name": "reset",
+                    "width": 1,
+                    "clk_domain": "io_systemClk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "io_systemReset",
+                    "width": 1,
+                    "clk_domain": "io_systemClk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "io_asyncResetn",
+                    "width": 1,
+                    "clk_domain": "io_systemClk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "systemClk_locked",
+                    "width": 1,
+                    "clk_domain": "io_systemClk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "si5338_cnt",
+                    "width": 32,
+                    "clk_domain": "si5338_pll_clk_156m25",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 31,
+                    "net_idx_right": 0
+                },
+                {
+                    "name": "si5338_pll_locked",
+                    "width": 1,
+                    "clk_domain": "io_systemClk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": []
+                },
+                {
+                    "name": "sys_cnt",
+                    "width": 32,
+                    "clk_domain": "io_systemClk",
+                    "selected_probe_type": "DATA AND TRIGGER",
+                    "child": [],
+                    "path": [],
+                    "net_idx_left": 31,
+                    "net_idx_right": 0
+                }
+            ],
+            "top_module": "top_soc",
+            "src": "elaborate",
+            "jtag_user": "USER2",
+            "input_pipeline": 1
+        }
+    }
+}

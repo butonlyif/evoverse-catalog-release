@@ -1,0 +1,35 @@
+# sources.yaml - ws-e1-base
+schema_version: '1.0'
+sources:
+  - id: ws-e1-schematic
+    type: board_document
+    owner: wsmicro
+    location: boards/ws-e1/ws-e1.md
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: ws-e1-base-schematic
+    type: board_document
+    owner: wsmicro
+    location: boards/ws-e1/carriers/ws-e1-base/ws-e1-base.md
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: tj180a484s-efinity-pinout
+    type: tool_output
+    owner: efinity
+    location: devices/TJ180A484S.pinout.csv
+    version: '2026.1.132.1.15'
+    section: Efinity Pinout Report
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: ws-e1-base-schematic-pdf
+    type: board_document
+    owner: wsmicro
+    location: docs/ws-e1/TJ180A484S_BASE_SCH_260323A0.pdf
+    observed_at: '2026-10-10'
+    state: CONFIRMED
+  - id: ws-e1-core-schematic-pdf
+    type: board_document
+    owner: wsmicro
+    location: docs/ws-e1/TJ180A484_MA_260313A2_SCH.pdf
+    observed_at: '2026-10-10'
+    state: CONFIRMED

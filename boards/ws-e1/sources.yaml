@@ -1,0 +1,32 @@
+# sources.yaml - ws-e1
+schema_version: '1.0'
+sources:
+  - id: ws-e1-schematic
+    type: board_document
+    owner: wsmicro
+    location: boards/ws-e1/ws-e1.md
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: tj180a484s-efinity-pinout
+    type: tool_output
+    owner: efinity
+    location: devices/TJ180A484S.pinout.csv
+    version: '2026.1.132.1.15'
+    section: Efinity Pinout Report
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: efinix-ti180-datasheet
+    type: web_page
+    owner: efinix
+    location: https://www.efinixinc.com/docs/titanium180-ds-v3.6.pdf
+    version: v3.6
+    section: Ordering Information — package J484D1 (TJ180A484S) is a SiP integrating 2-Gbit LPDDR4x, 16-bit
+    observed_at: '2026-10-16'
+    state: CONFIRMED
+  - id: ws-e1-jacket-ddr-peri
+    type: toolchain_document
+    owner: wsmicro
+    location: boards/ws-e1/carriers/ws-e1-base/jackets/ws-e1-cam-ddr-csi2-demo/ws-e1-cam-ddr-csi2.peri.xml
+    section: efxpt:adv_ddr ddr_inst — LPDDR4x, mem_density=2G, data_width=16, physical_rank=1
+    observed_at: '2026-10-16'
+    state: CONFIRMED

@@ -1,0 +1,110 @@
+signal,device_pin,device_bank,io_standard,direction,signal_class,role,interface,endpoint_ref,endpoint_pin,voltage_domain,source_ref,verification_status,notes
+clk_50m,H13,3D_3E,3.3V_LVCMOS,IN,CLOCK,main_clock,OSC_50M,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,50MHz osc X2 (Q33310F70062200) via R87; ball H13 = User IO/GCLK
+arst_n,A4,1D_1E,3.3V_LVCMOS,IN,RESET,reset,USER_BTN_BUT1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,"push button BUT1, RN3 pullup to 3.3V, active-low"
+clk_50m_aux,L13,3D_3E,3.3V_LVCMOS,IN,CLOCK,gpio,OSC_50M_AUX,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,same 50MHz CLK50M via R86; ball L13 = User IO/PLL_CLKIN
+user_btn2,B4,1D_1E,3.3V_LVCMOS,IN,GPIO,gpio,USER_BTN_BUT2,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,"push button BUT2, pullup, active-low"
+user_btn3,A3,1D_1E,3.3V_LVCMOS,IN,GPIO,gpio,USER_BTN_BUT3,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,"push button BUT3, pullup, active-low"
+user_btn4,A2,1D_1E,3.3V_LVCMOS,IN,GPIO,gpio,USER_BTN_BUT4,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,"push button BUT4, pullup, active-low"
+dip_sw1,B15,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW1 (SS-12F44-G5)
+dip_sw2,A15,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW2,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW2 (SS-12F44-G5)
+dip_sw3,B14,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW3,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW3 (SS-12F44-G5)
+dip_sw4,A14,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW4,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW4 (SS-12F44-G5)
+dip_sw5,B13,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW5,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW5 (SS-12F44-G5)
+dip_sw6,A13,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW6,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW6 (SS-12F44-G5)
+dip_sw7,B12,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW7,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW7 (SS-12F44-G5)
+dip_sw8,A11,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW8,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW8 (SS-12F44-G5)
+dip_sw9,B11,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW9,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW9 (SS-12F44-G5)
+dip_sw10,B10,3A_3B_3C,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW10,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,slide switch SW10 (SS-12F44-G5)
+seg_a,C6,1D_1E,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment A via RN9/RN11 to FJ3461AH digit drives
+seg_b,C5,1D_1E,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment B via RN9/RN11 to FJ3461AH digit drives
+seg_c,B7,1D_1E,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment C via RN9/RN11 to FJ3461AH digit drives
+seg_d,C8,1D_1E,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment D via RN9/RN11 to FJ3461AH digit drives
+seg_e,A9,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment E via RN9/RN11 to FJ3461AH digit drives
+seg_f,B6,1D_1E,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment F via RN9/RN11 to FJ3461AH digit drives
+seg_g,B5,1D_1E,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment G via RN9/RN11 to FJ3461AH digit drives
+seg_dp,C7,1D_1E,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,7-seg segment DP via RN9/RN11 to FJ3461AH digit drives
+seg_sel1,A10,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 1 to FJ3461AH (LED11/LED12)
+seg_sel2,C10,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL2,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 2 to FJ3461AH (LED11/LED12)
+seg_sel3,C11,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL3,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 3 to FJ3461AH (LED11/LED12)
+seg_sel4,C9,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL4,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 4 to FJ3461AH (LED11/LED12)
+seg_sel5,C12,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL5,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 5 to FJ3461AH (LED11/LED12)
+seg_sel6,C13,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL6,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 6 to FJ3461AH (LED11/LED12)
+seg_sel7,C14,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL7,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 7 to FJ3461AH (LED11/LED12)
+seg_sel8,B9,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,SEG_DIG_SEL8,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,digit select 8 to FJ3461AH (LED11/LED12)
+uart_tx,N16,3D_3E,3.3V_LVCMOS,OUT,UART,gpio,UART_USB,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,UART_P via R70 to CH340N(U2) pin6; direction inferred from net naming - verify on hardware
+uart_rx,P16,3D_3E,3.3V_LVCMOS,IN,UART,gpio,UART_USB,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,UART_N via R64 to CH340N(U2) pin7; direction inferred from net naming - verify on hardware
+flash_miso,N1,1A,3.3V_LVCMOS,IN,SPI,gpio,SPI_FLASH,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,W25Q32(U3) DO via R62; ball N1 = User IO/Configuration (dual-purpose)
+flash_mosi,L3,1A,3.3V_LVCMOS,OUT,SPI,gpio,SPI_FLASH,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,W25Q32(U3) DI via R63; ball L3 = User IO/Configuration (dual-purpose)
+flash_sclk,M3,1A,3.3V_LVCMOS,OUT,SPI,gpio,SPI_FLASH,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,W25Q32(U3) CLK via R61; ball M3 = User IO/Configuration (dual-purpose)
+flash_cs_n,P3,1A,3.3V_LVCMOS,OUT,SPI,gpio,SPI_FLASH,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,W25Q32(U3) CS via R88; ball P3 = User IO/Configuration (dual-purpose)
+flash_hold,G5,1B_1C,3.3V_LVCMOS,OUT,SPI,gpio,SPI_FLASH,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,W25Q32(U3) HOLD via R60; ball G5 = User IO/GCLK
+i2c_sda,A7,1D_1E,3.3V_LVCMOS,INOUT,I2C,gpio,I2C_EEPROM,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,"AT24C01C(U6) SDA, pullup R69 to 3.3V"
+i2c_scl,A8,1D_1E,3.3V_LVCMOS,OUT,I2C,gpio,I2C_EEPROM,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,"AT24C01C(U6) SCL, pullup R68 to 3.3V"
+vga_r0,B16,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA R0 via resistor ladder to DSUB1
+vga_r1,C15,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA R1 via resistor ladder to DSUB1
+vga_r2,C16,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA R2 via resistor ladder to DSUB1
+vga_r3,D14,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA R3 via resistor ladder to DSUB1
+vga_r4,D16,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA R4 via resistor ladder to DSUB1
+vga_g0,E15,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA G0 via resistor ladder to DSUB1
+vga_g1,E16,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA G1 via resistor ladder to DSUB1
+vga_g2,F15,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA G2 via resistor ladder to DSUB1
+vga_g3,F16,3A_3B_3C,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA G3 via resistor ladder to DSUB1
+vga_g4,G15,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA G4 via resistor ladder to DSUB1
+vga_g5,G16,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA G5 via resistor ladder to DSUB1
+vga_b0,H14,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA B0 via resistor ladder to DSUB1
+vga_b1,H15,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA B1 via resistor ladder to DSUB1
+vga_b2,K14,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA B2 via resistor ladder to DSUB1
+vga_b3,K15,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA B3 via resistor ladder to DSUB1
+vga_b4,L15,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA B4 via resistor ladder to DSUB1
+vga_hs,M15,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA HSYNC via R43 to DSUB1
+vga_vs,M16,3D_3E,3.3V_LVCMOS,OUT,GPIO,gpio,VGA,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,VGA VSYNC to DSUB1
+jtag_tck,M2,1A,3.3V_LVCMOS,IN,JTAG,tck,JTAG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,JTAG TCK from FT232HL(U5) pin13 via R1; ball M2 = Configuration
+jtag_tdi,K5,1A,3.3V_LVCMOS,IN,JTAG,tdi,JTAG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,JTAG TDI from FT232HL(U5) pin14 via R2; ball K5 = Configuration
+jtag_tdo,L5,1A,3.3V_LVCMOS,OUT,JTAG,tdo,JTAG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,JTAG TDO to FT232HL(U5) pin15 via R3; ball L5 = Configuration
+jtag_tms,M1,1A,3.3V_LVCMOS,IN,JTAG,tms,JTAG,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,JTAG TMS from FT232HL(U5) pin16 via R6; ball M1 = Configuration
+lvds1_p,K2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_1_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds1_n,L1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_1_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds2_p,J2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_2_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds2_n,K1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_2_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds3_p,H1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_3_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds3_n,H2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_3_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds4_p,G1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_4_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds4_n,G2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_4_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds5_p,K3,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_5_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds5_n,L2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_5_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds6_p,J5,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_6_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds6_n,K4,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_6_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds7_p,J3,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_7_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds7_n,J4,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_7_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds8_p,H3,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_8_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds8_n,H4,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_8_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds9_p,G3,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_9_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds9_n,G4,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_9_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds10_p,F3,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_10_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds10_n,F4,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_10_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds11_p,E3,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_11_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds11_n,E4,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_11_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds12_p,C3,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_12_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds12_n,D4,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_12_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds13_p,B3,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_13_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds13_n,C4,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_13_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds14_p,F1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_14_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds14_n,F2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_14_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds15_p,E1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_15_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds15_n,E2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_15_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds16_p,D1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_16_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds16_n,D3,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_16_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds17_p,C1,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_17_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds17_n,C2,1B_1C,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_17_N diff pair to CN1 40-pin expansion (ESD D39)
+lvds18_p,B1,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_18_P diff pair to CN1 40-pin expansion (ESD D39)
+lvds18_n,B2,1D_1E,3.3V_LVCMOS,INOUT,GPIO,gpio,EXP_CN1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,GPIOL_18_N diff pair to CN1 40-pin expansion (ESD D39)
+led_user,T8,4B,3.3V_LVCMOS,OUT,GPIO,user_led,USER_LED1,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED1 (KT-0603R red) via resistor to GND
+led_user2,T9,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED2,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED2 (KT-0603R red)
+led_user3,T10,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED3,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED3 (KT-0603R red)
+led_user4,T11,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED4,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED4 (KT-0603R red)
+led_user5,T12,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED5,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED5 (KT-0603R red)
+led_user6,R13,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED6,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED6 (KT-0603R red)
+led_user7,T14,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED7,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED7 (KT-0603R red)
+led_user8,R14,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED8,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED8 (KT-0603R red)
+led_user9,T15,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED9,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED9 (KT-0603R red)
+led_user10,R15,4A,3.3V_LVCMOS,OUT,GPIO,gpio,USER_LED10,,,3.3,t20f256-xd-ps-eval-schematic,CONFIRMED,LED10 (KT-0603R red)

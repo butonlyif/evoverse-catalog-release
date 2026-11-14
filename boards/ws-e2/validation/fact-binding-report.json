@@ -1,0 +1,1106 @@
+{
+ "root": "D:\\work\\evoverse_test_runs\\trae-nl-generation-2026-11\\runs\\ws-e2-material-20261113\\board-data\\boards\\ws-e2",
+ "violations": [],
+ "facts": [
+  {
+   "fact": "components:tj375",
+   "token": "TJ375N1156X",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "02"
+    ]
+   }
+  },
+  {
+   "fact": "components:rk3588j",
+   "token": "RK3588",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25"
+    ],
+    "som": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "31",
+     "32",
+     "33",
+     "34"
+    ]
+   }
+  },
+  {
+   "fact": "components:rk806-1",
+   "token": "RK806-1",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "13"
+    ]
+   }
+  },
+  {
+   "fact": "components:xl9555-module",
+   "token": "XL9555",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "21",
+     "23"
+    ],
+    "som": [
+     "12",
+     "32"
+    ]
+   }
+  },
+  {
+   "fact": "clocks:rk-xin24m",
+   "token": "XIN24M",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "04"
+    ]
+   }
+  },
+  {
+   "fact": "clocks:som-clock-fanout-ez8304a",
+   "token": "ez8304a",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "02",
+     "30"
+    ]
+   }
+  },
+  {
+   "fact": "memories:rk-lpddr4x",
+   "token": "ATL4X8G32M2D-46",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "15"
+    ]
+   }
+  },
+  {
+   "fact": "memories:rk-emmc",
+   "token": "FEMDRW128G-88A19",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "16"
+    ]
+   }
+  },
+  {
+   "fact": "memories:fpga-lpddr4x",
+   "token": "W66DP2RQQAGJ",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "24"
+    ]
+   }
+  },
+  {
+   "fact": "memories:fpga-qspi-nor",
+   "token": "GD25LB512MEYIGR",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "21"
+    ]
+   }
+  },
+  {
+   "fact": "memories:fpga-lpddr4x-dnp-note",
+   "token": "lpddr4x",
+   "state": "UNVERIFIED",
+   "binding": "PRESENCE_ONLY(unverified-ok)",
+   "pages": {
+    "som": [
+     "02",
+     "05",
+     "15",
+     "24"
+    ]
+   }
+  },
+  {
+   "fact": "debug_chains:rk-uart2-m0-debug",
+   "token": "uart2",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "04",
+     "14",
+     "23",
+     "24"
+    ],
+    "som": [
+     "02",
+     "04",
+     "06",
+     "12",
+     "32"
+    ]
+   }
+  },
+  {
+   "fact": "debug_chains:fpga-jtag-ft4232",
+   "token": "TJ375N1156X",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "02"
+    ]
+   }
+  },
+  {
+   "fact": "capabilities:rk-emmc-boot",
+   "token": "RK3588",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25"
+    ],
+    "som": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "31",
+     "32",
+     "33",
+     "34"
+    ]
+   }
+  },
+  {
+   "fact": "capabilities:rk-maskrom-boot",
+   "token": "RK3588",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25"
+    ],
+    "som": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "31",
+     "32",
+     "33",
+     "34"
+    ]
+   }
+  },
+  {
+   "fact": "capabilities:rk-debug-console",
+   "token": "RK3588",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25"
+    ],
+    "som": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06",
+     "07",
+     "08",
+     "09",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "31",
+     "32",
+     "33",
+     "34"
+    ]
+   }
+  },
+  {
+   "fact": "capabilities:fpga-qspi-nor-config",
+   "token": "TJ375N1156X",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "02"
+    ]
+   }
+  },
+  {
+   "fact": "power_domains:rk806-regulated-domains",
+   "token": "rk806",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "som": [
+     "02",
+     "13"
+    ]
+   }
+  },
+  {
+   "fact": "cross_chip_links:mipi0-tx",
+   "token": "mipi0",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "16",
+     "23"
+    ],
+    "som": [
+     "02",
+     "26",
+     "28",
+     "31",
+     "32"
+    ]
+   }
+  },
+  {
+   "fact": "cross_chip_links:mipi1-tx",
+   "token": "mipi1",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "16",
+     "24"
+    ],
+    "som": [
+     "02",
+     "26",
+     "28",
+     "31",
+     "33"
+    ]
+   }
+  },
+  {
+   "fact": "cross_chip_links:mipi2-tx",
+   "token": "mipi2",
+   "state": "CONFIRMED",
+   "binding": "PRESENCE_ONLY",
+   "pages": {
+    "mc": [
+     "16",
+     "24"
+    ],
+    "som": [
+     "02",
+     "26",
+     "28",
+     "31",
+     "33"
+    ]
+   }
+  }
+ ],
+ "summary": {
+  "factsChecked": 21,
+  "tokenAbsent": 0,
+  "presenceOnly": 21,
+  "violations": 0
+ },
+ "carriers": [
+  {
+   "root": "D:\\work\\evoverse_test_runs\\trae-nl-generation-2026-11\\runs\\ws-e2-material-20261113\\board-data\\boards\\ws-e2\\carriers\\ws-e2-rk3588-mc",
+   "violations": [],
+   "facts": [
+    {
+     "fact": "components:rtl8211fi-rk-phy",
+     "token": "RTL8211FI-CG",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "10",
+       "19"
+      ]
+     }
+    },
+    {
+     "fact": "components:rtl8211fi-ecat-phy",
+     "token": "RTL8211FI-CG",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "10",
+       "19"
+      ]
+     }
+    },
+    {
+     "fact": "components:lan9252-ecat",
+     "token": "LAN9252I",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "19"
+      ]
+     }
+    },
+    {
+     "fact": "components:yt6801-nic",
+     "token": "YT6801SH",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "10"
+      ]
+     }
+    },
+    {
+     "fact": "components:rtl8111hs-nic",
+     "token": "RTL8111HS",
+     "state": "UNVERIFIED",
+     "binding": "PRESENCE_ONLY(unverified-ok)",
+     "pages": {
+      "mc": [
+       "10"
+      ]
+     }
+    },
+    {
+     "fact": "components:es8388-codec",
+     "token": "ES8388",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "06"
+      ]
+     }
+    },
+    {
+     "fact": "components:ft4232-jtag-uart",
+     "token": "FT4232HL-REEL",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "13"
+      ]
+     }
+    },
+    {
+     "fact": "components:ft232-rk-debug",
+     "token": "FT232RL",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "04"
+      ]
+     }
+    },
+    {
+     "fact": "components:max3232-rs232-rk",
+     "token": "MAX3232IPWR",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "04",
+       "14"
+      ]
+     }
+    },
+    {
+     "fact": "components:max3232-rs232-fpga",
+     "token": "MAX3232IPWR",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "04",
+       "14"
+      ]
+     }
+    },
+    {
+     "fact": "components:cmt83085-rs485",
+     "token": "CMT83085",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "04",
+       "14"
+      ]
+     }
+    },
+    {
+     "fact": "components:tja1051-can0",
+     "token": "TJA1051T/3",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "14"
+      ]
+     }
+    },
+    {
+     "fact": "components:lmh1218-sdi",
+     "token": "LMH1218RTWR",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "18"
+      ]
+     }
+    },
+    {
+     "fact": "components:lmh1219-sdi",
+     "token": "LMH1219RTWR",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "18"
+      ]
+     }
+    },
+    {
+     "fact": "components:femdrw032g-emmc",
+     "token": "FEMDRW032G",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "15"
+      ]
+     }
+    },
+    {
+     "fact": "components:xl9555-carrier",
+     "token": "XL9555",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "21",
+       "23"
+      ],
+      "som": [
+       "12",
+       "32"
+      ]
+     }
+    },
+    {
+     "fact": "components:pi6c557-pcie-clk",
+     "token": "PI6C557-05BLE",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "11"
+      ]
+     }
+    },
+    {
+     "fact": "components:bl24c512-eeprom",
+     "token": "BL24C512A-PARC",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "19"
+      ]
+     }
+    },
+    {
+     "fact": "components:ina226-power-mon",
+     "token": "INA226AIDGSR",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "22"
+      ]
+     }
+    },
+    {
+     "fact": "clocks:pcie-refclk-pi6c557",
+     "token": "pi6c",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "11"
+      ],
+      "som": [
+       "19"
+      ]
+     }
+    },
+    {
+     "fact": "clocks:sdi-clk-lmkdb1202",
+     "token": "lmkdb1202",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "18"
+      ]
+     }
+    },
+    {
+     "fact": "memories:fpga-emmc-carrier",
+     "token": "FEMDRW032G",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "15"
+      ]
+     }
+    },
+    {
+     "fact": "debug_chains:rk-debug-console-carrier",
+     "token": "RK3588",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "01",
+       "02",
+       "03",
+       "04",
+       "05",
+       "06",
+       "07",
+       "08",
+       "09",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20",
+       "21",
+       "22",
+       "23",
+       "24",
+       "25"
+      ],
+      "som": [
+       "01",
+       "02",
+       "03",
+       "04",
+       "05",
+       "06",
+       "07",
+       "08",
+       "09",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20",
+       "21",
+       "22",
+       "23",
+       "24",
+       "25",
+       "26",
+       "27",
+       "28",
+       "29",
+       "30",
+       "31",
+       "32",
+       "33",
+       "34"
+      ]
+     }
+    },
+    {
+     "fact": "debug_chains:fpga-jtag-carrier",
+     "token": "TJ375N1156X",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "som": [
+       "02"
+      ]
+     }
+    },
+    {
+     "fact": "capabilities:rk-maskrom-entry-carrier",
+     "token": "RK3588",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "01",
+       "02",
+       "03",
+       "04",
+       "05",
+       "06",
+       "07",
+       "08",
+       "09",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20",
+       "21",
+       "22",
+       "23",
+       "24",
+       "25"
+      ],
+      "som": [
+       "01",
+       "02",
+       "03",
+       "04",
+       "05",
+       "06",
+       "07",
+       "08",
+       "09",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20",
+       "21",
+       "22",
+       "23",
+       "24",
+       "25",
+       "26",
+       "27",
+       "28",
+       "29",
+       "30",
+       "31",
+       "32",
+       "33",
+       "34"
+      ]
+     }
+    },
+    {
+     "fact": "capabilities:som-power-good",
+     "token": "RK3588",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "01",
+       "02",
+       "03",
+       "04",
+       "05",
+       "06",
+       "07",
+       "08",
+       "09",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20",
+       "21",
+       "22",
+       "23",
+       "24",
+       "25"
+      ],
+      "som": [
+       "01",
+       "02",
+       "03",
+       "04",
+       "05",
+       "06",
+       "07",
+       "08",
+       "09",
+       "10",
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20",
+       "21",
+       "22",
+       "23",
+       "24",
+       "25",
+       "26",
+       "27",
+       "28",
+       "29",
+       "30",
+       "31",
+       "32",
+       "33",
+       "34"
+      ]
+     }
+    },
+    {
+     "fact": "interfaces:rk-eth-rj45",
+     "token": "rj45",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "10"
+      ],
+      "som": [
+       "02"
+      ]
+     }
+    },
+    {
+     "fact": "interfaces:fpga-rs485-rs232",
+     "token": "rs485",
+     "state": "CONFIRMED",
+     "binding": "PRESENCE_ONLY",
+     "pages": {
+      "mc": [
+       "04",
+       "14"
+      ]
+     }
+    },
+    {
+     "fact": "device_behaviors:led-rk-user0",
+     "tokens": [
+      "user0"
+     ],
+     "state": "UNVERIFIED",
+     "binding": "TOKEN_ABSENT"
+    },
+    {
+     "fact": "device_behaviors:led-rk-user1",
+     "tokens": [
+      "user1"
+     ],
+     "state": "UNVERIFIED",
+     "binding": "TOKEN_ABSENT"
+    },
+    {
+     "fact": "device_behaviors:led-f-user0",
+     "tokens": [
+      "user0"
+     ],
+     "state": "UNVERIFIED",
+     "binding": "TOKEN_ABSENT"
+    },
+    {
+     "fact": "device_behaviors:led-f-user1",
+     "tokens": [
+      "user1"
+     ],
+     "state": "UNVERIFIED",
+     "binding": "TOKEN_ABSENT"
+    },
+    {
+     "fact": "device_behaviors:dip-rk-user-sw0-3",
+     "token": "sw0",
+     "state": "UNVERIFIED",
+     "binding": "PRESENCE_ONLY(unverified-ok)",
+     "pages": {
+      "mc": [
+       "03",
+       "12",
+       "21",
+       "24"
+      ]
+     }
+    },
+    {
+     "fact": "device_behaviors:dip-f-user-sw0-1",
+     "token": "sw0",
+     "state": "UNVERIFIED",
+     "binding": "PRESENCE_ONLY(unverified-ok)",
+     "pages": {
+      "mc": [
+       "03",
+       "12",
+       "21",
+       "24"
+      ]
+     }
+    }
+   ],
+   "summary": {
+    "factsChecked": 34,
+    "tokenAbsent": 4,
+    "presenceOnly": 30,
+    "violations": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+signal,device_pin,device_bank,io_standard,direction,signal_class,role,interface,endpoint_ref,endpoint_pin,voltage_domain,source_ref,verification_status,notes
+clk_50m,T18,TL,3.3V_LVCMOS,IN,CLOCK,main_clock,OSC_50M,,,3.3,ws-e1-base-schematic,CONFIRMED,"50MHz OSC U13 on core, ball T18 = GPIOL_26_PLLIN1 (weak pullup)"
+arst_n,H21,2C,1.8V_LVCMOS,IN,RESET,reset,USER_BTN_S1,,,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S1 has 10K pullup to D3V3 but bank 2C is 1.8V HSIO (Ti180 absolute max 1.98V); hardware review required. Ball H21 = GPIOT_P_29
+led_user,F21,2C,1.8V_LVCMOS,OUT,GPIO,user_led,USER_LED_D25,,,1.8,ws-e1-base-schematic,CONFIRMED,"D25 user LED on base via Q4 (MMBT3904T-7-F NPN), ball F21 = GPIOT_N_34"
+led_user2,F22,2C,1.8V_LVCMOS,OUT,GPIO,gpio,USER_LED_D26,,,1.8,ws-e1-base-schematic,CONFIRMED,"D26 user LED on base via Q5 NPN, ball F22 = GPIOT_P_34"
+user_btn2,J21,2C,1.8V_LVCMOS,IN,GPIO,gpio,USER_BTN_S2,,,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S2 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball J21 = GPIOT_N_29
+user_btn3,H22,2C,1.8V_LVCMOS,IN,GPIO,gpio,USER_BTN_S3,,,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S3 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball H22 = GPIOT_N_31
+user_btn4,G22,2C,1.8V_LVCMOS,IN,GPIO,gpio,USER_BTN_S4,,,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S4 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball G22 = GPIOT_P_31
+pmod2_io1,F20,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.1 PMOD2 IO17 -> 2C_GPIOT_P_33 (ball F20)
+pmod2_io2,F19,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.2 PMOD2 IO18 -> 2C_GPIOT_N_33 (ball F19)
+pmod2_io3,K22,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.3 PMOD2 IO19 -> 2C_GPIOT_P_28 (ball K22)
+pmod2_io4,K21,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.4 PMOD2 IO20 -> 2C_GPIOT_N_28 (ball K21)
+pmod2_io5,G18,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.5 PMOD2 IO21 -> 2C_GPIOT_P_30 (ball G18)
+pmod2_io6,H18,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.6 PMOD2 IO22 -> 2C_GPIOT_N_30 (ball H18)
+pmod2_io7,G20,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.7 PMOD2 IO23 -> 2C_GPIOT_P_32 (ball G20)
+pmod2_io8,G19,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,,,1.8,ws-e1-base-schematic,CONFIRMED,J11.8 PMOD2 IO24 -> 2C_GPIOT_N_32 (ball G19)
+jtag_tck,L6,BL,3.3V_LVCMOS,IN,JTAG,jtag_tck,JTAG,,,3.3,ws-e1-base-schematic,CONFIRMED,"JTAG TCK -> ball L6, 4K7 pullup"
+jtag_tdi,K6,BL,3.3V_LVCMOS,IN,JTAG,jtag_tdi,JTAG,,,3.3,ws-e1-base-schematic,CONFIRMED,"JTAG TDI -> ball K6, 4K7 pullup"
+jtag_tms,J6,BL,3.3V_LVCMOS,IN,JTAG,jtag_tms,JTAG,,,3.3,ws-e1-base-schematic,CONFIRMED,"JTAG TMS -> ball J6, 4K7 pullup"
+jtag_tdo,H6,BL,3.3V_LVCMOS,OUT,JTAG,jtag_tdo,JTAG,,,3.3,ws-e1-base-schematic,CONFIRMED,JTAG TDO -> ball H6
+creset_n,T9,4C,1.8V_LVCMOS,IN,RESET,creset_n,CONFIG,,,1.8,ws-e1-base-schematic,CONFIRMED,CRESET_N config reset -> ball T9
+flash_csn,Y3,4C,1.8V_LVCMOS,OUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e1-base-schematic,CONFIRMED,QSPI CS# (SSL_N) -> GPIOB_P_08_SSL_N (ball Y3)
+flash_clk,R3,4B,1.8V_LVCMOS,OUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e1-base-schematic,CONFIRMED,"QSPI CLK -> GPIOB_P_16_EXTSPICLK_CLK3_P (ball R3, also SI5338 LVDS clock P after config)"
+flash_io0,W2,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO0/DI -> GPIOB_P_09_CDI0 (ball W2)
+flash_io1,W3,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO1/DO -> GPIOB_N_09_CDI1 (ball W3)
+flash_io2,AA1,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO2/WP# -> GPIOB_N_10_CDI2 (ball AA1)
+flash_io3,Y1,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO3/HOLD# -> GPIOB_P_10_CDI3 (ball Y1)
+dip_sw1,Y16,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,,,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.1 -> GPIOL_37 (ball Y16), 10K pullup to D3V3"
+dip_sw2,AB15,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,,,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.2 -> GPIOL_51 (ball AB15), 10K pullup to D3V3"
+dip_sw3,AB17,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,,,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.3 -> GPIOL_52 (ball AB17), 10K pullup to D3V3"
+dip_sw4,AA16,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,,,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.4 -> GPIOL_35 (ball AA16), 10K pullup to D3V3"
+emmc_dat0,A15,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT0 -> 3A_GPIOR_P_32
+emmc_dat1,B15,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT1 -> 3A_GPIOR_N_32
+emmc_dat2,C16,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT2 -> 3A_GPIOR_P_39
+emmc_dat3,D16,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT3 -> 3A_GPIOR_N_39
+emmc_dat4,A18,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT4 -> 3A_GPIOR_P_34
+emmc_dat5,B19,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT5 -> 3A_GPIOR_N_34
+emmc_dat6,C17,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT6 -> 3A_GPIOR_P_38
+emmc_dat7,C18,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT7 -> 3A_GPIOR_N_38
+emmc_clk,D15,3A,1.8V_LVCMOS,OUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC CLK -> 3A_GPIOR_N_36
+emmc_ds,C15,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DS (Data Strobe) -> 3A_GPIOR_P_36
+emmc_cmd,A16,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC CMD -> 3A_GPIOR_P_33
+emmc_rstn,A17,3A,1.8V_LVCMOS,OUT,GPIO,gpio,EMMC,,,1.8,ws-e1-base-schematic,CONFIRMED,eMMC RSTN -> 3A_GPIOR_N_33
+eth_txd0,A21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD0 -> GPIOR_P_40 (DDIO)
+eth_txd1,B21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD1 -> GPIOR_N_40 (DDIO)
+eth_txd2,D19,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD2 -> GPIOR_N_43 (DDIO)
+eth_txd3,D18,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD3 -> GPIOR_P_43 (DDIO)
+eth_tx_ctl,C21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TX_CTL (TX_EN/TX_ERR DDIO) -> GPIOR_P_42
+eth_txc,D21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TX_CLK (125MHz DDIO) -> GPIOR_N_42
+eth_rxd0,C20,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD0 -> GPIOR_P_44_EXTFB (DDIO)
+eth_rxd1,D20,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD1 -> GPIOR_N_44 (DDIO)
+eth_rxd2,B22,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD2 -> GPIOR_P_41 (DDIO)
+eth_rxd3,C22,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD3 -> GPIOR_N_41 (DDIO)
+eth_rx_ctl,E22,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,,,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RX_CTL (RX_DV/RX_ERR DDIO) -> GPIOR_N_45
+eth_rxc,AA14,TL,3.3V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,,,3.3,ws-e1-base-schematic,CONFIRMED,RGMII RX_CLK (125MHz) -> GPIOL_29_CLK30
+eth_mdc,A20,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_MDC_MDIO,,,1.8,ws-e1-base-schematic,CONFIRMED,MDC -> GPIOR_P_35
+eth_mdio,B20,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,ETH_MDC_MDIO,,,1.8,ws-e1-base-schematic,CONFIRMED,MDIO -> GPIOR_N_35
+imu_sda,B17,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,IMU_I2C,,,1.8,ws-e1-base-schematic,CONFIRMED,IMU SDA -> 3A_GPIOR_P_37
+imu_scl,B18,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,IMU_I2C,,,1.8,ws-e1-base-schematic,CONFIRMED,IMU SCL -> 3A_GPIOR_N_37
+clkchip_sda,AB14,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,CLK_CHIP,,,3.3,ws-e1-base-schematic,CONFIRMED,Si5338A SDA -> GPIOL_50 (separate I2C bus from IMU)
+clkchip_scl,W14,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,CLK_CHIP,,,3.3,ws-e1-base-schematic,CONFIRMED,Si5338A SCL -> GPIOL_42 (separate I2C bus from IMU)
+clkchip_clkout,Y17,TL,3.3V_LVCMOS,OUT,CLOCK,gpio,CLK_CHIP,,,3.3,ws-e1-base-schematic,CONFIRMED,Si5338A PLL reference output (156.25MHz) -> GPIOL_33
+sdio1_d0,AA9,BL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,,,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D0 -> GPIOL_05_CLK25
+sdio1_d1,AB13,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,,,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D1 -> GPIOL_49
+sdio1_d2,U9,BL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,,,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D2 -> GPIOL_04_CLK25
+sdio1_d3,AB12,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,,,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D3 -> GPIOL_31
+sdio1_cmd,W9,BL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,,,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_CMD -> GPIOL_03_CLK24
+sdio1_clk,AA12,TL,3.3V_LVCMOS,OUT,GPIO,gpio,SDIO1,,,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_CLK -> GPIOL_30_CLK31
+sdio1_cd,Y11,BL,3.3V_LVCMOS,IN,GPIO,gpio,SDIO1,,,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_CD card detect -> GPIOL_10_PLLIN1
+mipi0_rxdp0,W8,BL,MIPI,IN,MIPI,mipi0_rx_lane0_p,MIPI0_RX,mipi_rx_p5,P5-31,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP0 (MIPI0_RXDP0)
+mipi0_rxdn0,V8,BL,MIPI,IN,MIPI,mipi0_rx_lane0_n,MIPI0_RX,mipi_rx_p5,P5-33,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN0 (MIPI0_RXDN0)
+mipi0_rxdp1,Y6,BL,MIPI,IN,MIPI,mipi0_rx_lane1_p,MIPI0_RX,mipi_rx_p5,P5-19,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP1 (MIPI0_RXDP1)
+mipi0_rxdn1,AA7,BL,MIPI,IN,MIPI,mipi0_rx_lane1_n,MIPI0_RX,mipi_rx_p5,P5-21,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN1 (MIPI0_RXDN1)
+mipi0_rxdp2,W5,BL,MIPI,IN,MIPI,mipi0_rx_lane2_p,MIPI0_RX,mipi_rx_p5,P5-7,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP2 (MIPI0_RXDP2)
+mipi0_rxdn2,V5,BL,MIPI,IN,MIPI,mipi0_rx_lane2_n,MIPI0_RX,mipi_rx_p5,P5-9,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN2 (MIPI0_RXDN2)
+mipi0_rxdp3,Y7,BL,MIPI,IN,MIPI,mipi0_rx_lane3_p,MIPI0_RX,mipi_rx_p5,P5-25,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP3 (MIPI0_RXDP3)
+mipi0_rxdn3,Y8,BL,MIPI,IN,MIPI,mipi0_rx_lane3_n,MIPI0_RX,mipi_rx_p5,P5-27,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN3 (MIPI0_RXDN3)
+mipi0_rxdp4,V6,BL,MIPI,IN,MIPI,mipi0_rx_lane4_p,MIPI0_RX,mipi_rx_p5,P5-13,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP4 (MIPI0_RXDP4)
+mipi0_rxdn4,V7,BL,MIPI,IN,MIPI,mipi0_rx_lane4_n,MIPI0_RX,mipi_rx_p5,P5-15,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN4 (MIPI0_RXDN4)
+mipi0_txdp0,Y4,BL,MIPI,OUT,MIPI,mipi0_tx_lane0_p,MIPI0_TX,mipi_tx_p6,P6-7,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP0 (MIPI0_TXDP0)
+mipi0_txdn0,W4,BL,MIPI,OUT,MIPI,mipi0_tx_lane0_n,MIPI0_TX,mipi_tx_p6,P6-9,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN0 (MIPI0_TXDN0)
+mipi0_txdp1,AB4,BL,MIPI,OUT,MIPI,mipi0_tx_lane1_p,MIPI0_TX,mipi_tx_p6,P6-13,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP1 (MIPI0_TXDP1)
+mipi0_txdn1,AA4,BL,MIPI,OUT,MIPI,mipi0_tx_lane1_n,MIPI0_TX,mipi_tx_p6,P6-15,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN1 (MIPI0_TXDN1)
+mipi0_txdp2,AB6,BL,MIPI,OUT,MIPI,mipi0_tx_lane2_p,MIPI0_TX,mipi_tx_p6,P6-19,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP2 (MIPI0_TXDP2)
+mipi0_txdn2,AB7,BL,MIPI,OUT,MIPI,mipi0_tx_lane2_n,MIPI0_TX,mipi_tx_p6,P6-21,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN2 (MIPI0_TXDN2)
+mipi0_txdp3,AA5,BL,MIPI,OUT,MIPI,mipi0_tx_lane3_p,MIPI0_TX,mipi_tx_p6,P6-25,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP3 (MIPI0_TXDP3)
+mipi0_txdn3,AA6,BL,MIPI,OUT,MIPI,mipi0_tx_lane3_n,MIPI0_TX,mipi_tx_p6,P6-27,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN3 (MIPI0_TXDN3)
+mipi0_txdp4,AB8,BL,MIPI,OUT,MIPI,mipi0_tx_lane4_p,MIPI0_TX,mipi_tx_p6,P6-31,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP4 (MIPI0_TXDP4)
+mipi0_txdn4,AB9,BL,MIPI,OUT,MIPI,mipi0_tx_lane4_n,MIPI0_TX,mipi_tx_p6,P6-33,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN4 (MIPI0_TXDN4)
+mipi2_rxdp0,U22,TL,MIPI,IN,MIPI,mipi2_rx_lane0_p,MIPI2_RX,mipi_rx_p5,P5-26,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP0 (MIPI2_RXDP0)
+mipi2_rxdn0,V22,TL,MIPI,IN,MIPI,mipi2_rx_lane0_n,MIPI2_RX,mipi_rx_p5,P5-28,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN0 (MIPI2_RXDN0)
+mipi2_rxdp1,Y22,TL,MIPI,IN,MIPI,mipi2_rx_lane1_p,MIPI2_RX,mipi_rx_p5,P5-20,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP1 (MIPI2_RXDP1)
+mipi2_rxdn1,Y21,TL,MIPI,IN,MIPI,mipi2_rx_lane1_n,MIPI2_RX,mipi_rx_p5,P5-22,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN1 (MIPI2_RXDN1)
+mipi2_rxdp2,V21,TL,MIPI,IN,MIPI,mipi2_rx_lane2_p,MIPI2_RX,mipi_rx_p5,P5-14,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP2 (MIPI2_RXDP2)
+mipi2_rxdn2,W21,TL,MIPI,IN,MIPI,mipi2_rx_lane2_n,MIPI2_RX,mipi_rx_p5,P5-16,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN2 (MIPI2_RXDN2)
+mipi2_rxdp3,AA22,TL,MIPI,IN,MIPI,mipi2_rx_lane3_p,MIPI2_RX,mipi_rx_p5,P5-8,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP3 (MIPI2_RXDP3)
+mipi2_rxdn3,AA21,TL,MIPI,IN,MIPI,mipi2_rx_lane3_n,MIPI2_RX,mipi_rx_p5,P5-10,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN3 (MIPI2_RXDN3)
+mipi2_rxdp4,U20,TL,MIPI,IN,MIPI,mipi2_rx_lane4_p,MIPI2_RX,mipi_rx_p5,P5-2,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP4 (MIPI2_RXDP4)
+mipi2_rxdn4,V20,TL,MIPI,IN,MIPI,mipi2_rx_lane4_n,MIPI2_RX,mipi_rx_p5,P5-4,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN4 (MIPI2_RXDN4)
+mipi2_txdp0,Y20,TL,MIPI,OUT,MIPI,mipi2_tx_lane0_p,MIPI2_TX,mipi_tx_p6,P6-26,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP0 (MIPI2_TXDP0)
+mipi2_txdn0,W19,TL,MIPI,OUT,MIPI,mipi2_tx_lane0_n,MIPI2_TX,mipi_tx_p6,P6-28,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN0 (MIPI2_TXDN0)
+mipi2_txdp1,AA20,TL,MIPI,OUT,MIPI,mipi2_tx_lane1_p,MIPI2_TX,mipi_tx_p6,P6-20,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP1 (MIPI2_TXDP1)
+mipi2_txdn1,AB21,TL,MIPI,OUT,MIPI,mipi2_tx_lane1_n,MIPI2_TX,mipi_tx_p6,P6-22,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN1 (MIPI2_TXDN1)
+mipi2_txdp2,Y19,TL,MIPI,OUT,MIPI,mipi2_tx_lane2_p,MIPI2_TX,mipi_tx_p6,P6-14,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP2 (MIPI2_TXDP2)
+mipi2_txdn2,Y18,TL,MIPI,OUT,MIPI,mipi2_tx_lane2_n,MIPI2_TX,mipi_tx_p6,P6-16,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN2 (MIPI2_TXDN2)
+mipi2_txdp3,AB20,TL,MIPI,OUT,MIPI,mipi2_tx_lane3_p,MIPI2_TX,mipi_tx_p6,P6-8,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP3 (MIPI2_TXDP3)
+mipi2_txdn3,AB19,TL,MIPI,OUT,MIPI,mipi2_tx_lane3_n,MIPI2_TX,mipi_tx_p6,P6-10,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN3 (MIPI2_TXDN3)
+mipi2_txdp4,AA18,TL,MIPI,OUT,MIPI,mipi2_tx_lane4_p,MIPI2_TX,mipi_tx_p6,P6-2,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP4 (MIPI2_TXDP4)
+mipi2_txdn4,AB18,TL,MIPI,OUT,MIPI,mipi2_tx_lane4_n,MIPI2_TX,mipi_tx_p6,P6-4,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN4 (MIPI2_TXDN4)
+ddr_clk_ref,Y14,TL,3.3V_LVCMOS,IN,CLOCK,pll_refclk,DDR_CLK,,,3.3,ws-e1-base-schematic,CONFIRMED,DDR PLL reference clock (33.33MHz) -> GPIOL_32_PLLIN1
+mipi0_refclk,AA10,BL,3.3V_LVCMOS,IN,CLOCK,pll_refclk,MIPI_CLK,,,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 PLL reference clock (27MHz) -> GPIOL_06_CLK27
+mipi2_refclk,AA15,TL,3.3V_LVCMOS,IN,CLOCK,pll_refclk,MIPI_CLK,,,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 PLL reference clock (mipi_clkin) -> GPIOL_27_CLK28
+uart_rxd,F16,TR,3.3V_LVCMOS,IN,GPIO,gpio,UART,,,3.3,ws-e1-base-schematic,CONFIRMED,UART RXD -> GPIOR_61 (FX10 to USB-UART bridge)
+uart_txd,G16,TR,3.3V_LVCMOS,OUT,GPIO,gpio,UART,,,3.3,ws-e1-base-schematic,CONFIRMED,UART TXD -> GPIOR_57 (FX10 to USB-UART bridge)
+3C_GPIOR_P12,B4,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D8,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA01_P_CC; base net FMC_LA_P01; core p14
+3C_GPIOR_N12,A4,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D9,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA01_N_CC; base net FMC_LA_N01; core p14
+3C_GPIOR_P10,B7,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D11,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA05_P; base net FMC_LA_P05; core p14
+3C_GPIOR_N10,B8,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D12,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA05_N; base net FMC_LA_N05; core p14
+3C_GPIOR_P14,A6,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D14,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA09_P; base net FMC_LA_P09; core p14
+3C_GPIOR_N14,A7,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D15,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA09_N; base net FMC_LA_N09; core p14
+4A_GPIOB_P32,H1,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D17,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA13_P; base net FMC_LA_P13; core p15
+4A_GPIOB_N32,J1,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D18,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA13_N; base net FMC_LA_N13; core p15
+4A_GPIOB_N31,K2,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D20,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA17_P_CC; base net FMC_LA_P17; core p15
+4A_GPIOB_P31,K1,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D21,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA17_N_CC; base net FMC_LA_N17; core p15
+4A_GPIOB_P33,G3,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D23,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA23_P; base net FMC_LA_P23; core p15
+4A_GPIOB_N33,H3,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D24,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA23_N; base net FMC_LA_N23; core p15
+4A_GPIOB_P34,G2,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D26,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA26_P; base net FMC_LA_P26; core p15
+4A_GPIOB_N34,H2,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 D27,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA26_N; base net FMC_LA_N26; core p15
+3C_GPIOR_P9,B1,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C10,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA06_P; base net FMC_LA_P06; core p14
+3C_GPIOR_N9,A2,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C11,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA06_N; base net FMC_LA_N06; core p14
+3C_GPIOR_P11,B2,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C14,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA10_P; base net FMC_LA_P10; core p14
+3C_GPIOR_N11,B3,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C15,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA10_N; base net FMC_LA_N10; core p14
+4A_GPIOB_P29,J5,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C18,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA14_P; base net FMC_LA_P14; core p15
+4A_GPIOB_N29,H5,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C19,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA14_N; base net FMC_LA_N14; core p15
+4A_GPIOB_N30,L2,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C22,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA18_P_CC; base net FMC_LA_P18; core p15
+4A_GPIOB_P30,L1,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C23,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA18_N_CC; base net FMC_LA_N18; core p15
+3C_GPIOR_N13,A5,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C26,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA27_P; base net FMC_LA_P27; core p14
+3C_GPIOR_P13,B5,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-2 C27,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA27_N; base net FMC_LA_N27; core p14
+4A_GPIOB_P25,K3,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F4,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA00_P_CC; base net FMC_HA_P0; core p15
+4A_GPIOB_N25,K4,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F5,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA00_N_CC; base net FMC_HA_N0; core p15
+4A_GPIOB_P23,L4,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F7,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA04_P; base net FMC_HA_P4; core p15
+4A_GPIOB_N23,L5,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F8,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA04_N; base net FMC_HA_N4; core p15
+4A_GPIOB_P26,M2,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F10,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA08_P; base net FMC_HA_P8; core p15
+4A_GPIOB_N26,N2,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F11,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA08_N; base net FMC_HA_N8; core p15
+4A_GPIOB_P24,M3,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F13,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA12_P; base net FMC_HA_P12; core p15
+4A_GPIOB_N24,N3,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F14,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA12_N; base net FMC_HA_N12; core p15
+4A_GPIOB_P27,J3,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F16,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA15_P; base net FMC_HA_P15; core p15
+4A_GPIOB_N27,J4,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F17,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA15_N; base net FMC_HA_N15; core p15
+3C_GPIOR_P8,C6,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F22,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB02_P; base net FMC_HB_P2; core p14
+3C_GPIOR_N8,C7,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F23,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB02_N; base net FMC_HB_N2; core p14
+3C_GPIOR_P6,D4,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F25,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB04_P; base net FMC_HB_P4; core p14
+3C_GPIOR_N6,D5,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F26,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB04_N; base net FMC_HB_N4; core p14
+3C_GPIOR_P0,F1,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F34,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB16_P; base net FMC_HB_P16; core p14
+3C_GPIOR_N0,F2,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F35,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB16_N; base net FMC_HB_N16; core p14
+3C_GPIOR_P1,F4,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F37,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB20_P; base net FMC_HB_P20; core p14
+3C_GPIOR_N1,E3,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 F38,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB20_N; base net FMC_HB_N20; core p14
+3C_GPIOR_P4,D1,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E2,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA01_P_CC; base net FMC_HA_P1; core p14
+3C_GPIOR_N4,C1,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E3,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA01_N_CC; base net FMC_HA_N1; core p14
+3C_GPIOR_P5,C2,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E6,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA05_P; base net FMC_HA_P5; core p14
+3C_GPIOR_N5,C3,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E7,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA05_N; base net FMC_HA_N5; core p14
+3C_GPIOR_P2,E1,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E9,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA09_P; base net FMC_HA_P9; core p14
+3C_GPIOR_N2,E2,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E10,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA09_N; base net FMC_HA_N9; core p14
+3C_GPIOR_P7,C5,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E12,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA13_P; base net FMC_HA_P13; core p14
+3C_GPIOR_N7,D6,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E13,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA13_N; base net FMC_HA_N13; core p14
+3C_GPIOR_P3,E4,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E15,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA16_P; base net FMC_HA_P16; core p14
+3C_GPIOR_N3,D3,3C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E16,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA16_N; base net FMC_HA_N16; core p14
+4A_GPIOB_P28,N1,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E21,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB03_P; base net FMC_HB_P3; core p15
+4A_GPIOB_N28,P1,4A,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-3 E22,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB03_N; base net FMC_HB_N3; core p15
+4B_GPIOB_P14,R5,4B,1.8V_LVCMOS,IN,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H4,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK0_M2C_P; base net CLK0_M2C_P; core p15
+4B_GPIOB_N14,T5,4B,1.8V_LVCMOS,IN,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H5,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK0_M2C_N; base net CLK0_M2C_N; core p15
+4B_GPIOB_P12,N5,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H7,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA02_P; base net FMC_LA_P02; core p15
+4B_GPIOB_N12,P5,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H8,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA02_N; base net FMC_LA_N02; core p15
+4B_GPIOB_P21,T1,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H10,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA04_P; base net FMC_LA_P04; core p15
+4B_GPIOB_N21,T2,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H11,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA04_N; base net FMC_LA_N04; core p15
+4B_GPIOB_P19,U2,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H13,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA07_P; base net FMC_LA_P07; core p15
+4B_GPIOB_N19,V2,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H14,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA07_N; base net FMC_LA_N07; core p15
+4B_GPIOB_P13,R6,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H16,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA11_P; base net FMC_LA_P11; core p15
+4B_GPIOB_N13,T6,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H17,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA11_N; base net FMC_LA_N11; core p15
+4B_GPIOB_P11,N6,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H19,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA15_P; base net FMC_LA_P15; core p15
+4B_GPIOB_N11,P6,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H20,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA15_N; base net FMC_LA_N15; core p15
+P0DP5,R22,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H28,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA24_P; base net FMC_LA_P24; core p13
+P0DN5,R21,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H29,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA24_N; base net FMC_LA_N24; core p13
+P0CP,T21,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H31,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA28_P; base net FMC_LA_P28; core p13
+P0CN,T22,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H32,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA28_N; base net FMC_LA_N28; core p13
+P0CTL0,J19,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H34,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA30_P; base net FMC_LA_P30; core p13
+P0CTL1,K19,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H35,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA30_N; base net FMC_LA_N30; core p13
+P0CTL2,L20,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H37,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA32_P; base net FMC_LA_P32; core p13
+P0CTL3,L19,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 H38,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA32_N; base net FMC_LA_N32; core p13
+4B_GPIOB_P15,M4,4B,1.8V_LVCMOS,IN,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G2,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK1_M2C_P; base net CLK1_M2C_P; core p15
+4B_GPIOB_N15,M5,4B,1.8V_LVCMOS,IN,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G3,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK1_M2C_N; base net CLK1_M2C_N; core p15
+4B_GPIOB_P20,V1,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G18,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA16_P; base net FMC_LA_P16; core p15
+4B_GPIOB_N20,W1,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G19,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA16_N; base net FMC_LA_N16; core p15
+4B_GPIOB_P17,P3,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G21,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA20_P; base net FMC_LA_P20; core p15
+4B_GPIOB_N17,P4,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G22,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA20_N; base net FMC_LA_N20; core p15
+4B_GPIOB_P18,T4,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G24,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA22_P; base net FMC_LA_P22; core p15
+4B_GPIOB_N18,U3,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G25,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA22_N; base net FMC_LA_N22; core p15
+4B_GPIOB_P22,R1,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G27,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA25_P; base net FMC_LA_P25; core p15
+4B_GPIOB_N22,R2,4B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G28,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA25_N; base net FMC_LA_N25; core p15
+P0DP7,M22,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G30,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA29_P; base net FMC_LA_P29; core p13
+P0DN7,N22,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G31,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA29_N; base net FMC_LA_N29; core p13
+P0CTL4,L22,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G33,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA31_P; base net FMC_LA_P31; core p13
+P0CTL5,L21,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G34,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA31_N; base net FMC_LA_N31; core p13
+P0CTL6,H20,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-4 G37,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 LA33_N; base net FMC_LA_N33; core p13
+SPICS2_FPGA,AB3,4C,1.8V_LVCMOS,INOUT,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K4,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK2_BIDIR_P; base net FMC_CLK_P2; core p5+p9
+SPI_SCK,V3,4C,1.8V_LVCMOS,INOUT,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K5,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK2_BIDIR_N; base net FMC_CLK_N2; core p5+p9
+SPICS3_P6_4,F10,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K7,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA02_P; base net FMC_HA_P2; core p13; net/pin-name alias verified on core p13 render
+P1DP6,D10,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K10,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA06_P; base net FMC_HA_P6; core p13
+P1DN6,C10,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K11,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA06_N; base net FMC_HA_N6; core p13
+P1CP,E9,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K13,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA10_P; base net FMC_HA_P10; core p13
+P1CN,E8,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K14,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA10_N; base net FMC_HA_N10; core p13
+P1DP3,C13,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K16,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA17_P_CC; base net FMC_HA_P17; core p13
+P1DN3,C12,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K17,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA17_N_CC; base net FMC_HA_N17; core p13
+P1DP1,D14,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K19,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA21_P; base net FMC_HA_P21; core p13
+P1DN1,D13,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K20,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA21_N; base net FMC_HA_N21; core p13
+P1DP0,E14,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K22,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA23_P; base net FMC_HA_P23; core p13
+P1DN0,E13,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K23,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA23_N; base net FMC_HA_N23; core p13
+P1CTL0,F13,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K25,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB00_P_CC; base net FMC_HB_P0; core p13
+P1CTL1,F12,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K26,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB00_N_CC; base net FMC_HB_N0; core p13
+P1CTL2,B10,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K28,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB06_P_CC; base net FMC_HB_P6; core p13
+P1CTL3,A10,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K29,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB06_N_CC; base net FMC_HB_N6; core p13
+P0DP0,P18,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K31,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB10_P; base net FMC_HB_P10; core p13
+P0DN0,N18,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K32,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB10_N; base net FMC_HB_N10; core p13
+P0DP2,L18,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K34,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB14_P; base net FMC_HB_P14; core p13
+P0DN2,M18,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K35,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB14_N; base net FMC_HB_N14; core p13
+P0CLKP,N20,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K37,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB17_P_CC; base net FMC_HB_P17; core p13
+P0CLKN,P20,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 K38,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB17_N_CC; base net FMC_HB_N17; core p13
+SPIDAT0,D8,3B,1.8V_LVCMOS,INOUT,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J2,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK3_BIDIR_P; base net FMC_CLK_P3; core p13; net/pin-name alias verified on core p13 render
+SPIDAT1,D9,3B,1.8V_LVCMOS,INOUT,CLOCK,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J3,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 CLK3_BIDIR_N; base net FMC_CLK_N3; core p13; net/pin-name alias verified on core p13 render
+P1DP4,A12,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J6,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA03_P; base net FMC_HA_P3; core p13
+P1DN4,A11,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J7,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA03_N; base net FMC_HA_N3; core p13
+P1DP5,D11,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J9,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA07_P; base net FMC_HA_P7; core p13
+P1DN5,C11,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J10,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA07_N; base net FMC_HA_N7; core p13
+P1DP7,E11,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J12,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA11_P; base net FMC_HA_P11; core p13
+P1DN7,E10,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J13,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA11_N; base net FMC_HA_N11; core p13
+P1CLKP,B13,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J15,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA14_P; base net FMC_HA_P14; core p13
+P1CLKN,B12,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J16,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA14_N; base net FMC_HA_N14; core p13
+P1DP2,B14,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J18,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA18_P; base net FMC_HA_P18; core p13
+P1DN2,A14,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J19,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA18_N; base net FMC_HA_N18; core p13
+P1CTL4,B9,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J21,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA22_P; base net FMC_HA_P22; core p13
+P1CTL5,A9,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J22,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HA22_N; base net FMC_HA_N22; core p13
+P1CTL6,F11,3B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J25,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB01_N; base net FMC_HB_N1; core p13
+P0DP4,M19,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J27,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB07_P; base net FMC_HB_P7; core p13
+P0DN4,M20,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J28,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB07_N; base net FMC_HB_N7; core p13
+P0DP6,N21,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J30,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB11_P; base net FMC_HB_P11; core p13
+P0DN6,P21,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J31,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB11_N; base net FMC_HB_N11; core p13
+P0DP1,P19,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J33,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB15_P; base net FMC_HB_P15; core p13
+P0DN1,R19,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J34,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB15_N; base net FMC_HB_N15; core p13
+P0DP3,T19,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J36,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB18_P; base net FMC_HB_P18; core p13
+P0DN3,T20,2A_2B,1.8V_LVCMOS,INOUT,GPIO,gpio,FMC_HPC_J3,fmc_hpc_j3,J3-5 J37,1.8,ws-e1-base-schematic-pdf,CONFIRMED,VITA57 HB18_N; base net FMC_HB_N18; core p13

@@ -1,0 +1,32 @@
+# Efinity Interface Specification
+# Board:   ws-e1
+# Carrier: ws-e1-base
+# FPGA:    Efinix Titanium TJ180A484S (484-FBGA SiP)
+# Source: TJ180A484_MA_260313A2_SCH.pdf, FPGA VCCIO supply nets.
+# Physical rails: 2A/2B/2C, 3A/3B/3C, 4A/4B/4C use VDD18;
+# BL/TL/BR/TR use VDD33 (VCCIO33_BR, VCCIO33_TR confirmed by device pinout
+# and reference designs). Carrier peripheral rails are not VCCIO.
+design.set_device_property("2A_2B","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("2A_2B","VOLTAGE","1.8","IOBANK")
+design.set_device_property("2C","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("2C","VOLTAGE","1.8","IOBANK")
+design.set_device_property("3A","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("3A","VOLTAGE","1.8","IOBANK")
+design.set_device_property("3B","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("3B","VOLTAGE","1.8","IOBANK")
+design.set_device_property("3C","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("3C","VOLTAGE","1.8","IOBANK")
+design.set_device_property("4A","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("4A","VOLTAGE","1.8","IOBANK")
+design.set_device_property("4B","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("4B","VOLTAGE","1.8","IOBANK")
+design.set_device_property("4C","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("4C","VOLTAGE","1.8","IOBANK")
+design.set_device_property("BL","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("BL","VOLTAGE","3.3","IOBANK")
+design.set_device_property("BR","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("BR","VOLTAGE","3.3","IOBANK")
+design.set_device_property("TL","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("TL","VOLTAGE","3.3","IOBANK")
+design.set_device_property("TR","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("TR","VOLTAGE","3.3","IOBANK")

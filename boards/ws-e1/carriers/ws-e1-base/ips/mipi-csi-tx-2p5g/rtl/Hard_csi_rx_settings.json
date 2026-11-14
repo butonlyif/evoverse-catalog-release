@@ -1,0 +1,56 @@
+{
+    "args": [
+        "-o",
+        "Hard_csi_rx",
+        "--base_path",
+        "D:\\wrw\\Project\\nantian_demo_tj180\\Ti180J484_CSI_LOOPBACK_2.5G_v6\\project_new\\ip",
+        "--vlnv",
+        {
+            "vendor": "efinixinc.com",
+            "library": "mipi",
+            "name": "efx_csi2_rx_top",
+            "version": "5.15"
+        }
+    ],
+    "conf": {
+        "tINIT_NS": "400000",
+        "NUM_DATA_LANE": "4",
+        "ASYNC_STAGE": "2",
+        "CLOCK_FREQ_MHZ": "100",
+        "PIXEL_FIFO_DEPTH": "2048",
+        "AREGISTER": "8",
+        "Pack_40": "1",
+        "Pack_48": "1",
+        "Pack_56": "1",
+        "Pack_64": "1",
+        "FRAME_MODE": "\"GENERIC\"",
+        "ENABLE_VCX": "0",
+        "MIPI_CSI2_RX_DEBUG": "1'b0",
+        "MIPI_CSI2_RX_PIXEL_SIDEBAND": "1'b0"
+    },
+    "output": {
+        "external_source_source": [
+            "Hard_csi_rx\\Hard_csi_rx.sv",
+            "Hard_csi_rx\\Hard_csi_rx_define.svh",
+            "Hard_csi_rx\\Hard_csi_rx_tmpl.vhd",
+            "Hard_csi_rx\\Hard_csi_rx_tmpl.sv"
+        ],
+        "external_example_example": [
+            "Hard_csi_rx\\Ti180J484_devkit\\csichk.v",
+            "Hard_csi_rx\\Ti180J484_devkit\\efx_csi2_rx_top.sv",
+            "Hard_csi_rx\\Ti180J484_devkit\\efx_csi2_tx_top.sv",
+            "Hard_csi_rx\\Ti180J484_devkit\\reset_ctrl.v",
+            "Hard_csi_rx\\Ti180J484_devkit\\Ti180_mipi.sdc",
+            "Hard_csi_rx\\Ti180J484_devkit\\top_2_5g.sv",
+            "Hard_csi_rx\\Ti180J484_devkit\\vga_chk.v",
+            "Hard_csi_rx\\Ti180J484_devkit\\vga_gen.v",
+            "Hard_csi_rx\\Ti180J484_devkit\\Hard_csi_rx.sv",
+            "Hard_csi_rx\\Ti180J484_devkit\\Hard_csi_rx_define.svh",
+            "Hard_csi_rx\\Ti180J484_devkit\\Ti180_mipi.peri.xml",
+            "Hard_csi_rx\\Ti180J484_devkit\\Ti180_mipi.xml"
+        ]
+    },
+    "ooc_synthesis": {},
+    "sw_version": "2025.2.288.4.15",
+    "generated_date": "2026-05-28T10:33:31.239672+00:00"
+}

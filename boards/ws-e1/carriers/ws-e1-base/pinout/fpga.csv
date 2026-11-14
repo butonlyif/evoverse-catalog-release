@@ -1,0 +1,128 @@
+signal,device_pin,device_bank,io_standard,direction,signal_class,role,interface,endpoint_ref,endpoint_pin,voltage_domain,source_ref,verification_status,notes
+clk_50m,T18,TL,3.3V_LVCMOS,IN,CLOCK,main_clock,OSC_50M,module-osc-u13,clk_50m,3.3,ws-e1-base-schematic,CONFIRMED,"50MHz OSC U13 on core, ball T18 = GPIOL_26_PLLIN1 (weak pullup)"
+arst_n,H21,2C,1.8V_LVCMOS,IN,RESET,reset,USER_BTN_S1,button-s1,arst_n,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S1 has 10K pullup to D3V3 but bank 2C is 1.8V HSIO (Ti180 absolute max 1.98V); hardware review required. Ball H21 = GPIOT_P_29
+led_user,F21,2C,1.8V_LVCMOS,OUT,GPIO,user_led,USER_LED_D25,led-d25,led_user,1.8,ws-e1-base-schematic,CONFIRMED,"D25 user LED on base via Q4 (MMBT3904T-7-F NPN), ball F21 = GPIOT_N_34"
+led_user2,F22,2C,1.8V_LVCMOS,OUT,GPIO,gpio,USER_LED_D26,led-d26,led_user2,1.8,ws-e1-base-schematic,CONFIRMED,"D26 user LED on base via Q5 NPN, ball F22 = GPIOT_P_34"
+user_btn2,J21,2C,1.8V_LVCMOS,IN,GPIO,gpio,USER_BTN_S2,button-s2,user_btn2,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S2 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball J21 = GPIOT_N_29
+user_btn3,H22,2C,1.8V_LVCMOS,IN,GPIO,gpio,USER_BTN_S3,button-s3,user_btn3,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S3 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball H22 = GPIOT_N_31
+user_btn4,G22,2C,1.8V_LVCMOS,IN,GPIO,gpio,USER_BTN_S4,button-s4,user_btn4,1.8,ws-e1-base-schematic,CONFIRMED,ELECTRICAL RISK: S4 D3V3 pullup exceeds bank 2C 1.8V HSIO absolute max 1.98V; hardware review required. Ball G22 = GPIOT_P_31
+pmod2_io1,F20,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io1,1.8,ws-e1-base-schematic,CONFIRMED,J11.1 PMOD2 IO17 -> 2C_GPIOT_P_33 (ball F20)
+pmod2_io2,F19,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io2,1.8,ws-e1-base-schematic,CONFIRMED,J11.2 PMOD2 IO18 -> 2C_GPIOT_N_33 (ball F19)
+pmod2_io3,K22,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io3,1.8,ws-e1-base-schematic,CONFIRMED,J11.3 PMOD2 IO19 -> 2C_GPIOT_P_28 (ball K22)
+pmod2_io4,K21,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io4,1.8,ws-e1-base-schematic,CONFIRMED,J11.4 PMOD2 IO20 -> 2C_GPIOT_N_28 (ball K21)
+pmod2_io5,G18,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io5,1.8,ws-e1-base-schematic,CONFIRMED,J11.5 PMOD2 IO21 -> 2C_GPIOT_P_30 (ball G18)
+pmod2_io6,H18,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io6,1.8,ws-e1-base-schematic,CONFIRMED,J11.6 PMOD2 IO22 -> 2C_GPIOT_N_30 (ball H18)
+pmod2_io7,G20,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io7,1.8,ws-e1-base-schematic,CONFIRMED,J11.7 PMOD2 IO23 -> 2C_GPIOT_P_32 (ball G20)
+pmod2_io8,G19,2C,1.8V_LVCMOS,INOUT,GPIO,gpio,PMOD2_J11,pmod-j11,pmod2_io8,1.8,ws-e1-base-schematic,CONFIRMED,J11.8 PMOD2 IO24 -> 2C_GPIOT_N_32 (ball G19)
+jtag_tck,L6,BL,3.3V_LVCMOS,IN,JTAG,jtag_tck,JTAG,jtag-j5,jtag_tck,3.3,ws-e1-base-schematic,CONFIRMED,"JTAG TCK -> ball L6, 4K7 pullup"
+jtag_tdi,K6,BL,3.3V_LVCMOS,IN,JTAG,jtag_tdi,JTAG,jtag-j5,jtag_tdi,3.3,ws-e1-base-schematic,CONFIRMED,"JTAG TDI -> ball K6, 4K7 pullup"
+jtag_tms,J6,BL,3.3V_LVCMOS,IN,JTAG,jtag_tms,JTAG,jtag-j5,jtag_tms,3.3,ws-e1-base-schematic,CONFIRMED,"JTAG TMS -> ball J6, 4K7 pullup"
+jtag_tdo,H6,BL,3.3V_LVCMOS,OUT,JTAG,jtag_tdo,JTAG,jtag-j5,jtag_tdo,3.3,ws-e1-base-schematic,CONFIRMED,JTAG TDO -> ball H6
+creset_n,T9,4C,1.8V_LVCMOS,IN,RESET,creset_n,CONFIG,reset-u11,creset_n,1.8,ws-e1-base-schematic,CONFIRMED,CRESET_N config reset -> ball T9
+flash_csn,Y3,4C,1.8V_LVCMOS,OUT,GPIO,gpio,QSPI_FLASH,flash-u10,flash_csn,1.8,ws-e1-base-schematic,CONFIRMED,QSPI CS# (SSL_N) -> GPIOB_P_08_SSL_N (ball Y3)
+flash_clk,R3,4B,1.8V_LVCMOS,OUT,GPIO,gpio,QSPI_FLASH,flash-u10,flash_clk,1.8,ws-e1-base-schematic,CONFIRMED,"QSPI CLK -> GPIOB_P_16_EXTSPICLK_CLK3_P (ball R3, also SI5338 LVDS clock P after config)"
+flash_io0,W2,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,flash-u10,flash_io0,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO0/DI -> GPIOB_P_09_CDI0 (ball W2)
+flash_io1,W3,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,flash-u10,flash_io1,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO1/DO -> GPIOB_N_09_CDI1 (ball W3)
+flash_io2,AA1,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,flash-u10,flash_io2,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO2/WP# -> GPIOB_N_10_CDI2 (ball AA1)
+flash_io3,Y1,4C,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,flash-u10,flash_io3,1.8,ws-e1-base-schematic,CONFIRMED,QSPI IO3/HOLD# -> GPIOB_P_10_CDI3 (ball Y1)
+dip_sw1,Y16,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,dip-sw1,dip_sw1,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.1 -> GPIOL_37 (ball Y16), 10K pullup to D3V3"
+dip_sw2,AB15,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,dip-sw1,dip_sw2,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.2 -> GPIOL_51 (ball AB15), 10K pullup to D3V3"
+dip_sw3,AB17,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,dip-sw1,dip_sw3,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.3 -> GPIOL_52 (ball AB17), 10K pullup to D3V3"
+dip_sw4,AA16,TL,3.3V_LVCMOS,IN,GPIO,gpio,DIP_SW1,dip-sw1,dip_sw4,3.3,ws-e1-base-schematic,CONFIRMED,"SW1.4 -> GPIOL_35 (ball AA16), 10K pullup to D3V3"
+emmc_dat0,A15,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat0,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT0 -> 3A_GPIOR_P_32
+emmc_dat1,B15,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat1,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT1 -> 3A_GPIOR_N_32
+emmc_dat2,C16,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat2,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT2 -> 3A_GPIOR_P_39
+emmc_dat3,D16,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat3,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT3 -> 3A_GPIOR_N_39
+emmc_dat4,A18,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat4,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT4 -> 3A_GPIOR_P_34
+emmc_dat5,B19,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat5,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT5 -> 3A_GPIOR_N_34
+emmc_dat6,C17,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat6,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT6 -> 3A_GPIOR_P_38
+emmc_dat7,C18,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_dat7,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DAT7 -> 3A_GPIOR_N_38
+emmc_clk,D15,3A,1.8V_LVCMOS,OUT,GPIO,gpio,EMMC,emmc-u9,emmc_clk,1.8,ws-e1-base-schematic,CONFIRMED,eMMC CLK -> 3A_GPIOR_N_36
+emmc_ds,C15,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_ds,1.8,ws-e1-base-schematic,CONFIRMED,eMMC DS (Data Strobe) -> 3A_GPIOR_P_36
+emmc_cmd,A16,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,emmc-u9,emmc_cmd,1.8,ws-e1-base-schematic,CONFIRMED,eMMC CMD -> 3A_GPIOR_P_33
+emmc_rstn,A17,3A,1.8V_LVCMOS,OUT,GPIO,gpio,EMMC,emmc-u9,emmc_rstn,1.8,ws-e1-base-schematic,CONFIRMED,eMMC RSTN -> 3A_GPIOR_N_33
+eth_txd0,A21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_txd0,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD0 -> GPIOR_P_40 (DDIO)
+eth_txd1,B21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_txd1,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD1 -> GPIOR_N_40 (DDIO)
+eth_txd2,D19,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_txd2,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD2 -> GPIOR_N_43 (DDIO)
+eth_txd3,D18,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_txd3,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TXD3 -> GPIOR_P_43 (DDIO)
+eth_tx_ctl,C21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_tx_ctl,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TX_CTL (TX_EN/TX_ERR DDIO) -> GPIOR_P_42
+eth_txc,D21,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_txc,1.8,ws-e1-base-schematic,CONFIRMED,RGMII TX_CLK (125MHz DDIO) -> GPIOR_N_42
+eth_rxd0,C20,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_rxd0,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD0 -> GPIOR_P_44_EXTFB (DDIO)
+eth_rxd1,D20,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_rxd1,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD1 -> GPIOR_N_44 (DDIO)
+eth_rxd2,B22,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_rxd2,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD2 -> GPIOR_P_41 (DDIO)
+eth_rxd3,C22,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_rxd3,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RXD3 -> GPIOR_N_41 (DDIO)
+eth_rx_ctl,E22,3A,1.8V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_rx_ctl,1.8,ws-e1-base-schematic,CONFIRMED,RGMII RX_CTL (RX_DV/RX_ERR DDIO) -> GPIOR_N_45
+eth_rxc,AA14,TL,3.3V_LVCMOS,IN,GPIO,gpio,ETH_RGMII,ethernet-phy-u6,eth_rxc,3.3,ws-e1-base-schematic,CONFIRMED,RGMII RX_CLK (125MHz) -> GPIOL_29_CLK30
+eth_mdc,A20,3A,1.8V_LVCMOS,OUT,GPIO,gpio,ETH_MDC_MDIO,ethernet-phy-u6,eth_mdc,1.8,ws-e1-base-schematic,CONFIRMED,MDC -> GPIOR_P_35
+eth_mdio,B20,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,ETH_MDC_MDIO,ethernet-phy-u6,eth_mdio,1.8,ws-e1-base-schematic,CONFIRMED,MDIO -> GPIOR_N_35
+imu_sda,B17,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,IMU_I2C,imu-u7,imu_sda,1.8,ws-e1-base-schematic,CONFIRMED,IMU SDA -> 3A_GPIOR_P_37
+imu_scl,B18,3A,1.8V_LVCMOS,INOUT,GPIO,gpio,IMU_I2C,imu-u7,imu_scl,1.8,ws-e1-base-schematic,CONFIRMED,IMU SCL -> 3A_GPIOR_N_37
+clkchip_sda,AB14,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,CLK_CHIP,clock-u8,clkchip_sda,3.3,ws-e1-base-schematic,CONFIRMED,Si5338A SDA -> GPIOL_50 (separate I2C bus from IMU)
+clkchip_scl,W14,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,CLK_CHIP,clock-u8,clkchip_scl,3.3,ws-e1-base-schematic,CONFIRMED,Si5338A SCL -> GPIOL_42 (separate I2C bus from IMU)
+clkchip_clkout,Y17,TL,3.3V_LVCMOS,OUT,CLOCK,gpio,CLK_CHIP,clock-u8,clkchip_clkout,3.3,ws-e1-base-schematic,CONFIRMED,Si5338A PLL reference output (156.25MHz) -> GPIOL_33
+sdio1_d0,AA9,BL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,microsd-j8,sdio1_d0,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D0 -> GPIOL_05_CLK25
+sdio1_d1,AB13,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,microsd-j8,sdio1_d1,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D1 -> GPIOL_49
+sdio1_d2,U9,BL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,microsd-j8,sdio1_d2,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D2 -> GPIOL_04_CLK25
+sdio1_d3,AB12,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,microsd-j8,sdio1_d3,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_D3 -> GPIOL_31
+sdio1_cmd,W9,BL,3.3V_LVCMOS,INOUT,GPIO,gpio,SDIO1,microsd-j8,sdio1_cmd,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_CMD -> GPIOL_03_CLK24
+sdio1_clk,AA12,TL,3.3V_LVCMOS,OUT,GPIO,gpio,SDIO1,microsd-j8,sdio1_clk,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_CLK -> GPIOL_30_CLK31
+sdio1_cd,Y11,BL,3.3V_LVCMOS,IN,GPIO,gpio,SDIO1,microsd-j8,sdio1_cd,3.3,ws-e1-base-schematic,CONFIRMED,microSD J8 SDIO1_CD card detect -> GPIOL_10_PLLIN1
+mipi0_rxdp0,W8,BL,MIPI,IN,MIPI,mipi0_rx_lane0_p,MIPI0_RX,mipi-camera-p5,P5.31,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP0 routed to QSE P5 pin 31
+mipi0_rxdn0,V8,BL,MIPI,IN,MIPI,mipi0_rx_lane0_n,MIPI0_RX,mipi-camera-p5,P5.33,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN0 routed to QSE P5 pin 33
+mipi0_rxdp1,Y6,BL,MIPI,IN,MIPI,mipi0_rx_lane1_p,MIPI0_RX,mipi-camera-p5,P5.19,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP1 routed to QSE P5 pin 19
+mipi0_rxdn1,AA7,BL,MIPI,IN,MIPI,mipi0_rx_lane1_n,MIPI0_RX,mipi-camera-p5,P5.21,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN1 routed to QSE P5 pin 21
+mipi0_rxdp2,W5,BL,MIPI,IN,MIPI,mipi0_rx_lane2_p,MIPI0_RX,mipi-camera-p5,P5.7,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP2 routed to QSE P5 pin 7
+mipi0_rxdn2,V5,BL,MIPI,IN,MIPI,mipi0_rx_lane2_n,MIPI0_RX,mipi-camera-p5,P5.9,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN2 routed to QSE P5 pin 9
+mipi0_rxdp3,Y7,BL,MIPI,IN,MIPI,mipi0_rx_lane3_p,MIPI0_RX,mipi-camera-p5,P5.25,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP3 routed to QSE P5 pin 25
+mipi0_rxdn3,Y8,BL,MIPI,IN,MIPI,mipi0_rx_lane3_n,MIPI0_RX,mipi-camera-p5,P5.27,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN3 routed to QSE P5 pin 27
+mipi0_rxdp4,V6,BL,MIPI,IN,MIPI,mipi0_rx_lane4_p,MIPI0_RX,mipi-camera-p5,P5.13,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDP4 routed to QSE P5 pin 13
+mipi0_rxdn4,V7,BL,MIPI,IN,MIPI,mipi0_rx_lane4_n,MIPI0_RX,mipi-camera-p5,P5.15,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 RXDN4 routed to QSE P5 pin 15
+mipi0_txdp0,Y4,BL,MIPI,OUT,MIPI,mipi0_tx_lane0_p,MIPI0_TX,mipi-hdmi-p6,P6.7,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP0 routed to QSE P6 pin 7
+mipi0_txdn0,W4,BL,MIPI,OUT,MIPI,mipi0_tx_lane0_n,MIPI0_TX,mipi-hdmi-p6,P6.9,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN0 routed to QSE P6 pin 9
+mipi0_txdp1,AB4,BL,MIPI,OUT,MIPI,mipi0_tx_lane1_p,MIPI0_TX,mipi-hdmi-p6,P6.13,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP1 routed to QSE P6 pin 13
+mipi0_txdn1,AA4,BL,MIPI,OUT,MIPI,mipi0_tx_lane1_n,MIPI0_TX,mipi-hdmi-p6,P6.15,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN1 routed to QSE P6 pin 15
+mipi0_txdp2,AB6,BL,MIPI,OUT,MIPI,mipi0_tx_lane2_p,MIPI0_TX,mipi-hdmi-p6,P6.19,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP2 routed to QSE P6 pin 19
+mipi0_txdn2,AB7,BL,MIPI,OUT,MIPI,mipi0_tx_lane2_n,MIPI0_TX,mipi-hdmi-p6,P6.21,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN2 routed to QSE P6 pin 21
+mipi0_txdp3,AA5,BL,MIPI,OUT,MIPI,mipi0_tx_lane3_p,MIPI0_TX,mipi-hdmi-p6,P6.25,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP3 routed to QSE P6 pin 25
+mipi0_txdn3,AA6,BL,MIPI,OUT,MIPI,mipi0_tx_lane3_n,MIPI0_TX,mipi-hdmi-p6,P6.27,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN3 routed to QSE P6 pin 27
+mipi0_txdp4,AB8,BL,MIPI,OUT,MIPI,mipi0_tx_lane4_p,MIPI0_TX,mipi-hdmi-p6,P6.31,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDP4 routed to QSE P6 pin 31
+mipi0_txdn4,AB9,BL,MIPI,OUT,MIPI,mipi0_tx_lane4_n,MIPI0_TX,mipi-hdmi-p6,P6.33,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 TXDN4 routed to QSE P6 pin 33
+mipi2_rxdp0,U22,TL,MIPI,IN,MIPI,mipi2_rx_lane0_p,MIPI2_RX,mipi-camera-p5,P5.26,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP0 routed to QSE P5 pin 26
+mipi2_rxdn0,V22,TL,MIPI,IN,MIPI,mipi2_rx_lane0_n,MIPI2_RX,mipi-camera-p5,P5.28,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN0 routed to QSE P5 pin 28
+mipi2_rxdp1,Y22,TL,MIPI,IN,MIPI,mipi2_rx_lane1_p,MIPI2_RX,mipi-camera-p5,P5.20,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP1 routed to QSE P5 pin 20
+mipi2_rxdn1,Y21,TL,MIPI,IN,MIPI,mipi2_rx_lane1_n,MIPI2_RX,mipi-camera-p5,P5.22,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN1 routed to QSE P5 pin 22
+mipi2_rxdp2,V21,TL,MIPI,IN,MIPI,mipi2_rx_lane2_p,MIPI2_RX,mipi-camera-p5,P5.14,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP2 routed to QSE P5 pin 14
+mipi2_rxdn2,W21,TL,MIPI,IN,MIPI,mipi2_rx_lane2_n,MIPI2_RX,mipi-camera-p5,P5.16,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN2 routed to QSE P5 pin 16
+mipi2_rxdp3,AA22,TL,MIPI,IN,MIPI,mipi2_rx_lane3_p,MIPI2_RX,mipi-camera-p5,P5.8,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP3 routed to QSE P5 pin 8
+mipi2_rxdn3,AA21,TL,MIPI,IN,MIPI,mipi2_rx_lane3_n,MIPI2_RX,mipi-camera-p5,P5.10,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN3 routed to QSE P5 pin 10
+mipi2_rxdp4,U20,TL,MIPI,IN,MIPI,mipi2_rx_lane4_p,MIPI2_RX,mipi-camera-p5,P5.2,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDP4 routed to QSE P5 pin 2
+mipi2_rxdn4,V20,TL,MIPI,IN,MIPI,mipi2_rx_lane4_n,MIPI2_RX,mipi-camera-p5,P5.4,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 RXDN4 routed to QSE P5 pin 4
+mipi2_txdp0,Y20,TL,MIPI,OUT,MIPI,mipi2_tx_lane0_p,MIPI2_TX,mipi-hdmi-p6,P6.26,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP0 routed to QSE P6 pin 26
+mipi2_txdn0,W19,TL,MIPI,OUT,MIPI,mipi2_tx_lane0_n,MIPI2_TX,mipi-hdmi-p6,P6.28,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN0 routed to QSE P6 pin 28
+mipi2_txdp1,AA20,TL,MIPI,OUT,MIPI,mipi2_tx_lane1_p,MIPI2_TX,mipi-hdmi-p6,P6.20,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP1 routed to QSE P6 pin 20
+mipi2_txdn1,AB21,TL,MIPI,OUT,MIPI,mipi2_tx_lane1_n,MIPI2_TX,mipi-hdmi-p6,P6.22,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN1 routed to QSE P6 pin 22
+mipi2_txdp2,Y19,TL,MIPI,OUT,MIPI,mipi2_tx_lane2_p,MIPI2_TX,mipi-hdmi-p6,P6.14,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP2 routed to QSE P6 pin 14
+mipi2_txdn2,Y18,TL,MIPI,OUT,MIPI,mipi2_tx_lane2_n,MIPI2_TX,mipi-hdmi-p6,P6.16,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN2 routed to QSE P6 pin 16
+mipi2_txdp3,AB20,TL,MIPI,OUT,MIPI,mipi2_tx_lane3_p,MIPI2_TX,mipi-hdmi-p6,P6.8,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP3 routed to QSE P6 pin 8
+mipi2_txdn3,AB19,TL,MIPI,OUT,MIPI,mipi2_tx_lane3_n,MIPI2_TX,mipi-hdmi-p6,P6.10,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN3 routed to QSE P6 pin 10
+mipi2_txdp4,AA18,TL,MIPI,OUT,MIPI,mipi2_tx_lane4_p,MIPI2_TX,mipi-hdmi-p6,P6.2,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDP4 routed to QSE P6 pin 2
+mipi2_txdn4,AB18,TL,MIPI,OUT,MIPI,mipi2_tx_lane4_n,MIPI2_TX,mipi-hdmi-p6,P6.4,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 TXDN4 routed to QSE P6 pin 4
+cam_i2c_scl,V16,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,CAM_CTRL_P5,mipi-camera-p5,P5.IO0,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net cam_i2c_scl at QSE P5 IO0 -> GPIOL_43; camera I2C SCL shared by both sensors
+cam_i2c_sda,W10,BL,3.3V_LVCMOS,INOUT,GPIO,gpio,CAM_CTRL_P5,mipi-camera-p5,P5.IO1,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net cam_i2c_sda at QSE P5 IO1 -> GPIOL_02; camera I2C SDA shared by both sensors
+cam_clk_24m,P17,TL,3.3V_LVCMOS,OUT,CLOCK,gpio,CAM_CTRL_P5,mipi-camera-p5,P5.IO2,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net cam_clk_24m at QSE P5 IO2 -> GPIOL_46; 24MHz camera master clock (sc850sl demo usage)
+cam_xshutdn,V10,BL,3.3V_LVCMOS,OUT,GPIO,gpio,CAM_CTRL_P5,mipi-camera-p5,P5.IO3,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net cam_xshutdn at QSE P5 IO3 -> GPIOL_01; camera XSHUTDOWN
+cam_io4_spare,T17,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,CAM_CTRL_P5,mipi-camera-p5,P5.IO4,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net cam_io4_spare at QSE P5 IO4 -> GPIOL_44; spare control line
+cam_trig,Y9,BL,3.3V_LVCMOS,OUT,GPIO,gpio,CAM_CTRL_P5,mipi-camera-p5,P5.IO5,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net cam_trig at QSE P5 IO5 -> GPIOL_07; frame-sync trigger; ball has MIPI_CLKIN capability
+mipi_tx_io0,V18,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,HDMI_CTRL_P6,mipi-hdmi-p6,P6.IO0,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net mipi_tx_io0 at QSE P6 IO0 -> GPIOL_28_CLK29; GCLK/MIPI_CLKIN capable
+mipi_tx_io1,W16,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,HDMI_CTRL_P6,mipi-hdmi-p6,P6.IO1,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net mipi_tx_io1 at QSE P6 IO1 -> GPIOL_54
+mipi_tx_io2,V17,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,HDMI_CTRL_P6,mipi-hdmi-p6,P6.IO2,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net mipi_tx_io2 at QSE P6 IO2 -> GPIOL_41
+mipi_tx_io3,V15,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,HDMI_CTRL_P6,mipi-hdmi-p6,P6.IO3,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net mipi_tx_io3 at QSE P6 IO3 -> GPIOL_55
+mipi_tx_io4,W18,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,HDMI_CTRL_P6,mipi-hdmi-p6,P6.IO4,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net mipi_tx_io4 at QSE P6 IO4 -> GPIOL_36_PLLIN1; PLL_CLKIN capable
+mipi_tx_io5,W15,TL,3.3V_LVCMOS,INOUT,GPIO,gpio,HDMI_CTRL_P6,mipi-hdmi-p6,P6.IO5,3.3,ws-e1-base-schematic,CONFIRMED,Schematic net mipi_tx_io5 at QSE P6 IO5 -> GPIOL_45
+ddr_clk_ref,Y14,TL,3.3V_LVCMOS,IN,CLOCK,pll_refclk,DDR_CLK,module-ddr-pll,ddr_clk_ref,3.3,ws-e1-base-schematic,CONFIRMED,DDR PLL reference clock (33.33MHz) -> GPIOL_32_PLLIN1
+mipi0_refclk,AA10,BL,3.3V_LVCMOS,IN,CLOCK,pll_refclk,MIPI_CLK,module-mipi-pll,mipi0_refclk,3.3,ws-e1-base-schematic,CONFIRMED,MIPI0 PLL reference clock (27MHz) -> GPIOL_06_CLK27
+mipi2_refclk,AA15,TL,3.3V_LVCMOS,IN,CLOCK,pll_refclk,MIPI_CLK,module-mipi-pll,mipi2_refclk,3.3,ws-e1-base-schematic,CONFIRMED,MIPI2 PLL reference clock (mipi_clkin) -> GPIOL_27_CLK28
+uart_rxd,F16,TR,3.3V_LVCMOS,IN,GPIO,gpio,UART,fx10-uart,uart_rxd,3.3,ws-e1-base-schematic,CONFIRMED,UART RXD -> GPIOR_61 (FX10 to USB-UART bridge)
+uart_txd,G16,TR,3.3V_LVCMOS,OUT,GPIO,gpio,UART,fx10-uart,uart_txd,3.3,ws-e1-base-schematic,CONFIRMED,UART TXD -> GPIOR_57 (FX10 to USB-UART bridge)
+fan_det,Y13,TL,3.3V_LVCMOS,IN,GPIO,gpio,FAN,fan-j7,tach,3.3,ws-e1-base-schematic,CONFIRMED,Base schematic sheet 6 maps FAN_DET to GPIOL_38; Efinity pinout maps GPIOL_38 to Y13.
+fan_pwm,V14,TL,3.3V_LVCMOS,OUT,GPIO,gpio,FAN,fan-j7,pwm,3.3,ws-e1-base-schematic,CONFIRMED,Base schematic sheet 6 maps FAN_PWM to GPIOL_40; Efinity pinout maps GPIOL_40 to V14.

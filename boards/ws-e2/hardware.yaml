@@ -1,0 +1,139 @@
+schema_version: '1.0'
+components:
+  - id: tj375
+    part: TJ375N1156X
+    role: fpga
+    source_refs: [tj375-efinity-pinout, ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+  - id: rk3588j
+    part: RK3588J
+    role: application_processor
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+  - id: rk806-1
+    part: RK806-1
+    role: power_management
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: SPI-attached PMIC on SOM schematic pages 13-14; powers RK3588J domains and selected FPGA rails
+  - id: xl9555-module
+    part: XL9555
+    role: io_expander
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: I2C GPIO expander present on SOM (pages 11, 33 region); additional XL9555 instances live on the carrier
+interfaces: []
+power_domains:
+  - id: rk-vcc-5v0-som-input
+    voltage: 5.0
+    provider: ws-e2-rk3588-mc
+    source_refs: [ws-e2-mc-carrier-schematic, ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier TPS548A28 produces VCC_5V0_SOM and feeds it to the module through BTB connector 0 (carrier sheet 22-23); RK806-1 and discrete regulators generate the SOM rails
+  - id: rk806-regulated-domains
+    provider: RK806-1
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: Includes CPU little, GPU, VENC, DDR, 3.3V, 2.0V, 1.8V and low-voltage analog/core rails; exact suspend policy remains BSP-owned
+clocks:
+  - id: rk-xin24m
+    signal: XIN24M
+    frequency_hz: 24000000
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: SOM crystal Y1100 on schematic page 4
+  - id: som-clock-fanout-ez8304a
+    signal: CLK_25MHz, CLK_100M_0, CLK_100M_1
+    frequency_hz: 25000000
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: 25 MHz crystal with EZ8304A fanout buffers distributing SOM local clocks and PCIe REFCLK (SOM pages 19/21/30-31)
+memories:
+  - id: rk-lpddr4x
+    device: ATL4X8G32M2D-46 IT
+    type: LPDDR4X
+    topology: 2x 2-channel x32 devices (4GB each, 8GB total)
+    source_refs: [ws-e2-som-nor-schematic, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+    notes: Capacity resolved by customer confirmation on 2026-11-10 and re-observed in SOM_NOR page 15
+  - id: rk-emmc
+    device: FEMDRW128G-88A19
+    type: eMMC
+    bus_width: 8
+    modes: [HS400, enhanced-strobe]
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: RK3588 boot eMMC on SOM page 16; usable capacity must be confirmed from the vendor datasheet or fitted BOM
+  - id: fpga-lpddr4x
+    device: W66DP2RQQAGJ
+    type: LPDDR4X
+    topology: single 32-bit channel (U2 fitted, U3 DNP)
+    source_refs: [ws-e2-som-nor-schematic, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+    notes: SOM page 24 sheet title is '24.TJ375_DDR0&1' - W66DP2RQQAGJ is the FPGA LPDDR4/4X DRAM, NOT serial NAND; earlier prose (legacy catalog ws-e2.md) mislabeled it 'Winbond SPI NAND 1Gb' and was corrected 2026-11-13 per oracle verification
+  - id: fpga-qspi-nor
+    device: GD25LB512MEYIGR
+    type: QSPI_NOR
+    topology: 512Mb active-serial x4 (FPGA_CDI0-CDI3/SS/CCK)
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: NOR-variant FPGA configuration flash on SOM pages 21-22; this variant replaces the CAP-variant large-capacity storage as the module authority
+  - id: fpga-lpddr4x-dnp-note
+    device: UNVERIFIED
+    type: SERIAL_NAND
+    topology: none fitted (U3 DNP on SOM page 24)
+    source_refs: [ws-e2-som-nor-schematic, ws-e2-catalog-material-v1]
+    validation_state: UNVERIFIED
+    notes: ERRATA 2026-11-13 - this entry replaces the removed 'fpga-serial-nand W66DP2RQQAGJ SERIAL_NAND x2' claim, which the oracle proved wrong (W66DP2RQQAGJ is the FPGA LPDDR DRAM, som p24 '24.TJ375_DDR0&1'); no fitted serial-NAND data-storage device is identifiable in the NOR text layer
+debug_chains:
+  - id: rk-uart2-m0-debug
+    device: RK3588J
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: UART2 M0 TX/RX leaves the module over BTB (MC sheets 23) and reaches the carrier FT232RL USB-UART bridge (MC sheet 4)
+  - id: fpga-jtag-ft4232
+    device: TJ375N1156X
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: F_TCK/TDI/TDO/TMS and F_CRESET_N cross the BTB (MC sheet 24) to the carrier FT4232HL JTAG/UART adapter (MC sheet 13)
+capabilities:
+  - id: rk-emmc-boot
+    kind: boot_storage
+    device: RK3588J
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+  - id: rk-maskrom-boot
+    kind: boot_storage
+    device: RK3588J
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 3 states RK_BOOT_SARADC_IN0=0V after power-on reset enters Maskrom mode; SARADC_IN0 is internally pulled up to 1.8 V
+  - id: rk-debug-console
+    kind: uart
+    device: RK3588J
+    signals: [RK_UART2_TX_M0_DEBUG_3V3, RK_UART2_RX_M0_DEBUG_3V3]
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+  - id: fpga-qspi-nor-config
+    kind: boot_storage
+    device: TJ375N1156X
+    source_refs: [ws-e2-som-nor-schematic]
+    validation_state: CONFIRMED
+    notes: Active-serial x4 configuration from GD25LB512MEYIGR (NOR variant)
+cross_chip_links:
+  - id: mipi0-tx
+    source_refs: [ws-e2-som-nor-schematic, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]
+  - id: mipi1-tx
+    source_refs: [ws-e2-som-nor-schematic, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]
+  - id: mipi2-tx
+    source_refs: [ws-e2-som-nor-schematic, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]
+  - id: rk-gpio-spi-iic
+    source_refs: [ws-e2-som-nor-schematic, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+    endpoints: [{target_id: fpga, width: 10}, {target_id: rk3588, width: 10}]
