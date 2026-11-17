@@ -1,0 +1,50 @@
+G11n16b 板测证据：'v' 切图案后无 UDP 数据流（G11n16 烧板）
+背景：开机 netsvc ping OK；MODE -> raw10 pattern stream (200M src) 打印正常
+（CamGen(1) 已执行 0x208=0xC4 电平序列）。两拍 `cam` dump 间隔 ~1.567s
+（由 [2C4] free200/free100 与 [2E0] hsedge 反推）。
+判读（G11n16b）：
+- [2CC]={full,armed,sof_cnt[29:0]}：0x4000044b→0x4000047b：armed=1、full=0、
+  sof_cnt +48（30fps 图案 sof 正常到达）
+- [2D8]/[2DC] 相机 tuser/vs +47、[2E0] hsedge +53,231（相机 33,750 行/s 在跑）
+- [2E4]{wcnt[17:0],rq[13:0]} / [2E8]{rq[17:0]}：wcnt/rq 各 +26,145,545
+  （mod-163840 恰 159 圈）= 16.68M 组/s = 图案源精确速率（FIFO 收支平衡）
+- [2F0] gen 包完成 +835,074（533k pps）、[2F8] 背压 +18,267,543
+- [31C] {occ_min[17:2],occ_peak[17:2]}=0x0000000a → occ_peak×4=40（与
+  [2C0] cam_udp_status 低 11 位快照 occ=36/38 一致）
+- 结论：每包仅 min(290,occ)≈40 组（~200B payload）→ 533k pps 小包风暴，
+  PC UDP 栈丢包 → 无图像。根因=G11n16 图案源 1 组/12 拍均匀细流与 pacer
+  纯流式（occ>0 即发）耦合；修复=G11n16b 行突发（480 组/行背靠背+行周期
+  3100 拍+帧尾 vblank 16.6ms）。
+
+MODE -> raw10 pattern stream (200M src)
+Info : Mac Reset Statistics Counters.cfg> cam
+CAMST: [2A0]=01102355 [2AC]=000000ff [270]=22e4575c [240]=00000000
+CLKST: [2C4]=baf875f0 [2C4]=bb0c7618 [250]=c351c335
+CAMDBG: [2CC]=4000044b [2D0]=21ed5a00
+CAMDBG2: [2D4]=0012184b [2D8]=0000044b
+CAMDBG3: [2DC]=0000044b [2E0]=0012af6f
+CAMDBG4: [2E4]=1a3468b1 [2E8]=1a2d8000
+CAMDBG5: [2EC]=00000000 TXOK=0000ffff
+CAMDBG6: [2F0]=008c9d80 [2F8]=0a0f2b06
+CAMDBG7: [2FC]=0ce674f0 [300]=0176f5eb
+CAMDBG8: [2C0]=afb00024 [304]=0176f5eb [308]=00000000
+CAMDBG9: [30C]=00000000 [310]=00000000 [314]=00000000 [318]=00000033
+CAMDBG10: [31C]=0000000a (min=00000000 peak=0000000a)
+CAMDBG11: [320]=0034f142 [324]=00000b91 (hsgap_max=3469634 hsgap_min=2961)
+CAMDBG12: [328]=00121ab4 [32C]=00000000 [330]=00000000 [334]=0000044c
+cfg> cam
+CAMST: [2A0]=01102355 [2AC]=000000ff [270]=246ad37c [240]=00000000
+CLKST: [2C4]=ad3a5a74 [2C4]=ad4e5a9c [250]=3b6b3b4e
+CAMDBG: [2CC]=4000047b [2D0]=23690a00
+CAMDBG2: [2D4]=0012e2b0 [2D8]=0000047a
+CAMDBG3: [2DC]=0000047a [2E0]=00137f5e
+CAMDBG4: [2E4]=76b69ab6 [2E8]=76aec000
+CAMDBG5: [2EC]=00000000 TXOK=0000ffff
+CAMDBG6: [2F0]=00995b82 [2F8]=0b25de9d
+CAMDBG7: [2FC]=0e5f7813 [300]=0176f5eb
+CAMDBG8: [2C0]=c8800026 [304]=0176f5eb [308]=00000000
+CAMDBG9: [30C]=00000000 [310]=00000000 [314]=00000000 [318]=00000033
+CAMDBG10: [31C]=0000000a (min=00000000 peak=0000000a)
+CAMDBG11: [320]=0034f141 [324]=00000b91 (hsgap_max=3469633 hsgap_min=2961)
+CAMDBG12: [328]=0012e26d [32C]=00000000 [330]=00000000 [334]=0000047b
+cfg>

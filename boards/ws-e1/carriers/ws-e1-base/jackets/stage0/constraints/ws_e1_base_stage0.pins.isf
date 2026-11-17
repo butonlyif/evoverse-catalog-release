@@ -1,0 +1,44 @@
+# EvoVerse SDK Stage-0 minimal interface -- ws-e1-base-stage0
+# Auto-generated from the carrier pin map (do not edit by hand;
+# add pins by editing the board pin map and regenerating).
+# Board IO-bank voltages (board-level, from carrier ISF).
+design.set_device_property("2A_2B","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("2A_2B","VOLTAGE","1.8","IOBANK")
+design.set_device_property("2C","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("2C","VOLTAGE","1.8","IOBANK")
+design.set_device_property("3A","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("3A","VOLTAGE","1.8","IOBANK")
+design.set_device_property("3B","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("3B","VOLTAGE","1.8","IOBANK")
+design.set_device_property("3C","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("3C","VOLTAGE","1.8","IOBANK")
+design.set_device_property("4A","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("4A","VOLTAGE","1.8","IOBANK")
+design.set_device_property("4B","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("4B","VOLTAGE","1.8","IOBANK")
+design.set_device_property("4C","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("4C","VOLTAGE","1.8","IOBANK")
+design.set_device_property("BL","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("BL","VOLTAGE","3.3","IOBANK")
+design.set_device_property("BR","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("BR","VOLTAGE","3.3","IOBANK")
+design.set_device_property("TL","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("TL","VOLTAGE","3.3","IOBANK")
+design.set_device_property("TR","DYNAMIC_VOLTAGE","0","IOBANK")
+design.set_device_property("TR","VOLTAGE","3.3","IOBANK")
+# §15 bootstrap: create_* is a one-shot ritual for a peri.xml-less project.
+# Unified Flow auto-infers these plain RTL-port GPIOs at map stage, so the
+# create_* lines MUST stay commented for replay builds (otherwise
+# "GPIO xxx exists"). Enable ONLY when bootstrapping without peri.xml.
+# design.create_input_clock_gpio("clk_50m")
+# Board osc ball T18 is PLL_CLKIN-only (GPIOL_26_PLLIN1); stage0 uses the
+# clock directly (no PLL), so route via a GCLK-capable ball instead:
+# AA12 = GPIOL_30_CLK31 (TL, 3.3 V, unused by this design; carrier net sdio1_clk).
+design.assign_pkg_pin("clk_50m","AA12")
+design.set_property("clk_50m","IO_STANDARD","3.3 V LVCMOS","GPIO")
+# design.create_input_gpio("arst_n")
+design.assign_pkg_pin("arst_n","H21")
+design.set_property("arst_n","IO_STANDARD","1.8 V LVCMOS","GPIO")
+# design.create_output_gpio("led_user")
+design.assign_pkg_pin("led_user","F21")
+design.set_property("led_user","IO_STANDARD","1.8 V LVCMOS","GPIO")

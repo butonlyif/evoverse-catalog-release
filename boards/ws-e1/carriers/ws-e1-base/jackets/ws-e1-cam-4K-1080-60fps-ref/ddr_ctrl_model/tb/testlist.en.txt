@@ -1,0 +1,68 @@
+[中文](testlist.txt) | English
+
+# Traceability baseline test-case table (finalized in Phase 8, 2026-10-23)
+# Format: top|test|vsim extra arguments (-g parameter overrides / -sv_seed)
+# An empty test = run the whole thing (tb_unit_* has no +TEST)
+# Note: the baseline randomness = the TB $urandom is unseeded (Questa default seed) + the model LATENCY_SEED=1 (the default)
+#       The window values of addr_hole/addr_alias/addr_alias_cross go with the test stimulus address segment 0x0030_0000,
+#       and must carry -gADDR_MAP_MODE=1 (hole_en is only activated under FIELD_DECODE_DEBUG)
+tb_top|smoke|
+tb_top|smoke_reset|
+tb_top|smoke_cfg|
+tb_top|wr_single|
+tb_top|wr_incr|
+tb_top|wr_wstrb|
+tb_top|wr_w_before_aw|
+tb_top|aw_waits_wvalid|
+tb_top|early_b|
+tb_top|wlast_err|
+tb_top|cobuf_strict|
+tb_top|allstrb_early|
+tb_top|wr_errors|
+tb_top|allstrb|
+tb_top|reads|
+tb_top|dual_port|
+tb_top|dual_multi|
+tb_top|dir_arb|
+tb_top|latency|
+tb_top|lat_equal|
+tb_top|lat_fixed|-gREAD_LATENCY_MIN=10 -gREAD_LATENCY_MAX=10
+tb_top|ostd_wr|
+tb_top|ostd_rd|
+tb_top|bvalid_modes|-gOTHER_AWCACHE_POLICY=1
+tb_top|init_block|
+tb_top|init_slverr|-gINIT_AXI_RESP=1
+tb_top|cfg_sel|
+tb_top|port_reset|
+tb_top|cmdq_full|
+tb_top|wdataq_full|
+tb_top|rdataq_full|-gCMD_QUEUE_DEPTH=16 -gREAD_OSTD_DEPTH=32
+tb_top|arb_fairness|
+tb_top|contend_multi|
+tb_top|err_inject|-gERR_INJECT_RATE=100
+tb_top|ooo_same_id|
+tb_top|ooo_diff_id|-gOUT_OF_ORDER_ENABLE=1
+tb_top|ooo_interleave|
+tb_top|ooo_b|
+tb_top|ooo_b_same_id|
+tb_top|random_stress|
+tb_top|field_decode|-gADDR_MAP_MODE=1
+tb_top|addr_hole|-gADDR_MAP_MODE=1 -gADDR_HOLE_START=3145728 -gADDR_HOLE_END=3145984
+tb_top|addr_alias|-gADDR_MAP_MODE=1 -gADDR_HOLE_POLICY=1 -gADDR_HOLE_START=3145792 -gADDR_HOLE_END=3145856
+tb_top|addr_alias_cross|-gADDR_MAP_MODE=1 -gADDR_HOLE_POLICY=1 -gADDR_HOLE_START=3145728 -gADDR_HOLE_END=3145984
+tb_top|port_reset_mid|
+tb_top|r_gap|
+tb_top|w_gap|
+tb_top|cfg_clear_mem|-gCFG_RESET_CLEAR_MEM=1
+tb_top_cdc|cdc_smoke|
+tb_top_cdc|cdc_dual|
+tb_top_cdc|cdc_ostd|
+tb_top_cdc|cdc_stress|
+tb_top_cdc|cdc_rst|
+tb_top_cdc|cdc_slow|
+tb_top_cdc|cdc_wgap|
+tb_top_cdc|cdc_contend|
+tb_top_cdc|cdc_err|-gERR_INJECT_RATE=100
+tb_unit_addr|||
+tb_unit_cfg|||
+tb_unit_mem|||

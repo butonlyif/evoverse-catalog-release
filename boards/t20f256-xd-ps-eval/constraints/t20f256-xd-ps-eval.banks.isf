@@ -1,0 +1,15 @@
+# Efinity Interface Specification
+# Board:   t20f256-xd-ps-eval (standalone)
+# FPGA:    Efinix Trion T20F256C4 (F256 BGA)
+# Source:  T20F256.PcbDoc netlist + T20F256.pinout.csv (Efinity PT probe).
+# All seven IO banks are powered from VCC3.3 (VCCIO balls K6/H6/H7/F6/G6/
+# E10/F10/F11/J10/J11/L10/L11/L6/L7 all net VCC3.3 on the PCB).
+# 4A/4B have no device default; board rail is 3.3V -> declared below.
+# only VOLTAGE lines are emitted.
+design.set_device_property("1A","VOLTAGE","3.3","IOBANK")
+design.set_device_property("1B_1C","VOLTAGE","3.3","IOBANK")
+design.set_device_property("1D_1E","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3A_3B_3C","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3D_3E","VOLTAGE","3.3","IOBANK")
+design.set_device_property("4A","VOLTAGE","3.3","IOBANK")
+design.set_device_property("4B","VOLTAGE","3.3","IOBANK")

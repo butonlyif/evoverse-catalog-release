@@ -1,0 +1,92 @@
+signal,device_pin,device_bank,io_standard,direction,signal_class,role,interface,endpoint_ref,endpoint_pin,voltage_domain,source_ref,verification_status,notes
+clk_50m,R3,4D,1.8V_LVCMOS,IN,CLOCK,main_clock,OSC_100M,,,1.8,ws-e3-schematic,CONFIRMED,100MHz HCSL osc Y3 -> R3=GPIOB_P_03_PLLIN0
+arst_n,A3,4A_4B,1.8V_LVCMOS,IN,RESET,reset,POR,,,1.8,ws-e3-schematic,CONFIRMED,Jacket reset GPIO -> spare A3=GPIOB_P_43_CSO_CLK10_P (10K pu to 1.8V)
+led_user,C1,4A_4B,1.8V_LVCMOS,OUT,GPIO,user_led,USER_LED_D6_QSPI_FLASH,,,1.8,ws-e3-schematic,CONFIRMED,Blue LED D6 via Q2 NPN + SPI Flash CS# -> C1=GPIOB_N_38_SSL_N [shared: flash_csn]
+clk100m_n,R2,4D,1.8V_LVCMOS,IN,GPIO,gpio,OSC_100M,,,1.8,ws-e3-schematic,CONFIRMED,100MHz HCSL N side -> R2=GPIOB_N_03_CDI31
+creset_n,G10,4A_4B,1.8V_LVCMOS,IN,RESET,creset_n,CONFIG,,,1.8,ws-e3-schematic,CONFIRMED,CRESET_N config reset from TPS3840 POR -> ball G10 (hard IP)
+jtag_tdo,F6,BR3_BR4,3.3V_LVCMOS,OUT,JTAG,jtag_tdo,JTAG,,,3.3,ws-e3-schematic,CONFIRMED,JTAG TDO -> F6
+jtag_tms,F7,BR3_BR4,3.3V_LVCMOS,IN,JTAG,jtag_tms,JTAG,,,3.3,ws-e3-schematic,CONFIRMED,"JTAG TMS -> F7, 4.7K pullup"
+jtag_tck,F8,BR3_BR4,3.3V_LVCMOS,IN,JTAG,jtag_tck,JTAG,,,3.3,ws-e3-schematic,CONFIRMED,"JTAG TCK -> F8, 4.7K pullup"
+cdone,H10,4A_4B,1.8V_LVCMOS,OUT,GPIO,cdone,CONFIG,,,1.8,ws-e3-schematic,CONFIRMED,CDONE -> green LED D4 -> H10
+flash_clk,G4,4A_4B,1.8V_LVCMOS,OUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e3-schematic,CONFIRMED,QSPI CLK -> G4=GPIOB_P_39_CCK_PLLIN0
+flash_io0,J4,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e3-schematic,CONFIRMED,QSPI IO0 -> J4=GPIOB_N_40_CDI0
+flash_io1,J5,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e3-schematic,CONFIRMED,QSPI IO1 -> J5=GPIOB_P_40_CDI1_EXTFB
+flash_io2,G3,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e3-schematic,CONFIRMED,QSPI IO2 -> G3=GPIOB_N_39_CDI2
+flash_io3,C2,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,QSPI_FLASH,,,1.8,ws-e3-schematic,CONFIRMED,QSPI IO3 -> C2=GPIOB_P_38_CDI3
+emmc_dat0,T17,2A_2B_2C,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e3-schematic,CONFIRMED,eMMC DAT0 -> T17=GPIOT_P_29
+emmc_dat1,R16,2A_2B_2C,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e3-schematic,CONFIRMED,eMMC DAT1 -> R16=GPIOT_N_29
+emmc_dat2,N17,2A_2B_2C,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e3-schematic,CONFIRMED,eMMC DAT2 -> N17=GPIOT_P_32
+emmc_dat3,N16,2A_2B_2C,1.8V_LVCMOS,INOUT,GPIO,gpio,EMMC,,,1.8,ws-e3-schematic,CONFIRMED,eMMC DAT3 -> N16=GPIOT_N_32
+mipi2_txdp0,F22,TR,MIPI,OUT,MIPI,mipi2_tx_lane0_p,MIPI2_TX,external,mipi2_txdp0,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD0P -> F22=MIPI2_TXDP0; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdn0,F21,TR,MIPI,OUT,MIPI,mipi2_tx_lane0_n,MIPI2_TX,external,mipi2_txdn0,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD0N -> F21=MIPI2_TXDN0; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdp1,E22,TR,MIPI,OUT,MIPI,mipi2_tx_lane1_p,MIPI2_TX,external,mipi2_txdp1,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD1P -> E22=MIPI2_TXDP1; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdn1,E21,TR,MIPI,OUT,MIPI,mipi2_tx_lane1_n,MIPI2_TX,external,mipi2_txdn1,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD1N -> E21=MIPI2_TXDN1; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdp2,D21,TR,MIPI,OUT,MIPI,mipi2_tx_lane2_p,MIPI2_TX,external,mipi2_txdp2,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD2P -> D21=MIPI2_TXDP2; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdn2,C21,TR,MIPI,OUT,MIPI,mipi2_tx_lane2_n,MIPI2_TX,external,mipi2_txdn2,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD2N -> C21=MIPI2_TXDN2; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdp3,C22,TR,MIPI,OUT,MIPI,mipi2_tx_lane3_p,MIPI2_TX,external,mipi2_txdp3,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD3P -> C22=MIPI2_TXDP3; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdn3,B22,TR,MIPI,OUT,MIPI,mipi2_tx_lane3_n,MIPI2_TX,external,mipi2_txdn3,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 TXD3N -> B22=MIPI2_TXDN3; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdp4,B21,TR,MIPI,OUT,MIPI,mipi2_tx_lane4_p,MIPI2_TX,external,mipi2_txdp4,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 CLKP -> B21=MIPI2_TXDP4; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_txdn4,A21,TR,MIPI,OUT,MIPI,mipi2_tx_lane4_n,MIPI2_TX,external,mipi2_txdn4,1.8,ws-e3-schematic,CONFIRMED,"MIPI2 CLKN -> A21=MIPI2_TXDN4; endpoint=external, downstream target absent from ws-e3.md, schematic cross-ref pending"
+mipi2_rxdp4,G20,TR,MIPI,IN,CLOCK,mipi2_rx_lane4_p,MIPI2_RX,,,1.8,ws-e3-schematic,CONFIRMED,MIPI2 RXCLKP -> G20=MIPI2_RXDP4
+ref_res_2a,P16,2A_2B_2C,1.8V_LVCMOS,IN,GPIO,ref_res,CONFIG,,,1.8,ws-e3-schematic,CONFIRMED,R69 10K to GND -> P16
+ref_res_4a,G5,4A_4B,1.8V_LVCMOS,IN,GPIO,ref_res,CONFIG,,,1.8,ws-e3-schematic,CONFIRMED,R76 10K to GND -> G5
+ref_res_4b,H5,4A_4B,1.8V_LVCMOS,IN,GPIO,ref_res,CONFIG,,,1.8,ws-e3-schematic,CONFIRMED,R47 10K to GND -> H5
+ref_res_4d,M7,4D,1.8V_LVCMOS,IN,GPIO,ref_res,CONFIG,,,1.8,ws-e3-schematic,CONFIRMED,R57 10K to GND -> M7
+pcie_tx0_p,C4,Q2,SERDES,OUT,SERDES,pcie_tx0_p,PCIE,m2_slot,49,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDP0 -> C4, M.2 PETp0 (pin 49), 0.1uF AC-coupling near TX; endpoint=M.2 slot contact"
+pcie_tx0_n,D4,Q2,SERDES,OUT,SERDES,pcie_tx0_n,PCIE,m2_slot,47,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDN0 -> D4, M.2 PETn0 (pin 47); endpoint=M.2 slot contact"
+pcie_rx0_p,A5,Q2,SERDES,IN,SERDES,pcie_rx0_p,PCIE,m2_slot,43,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDP0 -> A5, M.2 PERp0 (pin 43); endpoint=M.2 slot contact"
+pcie_rx0_n,B5,Q2,SERDES,IN,SERDES,pcie_rx0_n,PCIE,m2_slot,41,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDN0 -> B5, M.2 PERn0 (pin 41); endpoint=M.2 slot contact"
+pcie_tx1_p,C6,Q2,SERDES,OUT,SERDES,pcie_tx1_p,PCIE,m2_slot,37,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDP1 -> C6, M.2 PETp1 (pin 37); endpoint=M.2 slot contact"
+pcie_tx1_n,D6,Q2,SERDES,OUT,SERDES,pcie_tx1_n,PCIE,m2_slot,35,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDN1 -> D6, M.2 PETn1 (pin 35); endpoint=M.2 slot contact"
+pcie_rx1_p,A7,Q2,SERDES,IN,SERDES,pcie_rx1_p,PCIE,m2_slot,31,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDP1 -> A7, M.2 PERp1 (pin 31); endpoint=M.2 slot contact"
+pcie_rx1_n,B7,Q2,SERDES,IN,SERDES,pcie_rx1_n,PCIE,m2_slot,29,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDN1 -> B7, M.2 PERn1 (pin 29); endpoint=M.2 slot contact"
+pcie_tx2_p,C8,Q2,SERDES,OUT,SERDES,pcie_tx2_p,PCIE,m2_slot,25,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDP2 -> C8, M.2 PETp2 (pin 25); endpoint=M.2 slot contact"
+pcie_tx2_n,D8,Q2,SERDES,OUT,SERDES,pcie_tx2_n,PCIE,m2_slot,23,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDN2 -> D8, M.2 PETn2 (pin 23); endpoint=M.2 slot contact"
+pcie_rx2_p,A9,Q2,SERDES,IN,SERDES,pcie_rx2_p,PCIE,m2_slot,19,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDP2 -> A9, M.2 PERp2 (pin 19); endpoint=M.2 slot contact"
+pcie_rx2_n,B9,Q2,SERDES,IN,SERDES,pcie_rx2_n,PCIE,m2_slot,17,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDN2 -> B9, M.2 PERn2 (pin 17); endpoint=M.2 slot contact"
+pcie_tx3_p,C10,Q2,SERDES,OUT,SERDES,pcie_tx3_p,PCIE,m2_slot,13,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDP3 -> C10, M.2 PETp3 (pin 13); endpoint=M.2 slot contact"
+pcie_tx3_n,D10,Q2,SERDES,OUT,SERDES,pcie_tx3_n,PCIE,m2_slot,11,1.8,ws-e3-schematic,CONFIRMED,"Q2_TXDN3 -> D10, M.2 PETn3 (pin 11); endpoint=M.2 slot contact"
+pcie_rx3_p,A11,Q2,SERDES,IN,SERDES,pcie_rx3_p,PCIE,m2_slot,7,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDP3 -> A11, M.2 PERp3 (pin 7); endpoint=M.2 slot contact"
+pcie_rx3_n,B11,Q2,SERDES,IN,SERDES,pcie_rx3_n,PCIE,m2_slot,5,1.8,ws-e3-schematic,CONFIRMED,"Q2_RXDN3 -> B11, M.2 PERn3 (pin 5); endpoint=M.2 slot contact"
+pcie_refclk0_p,E11,Q2,SERDES,IN,SERDES,pcie_refclk0_p,PCIE,osc_y2,y2_out,1.8,ws-e3-schematic,CONFIRMED,"Q2_REFCLK0_P -> E11, 100MHz HCSL osc Y2 (AX3HAF1), default PCIe; endpoint=on-board osc Y2 output"
+pcie_refclk0_n,F11,Q2,SERDES,IN,SERDES,pcie_refclk0_n,PCIE,osc_y2,y2_out,1.8,ws-e3-schematic,CONFIRMED,"Q2_REFCLK0_N -> F11, 100MHz HCSL osc Y2 (AX3HAF1); endpoint=on-board osc Y2 output"
+pcie_refclk1_p,E13,Q2,SERDES,IN,SERDES,pcie_refclk1_p,PCIE,m2_slot,55,1.8,ws-e3-schematic,CONFIRMED,"Q2_REFCLK1_P -> E13, M.2 REFCLKp (pin 55); endpoint=M.2 slot contact"
+pcie_refclk1_n,F13,Q2,SERDES,IN,SERDES,pcie_refclk1_n,PCIE,m2_slot,53,1.8,ws-e3-schematic,CONFIRMED,"Q2_REFCLK1_N -> F13, M.2 REFCLKn (pin 53); endpoint=M.2 slot contact"
+pcie_cal_res,G13,Q2,1.8V_LVCMOS,IN,GPIO,qse2_calibration,PCIE,,,1.8,ws-e3-schematic,CONFIRMED,"Q2_CAL_RES -> G13, 3.01K to GND (R15)"
+pcie_perst_n,J6,BR0,3.3V_LVCMOS,IN,GPIO,gpio,PCIE,,,3.3,ws-e3-schematic,CONFIRMED,"PCIE_PERST_N -> J6=GPIOR_144_PERST_Q2_N, M.2 PERST# (pin 50)"
+gpio_m2_00,N1,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_04_CDI30_EXTFB -> N1
+gpio_m2_01,P1,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_04_CDI29 -> P1
+gpio_m2_02,P4,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_05_CDI28_PLLIN0 -> P4
+gpio_m2_03,P3,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_05_CDI27 -> P3
+gpio_m2_04,R6,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_06_CDI26_EXTFB -> R6
+gpio_m2_05,T6,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_06_CDI25 -> T6
+gpio_m2_06,L2,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_07_CDI24_PLLIN0 -> L2
+gpio_m2_07,M2,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_07_CDI23 -> M2
+gpio_m2_08,N7,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_08_CDI22_EXTFB -> N7
+gpio_m2_09,P6,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_08 -> P6
+gpio_m2_10,N6,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_09 -> N6
+gpio_m2_11,N5,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_09 -> N5
+gpio_m2_12,N3,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_12 -> N3
+gpio_m2_13,N2,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_12 -> N2
+gpio_m2_14,K1,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_13_CDI21_CLK0_P -> K1
+gpio_m2_15,L1,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_13_CDI20_CLK0_N -> L1
+gpio_m2_16,P5,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_14_CDI19_CLK1_P -> P5
+gpio_m2_17,R4,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_14_CDI18_CLK1_N -> R4
+gpio_m2_18,E2,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_36_CDI7 -> E2 -> S18
+gpio_m2_19,D2,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_36_CDI6 -> D2 -> S17
+gpio_m2_20,F3,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_37_CDI5 -> F3 -> S13
+gpio_m2_21,F2,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_37_CDI4 -> F2 -> S19
+gpio_m2_22,B2,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_41 -> B2 -> S16
+gpio_m2_23,B1,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_41 -> B1 -> S15
+gpio_m2_24,T16,2A_2B_2C,1.8V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,1.8,ws-e3-schematic,CONFIRMED,GPIOT_N_14 -> T16
+gpio_m2_25,L8,BR0,3.3V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_140_PLLIN1 -> L8
+gpio_m2_26,K8,BR0,3.3V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_141 -> K8
+gpio_m2_27,M8,BR0,3.3V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_142_CLK8 -> M8
+gpio_m2_28,K7,BR0,3.3V_LVCMOS,INOUT,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_143_CLK9 -> K7
+gpio_m2_29,K6,BR0,3.3V_LVCMOS,IN,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_145_PLLIN1 -> K6 (OSC33_133M in)
+gpio_m2_30,M20,TR1,3.3V_LVCMOS,IN,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_93_PLLIN1 -> M20
+gpio_m2_31,N20,TR1,3.3V_LVCMOS,IN,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_94 -> N20
+gpio_m2_32,N21,TR1,3.3V_LVCMOS,IN,GPIO,gpio,M2_CONN,,,3.3,ws-e3-schematic,CONFIRMED,GPIOR_95_CLK12 -> N21
+gpio_spare_0,M4,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,SPARE,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_P_15_CDI17_CLK2_P -> M4
+gpio_spare_1,M3,4D,1.8V_LVCMOS,INOUT,GPIO,gpio,SPARE,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_15_CDI16_CLK2_N -> M3
+gpio_spare_3,A2,4A_4B,1.8V_LVCMOS,INOUT,GPIO,gpio,SPARE,,,1.8,ws-e3-schematic,CONFIRMED,GPIOB_N_43_CSI_CLK10_N -> A2

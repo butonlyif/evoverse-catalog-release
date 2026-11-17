@@ -1,0 +1,80 @@
+schema_version: '1.0'
+sources:
+  - id: ws-e2-som-nor-schematic
+    type: board_document
+    owner: shennan-circuits
+    location: d:/work/evoverse-trae-generation-campaign/docs/TBS2009_SOM_NOR_20260917.pdf
+    version: V1.0 (2026-09-18, 34 pages)
+    section: TBS2009 SOM NOR-variant schematic; module authority for this material
+    observed_at: '2026-11-13'
+    sha256: 90F195764EA69ABAB57D09C829310D360F9936AA9FB14809177F585351C938F8
+    state: CONFIRMED
+  - id: ws-e2-mc-carrier-schematic
+    type: board_document
+    owner: elitestek
+    location: d:/work/evoverse-trae-generation-campaign/docs/WS-E2-RK3588-MC-V01_261102-1050.pdf
+    version: V1.0 (2026-10-14, 25 pages)
+    section: WS-E2-RK3588-MC-V01 carrier schematic
+    observed_at: '2026-11-13'
+    sha256: F30CA979BDBFBCF41E492045015E69765D9EE58206F846BBD23D2710217E00A0
+    state: CONFIRMED
+  - id: ws-e2-catalog-material-v1
+    type: board_document
+    owner: evoverse-catalog
+    location: C:/Users/buton/evoverse-sdk/catalog/boards/ws-e2
+    version: catalog 0.9.6 (commit c4f9e2e, generated 2026-11-11 from SOM_CAP)
+    section: Prior ws-e2 material generation; module pinout rows carried over where the SOM PCB net map is variant-invariant
+    observed_at: '2026-11-13'
+    state: CONFIRMED
+  - id: tj375-efinity-pinout
+    type: tool_output
+    owner: efinix
+    location: C:/Users/buton/evoverse-sdk/catalog/devices/TJ375N1156X.pinout.csv
+    version: '2026.1.132.1.15'
+    section: Efinity Pinout Report (exact-package authority)
+    observed_at: '2026-11-13'
+    state: CONFIRMED
+  - id: rk3588j-device-authority
+    type: tool_output
+    owner: evoverse-catalog
+    location: C:/Users/buton/evoverse-sdk/catalog/devices/RK3588J.authority.json
+    version: catalog 0.9.6
+    section: RK3588J exact-ball authority
+    observed_at: '2026-11-13'
+    state: CONFIRMED
+  - id: rockchip-kernel-repo
+    type: git_repository
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/kernel
+    commit: 77168c8d5ab82399f65a80e9f807b50ba37cf483
+    branch: develop-6.1
+    section: Vendor kernel source; observed commit used by ws-e2 public-source BSP assembly (superproject root f3ca80d7, 2026-11-11)
+    observed_at: '2026-11-11'
+    state: CONFIRMED
+  - id: rockchip-u-boot-repo
+    type: git_repository
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/u-boot
+    commit: 1c535d65b8509f388d09e49fb6961f49fda35a1d
+    branch: next-dev
+    section: Vendor u-boot source (default branch next-dev); observed commit used by ws-e2 public-source BSP assembly
+    observed_at: '2026-11-11'
+    state: CONFIRMED
+  - id: buildroot-upstream-repo
+    type: git_repository
+    owner: buildroot
+    location: https://github.com/buildroot/buildroot
+    commit: 7fdeadb3b9f12f78e5fccca914d7fef47090ab9a
+    tag: 2026.08.1
+    section: Official upstream buildroot stable release
+    observed_at: '2026-11-11'
+    state: CONFIRMED
+  - id: rockchip-rkbin-repo
+    type: git_repository
+    owner: rockchip-linux
+    location: https://github.com/rockchip-linux/rkbin
+    commit: 3e288fe814e059dd06833495f845cab04ac20a5c
+    branch: master
+    section: Loader firmware source; rk3588_spl_v1.14.bin sha256 b811b90b6847dc251838e82036c328f00eaacefe94659432265a0ccb0fc8f4e5 verified 2026-11-11
+    observed_at: '2026-11-11'
+    state: CONFIRMED

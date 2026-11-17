@@ -1,0 +1,168 @@
+schema_version: '1.0'
+target: rk3588
+board_id: rk3588j-evm
+board_revision: '1'
+soc:
+  manufacturer: Rockchip
+  part: RK3588J
+ddr:
+  type: lpddr4x
+  devices: 2
+  device_part: ATL4X8G32M2D-46 IT
+  topology: 2x LPDDR4X (ATL4X8G32M2D-46 IT) fitted on the SOM
+  size_state: CUSTOMER_CONFIRMED_2026-11-10
+  notes: 2x ATL4X8G32M2D-46 IT (4GB each) = 8GB total, customer-confirmed 2026-11-10;
+    earlier prose reading "RK DDR 4GB (Hynix H9)" was corrected.
+boot_storage:
+  type: emmc
+  bus_width: 8
+  mode: HS400
+debug_uart:
+  instance: UART2_M0_DEBUG
+  baudrate: 1500000
+  console: ttyS2
+expected_dtb: ws-e2-rk3588j-evm.dtb
+sources:
+  bsp: rockchip-kernel-repo
+  environment: rockchip-linux-sdk-org
+environment:
+  provisioning: LINUX_ENVIRONMENT_MANAGER_SATISFIED
+  host: Linux Environment Manager provisioned host (WSL2 Ubuntu 24.04)
+  toolchain: aarch64-linux-gnu-
+  toolchain_version: 13.3.0 (Ubuntu 24.04 gcc-aarch64-linux-gnu; same version baked
+    into evoverse/rk3588-ai-platform-builder@sha256:daa5f73b)
+  host_build_tools_note: platform-builder image ships the cross compiler only; kernel/u-boot
+    builds additionally need host make/bison/flex/cpio/lz4/libssl-dev installed on
+    the build host (verified 2026-11-11)
+  manager: evoverse-env 2026.11.1 (contract environment-manager/v1)
+  environment_id: rk3588-ai@2026.11.1
+  manifest_digest: sha256:f10d7ca56d8a9a8d97ef743314b0ff5fe04db03cf02c8ce8b4c60e4d230f7551
+  provisioned_on: 2026-11-11
+optional_peripherals:
+- pcie3.0-x4 (PCIE30 lanes, CLK/RESET from corrected pinout)
+- pcie2.0 (PCIE20 lanes with per-lane reset)
+- typec0/typec1 (USB3 + DP mux-capable Type-C)
+- usb2.0-host0/host1 and otg
+- hdmi-tx0/hdmi-tx1 and hdmi-rx
+- dp1
+- gmac0-gigabit-ethernet
+- sata
+- sdmmc0
+- headphone-audio
+- saradc/tsadc on-board sensors
+- recovery/boot key (BTB_EVM_KEY/BOOT)
+public_source_assembly:
+  assembled_on: '2026-11-11'
+  status: CATALOG_DELIVERED
+  note: Bundles, loaders, partition layout and identity manifest delivered under carriers/rk3588j-evm/bsp/
+    (manifest.json is the Adapter qualification input per the C15 resolution chain);
+    Adapter-owned BSP binding still pending, not an installed or promoted baseline.
+  superproject:
+    location: delivered as bsp/superproject.bundle + bundles/ (dev tree WSL /root/ws-e2-bsp/ws-e2-rk3588-bsp)
+    root_commit: 99a56fe7c7cf37db78aed56fff76a1a9572ee824
+    layout: root commit + 4 submodules (kernel, u-boot, buildroot, rkbin) + layouts/
+      + board-ws-e2/ (BR2_EXTERNAL buildroot board support)
+  components:
+    kernel: develop-6.1 @ 77168c8d5ab82399f65a80e9f807b50ba37cf483
+    u-boot: next-dev @ 1c535d65b8509f388d09e49fb6961f49fda35a1d
+    buildroot: 2026.08.1 @ 7fdeadb3b9f12f78e5fccca914d7fef47090ab9a
+    rkbin: master @ 3e288fe814e059dd06833495f845cab04ac20a5c
+  loader:
+    spl: loaders/rk3588_spl_v1.14.bin (also rkbin/bin/rk35/ in-tree)
+    spl_sha256: b811b90b6847dc251838e82036c328f00eaacefe94659432265a0ccb0fc8f4e5
+    spl_identity_note: byte-identical to the value registered in legacy health-policy.json
+    ddr_init: loaders/rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.24.bin
+    ddr_init_sha256: 2853a0da7ab895af43d50615af73eccf0694115dd0202483ee1c93c9071a42c3
+    atf: loaders/rk3588_bl31_v1.56.elf (sha256 2864c2fc36333e03e7e3fe6459225d320d310850b4ac7620d1f3601efb7d4a9b)
+    bl32: loaders/rk3588_bl32_v1.23.bin (sha256 cb4ec2d0d8986b22cc55dbcf57c499f10fcca124bcd1e9a5d62cbf9ce0f40636)
+  partition_layout:
+    path: layouts/ws-e2-minimal-parameter.txt
+    sha256: 5a592e7227f0b211b7bd07e9532ccb69bafc913575e83772d515f97514c3616a
+    format_note: follows rkbin/tools/parameter_gpt.txt; eMMC 128GB; idbloader@0x40,
+      uboot@0x4000 (4MiB), resource@0x6000 (16MiB), boot@0xE000 (16MiB), rootfs grows
+      from 0x16000
+    rebuild_note: rebuilt 2026-11-11; the legacy layouts/ws-e2-minimal-parameter.txt
+      (sha256 d9f89ac6...) was session-local to the September assembly and is not
+      reproducible
+  superseded_legacy:
+    bsp_commit: b8f5dda574157e5f4545f5dc86eb967153fda6d7
+    note: sealed offline evopkg identity; superseded by this public-source assembly
+      (record kept for traceability)
+  smoke_evidence:
+    date: '2026-11-11'
+    host: WSL Ubuntu-24.04, gcc-aarch64-linux-gnu 13.3.0
+    scope: compile-level smoke only; no flash, no boot, no hardware validation
+    kernel:
+      result: PASS
+      config: rockchip_linux_defconfig + rk3588.config fragment merge (also built
+        inside buildroot via LINUX_OVERRIDE_SRCDIR)
+      artifacts: Image 41925120 bytes (release 6.1.172) + 77 rk3588 dtbs incl. rk3588-evb1-lp4-v10-linux.dtb
+      notes: merge_config.sh must run from inside the O= dir (invoking it from the
+        source tree writes .config into the source tree and trips the outputmakefile
+        clean check)
+    u-boot:
+      result: PASS
+      config: rk3588_defconfig
+      artifacts: idbloader.img 343069 bytes (sha256 e17d4bfd88c14cd8582258776f5174f5cccc37437bf01db47ad665a89d0e4b17,
+        in-tree TPL+SPL rksd) + u-boot.itb 2180096 bytes (sha256 3eaa94366716b468870d569e4228689545b10579da4845694537e2e759cdcb3d,
+        FIT with BL31 v1.56 + BL32 v1.23); shas vary per build (embedded build timestamp)
+      notes: vendor tree -Werror vs gcc 13.3 needs KCFLAGS="-Wno-error" (edid.c maybe-uninitialized,
+        command.c enum-int-mismatch); make_fit_atf.sh hardcodes ./bl31.elf and tee.bin
+        copies in-tree; idbloader.img has no make rule (SDK packaging layer) - manual
+        mkimage -T rksd of tpl+spl works; dtc required on host
+    buildroot:
+      result: PASS
+      config: board-ws-e2 BR2_EXTERNAL, ws-e2_rk3588j_defconfig (kernel from the pinned
+        tree via LINUX_OVERRIDE_SRCDIR; headers series 6.1 explicit - AS_KERNEL+CUSTOM_VERSION
+        is a broken buildroot combo producing a bogus "expected 2.6" strict check)
+      artifacts: full flashable set at WSL /root/ws-e2-bsp/.smoke-br-out/images/ws-e2-image/
+        - boot.img 42436608 bytes (sha256 24074cc1a9a26237ef82622d800b1a834f3ae867e0772c573d3af0613dd5b8b2,
+        Android bootimg header v2, EVB dtb placeholder) + rootfs.ext4 536870912 bytes
+        (sha256 7b5c44c45ddd94f4a8fc6d077f7bcfe00524e2baf4bca953128035f236dedafe)
+        + idbloader/u-boot.itb/parameter.txt; mkbootimg vendored (Apache-2.0, apt
+        mkbootimg broken - missing gki module)
+      notes: DTS placeholder is rk3588-evb1-lp4-v10-linux until the schematic-derived
+        ws-e2 DTS lands; boot cmdline root device must be confirmed at board bring-up;
+        AVB (CONFIG_ANDROID_AVB) acceptance of unsigned boot.img is a bring-up item
+id: ws-e2-rk3588j-evm
+part: RK3588J
+compatible:
+- evoverse,ws-e2-rk3588j-evm
+- rockchip,rk3588
+dts:
+  compatible:
+  - evoverse,ws-e2-rk3588j-evm
+  - rockchip,rk3588
+boot:
+  device: emmc
+  uart: UART2_M0_DEBUG
+  console: ttyS2,1500000n8
+  storage_bus_width: 8
+  storage_mode: HS400
+memory:
+  type: lpddr4x
+  devices: 2
+  device_part: ATL4X8G32M2D-46 IT
+  size_state: CUSTOMER_CONFIRMED_2026-11-10
+  notes: 2x ATL4X8G32M2D-46 IT (4GB each) = 8GB total, customer-confirmed 2026-11-10;
+    earlier prose reading "RK DDR 4GB (Hynix H9)" was corrected.
+power:
+  pmic: RK806-1
+  topology: single-pmic-plus-discrete-big-core-npu-regulators
+  base_dtsi_recommendation: rk3588-rk806-single.dtsi
+os:
+  recommended_bsp_family: rockchip-linux-6.1-vendor
+  recommended_rootfs: buildroot-minimal
+  initial_scope: serial-console-emmc-rootfs
+  legacy_baseline: baselines/ws-e2-rk3588j-minimal
+legacy_environment:
+  flow: OFFLINE_PACKAGES_SEALED_LEGACY
+  declaration: platforms/environment/offline-packages.json
+  health_policy: platforms/environment/health-policy.json
+  instructions: platforms/environment/README.md
+  packages:
+  - rk3588-toolchain-2026.09.evopkg
+  - ws-e2-rk3588-bsp-b8f5dda5.evopkg
+  note: The offline evopkg deployment flow is sealed since SDK 1.0.0 (adapter reports
+    LEGACY_ENVIRONMENT; deploy is rejected with ENVIRONMENT_MANAGER_REQUIRED). New
+    environment provisioning is owned by the Linux Environment Manager (evoverse-env).

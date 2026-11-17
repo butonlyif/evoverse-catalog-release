@@ -1,0 +1,38 @@
+{
+    "args": [
+        "-o",
+        "my_csi2_tx",
+        "--base_path",
+        "ip",
+        "--vlnv",
+        {
+            "vendor": "efinixinc.com",
+            "library": "mipi",
+            "name": "efx_csi2_tx_top",
+            "version": "5.14"
+        }
+    ],
+    "conf": {
+        "tINIT_NS": "400000",
+        "tINIT_SKEWCAL_NS": "100000",
+        "NUM_DATA_LANE": "4",
+        "ASYNC_STAGE": "2",
+        "HS_BYTECLK_MHZ": "148",
+        "DPHY_CLOCK_MODE": "\"Continuous\"",
+        "PIXEL_FIFO_DEPTH": "2048",
+        "FRAME_MODE": "\"GENERIC\"",
+        "Pack_40": "1",
+        "Pack_48": "1",
+        "Pack_56": "1",
+        "Pack_64": "1",
+        "ENABLE_VCX": "0",
+        "ENABLE_SKEWCAL_INIT": "1",
+        "MIPI_CSI2_TX_DEBUG": "1'b0"
+    },
+    "output": {
+        "external_source_source": []
+    },
+    "ooc_synthesis": {},
+    "sw_version": "2026.1.132.1.15",
+    "external_path_option": "RELATIVE_PATH"
+}

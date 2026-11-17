@@ -1,0 +1,9 @@
+[project]
+name = "ws-e1-pc-tools"
+version = "0.1.0"
+description = "ws_e1 TSE RAW10 UDP 流 PC 端工具链（G7 验收：解包/重组/白平衡/demosaic/实时显示）"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "opencv-python",
+]
