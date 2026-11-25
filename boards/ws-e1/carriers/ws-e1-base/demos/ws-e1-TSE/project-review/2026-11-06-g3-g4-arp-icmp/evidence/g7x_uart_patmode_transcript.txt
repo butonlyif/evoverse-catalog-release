@@ -1,0 +1,44 @@
+G7 附加项验收转录（2026-11-06）
+================================
+
+说明：原文件 sim\uart_cbar.log 与 viewer 控制台输出随监听窗口关闭被清理，
+以下内容为会话内逐行转录，非原始字节快照。capture 时间约 2026-11-06 晚，
+固件=TEST_MODE=0+PAT_TYPE=2（RGGB 彩条 v3，mux S_IDLE 注入版，
+RAM 13504B/32KB），bit=ws_e1_tse.bit（当日第三次全编译，map/pt/pnr/pgm 全 PASS）。
+
+[UART COM8 115200，420s 窗口]
+PAT MODE -> 2
+PAT MODE -> 1
+ARP: reply sent
+PAT MODE -> 3
+PAT MODE -> 0
+PAT MODE -> 1
+PAT MODE -> 2
+PAT MODE -> 3
+PAT MODE -> 0
+PAT MODE -> 1
+PAT MODE -> 2
+ARP: reply sent
+PAT MODE -> 3
+PAT MODE -> 0
+
+[viewer 会话（PC 10.0.0.3:10005 收流，控制发 10.0.0.8:10006）]
+menu: [1]select pattern(0-3)  [2]carousel 5s  [3]shot  [4]quit
+PAT -> 2 (v-gradient)
+PAT -> 1 (h-gradient)
+PAT -> 3 (checker)
+PAT -> 0 (colorbar)
+carousel ON (5s)
+PAT -> 1 / 2 / 3 / 0 / 1 / 2 / 3 / 0   （轮播 8 次自动切换）
+session: frames=1950 lost=0 last_fn=5566 pkts=3976957
+
+[同日更早的 ping 共存验证（另一次 capture，转录）]
+UART: ARP: reply sent ×1, ICMP: echo reply sent ×4
+PC: ping -n 5 10.0.0.8 -> Sent=5 Received=3 (TTL=64, avg 7ms)
+PC: arp -a -> 10.0.0.8 ea-e8-5e-00-60-c8 dynamic   （ARP 动态学习恢复）
+
+结论：
+- 控制 UDP 与 UART PAT MODE 12:12 一一对应（4 手选+8 轮播）
+- 2 次 ARP 注入与流共存，viewer 全程 lost=0（S_IDLE 窗口注入零损伤）
+- ICMP 注入存活率 3/5-4/5（首包竞态+单应答竞态，待改进项）
+- 巨型粘连包（11664B=8×1458）仅存在于 v2 mid-frame 注入固件，v3 后未再现

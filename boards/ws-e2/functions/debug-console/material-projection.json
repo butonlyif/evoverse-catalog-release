@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "adapterId": "rk3588",
+  "adapterVersion": "1.0.0",
+  "adapterApiVersion": "1.2",
+  "functionId": "debug-console",
+  "functionType": "serial_bus",
+  "materialDigest": "sha256:0afafc52b773f5275e54f9ee9996660ec03f255fb4ca5a68f77b78c45d853f71",
+  "requirements": [
+    {
+      "kind": "board_test",
+      "id": "board_test.bus-loopback.debug-console",
+      "statement": "Run a loopback or attached-device transfer and compare the received bytes."
+    },
+    {
+      "kind": "driver",
+      "id": "driver.bus-driver.debug-console",
+      "statement": "Enable the matching kernel controller driver in the board kernel config."
+    },
+    {
+      "kind": "dts",
+      "id": "dts.bus-node.debug-console",
+      "statement": "Declare the controller node with pins, rate and address in the board DTS."
+    },
+    {
+      "kind": "runtime",
+      "id": "runtime.bus-tools.debug-console",
+      "statement": "Export the bus user-space runtime and headers in the Target Pack."
+    }
+  ],
+  "projectionDigest": "7a4925ecbaacc2efef65553b54e6174f3877ce0f03677f69de6ca2e2212148e5"
+}

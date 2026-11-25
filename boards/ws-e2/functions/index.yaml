@@ -1,0 +1,7 @@
+schema_version: '1.0'
+target: rk3588
+functions:
+  - id: boot-emmc
+    required: true
+  - id: debug-console
+    required: true

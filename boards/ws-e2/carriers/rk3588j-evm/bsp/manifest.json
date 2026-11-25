@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1",
+  "boardId": "ws-e2",
+  "carrierId": "rk3588j-evm",
+  "assembledOn": "2026-11-11",
+  "status": "CATALOG_DELIVERED",
+  "rootCommit": "99a56fe7c7cf37db78aed56fff76a1a9572ee824",
+  "bspVersion": "99a56fe7",
+  "materialId": "rockchip-bsp-baseline",
+  "baselineLock": {
+    "locked": true,
+    "state": "LOCK_READY",
+    "receipt": {
+      "tool": "scripts/check_bsp_material.py",
+      "tree": "/root/ws-e2-bsp/verify-repack/ws-e2-rk3588-bsp (clean-room materialization of the delivered bundle bytes)",
+      "materialVersion": "99a56fe7",
+      "sha256": "4ddf7b5104b4422289abe9bdcb2d0fc7094c2b6957b3cf6f91848e29ecfcf1e0",
+      "checkedAt": "2026-11-14T12:48:58+00:00",
+      "verdict": "LOCK_READY (fsck=SHALLOW with the four tip-only cut points recorded explicitly; kconfig/shebang/sourceSample PASS)"
+    },
+    "reason": "Owner instruction 2026-11-14 (「版本不要动，解锁，然后重新打包」): the public-source rebuild tree was verified against upstream (sampled kconfig blobs byte-identical to raw.githubusercontent @1c535d65) plus empirical make rk3588_defconfig and full make all PASS (u-boot.bin sha256 6618c764…). Census corrections: lkc.h/zconf.y static declarations are the legitimate rockchip single-TU kconfig variant, and the published bundle bytes were re-proven clean (2026-11-14 re-created bundles came out byte-identical to bundleFiles below) — the actual damage (CRLF blobs, front-truncated zconf.tab.c_shipped) lived in the 2026-11-11 Windows materialization, which this unlock accompanies with a clean-room re-materialization gated by the same R-06 gate. Version deliberately unchanged: bspVersion stays 99a56fe7."
+  },
+  "release": {
+    "delivery": "github-release-attachment",
+    "repository": "https://github.com/butonlyif/evoverse-catalog-release",
+    "tag": "bsp-ws-e2-99a56fe7",
+    "urlPattern": "https://github.com/butonlyif/evoverse-catalog-release/releases/download/bsp-ws-e2-99a56fe7/{file}",
+    "note": "Bundle bytes are GitHub Release assets (outside the git tree, not carried by catalog sync); this manifest is the in-repo identity - fetch each file by urlPattern and verify sha256 against bundleFiles."
+  },
+  "bundleFiles": [
+    {
+      "file": "superproject.bundle",
+      "bytes": 13775,
+      "sha256": "cb9f35ecc331671379f72fe2b8442b3249085e3a453b95280333d93ac32d5eec"
+    },
+    {
+      "file": "kernel.bundle",
+      "bytes": 286940015,
+      "sha256": "09607a57dc30371ffca16a0a823fd327226edaba6138808fb1e5f4252fec0028"
+    },
+    {
+      "file": "u-boot.bundle",
+      "bytes": 22276990,
+      "sha256": "be63643d743b0417bd07a47b4eea6dd73f0b778f8619244c6f6ad1a5d6f07d01"
+    },
+    {
+      "file": "buildroot.bundle",
+      "bytes": 9453748,
+      "sha256": "f32f08a31101efa5db3ae696167797219e880aef7dd19a89454811961bc511eb"
+    },
+    {
+      "file": "rkbin.bundle",
+      "bytes": 28469362,
+      "sha256": "1270178bc17a7a899778c7f11fbb0ad4d8a8d51dc4cd7cc141737cd8513407a9"
+    }
+  ],
+  "origin": "public-source assembly (authoritative public repositories, observed commits); superproject root + 4 submodules + layouts/",
+  "components": {
+    "kernel": {
+      "url": "https://github.com/rockchip-linux/kernel",
+      "branch": "develop-6.1",
+      "commit": "77168c8d5ab82399f65a80e9f807b50ba37cf483"
+    },
+    "u-boot": {
+      "url": "https://github.com/rockchip-linux/u-boot",
+      "branch": "next-dev",
+      "commit": "1c535d65b8509f388d09e49fb6961f49fda35a1d"
+    },
+    "buildroot": {
+      "url": "https://github.com/buildroot/buildroot",
+      "tag": "2026.08.1",
+      "commit": "7fdeadb3b9f12f78e5fccca914d7fef47090ab9a"
+    },
+    "rkbin": {
+      "url": "https://github.com/rockchip-linux/rkbin",
+      "branch": "master",
+      "commit": "3e288fe814e059dd06833495f845cab04ac20a5c"
+    }
+  },
+  "buildMutablePaths": [
+    "kernel",
+    "u-boot",
+    "buildroot"
+  ],
+  "bspSelection": {
+    "repositoryUri": "catalog://ws-e2/rk3588-bsp",
+    "commit": "99a56fe7c7cf37db78aed56fff76a1a9572ee824",
+    "family": "rockchip-linux",
+    "licenses": [
+      {
+        "id": "linux-copying",
+        "redistribution": "allowed",
+        "source": "kernel/COPYING (GPL-2.0)"
+      },
+      {
+        "id": "u-boot-licenses",
+        "redistribution": "allowed",
+        "source": "u-boot/Licenses/README (GPL-2.0)"
+      },
+      {
+        "id": "buildroot-copying",
+        "redistribution": "allowed",
+        "source": "buildroot/COPYING (GPL-2.0+)"
+      },
+      {
+        "id": "rockchip-rkbin",
+        "redistribution": "allowed",
+        "source": "loaders/LICENSE (Rockchip license: use, copy, distribute granted; no decompiling; keep notices; AS IS)"
+      }
+    ],
+    "loader": {
+      "path": "loaders/rk3588_spl_v1.14.bin",
+      "sha256": "b811b90b6847dc251838e82036c328f00eaacefe94659432265a0ccb0fc8f4e5"
+    },
+    "partitionLayout": {
+      "path": "layouts/ws-e2-minimal-parameter.txt",
+      "sha256": "5a592e7227f0b211b7bd07e9532ccb69bafc913575e83772d515f97514c3616a"
+    },
+    "environment": {
+      "containerDigest": "sha256:199f9388bbb4793356dc997c7a3a69d684a869b05951f2011074200bf7c923cc",
+      "toolchainTriple": "aarch64-linux-gnu",
+      "toolchainSha256": "cd90adc7801f4595267f61a5d25bd3a0c6beb2f9f1f107ab919a97a12972dc9a",
+      "imageCapabilities": ["make", "gcc", "bison", "flex", "dtc", "pkg-config", "python3"]
+    }
+  },
+  "materialization": {
+    "superproject": "git clone superproject.bundle",
+    "components": "git clone <component>.bundle into the submodule path (gitlinks pin the SHAs above)",
+    "adapterCandidateRoots": [
+      "<EVOVERSE_HOME>/bsp/ws-e2/99a56fe7",
+      "<carrier>/bsp/tree"
+    ],
+    "repack20261114": "integrity re-run: bundles re-created from the verified rebuild tree came out byte-identical (sha256 + size) to the 2026-11-11 bundleFiles below, proving the published release assets were never damaged; the census damage (CRLF blobs, front-truncated zconf.tab.c_shipped) lived in the Windows materialization step, not in the packaged bytes; tip-only cut points are recorded explicitly in the baselineLock receipt (--allow-shallow); full history stays traceable at the upstream repositories under components.*"
+  },
+  "notes": [
+    "rockchip-linux/buildroot does not exist (GitHub API 404, 2026-11-11); buildroot is official upstream tag 2026.08.1.",
+    "rkbin rk3588_spl_v1.14.bin sha256 is byte-identical to the legacy health-policy registration (b811b90b...fc8f4e5).",
+    "This manifest supersedes the sealed legacy identity b8f5dda5 for the requirement-based flow (C15 fix consumes it).",
+    "2026-11-14: baselineLock lifted to LOCK_READY by owner decision (version unchanged) — receipt recorded under baselineLock.receipt; imageCapabilities attest the rebuilt builder image sha256:199f9388… (pkg-config added 2026-11-14) against the runtime-project's requiredImageCapabilities; bundleFiles now point at the 2026-11-14 repack bytes verified through scripts/check_bsp_material.py."
+  ]
+}

@@ -1,0 +1,38 @@
+schema_version: '1.0'
+components:
+  - {id: tj180a484s, manufacturer: Efinix, part: TJ180A484S, role: fpga, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+  - {id: cyusb4014, manufacturer: Infineon, part: CYUSB4014-FCAXI, role: usb3_controller, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: w25q256jw, manufacturer: Winbond, part: W25Q256JWPIQ, role: configuration_flash, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+interfaces:
+  - {id: fx10-usb3, protocol: USB 3.2 Gen 2 and FX10 parallel/LVDS, endpoints: [cyusb4014, tj180a484s], notes: 'USB3, USB2, CC, SPI, JTAG/SWD, UART, CAN-FD and parallel buses; sheets 3-8.', source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: mipi0, protocol: Efinix MIPI hard I/O, lanes: 5 RX differential pairs and 5 TX differential pairs, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+  - {id: mipi2, protocol: Efinix MIPI hard I/O, lanes: 5 RX differential pairs and 5 TX differential pairs, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+  - {id: module-carrier, protocol: board-to-board electrical interface, notes: 'Exposes FPGA GPIO, MIPI, FX10, JTAG, clocks and supply rails; connector positions remain outside functional pinout.', source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+power_domains:
+  - {id: vcc-core-0v95, voltage: 0.95, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: vcca-pll-0v95, voltage: 0.95, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: ddr-vdd-1v1, voltage: 1.1, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: ddr-vddq-0v6, voltage: 0.6, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: phy-vdd-0v85, voltage: 0.85, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: vccaux-1v8, voltage: 1.8, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: vqps-1v8, voltage: 1.8, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: vccio-hsio-1v8, voltage: 1.8, banks: [2A_2B, 2C, 3A, 3B, 3C, 4A, 4B, 4C], source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: vccio-hvio-3v3, voltage: 3.3, banks: [BL, BR, TL, TR], source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+clocks:
+  - {id: osc-50m, signal: clk_50m, ball: T18, frequency_hz: 50000000, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+  - {id: ddr-pll-ref, signal: ddr_clk_ref, ball: Y14, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+  - {id: mipi0-pll-ref, signal: mipi0_refclk, ball: AA10, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+  - {id: mipi2-pll-ref, signal: mipi2_refclk, ball: AA15, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+memories:
+  - {id: w25q256jw-qspi, manufacturer: Winbond, device: W25Q256JWPIQ, role: configuration, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: lpddr-interface, device: LPDDR4/LPDDR4X x16 hard PHY (SiP-integrated), role: system_memory, notes: 'TJ180A484S (package J484D1) is a SiP integrating 2Gb LPDDR4x, x16, 1 rank per Efinix Ti180 data sheet; jacket demo peri.xml adv_ddr matches (LPDDR4x, mem_density=2G, data_width=16, physical_rank=1).', source_refs: [efinix-ti180-datasheet, ws-e1-jacket-ddr-peri], validation_state: CONFIRMED}
+debug_chains:
+  - {id: fpga-jtag, device: TJ180A484S, signals: [TCK, TDI, TMS, TDO], voltage: 3.3, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: fx10-jtag-swd, device: CYUSB4014-FCAXI, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+capabilities:
+  - {id: usb3-gen2, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: mipi-rx-tx, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: fpga-configuration-qspi, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}
+  - {id: fpga-package-closure, package_balls: 484, connected_power: 177, connected_signal: 299, board_nc: 2, device_nc: 6, artifact: pinout/TJ180A484S-package-audit-v1.csv, source_refs: [ws-e1-module-schematic, tj180a484s-efinity-pinout], validation_state: CONFIRMED}
+cross_chip_links:
+  - {id: fpga-fx10-parallel, from: tj180a484s, to: cyusb4014, protocol: parallel/LVDS, source_refs: [ws-e1-module-schematic], validation_state: CONFIRMED}

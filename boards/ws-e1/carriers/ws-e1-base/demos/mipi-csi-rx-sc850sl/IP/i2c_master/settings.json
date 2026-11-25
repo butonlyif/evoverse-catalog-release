@@ -1,0 +1,66 @@
+{
+    "args": [
+        "-o",
+        "i2c_master",
+        "--base_path",
+        "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip",
+        "--vlnv",
+        {
+            "vendor": "efinixinc.com",
+            "library": "serial_interface",
+            "name": "efx_i2c_controller",
+            "version": "5.0"
+        }
+    ],
+    "conf": {
+        "SLAVE_ADDR": "84",
+        "I2C_FAST_MODE": "0",
+        "I2C_MODE": "\"MASTER\"",
+        "DATA_BYTE_WIDTH": "16",
+        "CLOCK_FREQ": "50",
+        "SPIKE_FILTER_CYCLE": "2"
+    },
+    "output": {
+        "external_source_source": [
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\i2c_master_define.vh",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\i2c_master_tmpl.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\i2c_master.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\i2c_master_tmpl.vhd"
+        ],
+        "external_example_example": [
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_controller_test.peri.xml",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_controller_test.xml",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_clock_gen.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_controller_test.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\efx_i2c_master_controller.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\efx_i2c_slave_controller.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_T20.sdc",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_functions.vh",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_master.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\T20F256_devkit\\i2c_master_define.vh"
+        ],
+        "external_example_2": [
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_controller_test.peri.xml",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_controller_test.xml",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_clock_gen.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_controller_test.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\efx_i2c_master_controller.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\efx_i2c_slave_controller.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_Ti60.sdc",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_functions.vh",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_master.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Ti60F225_devkit\\i2c_master_define.vh"
+        ],
+        "external_testbench_testbench": [
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Testbench\\i2c_controller_tb.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Testbench\\i2c_controller_test.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Testbench\\efx_i2c_master_controller.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Testbench\\efx_i2c_slave_controller.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Testbench\\modelsim.do",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Testbench\\i2c_master.v",
+            "D:\\J\\nantian\\smartsense\\mipi_rx_test\\ip\\i2c_master\\Testbench\\i2c_master_define.vh"
+        ]
+    },
+    "sw_version": "2023.2.307",
+    "generated_date": "2024-04-02T08:35:48.849324"
+}

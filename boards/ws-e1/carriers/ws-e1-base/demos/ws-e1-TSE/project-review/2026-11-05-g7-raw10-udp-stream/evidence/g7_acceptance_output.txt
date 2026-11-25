@@ -1,0 +1,17 @@
+﻿RAW10 RX PC 端验收输出（test_raw10_rx.py --seconds 10，2026-11-05，工具输出原样抄录）
+listening on 10.0.0.2:10005, collecting 10.0s ...
+===== RAW10 RX 统计（10.00s 窗口） =====
+  UDP 包数        : 536432  (末包 300)
+  完整帧数        : 295  (帧号 738..1037)
+  丢帧数          : 0  (帧号跳变统计)
+  重复/乱序包     : 0
+  帧率            : 30.00 fps   (要求 30.00 ± 0.1)
+  载荷带宽        : 622.1 Mbps (要求 622 ± 5)
+  像素比对        : frame 738 OK  frame 739 OK  frame 740 OK  frame 741 OK  frame 742 OK
+  分项判定:
+    [PASS] 丢帧 = 0
+    [PASS] 无重复/乱序包
+    [PASS] 帧率 30.00±0.1
+    [PASS] 带宽 622±5 Mbps
+    [PASS] 像素比对 PASS
+RESULT: PASS — G7 验收达成

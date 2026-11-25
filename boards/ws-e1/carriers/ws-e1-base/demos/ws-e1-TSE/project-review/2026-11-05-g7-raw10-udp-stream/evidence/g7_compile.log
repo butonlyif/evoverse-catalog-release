@@ -1,0 +1,11 @@
+﻿Running: efx_run_map.py ws_e1_tse --family Titanium --device TJ180A484S --project_xml D:\Projs\ws-e1-TSE\ws_e1_tse.xml --dir D:\Projs\ws-e1-TSE\ip\myriscv --dir D:\Projs\ws-e1-TSE\ip\mytse --output_dir outflow --work_dir work_syn --opt root=ws_e1_tse --opt veri_options=verilog_mode=verilog_2k,vhdl_mode=vhdl_2008 work-dir=work_syn write_efx_verilog=on I=ip/myriscv --opt write-premap-module=ws_e1_tse.elab.vdb
+   map :	PASS 
+Running: efx_run_dbg.py ws_e1_tse --family Titanium --device TJ180A484S --debug_profile debug_profile.wizard.json --output_dir outflow --top_module ws_e1_tse --map_opts veri_options=verilog_mode=verilog_2k,vhdl_mode=vhdl_2008 I=ip/myriscv
+   debugger auto instantation :	PASS 
+Warning: Detecting the debugger auto instantiation is enable. Multiple interface XML file may exist that may cause Interface Designer fail
+Running: efx_run_pt_unified.py ws_e1_tse.dbg Titanium TJ180A484S --output_dir outflow --timing_model C4 --project_xml ws_e1_tse.xml
+   interface :	PASS 
+Running: efx_run_pnr.py ws_e1_tse --prj D:\Projs\ws-e1-TSE\ws_e1_tse.xml --family Titanium --device TJ180A484S --timing_model C4 --dir D:\Projs\ws-e1-TSE\ip\myriscv --dir D:\Projs\ws-e1-TSE\ip\mytse --output_dir outflow --work_dir work_pnr --opt sdc_file=ws_e1_tse.sdc --enable_dbg
+   pnr :	PASS 
+Running: efx_run_pgm.py ws_e1_tse --family Titanium --device TJ180A484S --output_dir outflow --work_dir work_pnr --opt mode=active width=1 enable_roms=on spi_low_power_mode=on io_weak_pullup=on oscillator_clock_divider=DIV8 enable_crc_check=off bitstream_compression=on active_capture_clk_edge=negedge release_tri_then_reset=on jtag_usercode=0xFFFFFFFF enable_external_master_clock=off four_byte_addressing=off
+   pgm :	PASS 

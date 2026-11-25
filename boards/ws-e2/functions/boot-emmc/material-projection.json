@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "adapterId": "rk3588",
+  "adapterVersion": "1.0.0",
+  "adapterApiVersion": "1.2",
+  "functionId": "boot-emmc",
+  "functionType": "boot_storage_recovery",
+  "materialDigest": "sha256:f9a4a6336db791b53b9b94e6c3c103f2ada65c4b876a0927f2047eea6cad106a",
+  "requirements": [
+    {
+      "kind": "board_test",
+      "id": "board_test.power-loss-recovery.boot-emmc",
+      "statement": "Interrupt an upgrade and confirm the board still boots the previous image."
+    },
+    {
+      "kind": "loader",
+      "id": "loader.boot-chain.boot-emmc",
+      "statement": "Build the declared loader, trust and U-Boot chain for the boot media."
+    },
+    {
+      "kind": "partition",
+      "id": "partition.partition-layout.boot-emmc",
+      "statement": "Apply the declared partition layout to the Firmware image."
+    },
+    {
+      "kind": "recovery",
+      "id": "recovery.recovery-tool.boot-emmc",
+      "statement": "Ship the declared recovery tool and confirm the rollback path."
+    }
+  ],
+  "projectionDigest": "ac9ead0c130367f0dde4c301d0e32457aa73ee3693bebc3dd99a68cc903a38bb"
+}

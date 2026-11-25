@@ -1,0 +1,345 @@
+---
+evoverse_manifest_version: 2
+kind: board
+id: t20f256-xd-ps-eval
+display_name: T20F256 XD-PS Evaluation Board
+version: 0.1.0
+status: active
+pinout_csv: pinout/t20f256-xd-ps-eval.csv
+fpga:
+  vendor: elitestek
+  family: Trion
+  part: T20F256
+  package: F256
+  timing_model: C4
+---
+
+[English](t20f256-xd-ps-eval.en.md) | 中文
+
+# 底板规格
+
+> **本文件由 `tools/board-pinout-tool` 自动生成**。
+> 不要手工编辑本文件；如需修改，请编辑 `pinout/*.csv` 与 manifest 后重新生成。
+
+| 属性 | 值 |
+| --- | --- |
+| 版本 | 0.1.0 |
+| ID | t20f256-xd-ps-eval |
+
+## 2. 对外接口清单
+
+按 `interface` 列分组（空 `interface` 的行合并到“未归类”）。
+这是项目时真正查询的视图；接插件物理脚号不在此表内，
+由 PCB 工程师另行维护 `pinmap-connector.csv`。
+
+### 2.1 JTAG
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| JTAG | jtag_tck | M2 | IN | JTAG | JTAG TCK from FT232HL(U5) pin13 via R1; ball M2 = Configuration |
+| JTAG | jtag_tdi | K5 | IN | JTAG | JTAG TDI from FT232HL(U5) pin14 via R2; ball K5 = Configuration |
+| JTAG | jtag_tdo | L5 | OUT | JTAG | JTAG TDO to FT232HL(U5) pin15 via R3; ball L5 = Configuration |
+| JTAG | jtag_tms | M1 | IN | JTAG | JTAG TMS from FT232HL(U5) pin16 via R6; ball M1 = Configuration |
+
+### 2.2 UART
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| UART_USB | uart_tx | N16 | OUT | GP_IO | UART_P via R70 to CH340N(U2) pin6; direction inferred from net naming - verify on hardware |
+| UART_USB | uart_rx | P16 | IN | GP_IO | UART_N via R64 to CH340N(U2) pin7; direction inferred from net naming - verify on hardware |
+
+### 2.3 SPI
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| SPI_FLASH | flash_miso | N1 | IN | GP_IO | W25Q32(U3) DO via R62; ball N1 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_mosi | L3 | OUT | GP_IO | W25Q32(U3) DI via R63; ball L3 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_sclk | M3 | OUT | GP_IO | W25Q32(U3) CLK via R61; ball M3 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_cs_n | P3 | OUT | GP_IO | W25Q32(U3) CS via R88; ball P3 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_hold | G5 | OUT | GP_IO | W25Q32(U3) HOLD via R60; ball G5 = User IO/GCLK |
+
+### 2.4 BUZZER
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| BUZZER | buzzer | T2 | OUT | GP_IO | buzzer via R7 driver transistor |
+
+### 2.5 DIP
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| DIP_SW1 | dip_sw1 | B15 | IN | GP_IO | slide switch SW1 (SS-12F44-G5) |
+| DIP_SW2 | dip_sw2 | A15 | IN | GP_IO | slide switch SW2 (SS-12F44-G5) |
+| DIP_SW3 | dip_sw3 | B14 | IN | GP_IO | slide switch SW3 (SS-12F44-G5) |
+| DIP_SW4 | dip_sw4 | A14 | IN | GP_IO | slide switch SW4 (SS-12F44-G5) |
+| DIP_SW5 | dip_sw5 | B13 | IN | GP_IO | slide switch SW5 (SS-12F44-G5) |
+| DIP_SW6 | dip_sw6 | A13 | IN | GP_IO | slide switch SW6 (SS-12F44-G5) |
+| DIP_SW7 | dip_sw7 | B12 | IN | GP_IO | slide switch SW7 (SS-12F44-G5) |
+| DIP_SW8 | dip_sw8 | A11 | IN | GP_IO | slide switch SW8 (SS-12F44-G5) |
+| DIP_SW9 | dip_sw9 | B11 | IN | GP_IO | slide switch SW9 (SS-12F44-G5) |
+| DIP_SW10 | dip_sw10 | B10 | IN | GP_IO | slide switch SW10 (SS-12F44-G5) |
+
+### 2.6 EXP
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| EXP_CN1 | lvds1_p | K2 | INOUT | GP_IO | GPIOL_1_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds1_n | L1 | INOUT | GP_IO | GPIOL_1_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds2_p | J2 | INOUT | GP_IO | GPIOL_2_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds2_n | K1 | INOUT | GP_IO | GPIOL_2_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds3_p | H1 | INOUT | GP_IO | GPIOL_3_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds3_n | H2 | INOUT | GP_IO | GPIOL_3_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds4_p | G1 | INOUT | GP_IO | GPIOL_4_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds4_n | G2 | INOUT | GP_IO | GPIOL_4_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds5_p | K3 | INOUT | GP_IO | GPIOL_5_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds5_n | L2 | INOUT | GP_IO | GPIOL_5_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds6_p | J5 | INOUT | GP_IO | GPIOL_6_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds6_n | K4 | INOUT | GP_IO | GPIOL_6_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds7_p | J3 | INOUT | GP_IO | GPIOL_7_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds7_n | J4 | INOUT | GP_IO | GPIOL_7_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds8_p | H3 | INOUT | GP_IO | GPIOL_8_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds8_n | H4 | INOUT | GP_IO | GPIOL_8_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds9_p | G3 | INOUT | GP_IO | GPIOL_9_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds9_n | G4 | INOUT | GP_IO | GPIOL_9_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds10_p | F3 | INOUT | GP_IO | GPIOL_10_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds10_n | F4 | INOUT | GP_IO | GPIOL_10_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds11_p | E3 | INOUT | GP_IO | GPIOL_11_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds11_n | E4 | INOUT | GP_IO | GPIOL_11_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds12_p | C3 | INOUT | GP_IO | GPIOL_12_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds12_n | D4 | INOUT | GP_IO | GPIOL_12_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds13_p | B3 | INOUT | GP_IO | GPIOL_13_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds13_n | C4 | INOUT | GP_IO | GPIOL_13_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds14_p | F1 | INOUT | GP_IO | GPIOL_14_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds14_n | F2 | INOUT | GP_IO | GPIOL_14_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds15_p | E1 | INOUT | GP_IO | GPIOL_15_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds15_n | E2 | INOUT | GP_IO | GPIOL_15_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds16_p | D1 | INOUT | GP_IO | GPIOL_16_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds16_n | D3 | INOUT | GP_IO | GPIOL_16_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds17_p | C1 | INOUT | GP_IO | GPIOL_17_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds17_n | C2 | INOUT | GP_IO | GPIOL_17_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds18_p | B1 | INOUT | GP_IO | GPIOL_18_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds18_n | B2 | INOUT | GP_IO | GPIOL_18_N diff pair to CN1 40-pin expansion (ESD D39) |
+
+### 2.7 I
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| I2C_EEPROM | i2c_sda | A7 | INOUT | GP_IO | AT24C01C(U6) SDA, pullup R69 to 3.3V |
+| I2C_EEPROM | i2c_scl | A8 | OUT | GP_IO | AT24C01C(U6) SCL, pullup R68 to 3.3V |
+
+### 2.8 OSC
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| OSC_50M | clk_50m | H13 | IN | CLK | 50MHz osc X2 (Q33310F70062200) via R87; ball H13 = User IO/GCLK |
+| OSC_50M_AUX | clk_50m_aux | L13 | IN | CLK | same 50MHz CLK50M via R86; ball L13 = User IO/PLL_CLKIN |
+
+### 2.9 SEG
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| SEG_DIG | seg_a | C6 | OUT | GP_IO | 7-seg segment A via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_b | C5 | OUT | GP_IO | 7-seg segment B via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_c | B7 | OUT | GP_IO | 7-seg segment C via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_d | C8 | OUT | GP_IO | 7-seg segment D via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_e | A9 | OUT | GP_IO | 7-seg segment E via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_f | B6 | OUT | GP_IO | 7-seg segment F via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_g | B5 | OUT | GP_IO | 7-seg segment G via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_dp | C7 | OUT | GP_IO | 7-seg segment DP via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG_SEL1 | seg_sel1 | A10 | OUT | GP_IO | digit select 1 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL2 | seg_sel2 | C10 | OUT | GP_IO | digit select 2 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL3 | seg_sel3 | C11 | OUT | GP_IO | digit select 3 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL4 | seg_sel4 | C9 | OUT | GP_IO | digit select 4 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL5 | seg_sel5 | C12 | OUT | GP_IO | digit select 5 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL6 | seg_sel6 | C13 | OUT | GP_IO | digit select 6 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL7 | seg_sel7 | C14 | OUT | GP_IO | digit select 7 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL8 | seg_sel8 | B9 | OUT | GP_IO | digit select 8 to FJ3461AH (LED11/LED12) |
+
+### 2.10 USER
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| USER_BTN_BUT1 | arst_n | A4 | IN | RST | push button BUT1, RN3 pullup to 3.3V, active-low |
+| USER_LED1 | led_user | T8 | OUT | GP_IO | LED1 (KT-0603R red) via resistor to GND |
+| USER_LED2 | led_user2 | T9 | OUT | GP_IO | LED2 (KT-0603R red) |
+| USER_LED3 | led_user3 | T10 | OUT | GP_IO | LED3 (KT-0603R red) |
+| USER_LED4 | led_user4 | T11 | OUT | GP_IO | LED4 (KT-0603R red) |
+| USER_LED5 | led_user5 | T12 | OUT | GP_IO | LED5 (KT-0603R red) |
+| USER_LED6 | led_user6 | R13 | OUT | GP_IO | LED6 (KT-0603R red) |
+| USER_LED7 | led_user7 | T14 | OUT | GP_IO | LED7 (KT-0603R red) |
+| USER_LED8 | led_user8 | R14 | OUT | GP_IO | LED8 (KT-0603R red) |
+| USER_LED9 | led_user9 | T15 | OUT | GP_IO | LED9 (KT-0603R red) |
+| USER_LED10 | led_user10 | R15 | OUT | GP_IO | LED10 (KT-0603R red) |
+| USER_BTN_BUT2 | user_btn2 | B4 | IN | GP_IO | push button BUT2, pullup, active-low |
+| USER_BTN_BUT3 | user_btn3 | A3 | IN | GP_IO | push button BUT3, pullup, active-low |
+| USER_BTN_BUT4 | user_btn4 | A2 | IN | GP_IO | push button BUT4, pullup, active-low |
+
+### 2.11 VGA
+
+| interface | 信号名 | ball | 方向 | 类别 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| VGA | vga_r0 | B16 | OUT | GP_IO | VGA R0 via resistor ladder to DSUB1 |
+| VGA | vga_r1 | C15 | OUT | GP_IO | VGA R1 via resistor ladder to DSUB1 |
+| VGA | vga_r2 | C16 | OUT | GP_IO | VGA R2 via resistor ladder to DSUB1 |
+| VGA | vga_r3 | D14 | OUT | GP_IO | VGA R3 via resistor ladder to DSUB1 |
+| VGA | vga_r4 | D16 | OUT | GP_IO | VGA R4 via resistor ladder to DSUB1 |
+| VGA | vga_g0 | E15 | OUT | GP_IO | VGA G0 via resistor ladder to DSUB1 |
+| VGA | vga_g1 | E16 | OUT | GP_IO | VGA G1 via resistor ladder to DSUB1 |
+| VGA | vga_g2 | F15 | OUT | GP_IO | VGA G2 via resistor ladder to DSUB1 |
+| VGA | vga_g3 | F16 | OUT | GP_IO | VGA G3 via resistor ladder to DSUB1 |
+| VGA | vga_g4 | G15 | OUT | GP_IO | VGA G4 via resistor ladder to DSUB1 |
+| VGA | vga_g5 | G16 | OUT | GP_IO | VGA G5 via resistor ladder to DSUB1 |
+| VGA | vga_b0 | H14 | OUT | GP_IO | VGA B0 via resistor ladder to DSUB1 |
+| VGA | vga_b1 | H15 | OUT | GP_IO | VGA B1 via resistor ladder to DSUB1 |
+| VGA | vga_b2 | K14 | OUT | GP_IO | VGA B2 via resistor ladder to DSUB1 |
+| VGA | vga_b3 | K15 | OUT | GP_IO | VGA B3 via resistor ladder to DSUB1 |
+| VGA | vga_b4 | L15 | OUT | GP_IO | VGA B4 via resistor ladder to DSUB1 |
+| VGA | vga_hs | M15 | OUT | GP_IO | VGA HSYNC via R43 to DSUB1 |
+| VGA | vga_vs | M16 | OUT | GP_IO | VGA VSYNC to DSUB1 |
+
+## 3. 管脚分配完整表
+
+共 110 行；列头沿用 SDK v0.8.0 的 8 列 + `interface`。
+接插件物理脚号不在此表内（见 §3.x 与 `pinmap-connector.csv`）。
+
+| interface | pin_name | ball | bank | io_std | dir | class | function | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OSC_50M | clk_50m | H13 | 3D_3E | 3.3V_LVCMOS | IN | CLK | main_clock | 50MHz osc X2 (Q33310F70062200) via R87; ball H13 = User IO/GCLK |
+| USER_BTN_BUT1 | arst_n | A4 | 1D_1E | 3.3V_LVCMOS | IN | RST | reset | push button BUT1, RN3 pullup to 3.3V, active-low |
+| USER_LED1 | led_user | T8 | 4B | 3.3V_LVCMOS | OUT | GP_IO | user_led | LED1 (KT-0603R red) via resistor to GND |
+| OSC_50M_AUX | clk_50m_aux | L13 | 3D_3E | 3.3V_LVCMOS | IN | CLK | - | same 50MHz CLK50M via R86; ball L13 = User IO/PLL_CLKIN |
+| USER_LED2 | led_user2 | T9 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user2 | LED2 (KT-0603R red) |
+| USER_LED3 | led_user3 | T10 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user3 | LED3 (KT-0603R red) |
+| USER_LED4 | led_user4 | T11 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user4 | LED4 (KT-0603R red) |
+| USER_LED5 | led_user5 | T12 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user5 | LED5 (KT-0603R red) |
+| USER_LED6 | led_user6 | R13 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user6 | LED6 (KT-0603R red) |
+| USER_LED7 | led_user7 | T14 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user7 | LED7 (KT-0603R red) |
+| USER_LED8 | led_user8 | R14 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user8 | LED8 (KT-0603R red) |
+| USER_LED9 | led_user9 | T15 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user9 | LED9 (KT-0603R red) |
+| USER_LED10 | led_user10 | R15 | 4A | 3.3V_LVCMOS | OUT | GP_IO | led_user10 | LED10 (KT-0603R red) |
+| USER_BTN_BUT2 | user_btn2 | B4 | 1D_1E | 3.3V_LVCMOS | IN | GP_IO | user_btn2 | push button BUT2, pullup, active-low |
+| USER_BTN_BUT3 | user_btn3 | A3 | 1D_1E | 3.3V_LVCMOS | IN | GP_IO | user_btn3 | push button BUT3, pullup, active-low |
+| USER_BTN_BUT4 | user_btn4 | A2 | 1D_1E | 3.3V_LVCMOS | IN | GP_IO | user_btn4 | push button BUT4, pullup, active-low |
+| DIP_SW1 | dip_sw1 | B15 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw1 | slide switch SW1 (SS-12F44-G5) |
+| DIP_SW2 | dip_sw2 | A15 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw2 | slide switch SW2 (SS-12F44-G5) |
+| DIP_SW3 | dip_sw3 | B14 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw3 | slide switch SW3 (SS-12F44-G5) |
+| DIP_SW4 | dip_sw4 | A14 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw4 | slide switch SW4 (SS-12F44-G5) |
+| DIP_SW5 | dip_sw5 | B13 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw5 | slide switch SW5 (SS-12F44-G5) |
+| DIP_SW6 | dip_sw6 | A13 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw6 | slide switch SW6 (SS-12F44-G5) |
+| DIP_SW7 | dip_sw7 | B12 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw7 | slide switch SW7 (SS-12F44-G5) |
+| DIP_SW8 | dip_sw8 | A11 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw8 | slide switch SW8 (SS-12F44-G5) |
+| DIP_SW9 | dip_sw9 | B11 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw9 | slide switch SW9 (SS-12F44-G5) |
+| DIP_SW10 | dip_sw10 | B10 | 3A_3B_3C | 3.3V_LVCMOS | IN | GP_IO | dip_sw10 | slide switch SW10 (SS-12F44-G5) |
+| SEG_DIG | seg_a | C6 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | seg_a | 7-seg segment A via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_b | C5 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | seg_b | 7-seg segment B via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_c | B7 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | seg_c | 7-seg segment C via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_d | C8 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | seg_d | 7-seg segment D via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_e | A9 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_e | 7-seg segment E via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_f | B6 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | seg_f | 7-seg segment F via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_g | B5 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | seg_g | 7-seg segment G via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG | seg_dp | C7 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | seg_dp | 7-seg segment DP via RN9/RN11 to FJ3461AH digit drives |
+| SEG_DIG_SEL1 | seg_sel1 | A10 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel1 | digit select 1 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL2 | seg_sel2 | C10 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel2 | digit select 2 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL3 | seg_sel3 | C11 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel3 | digit select 3 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL4 | seg_sel4 | C9 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel4 | digit select 4 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL5 | seg_sel5 | C12 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel5 | digit select 5 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL6 | seg_sel6 | C13 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel6 | digit select 6 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL7 | seg_sel7 | C14 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel7 | digit select 7 to FJ3461AH (LED11/LED12) |
+| SEG_DIG_SEL8 | seg_sel8 | B9 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | seg_sel8 | digit select 8 to FJ3461AH (LED11/LED12) |
+| BUZZER | buzzer | T2 | 4B | 3.3V_LVCMOS | OUT | GP_IO | buzzer | buzzer via R7 driver transistor |
+| UART_USB | uart_tx | N16 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | - | UART_P via R70 to CH340N(U2) pin6; direction inferred from net naming - verify on hardware |
+| UART_USB | uart_rx | P16 | 3D_3E | 3.3V_LVCMOS | IN | GP_IO | - | UART_N via R64 to CH340N(U2) pin7; direction inferred from net naming - verify on hardware |
+| SPI_FLASH | flash_miso | N1 | 1A | 3.3V_LVCMOS | IN | GP_IO | - | W25Q32(U3) DO via R62; ball N1 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_mosi | L3 | 1A | 3.3V_LVCMOS | OUT | GP_IO | - | W25Q32(U3) DI via R63; ball L3 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_sclk | M3 | 1A | 3.3V_LVCMOS | OUT | GP_IO | - | W25Q32(U3) CLK via R61; ball M3 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_cs_n | P3 | 1A | 3.3V_LVCMOS | OUT | GP_IO | - | W25Q32(U3) CS via R88; ball P3 = User IO/Configuration (dual-purpose) |
+| SPI_FLASH | flash_hold | G5 | 1B_1C | 3.3V_LVCMOS | OUT | GP_IO | - | W25Q32(U3) HOLD via R60; ball G5 = User IO/GCLK |
+| I2C_EEPROM | i2c_sda | A7 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | - | AT24C01C(U6) SDA, pullup R69 to 3.3V |
+| I2C_EEPROM | i2c_scl | A8 | 1D_1E | 3.3V_LVCMOS | OUT | GP_IO | - | AT24C01C(U6) SCL, pullup R68 to 3.3V |
+| VGA | vga_r0 | B16 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_r0 | VGA R0 via resistor ladder to DSUB1 |
+| VGA | vga_r1 | C15 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_r1 | VGA R1 via resistor ladder to DSUB1 |
+| VGA | vga_r2 | C16 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_r2 | VGA R2 via resistor ladder to DSUB1 |
+| VGA | vga_r3 | D14 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_r3 | VGA R3 via resistor ladder to DSUB1 |
+| VGA | vga_r4 | D16 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_r4 | VGA R4 via resistor ladder to DSUB1 |
+| VGA | vga_g0 | E15 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_g0 | VGA G0 via resistor ladder to DSUB1 |
+| VGA | vga_g1 | E16 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_g1 | VGA G1 via resistor ladder to DSUB1 |
+| VGA | vga_g2 | F15 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_g2 | VGA G2 via resistor ladder to DSUB1 |
+| VGA | vga_g3 | F16 | 3A_3B_3C | 3.3V_LVCMOS | OUT | GP_IO | vga_g3 | VGA G3 via resistor ladder to DSUB1 |
+| VGA | vga_g4 | G15 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_g4 | VGA G4 via resistor ladder to DSUB1 |
+| VGA | vga_g5 | G16 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_g5 | VGA G5 via resistor ladder to DSUB1 |
+| VGA | vga_b0 | H14 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_b0 | VGA B0 via resistor ladder to DSUB1 |
+| VGA | vga_b1 | H15 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_b1 | VGA B1 via resistor ladder to DSUB1 |
+| VGA | vga_b2 | K14 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_b2 | VGA B2 via resistor ladder to DSUB1 |
+| VGA | vga_b3 | K15 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_b3 | VGA B3 via resistor ladder to DSUB1 |
+| VGA | vga_b4 | L15 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_b4 | VGA B4 via resistor ladder to DSUB1 |
+| VGA | vga_hs | M15 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_hs | VGA HSYNC via R43 to DSUB1 |
+| VGA | vga_vs | M16 | 3D_3E | 3.3V_LVCMOS | OUT | GP_IO | vga_vs | VGA VSYNC to DSUB1 |
+| JTAG | jtag_tck | M2 | 1A | 3.3V_LVCMOS | IN | JTAG | - | JTAG TCK from FT232HL(U5) pin13 via R1; ball M2 = Configuration |
+| JTAG | jtag_tdi | K5 | 1A | 3.3V_LVCMOS | IN | JTAG | - | JTAG TDI from FT232HL(U5) pin14 via R2; ball K5 = Configuration |
+| JTAG | jtag_tdo | L5 | 1A | 3.3V_LVCMOS | OUT | JTAG | - | JTAG TDO to FT232HL(U5) pin15 via R3; ball L5 = Configuration |
+| JTAG | jtag_tms | M1 | 1A | 3.3V_LVCMOS | IN | JTAG | - | JTAG TMS from FT232HL(U5) pin16 via R6; ball M1 = Configuration |
+| EXP_CN1 | lvds1_p | K2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds1_p | GPIOL_1_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds1_n | L1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds1_n | GPIOL_1_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds2_p | J2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds2_p | GPIOL_2_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds2_n | K1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds2_n | GPIOL_2_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds3_p | H1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds3_p | GPIOL_3_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds3_n | H2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds3_n | GPIOL_3_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds4_p | G1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds4_p | GPIOL_4_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds4_n | G2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds4_n | GPIOL_4_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds5_p | K3 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds5_p | GPIOL_5_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds5_n | L2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds5_n | GPIOL_5_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds6_p | J5 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds6_p | GPIOL_6_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds6_n | K4 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds6_n | GPIOL_6_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds7_p | J3 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds7_p | GPIOL_7_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds7_n | J4 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds7_n | GPIOL_7_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds8_p | H3 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds8_p | GPIOL_8_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds8_n | H4 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds8_n | GPIOL_8_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds9_p | G3 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds9_p | GPIOL_9_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds9_n | G4 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds9_n | GPIOL_9_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds10_p | F3 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds10_p | GPIOL_10_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds10_n | F4 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds10_n | GPIOL_10_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds11_p | E3 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds11_p | GPIOL_11_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds11_n | E4 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds11_n | GPIOL_11_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds12_p | C3 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds12_p | GPIOL_12_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds12_n | D4 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds12_n | GPIOL_12_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds13_p | B3 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds13_p | GPIOL_13_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds13_n | C4 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds13_n | GPIOL_13_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds14_p | F1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds14_p | GPIOL_14_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds14_n | F2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds14_n | GPIOL_14_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds15_p | E1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds15_p | GPIOL_15_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds15_n | E2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds15_n | GPIOL_15_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds16_p | D1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds16_p | GPIOL_16_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds16_n | D3 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds16_n | GPIOL_16_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds17_p | C1 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds17_p | GPIOL_17_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds17_n | C2 | 1B_1C | 3.3V_LVCMOS | INOUT | GP_IO | lvds17_n | GPIOL_17_N diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds18_p | B1 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds18_p | GPIOL_18_P diff pair to CN1 40-pin expansion (ESD D39) |
+| EXP_CN1 | lvds18_n | B2 | 1D_1E | 3.3V_LVCMOS | INOUT | GP_IO | lvds18_n | GPIOL_18_N diff pair to CN1 40-pin expansion (ESD D39) |
+
+## 4. 骨架工程信号
+
+Stage-0 骨架工程（`evoverse new-project` 无 jacket 时）会从管脚分配表中
+按 `function` 列匹配以下三个角色。缺失任何一个都会让骨架生成失败。
+
+| function | 设计端口 | ISF 类型 | 球号 | 信号名 | 对外接口 |
+| --- | --- | --- | --- | --- | --- |
+| main_clock | clk_50m | pll_input_clock | H13 | clk_50m | OSC_50M |
+| reset | arst_n | input | A4 | arst_n | USER_BTN_BUT1 |
+| user_led | led_user | output | T8 | led_user | USER_LED1 |
+
+## 5. 板级 IO-bank 电压
+
+以下条目直接抄自 `constraints/*.isf`，不要在此覆盖：
+
+```python
+design.set_device_property("1A","VOLTAGE","3.3","IOBANK")
+design.set_device_property("1B_1C","VOLTAGE","3.3","IOBANK")
+design.set_device_property("1D_1E","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3A_3B_3C","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3D_3E","VOLTAGE","3.3","IOBANK")
+design.set_device_property("4A","VOLTAGE","3.3","IOBANK")
+design.set_device_property("4B","VOLTAGE","3.3","IOBANK")
+```
+
+---
+
+_Auto-generated by board-pinout-tool v0.1.0 (110 rows, 3 skeleton-role-tagged, 110 interface-tagged)._

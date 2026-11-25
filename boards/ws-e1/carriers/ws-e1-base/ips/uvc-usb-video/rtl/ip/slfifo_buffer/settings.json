@@ -1,0 +1,75 @@
+{
+    "args": [
+        "-o",
+        "slfifo_buffer",
+        "--base_path",
+        "F:\\fx10\\ti180_fx10_core\\LVDS_UVC_4K60\\fpga\\cam_uvc\\ip",
+        "--vlnv",
+        {
+            "vendor": "efinixinc.com",
+            "library": "memory",
+            "name": "efx_fifo_top",
+            "version": "8.1"
+        }
+    ],
+    "conf": {
+        "SYNC_CLK": "0",
+        "SYNC_STAGE": "2",
+        "DEPTH_2": "9",
+        "DATA_WIDTH": "256",
+        "MODE": "\"FWFT\"",
+        "OUTPUT_REG": "0",
+        "PROG_FULL_ASSERT": "128",
+        "PROGRAMMABLE_FULL": "\"STATIC_SINGLE\"",
+        "PFN_INTERNAL": "127",
+        "PEA_INTERNAL": "10",
+        "PEN_INTERNAL": "11",
+        "PROGRAMMABLE_EMPTY": "\"STATIC_SINGLE\"",
+        "OPTIONAL_FLAGS": "1",
+        "PIPELINE_REG": "1",
+        "ASYM_WIDTH_RATIO": "1",
+        "BYPASS_RESET_SYNC": "0",
+        "ENDIANESS": "0",
+        "RAM_STYLE": "\"block_ram\"",
+        "OVERFLOW_PROTECT": "1",
+        "UNDERFLOW_PROTECT": "1"
+    },
+    "output": {
+        "external_source_source": [
+            "slfifo_buffer\\slfifo_buffer.sv",
+            "slfifo_buffer\\slfifo_buffer_define.svh",
+            "slfifo_buffer\\slfifo_buffer_tmpl.sv",
+            "slfifo_buffer\\slfifo_buffer_tmpl.vhd"
+        ],
+        "external_example_example": [
+            "slfifo_buffer\\T20F256_devkit\\fifo_demo_top.v",
+            "slfifo_buffer\\T20F256_devkit\\fifo_demo_T20.sdc",
+            "slfifo_buffer\\T20F256_devkit\\efx_symmetric_width_fifo_top.sv",
+            "slfifo_buffer\\T20F256_devkit\\slfifo_buffer.sv",
+            "slfifo_buffer\\T20F256_devkit\\slfifo_buffer_define.svh",
+            "slfifo_buffer\\T20F256_devkit\\fifo_demo.peri.xml",
+            "slfifo_buffer\\T20F256_devkit\\fifo_demo.xml"
+        ],
+        "external_example_2": [
+            "slfifo_buffer\\Ti60F225_devkit\\fifo_demo_top.v",
+            "slfifo_buffer\\Ti60F225_devkit\\fifo_demo_Ti60.sdc",
+            "slfifo_buffer\\Ti60F225_devkit\\efx_symmetric_width_fifo_top.sv",
+            "slfifo_buffer\\Ti60F225_devkit\\slfifo_buffer.sv",
+            "slfifo_buffer\\Ti60F225_devkit\\slfifo_buffer_define.svh",
+            "slfifo_buffer\\Ti60F225_devkit\\fifo_demo.peri.xml",
+            "slfifo_buffer\\Ti60F225_devkit\\fifo_demo.xml"
+        ],
+        "external_testbench_testbench": [
+            "slfifo_buffer\\Testbench\\fifo_tb.sv",
+            "slfifo_buffer\\Testbench\\xrun.sh",
+            "slfifo_buffer\\Testbench\\msim.sh",
+            "slfifo_buffer\\Testbench\\flist",
+            "slfifo_buffer\\Testbench\\modelsim.do",
+            "slfifo_buffer\\Testbench\\slfifo_buffer.sv",
+            "slfifo_buffer\\Testbench\\slfifo_buffer_define.svh"
+        ]
+    },
+    "ooc_synthesis": {},
+    "sw_version": "2025.2.288",
+    "generated_date": "2026-05-13T07:33:12.270630+00:00"
+}
