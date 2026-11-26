@@ -1,0 +1,17 @@
+# sources.yaml - ws-e3
+schema_version: '1.0'
+sources:
+  - id: ws-e3-schematic
+    type: board_document
+    owner: wsmicro
+    location: boards/ws-e3/ws-e3.md
+    observed_at: '2026-09-22'
+    state: CONFIRMED
+  - id: ws-e3-stage0-isf
+    type: toolchain_document
+    owner: wsmicro
+    location: boards/ws-e3/jackets/stage0/constraints/ws_e3_stage0.pins.isf
+    version: '1'
+    section: EvoVerse SDK stage-0 pins (ISF)
+    observed_at: '2026-09-22'
+    state: CONFIRMED

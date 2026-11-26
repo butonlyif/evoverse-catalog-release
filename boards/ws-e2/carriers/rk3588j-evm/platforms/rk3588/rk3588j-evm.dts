@@ -1,0 +1,21 @@
+/dts-v1/;
+
+/*
+ * Initial board device-tree skeleton for rk3588j-evm revision 1.
+ * Derived only from confirmed schematic facts. Unknown compatible strings,
+ * clocks, resets, regulators, PHY settings, calibration, and driver
+ * properties remain unresolved and disabled where necessary; DDR training
+ * data, firmware, and vendor magic values are never derived here.
+ */
+
+/ {
+	model = "RK3588J EVM Baseboard (1)";
+	compatible = "evoverse,ws-e2-rk3588j-evm", "rockchip,rk3588";
+
+	chosen {
+		/* debug UART: UART2_M0_DEBUG, 1500000 baud — bind to the BSP serial alias before use */
+	};
+
+	/* DDR topology (schematic fact, not training data): 2x LPDDR4X (ATL4X8G32M2D-46 IT) fitted on the SOM */
+	/* selected boot storage: emmc */
+};

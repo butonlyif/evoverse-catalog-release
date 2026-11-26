@@ -1,0 +1,126 @@
+# hardware.yaml - ws-e3 (single-FPGA module, Titanium TJ375N484X)
+schema_version: '1.0'
+components:
+  - id: tj375n484x
+    part: TJ375N484X
+    role: fpga
+    source_refs: [ws-e3-schematic, ws-e3-stage0-isf]
+    validation_state: CONFIRMED
+interfaces: []
+power_domains: []
+clocks:
+  - id: clk_100m_osc
+    signal: clk_50m
+    ball: R3
+    frequency_hz: 100000000
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: 100MHz HCSL osc Y3 into GPIOB_P_03_PLLIN0; legacy signal name clk_50m kept
+  - id: pcie_refclk0_osc
+    signal: pcie_refclk0_p
+    ball: E11
+    frequency_hz: 100000000
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: 100MHz HCSL osc Y2 (AX3HAF1) diff pair E11/F11, default PCIe refclk
+memories:
+  - id: qspi_flash
+    device: TJ375N484X
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: QSPI flash via GS12341 on 4A_4B bank (flash_clk/io0..io3)
+debug_chains:
+  - id: jtag_chain
+    device: TJ375N484X
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: 3-wire JTAG TDO/TMS/TCK on BR3_BR4 (3.3V)
+capabilities:
+  - id: mipi2_tx_4lane
+    kind: mipi_tx
+    device: TJ375N484X
+    signals:
+      - mipi2_txdp0
+      - mipi2_txdn0
+      - mipi2_txdp1
+      - mipi2_txdn1
+      - mipi2_txdp2
+      - mipi2_txdn2
+      - mipi2_txdp3
+      - mipi2_txdn3
+      - mipi2_txdp4
+      - mipi2_txdn4
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: MIPI2 TX 4 data lanes + clock pair on TR bank
+  - id: pcie_x4_m2
+    kind: pcie
+    device: TJ375N484X
+    signals:
+      - pcie_tx0_p
+      - pcie_tx0_n
+      - pcie_rx0_p
+      - pcie_rx0_n
+      - pcie_tx1_p
+      - pcie_tx1_n
+      - pcie_rx1_p
+      - pcie_rx1_n
+      - pcie_tx2_p
+      - pcie_tx2_n
+      - pcie_rx2_p
+      - pcie_rx2_n
+      - pcie_tx3_p
+      - pcie_tx3_n
+      - pcie_rx3_p
+      - pcie_rx3_n
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: PCIe x4 Gen3 via Q2 SERDES hard IP to M.2 Key-M connector
+  - id: m2_conn_gpio
+    kind: gpio
+    device: TJ375N484X
+    signals:
+      - gpio_m2_00
+      - gpio_m2_01
+      - gpio_m2_02
+      - gpio_m2_03
+      - gpio_m2_04
+      - gpio_m2_05
+      - gpio_m2_06
+      - gpio_m2_07
+      - gpio_m2_08
+      - gpio_m2_09
+      - gpio_m2_10
+      - gpio_m2_11
+      - gpio_m2_12
+      - gpio_m2_13
+      - gpio_m2_14
+      - gpio_m2_15
+      - gpio_m2_16
+      - gpio_m2_17
+      - gpio_m2_18
+      - gpio_m2_19
+      - gpio_m2_20
+      - gpio_m2_21
+      - gpio_m2_22
+      - gpio_m2_23
+      - gpio_m2_24
+      - gpio_m2_25
+      - gpio_m2_26
+      - gpio_m2_27
+      - gpio_m2_28
+      - gpio_m2_29
+      - gpio_m2_30
+      - gpio_m2_31
+      - gpio_m2_32
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: 33 M.2 connector GPIOs across 4D/4A_4B/2A_2B_2C/BR0/TR1 banks
+  - id: user_led_d6
+    kind: led
+    device: TJ375N484X
+    signals: [led_user]
+    source_refs: [ws-e3-schematic]
+    validation_state: CONFIRMED
+    notes: Blue LED D6 via NPN; ball shared with QSPI flash CS#
+cross_chip_links: []

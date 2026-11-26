@@ -1,0 +1,170 @@
+# =============================================================================
+# ws_e1_tse 摄像头接入 P1：MIPI_RX2 硬核 DPHY RX + cam I2C GPIO + 新 PLL(TL1)
+# 引导用 ISF（Efinity Interface Script Format，Python API 源码，非 XML）
+#
+# 来源：配置值 1:1 转写自参考工程 D:\Projs\ws-e1-cam-4K-1080-60fps-ref
+#       （v4.11 板测出图的 1080 路 cam1 资源组：MIPI_RX2 + cam_1_* 引脚）。
+#       语法依据：Efinity 官方 helloworld-unified 示例 ISF + api_service 源码
+#       （mipi_hard_dphy_prop_id.py / pll_prop.py / isf_converter.py）。
+#
+# 引导流程（硬约束 rules-efinity-hard.md §15 的本工程适配版）：
+#   1. 引导应用（本文件 create_* 生效）：
+#      bin\efx_run_pt_script.bat scripts\efx_run_pt_import_isf.py
+#          --peri_design ws_e1_tse.peri.xml --isf_files constraints\cam_csi2_bootstrap.isf
+#      （先加 -s work_pt\peri_dryrun.xml 做校验，成功后去掉 -s 实际写入）
+#   2. 引导编译 PASS 后，将下方 create_* 段整段注释（标注启用条件）。
+#   3. 重放编译必须再次 PASS（引导 + 重放两连 PASS 才算 ISF 验收）。
+#   注：本工程 unified_flow=false 且 inter_file 为空，构建直接消费已持久化的
+#       peri.xml，不存在 ISF 重放链；本文件入库仅作 bootstrap 记录。
+#
+# PLL pll_csi（PLL_TL1 空闲槽）：
+#   CORE 参考 = clk（PLL_0 的 50M 输出，GCLK 网；参考工程同构先例 i_clk_27m）
+#   VCO = 50M × M(2) × DIV_fb(24) / N(1) = 2400MHz（本板已验证 pll_0 VCO 1250 同族）
+#   CLKOUT0 = csi_clk_100m = 2400/24 = 100MHz（CSI IP 核钟 + DPHY CFG_CLK，官方 80–120M）
+#   CLKOUT1 = csi_clk_200m = 2400/12 = 200MHz（IP 像素域，官方下限 178.2M）
+#   数学反推自本工程 pll_0 与参考工程 5 个实测 PLL，逐一闭合。
+# =============================================================================
+
+# ========== ① 一次性 bootstrap（已于 2026-11-06 应用到 ws_e1_tse.peri.xml 并入库；
+#              引导编译 PASS 后保持注释状态。仅当从零重建 peri.xml（git 恢复到
+#              本工程无 cam_csi2 接口的基线）时才需要整段解除注释重跑引导）==========
+# design.create_block("dphy_rx2", "MIPI_DPHY_RX")
+# design.create_block("pll_csi", "PLL")
+# design.create_output_gpio("cam_1_en")
+# design.create_inout_gpio("cam_1_scl")
+# design.create_inout_gpio("cam_1_sda")
+
+# ========== ② 重放安全段（幂等：仅 set_property / assign_resource / assign_pkg_pin）==========
+
+# ---- 旧 PLL pll_csi（已退役，仅存档）----
+# 2026-11-06 板测复盘：旧 pll_0 的 clk_25m 输出实际 out_divider=50 → 20MHz，
+# 而 pll_csi 声明 REFCLK_FREQ=25.0 → 参考频率不匹配失锁（locked=0）。
+# 最终方案：pll_csi 整体删除，pll_0 改为直接输出 50/125/125/100/200M
+#（M=1、fb=clk_50m div20、VCO=1000），peri 修改经 PT design API 写入
+#（work_pt/fix_peri_pll0.py）。相机时钟名：clk_100m / clk_200m。
+# 以下 pll_csi 历史配置仅供参考，不再使用：
+# design.assign_resource("pll_csi", "PLL_TL1", "PLL")
+# design.set_property("pll_csi", "REFCLK_SOURCE", "CORE", "PLL")
+# design.set_property("pll_csi", "CORE_CLK_PIN", "clk_25m", "PLL")
+# design.set_property("pll_csi", "REFCLK_FREQ", "25.0", "PLL")
+# design.set_property("pll_csi", "M", "4", "PLL")
+# design.set_property("pll_csi", "N", "1", "PLL")
+# design.set_property("pll_csi", "O", "2", "PLL")
+# design.set_property("pll_csi", "FEEDBACK_MODE", "LOCAL", "PLL")
+# design.set_property("pll_csi", "FEEDBACK_CLK", "CLK0", "PLL")
+# design.set_property("pll_csi", "RSTN_PIN", "pll_csi_rstn", "PLL")
+# design.set_property("pll_csi", "LOCKED_PIN", "pll_csi_locked", "PLL")
+# design.set_property("pll_csi", "CLKOUT0_EN", "1", "PLL")
+# design.set_property("pll_csi", "CLKOUT0_DIV", "24", "PLL")
+# design.set_property("pll_csi", "CLKOUT0_PIN", "csi_clk_100m", "PLL")
+# design.set_property("pll_csi", "CLKOUT0_CONN_TYPE", "gclk", "PLL")
+# design.set_property("pll_csi", "CLKOUT0_DYNPHASE_EN", "0", "PLL")
+# design.set_property("pll_csi", "CLKOUT0_PHASE_STEP", "0", "PLL")
+# design.set_property("pll_csi", "CLKOUT1_EN", "1", "PLL")
+# design.set_property("pll_csi", "CLKOUT1_DIV", "12", "PLL")
+# design.set_property("pll_csi", "CLKOUT1_PIN", "csi_clk_200m", "PLL")
+# 注：CLKOUT1_CONN_TYPE 不被 Ti180 PLL 的 ISF API 支持（校验实测拒绝）；
+#     CLKOUT1 连接类型保持默认 gclk（导入后已核对 peri.xml 实值）。
+# design.set_property("pll_csi", "CLKOUT1_DYNPHASE_EN", "0", "PLL")
+# design.set_property("pll_csi", "CLKOUT1_PHASE_STEP", "0", "PLL")
+# design.set_property("pll_csi", "CLKOUT2_EN", "0", "PLL")
+# design.set_property("pll_csi", "CLKOUT3_EN", "0", "PLL")
+# design.set_property("pll_csi", "CLKOUT4_EN", "0", "PLL")
+
+# ---- MIPI_RX2 硬核 DPHY RX（照搬参考工程 dphy_rx2：IMX415 1782Mbps 4-lane RAW10）----
+design.assign_resource("dphy_rx2", "MIPI_RX2", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "DATA_RATE", "1782", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "NUM_DATA_LANES", "4", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "DATA_WIDTH", "16", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "CFG_CLK_FREQ", "100", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "CFG_CLK_PIN", "clk_100m", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "WORD_CLKOUT_HS_CONN_TYPE", "gclk", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "WORD_CLKOUT_HS_PIN", "dphy_rx2_clk_CLKOUT", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_CLK_ESC_CONN_TYPE", "normal", "MIPI_DPHY_RX")
+# lane 映射（MIPI_RX2 物理位置：clk=lane2，data=0/1/3/4，与参考工程 peri clock_lane/data_lane 一致）
+design.set_property("dphy_rx2", "PHY_LANE_0", "data0", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "PHY_LANE_1", "data1", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "PHY_LANE_2", "clk", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "PHY_LANE_3", "data2", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "PHY_LANE_4", "data3", "MIPI_DPHY_RX")
+# 控制/复位（顶层 syn_peri_port 同名端口，RTL 侧驱动 100M 域复位）
+design.set_property("dphy_rx2", "RESET_N_PIN", "dphy_rx2_RESET_N", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RST0_N_PIN", "dphy_rx2_RST0_N", "MIPI_DPHY_RX")
+# clock lane 状态（lock 观测探针）
+design.set_property("dphy_rx2", "STOPSTATE_CLK_PIN", "dphy_rx2_STOPSTATE_CLK", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_CLK_ACTIVE_HS_PIN", "dphy_rx2_RX_CLK_ACTIVE_HS", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_CLK_NOT_PIN", "dphy_rx2_ULPS_CLK_ENTER", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ACTIVE_CLK_NOT_PIN", "dphy_rx2_ULPS_CLK_ACTIVEN", "MIPI_DPHY_RX")
+# escape clocks / ULPS per lane（my_csi2_rx RxClkEsc/RxUlpsEsc/RxUlpsActiveNot）
+design.set_property("dphy_rx2", "RX_CLK_ESC_LAN0_PIN", "dphy_rx2_ESC_LAN0_CLK", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_CLK_ESC_LAN1_PIN", "dphy_rx2_ESC_LAN1_CLK", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_CLK_ESC_LAN2_PIN", "dphy_rx2_ESC_LAN2_CLK", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_CLK_ESC_LAN3_PIN", "dphy_rx2_ESC_LAN3_CLK", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ESC_LAN0_PIN", "dphy_rx2_ULPS_LAN0_ENTER", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ESC_LAN1_PIN", "dphy_rx2_ULPS_LAN1_ENTER", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ESC_LAN2_PIN", "dphy_rx2_ULPS_LAN2_ENTER", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ESC_LAN3_PIN", "dphy_rx2_ULPS_LAN3_ENTER", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ACTIVE_NOT_LAN0_PIN", "dphy_rx2_ULPS_LAN0_ACTIVEN", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ACTIVE_NOT_LAN1_PIN", "dphy_rx2_ULPS_LAN1_ACTIVEN", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ACTIVE_NOT_LAN2_PIN", "dphy_rx2_ULPS_LAN2_ACTIVEN", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_ULPS_ACTIVE_NOT_LAN3_PIN", "dphy_rx2_ULPS_LAN3_ACTIVEN", "MIPI_DPHY_RX")
+# 错误探针（G8 判据：SOT/SOTSYNC/ESC/CONTROL 恒 0）
+design.set_property("dphy_rx2", "ERR_SOT_HS_LAN0_PIN", "dphy_rx2_ERR_SOT_HS_LAN0", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_SOT_HS_LAN1_PIN", "dphy_rx2_ERR_SOT_HS_LAN1", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_SOT_HS_LAN2_PIN", "dphy_rx2_ERR_SOT_HS_LAN2", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_SOT_HS_LAN3_PIN", "dphy_rx2_ERR_SOT_HS_LAN3", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_SOT_SYNC_HS_LAN0_PIN", "dphy_rx2_HS_LAN0_SOTSYNC_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_SOT_SYNC_HS_LAN1_PIN", "dphy_rx2_HS_LAN1_SOTSYNC_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_SOT_SYNC_HS_LAN2_PIN", "dphy_rx2_HS_LAN2_SOTSYNC_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_SOT_SYNC_HS_LAN3_PIN", "dphy_rx2_HS_LAN3_SOTSYNC_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_ESC_LAN0_PIN", "dphy_rx2_ESC_LAN0_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_ESC_LAN1_PIN", "dphy_rx2_ESC_LAN1_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_ESC_LAN2_PIN", "dphy_rx2_ESC_LAN2_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_ESC_LAN3_PIN", "dphy_rx2_ESC_LAN3_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_CONTROL_LAN0_PIN", "dphy_rx2_LINESTATE_LAN0_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_CONTROL_LAN1_PIN", "dphy_rx2_LINESTATE_LAN1_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_CONTROL_LAN2_PIN", "dphy_rx2_LINESTATE_LAN2_ERROR", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "ERR_CONTROL_LAN3_PIN", "dphy_rx2_LINESTATE_LAN3_ERROR", "MIPI_DPHY_RX")
+# lane stopstate / sync / skewcal / valid / data（my_csi2_rx 全量输入）
+design.set_property("dphy_rx2", "STOPSTATE_LAN0_PIN", "dphy_rx2_STOPSTATE_LAN0", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "STOPSTATE_LAN1_PIN", "dphy_rx2_STOPSTATE_LAN1", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "STOPSTATE_LAN2_PIN", "dphy_rx2_STOPSTATE_LAN2", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "STOPSTATE_LAN3_PIN", "dphy_rx2_STOPSTATE_LAN3", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SYNC_HS_LAN0_PIN", "dphy_rx2_HS_LAN0_SYNC", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SYNC_HS_LAN1_PIN", "dphy_rx2_HS_LAN1_SYNC", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SYNC_HS_LAN2_PIN", "dphy_rx2_HS_LAN2_SYNC", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SYNC_HS_LAN3_PIN", "dphy_rx2_HS_LAN3_SYNC", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SKEW_CAL_HS_LAN0_PIN", "dphy_rx2_HS_LAN0_SKEWCAL", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SKEW_CAL_HS_LAN1_PIN", "dphy_rx2_HS_LAN1_SKEWCAL", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SKEW_CAL_HS_LAN2_PIN", "dphy_rx2_HS_LAN2_SKEWCAL", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_SKEW_CAL_HS_LAN3_PIN", "dphy_rx2_HS_LAN3_SKEWCAL", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_VALID_HS_LAN0_PIN", "dphy_rx2_HS_LAN0_VALID", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_VALID_HS_LAN1_PIN", "dphy_rx2_HS_LAN1_VALID", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_VALID_HS_LAN2_PIN", "dphy_rx2_HS_LAN2_VALID", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_VALID_HS_LAN3_PIN", "dphy_rx2_HS_LAN3_VALID", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_DATA_HS_LAN0_PIN", "dphy_rx2_HS_LAN0_DATA", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_DATA_HS_LAN1_PIN", "dphy_rx2_HS_LAN1_DATA", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_DATA_HS_LAN2_PIN", "dphy_rx2_HS_LAN2_DATA", "MIPI_DPHY_RX")
+design.set_property("dphy_rx2", "RX_DATA_HS_LAN3_PIN", "dphy_rx2_HS_LAN3_DATA", "MIPI_DPHY_RX")
+
+# ---- cam I2C + 传感器使能 GPIO（照搬参考工程 cam_1_*：TL/BL bank 均 3.3V，无 1.2V 声明）----
+# I2C 开漏：IN/OUT/OE 全部 IO 寄存器挂 clk_200m（2026-11-06 由 csi_clk_200m 改名，pll_0 输出）
+design.assign_pkg_pin("cam_1_en", "Y9")
+design.assign_pkg_pin("cam_1_scl", "P17")
+design.assign_pkg_pin("cam_1_sda", "V10")
+design.set_property("cam_1_en", "IO_STANDARD", "3.3 V LVCMOS")
+design.set_property("cam_1_en", "DRIVE_STRENGTH", "4")
+design.set_property("cam_1_scl", "IO_STANDARD", "3.3 V LVCMOS")
+design.set_property("cam_1_scl", "PULL_OPTION", "WEAK_PULLUP")
+design.set_property("cam_1_scl", "IN_P_REG", "1")
+design.set_property("cam_1_scl", "IN_CLK_PIN", "clk_200m")
+design.set_property("cam_1_scl", "OUT_P_REG", "REGISTER")
+design.set_property("cam_1_scl", "OUT_CLK_PIN", "clk_200m")
+design.set_property("cam_1_scl", "OE_P_REG", "1")
+design.set_property("cam_1_sda", "IO_STANDARD", "3.3 V LVCMOS")
+design.set_property("cam_1_sda", "PULL_OPTION", "WEAK_PULLUP")
+design.set_property("cam_1_sda", "IN_P_REG", "1")
+design.set_property("cam_1_sda", "IN_CLK_PIN", "clk_200m")
+design.set_property("cam_1_sda", "OUT_P_REG", "REGISTER")
+design.set_property("cam_1_sda", "OUT_CLK_PIN", "clk_200m")
+design.set_property("cam_1_sda", "OE_P_REG", "1")

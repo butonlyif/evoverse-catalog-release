@@ -1,0 +1,124 @@
+schema_version: '1.0'
+identity:
+  id: boot-emmc
+  function_type: boot_storage_recovery
+  target_id: rk3588
+  board_id: ws-e2
+  revision: '1'
+  adapter: rk3588
+  state: MATERIAL_READY
+  requirement_ids:
+    - REQ-WS-E2-BOOT-001
+    - REQ-WS-E2-STORAGE-001
+    - REQ-WS-E2-RECOVERY-001
+hardware:
+  facts:
+    - name: boot_media
+      value: eMMC FEMDRW128G-88A19 on SOM page 16, 8-bit HS400 with enhanced strobe
+      source_refs: [ws-e2-som-nor-schematic]
+      validation_state: CONFIRMED
+    - name: boot_media_bus_width
+      value: 8
+      source_refs: [ws-e2-som-nor-schematic]
+      validation_state: CONFIRMED
+    - name: boot_device_selection
+      value: RK_BOOT_SARADC_IN0 held at 0 V after power-on reset selects Maskrom (carrier sheet 3)
+      source_refs: [ws-e2-mc-carrier-schematic]
+      validation_state: CONFIRMED
+    - name: partition_layout
+      value: idbloader at 0x40, uboot at 0x4000, resource at 0x6000, boot at 0xE000, rootfs from 0x16000
+      source_refs: [ws-e2-catalog-material-v1]
+      validation_state: CONFIRMED
+    - name: loader_spl
+      value: rk3588_spl_v1.14.bin from rkbin
+      source_refs: [rockchip-rkbin-repo]
+      validation_state: CONFIRMED
+    - name: trust_firmware
+      value: rk3588_bl31_v1.56.elf and rk3588_bl32_v1.23.bin from rkbin
+      source_refs: [rockchip-rkbin-repo]
+      validation_state: CONFIRMED
+    - name: ddr_init
+      value: rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.24.bin from rkbin
+      source_refs: [rockchip-rkbin-repo]
+      validation_state: CONFIRMED
+    - name: power_sequence
+      value: RK806-1 single-PMIC topology with base dtsi rk3588-rk806-single.dtsi
+      source_refs: [ws-e2-som-nor-schematic]
+      validation_state: CONFIRMED
+  source_refs:
+    - rockchip-rkbin-repo
+    - ws-e2-catalog-material-v1
+    - ws-e2-mc-carrier-schematic
+    - ws-e2-som-nor-schematic
+software:
+  interface:
+    kind: boot_block_device
+    device_node: /dev/mmcblk0
+    subsystem: mmc
+  app_sdk_capability_id: boot-emmc
+resources:
+  allocations:
+    cpu: shared with application cores
+  memory:
+    storage: eMMC FEMDRW128G-88A19, rootfs grows from partition offset 0x16000
+  security:
+    upgrade: boot and rootfs partitions are re-flashed under explicit confirmation, no A/B slot in the serial-console-emmc-rootfs scope
+    rollback: the previous image is retained on the build host and re-flashed through Maskrom when a boot fails
+platform:
+  kernel:
+    config:
+      - CONFIG_MMC_SDHCI_OF_DWCMSHC=y
+    driver:
+      - sdhci-of-dwcmshc
+  firmware:
+    partitions: [idbloader, uboot, resource, boot, rootfs]
+    boot_dependencies: [idbloader, u-boot.itb, boot.img, rootfs]
+  recovery:
+    - rkdeveloptool
+verification:
+  requirement_ids:
+    - REQ-WS-E2-BOOT-001
+    - REQ-WS-E2-STORAGE-001
+    - REQ-WS-E2-RECOVERY-001
+  levels: [V7]
+  cases:
+    - id: boot-emmc-cold-boot
+      requirement_id: REQ-WS-E2-BOOT-001
+      level: V7
+      steps:
+        - Power-cycle the carrier from a cold state with RK_BOOT_SARADC_IN0 left pulled up.
+        - Capture UART2 M0 at 1500000 8N1 from power-on to the login prompt.
+        - List the block devices and the mount state of the eMMC rootfs.
+      criteria:
+        - U-Boot and kernel banners appear on the console.
+        - The rootfs mounts read-write from the eMMC and a login prompt appears.
+      equipment:
+        - WS-E2 RK3588 MC carrier with the WS-E2 SOM fitted
+        - USB-UART adapter on UART2 M0
+        - bench supply at the carrier input
+      evidence_format: timestamped console log plus block device listing
+      failure_rule: a missing banner, a read-only rootfs or a kernel panic fails the case
+    - id: boot-emmc-maskrom-recovery
+      requirement_id: REQ-WS-E2-RECOVERY-001
+      level: V7
+      steps:
+        - Hold RK_BOOT_SARADC_IN0 at 0 V and power-cycle the carrier.
+        - Confirm Maskrom enumeration with rkdeveloptool.
+        - Re-flash idbloader.img and u-boot.itb, then boot the board again.
+      criteria:
+        - Maskrom enumerates and the loader write completes.
+        - The board boots to the login prompt after the recovery write.
+      equipment:
+        - WS-E2 RK3588 MC carrier with the WS-E2 SOM fitted
+        - USB-UART adapter on UART2 M0
+        - USB OTG cable to the carrier
+      evidence_format: rkdeveloptool session log plus console log after recovery
+      failure_rule: a failed enumeration or a board that does not boot fails the case
+delivery:
+  firmware_files: [idbloader.img, u-boot.itb, boot.img, rootfs.ext4]
+  target_pack_interfaces: []
+  diagnostics:
+    - rkdeveloptool Maskrom recovery session
+  acceptance:
+    - A cold boot from eMMC reaches a login prompt on ttyS2.
+    - Maskrom recovery re-flashes the boot chain and the board boots again.

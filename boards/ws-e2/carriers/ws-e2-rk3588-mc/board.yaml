@@ -1,0 +1,35 @@
+schema_version: '1.0'
+id: ws-e2-rk3588-mc
+kind: carrier
+display_name: WS-E2-RK3588-MC V01 Baseboard
+revision: '1'
+material_version: '1.0.0'
+status: validated
+composition:
+  mode: carrier
+  parent_module: ws-e2
+development_targets:
+  - id: fpga
+    type: fpga
+    adapter: efinity
+    device: {manufacturer: Efinix, part: TJ375N1156X, family: Titanium, timing_model: C4}
+    artifacts: {pinout: pinout/ws-e2-fpga-v1.csv}
+    source_refs: [ws-e2-som-nor-schematic, tj375-efinity-pinout, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+  - id: rk3588
+    type: soc
+    adapter: rk3588
+    device: {manufacturer: Rockchip, part: RK3588J}
+    artifacts: {pinout: pinout/ws-e2-rk3588j-v1.csv, platform: platforms/rk3588/platform.yaml}
+    environment_requirement:
+      profile_ref: platforms/rk3588/profile.template.json
+      state: SATISFIED
+      capability: rk3588-cross-build
+      target_architecture: aarch64
+      compatibility_scope: rockchip-linux vendor kernel/u-boot/rkbin cross build (CROSS_COMPILE=aarch64-linux-gnu-)
+    source_refs: [rockchip-kernel-repo, rockchip-rkbin-repo, ws-e2-catalog-material-v1]
+    validation_state: CONFIRMED
+artifacts:
+  hardware: hardware.yaml
+  sources: sources.yaml
+  generated_docs: docs/generated

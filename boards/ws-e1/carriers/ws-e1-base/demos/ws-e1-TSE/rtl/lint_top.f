@@ -1,0 +1,10 @@
+D:/Projs/ws-e1-TSE/rtl/ws_e1_tse.v
+D:/Projs/ws-e1-TSE/rtl/udp_pat_gen.v
+D:/Projs/ws-e1-TSE/rtl/mac_pat_gen.v
+D:/Projs/ws-e1-TSE/rtl/mac_rx2tx.v
+D:/Projs/ws-e1-TSE/rtl/reg_apb3.v
+D:/Projs/ws-e1-TSE/rtl/apb3_2_axi4_lite.v
+D:/Projs/ws-e1-TSE/rtl/axi4_st_mux.v
+D:/Projs/ws-e1-TSE/rtl/axi4_st_mux3.v
+D:/Projs/ws-e1-TSE/rtl/eth_pkt_fifo.v
+D:/Projs/ws-e1-TSE/rtl/DaulClkFifo.v

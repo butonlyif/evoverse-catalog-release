@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "platformId": "rk3588-platform-development",
+  "version": "2026.11.24",
+  "manifestDigest": "sha256:2385cdbb84ccb2894ae8c89ba7a7cbb09d8c087039c6f2047407e6ce81c652af",
+  "manifestUrl": "https://github.com/butonlyif/evoverse-rockchip-platform-release/releases/download/platform-development-2026.11.24-candidate.1/platform-development-release.json",
+  "moduleId": "ws-e2",
+  "carrierId": "rk3588j-evm",
+  "boardRevision": "1",
+  "qualification": {
+    "software": "PASS",
+    "boot": "NOT_RUN",
+    "hardware": "NOT_RUN",
+    "reason": "NO_BOARD"
+  }
+}

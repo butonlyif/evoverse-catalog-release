@@ -1,0 +1,577 @@
+{
+    "debug_cores": [
+        {
+            "name": "MipiTx",
+            "type": "vio",
+            "uuid": "db60f197771f4fa29d12e78e2c75d273",
+            "probes": [
+                {
+                    "name": "ConfigTxVertPixelNumber",
+                    "width": 16,
+                    "init": "0x870"
+                },
+                {
+                    "name": "ConfigTxHoriPixelNumber",
+                    "width": 16,
+                    "init": "0xf00"
+                },
+                {
+                    "name": "ConfigTxFrameRate",
+                    "width": 8,
+                    "init": "0x3c"
+                },
+                {
+                    "name": "ConfigTxHBlankTime_us",
+                    "width": 2,
+                    "init": "0x6"
+                },
+                {
+                    "name": "ConfigTxVBlankTime_us",
+                    "width": 5,
+                    "init": "0x5"
+                },
+                {
+                    "name": "configTxLanesNumber",
+                    "width": 3,
+                    "init": "0x4"
+                },
+                {
+                    "name": "ConfigPixelDataType",
+                    "width": 6,
+                    "init": "0x2c"
+                },
+                {
+                    "name": "RealTxHoriPixelNumber",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "TxDataRate_bps",
+                    "width": 33,
+                    "init": null
+                },
+                {
+                    "name": "ParamTxVertSyncLength_Cycle",
+                    "width": 24,
+                    "init": null
+                },
+                {
+                    "name": "paramTxVertBlankLength_Cycle",
+                    "width": 20,
+                    "init": null
+                },
+                {
+                    "name": "paramTxHoriBlankLength_Cycle",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "paramTxDataValidLength_Cycle",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "ParamTxHoriSyncLength_Cycle",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "ConfigTxFramerMode",
+                    "width": 1,
+                    "init": "0x0"
+                },
+                {
+                    "name": "ControlTxDPHYReset",
+                    "width": 1,
+                    "init": "0x1"
+                },
+                {
+                    "name": "ControlTxCSIReset",
+                    "width": 1,
+                    "init": "0x1"
+                },
+                {
+                    "name": "ControlTxDisable",
+                    "width": 1,
+                    "init": "0x0"
+                },
+                {
+                    "name": "MipiTx_ConfigTxVCEnable",
+                    "width": 3,
+                    "init": "0x0"
+                },
+                {
+                    "name": "CfgTxHPixelMax",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "HoriMaxPixelNum",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "RealHoriPixelNum",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "CalcHoriMaxPixelNum",
+                    "width": 36,
+                    "init": null
+                },
+                {
+                    "name": "HoriPayloadBitNum",
+                    "width": 36,
+                    "init": null
+                },
+                {
+                    "name": "CalcHoriBitNum",
+                    "width": 17,
+                    "init": null
+                },
+                {
+                    "name": "CfgTxBitNFactor",
+                    "width": 17,
+                    "init": null
+                },
+                {
+                    "name": "HSyncPeriod",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "HoriPayloadLen",
+                    "width": 16,
+                    "init": null
+                }
+            ]
+        },
+        {
+            "name": "LA_Mipi_Tx",
+            "type": "la",
+            "uuid": "5cfcbbbbe0ec4449af021c99c1293188",
+            "probes": [
+                {
+                    "name": "MipiTxValid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiTxHSync",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiTxVSync",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiTx_DATA",
+                    "width": 64,
+                    "probe_type": 1
+                },
+                {
+                    "name": "r_tx_axi_araddr_1P",
+                    "width": 6,
+                    "probe_type": 1
+                },
+                {
+                    "name": "w_tx_axi_rvalid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "w_tx_axi_arready",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "w_tx_axi_rdata",
+                    "width": 32,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Tx_intp_status_reg",
+                    "width": 4,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Tx_intp_ennable_reg",
+                    "width": 5,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Tx_lane_stop_status",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Tx_ULPS_status",
+                    "width": 9,
+                    "probe_type": 1
+                },
+                {
+                    "name": "r_tx_dbg_fsm_1P",
+                    "width": 2,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_tx_data0_HS_OUT",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_tx_data1_HS_OUT",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_tx_data2_HS_OUT",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_tx_data3_HS_OUT",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiTxDPHYRstN",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiTx_DPHY_RSTN",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiTxAutoRst",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "TxDPHYRstCnt",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "TxConfigEn",
+                    "width": 1,
+                    "probe_type": 1
+                }
+            ],
+            "data_depth": 1024,
+            "trigin_en": false,
+            "trigout_en": false,
+            "capture_control": false,
+            "input_pipeline": 1,
+            "auto_inserted": false
+        },
+        {
+            "name": "MipiRx",
+            "type": "vio",
+            "uuid": "5baab68b380345a69c054a882ebbd8f0",
+            "probes": [
+                {
+                    "name": "VidioFrmNum",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "VidioHPixelNum",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "VidioVPixelNum",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "VidioVBlankTime",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "VidioHBlankTime",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "VidioDataType",
+                    "width": 6,
+                    "init": null
+                },
+                {
+                    "name": "VidioRestChg",
+                    "width": 1,
+                    "init": null
+                },
+                {
+                    "name": "MipiRxLanesAct",
+                    "width": 1,
+                    "init": null
+                },
+                {
+                    "name": "MipiRxStaVCAct",
+                    "width": 4,
+                    "init": null
+                },
+                {
+                    "name": "ConfRxLanNum",
+                    "width": 3,
+                    "init": "0x4"
+                },
+                {
+                    "name": "RxErrCnt",
+                    "width": 16,
+                    "init": null
+                },
+                {
+                    "name": "MipiRxError",
+                    "width": 8,
+                    "init": null
+                },
+                {
+                    "name": "TestTimeCnt",
+                    "width": 32,
+                    "init": null
+                },
+                {
+                    "name": "CtrlRxDPHYRstN",
+                    "width": 1,
+                    "init": "0x1"
+                },
+                {
+                    "name": "CtrlRxCSIRstN",
+                    "width": 1,
+                    "init": "0x1"
+                },
+                {
+                    "name": "MiPiRxRight",
+                    "width": 8,
+                    "init": null
+                }
+            ]
+        },
+        {
+            "name": "LA_Mipi_Rx",
+            "type": "la",
+            "uuid": "d9294628eeaf4444a523ffc169a13472",
+            "probes": [
+                {
+                    "name": "Rx_intp_status_reg",
+                    "width": 15,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Rx_intp_ennable_reg",
+                    "width": 15,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Rx_lane0_status",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Rx_lane1_status",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Rx_lane2_status",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "Rx_lane3_status",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "word_count",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRx_CNT",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRx_VALID",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRx_HSYNC",
+                    "width": 4,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRx_VSYNC",
+                    "width": 4,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRx_VC",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "w_rx_axi_rvalid",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "w_rx_axi_rdata",
+                    "width": 32,
+                    "probe_type": 1
+                },
+                {
+                    "name": "r_rx_axi_araddr_1P",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRx_DATA",
+                    "width": 64,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRxData",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRxError",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MiPiRxRight",
+                    "width": 8,
+                    "probe_type": 1
+                },
+                {
+                    "name": "MipiRxDPHYRstN",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "RxErrCnt",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "datatype",
+                    "width": 6,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN0_DATA",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN1_DATA",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN2_DATA",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN3_DATA",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN0_VALID",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN1_VALID",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN2_VALID",
+                    "width": 1,
+                    "probe_type": 1
+                },
+                {
+                    "name": "mipi_dphy_rx_inst2_HS_LAN3_VALID",
+                    "width": 1,
+                    "probe_type": 1
+                }
+            ],
+            "data_depth": 1024,
+            "trigin_en": false,
+            "trigout_en": false,
+            "capture_control": false,
+            "input_pipeline": 1,
+            "auto_inserted": false
+        },
+        {
+            "name": "la0",
+            "type": "la",
+            "uuid": "79f8be0273e64954ab10776e92a28b89",
+            "probes": [
+                {
+                    "name": "mipi_rx_cnt",
+                    "width": 26,
+                    "probe_type": 1
+                },
+                {
+                    "name": "RxsyncHs",
+                    "width": 4,
+                    "probe_type": 1
+                },
+                {
+                    "name": "RxDataHS0",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "RxDataHS1",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "RxDataHS2",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "RxDataHS3",
+                    "width": 16,
+                    "probe_type": 1
+                },
+                {
+                    "name": "RxValidHS",
+                    "width": 4,
+                    "probe_type": 1
+                }
+            ],
+            "data_depth": 1024,
+            "trigin_en": false,
+            "trigout_en": false,
+            "capture_control": false,
+            "input_pipeline": 1,
+            "auto_inserted": false
+        }
+    ],
+    "session": {
+        "debug_widget": [],
+        "wizard": {}
+    },
+    "jtag_user": "USER1"
+}

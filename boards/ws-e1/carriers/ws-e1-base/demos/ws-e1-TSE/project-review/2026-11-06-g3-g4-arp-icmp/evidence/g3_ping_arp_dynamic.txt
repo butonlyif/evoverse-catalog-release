@@ -1,0 +1,18 @@
+G3 验收（2026-11-06）：删除静态 ARP 后首次 ping 触发动态 ARP 学习
+固件：G3/G4 net service（yt8531 rgmii-id 修复版 bit），板 10.0.0.8 / ea:e8:5e:00:60:c8
+PC：10.0.0.2（以太网 5；双网卡 10.0.0.2 / 10.0.0.3，ping -S 强制源地址）
+
+> ping -S 10.0.0.2 10.0.0.8 -n 4
+
+Ping statistics for 10.0.0.8:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 6ms, Maximum = 22ms, Average = 10ms
+
+> arp -a | findstr 10.0.0.8
+
+  10.0.0.8              ea-e8-5e-00-60-c8     dynamic
+
+前置状态：静态 ARP 项（Permanent → ea-e8-5e-00-60-c8）已经提权 arp -d 删除，
+删除后残留 Unreachable 墓碑项，ping 触发 ARP 解析后被动态项取代（type=dynamic）。
+同窗口板侧 UART 打印 3 次 "ARP: reply sent"。

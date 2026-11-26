@@ -1,0 +1,231 @@
+﻿Reading pref.tcl
+
+# 2024.2
+
+# vlog ../rtl/udp_pat_gen_v2.v tb_udp_v2.v
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 23:27:49 on Nov 05,2026
+# vlog ../rtl/udp_pat_gen_v2.v tb_udp_v2.v 
+# -- Compiling module udp_pat_gen_v2
+# -- Compiling module tb_udp_v2
+# 
+# Top level modules:
+# 	tb_udp_v2
+# End time: 23:27:49 on Nov 05,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#  vsim -voptargs=+acc tb_udp_v2
+# vsim -voptargs="+acc" tb_udp_v2 
+# Start time: 23:27:49 on Nov 05,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "udp_pat_gen_v2(fast)".
+# ** Warning: tb_udp_v2.v(49): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 19, found 18.
+# ** Warning: tb_udp_v2.v(49): (vopt-2718) [TFMPC] - Missing connection for port 'dbg_state_o'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
+# //  Questa Sim-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.tb_udp_v2(fast)
+# Loading work.udp_pat_gen_v2(fast)
+#  run -all
+#   BEAT total=1497 tvalid=1 tdata=08 tlast=0 state=2 hdr_cnt=0 pay_left=4 ipg_cnt=0
+#   BEAT total=1498 tvalid=1 tdata=52 tlast=0 state=2 hdr_cnt=0 pay_left=3 ipg_cnt=0
+#   BEAT total=1499 tvalid=1 tdata=18 tlast=0 state=2 hdr_cnt=0 pay_left=2 ipg_cnt=0
+#   BEAT total=1500 tvalid=1 tdata=87 tlast=1 state=2 hdr_cnt=0 pay_left=1 ipg_cnt=0
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=0
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=1
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=2
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=3
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=4
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=5
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=6
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=7
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=8
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=9
+#   BEAT total=1500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=10
+#   BEAT total=1500 tvalid=0 tdata=ff tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=11
+#   BEAT total=1500 tvalid=0 tdata=ff tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=12
+#   BEAT total=1501 tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=0 pay_left=0 ipg_cnt=13
+#   BEAT total=1502 tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=1 pay_left=0 ipg_cnt=0
+#   BEAT total=1503 tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=2 pay_left=0 ipg_cnt=0
+#   CYC tvalid=1 tdata=15 tlast=0 state=2 hdr_cnt=0 pay_left=4 ipg_cnt=0 total=2680497
+#   BEAT total=2680498 tvalid=1 tdata=55 tlast=0 state=2 hdr_cnt=0 pay_left=3 ipg_cnt=0
+#   CYC tvalid=1 tdata=55 tlast=0 state=2 hdr_cnt=0 pay_left=3 ipg_cnt=0 total=2680498
+#   BEAT total=2680499 tvalid=1 tdata=59 tlast=0 state=2 hdr_cnt=0 pay_left=2 ipg_cnt=0
+#   CYC tvalid=1 tdata=59 tlast=0 state=2 hdr_cnt=0 pay_left=2 ipg_cnt=0 total=2680499
+#   BEAT total=2680500 tvalid=1 tdata=57 tlast=1 state=2 hdr_cnt=0 pay_left=1 ipg_cnt=0
+#   CYC tvalid=1 tdata=57 tlast=1 state=2 hdr_cnt=0 pay_left=1 ipg_cnt=0 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=0
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=0 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=1
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=1 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=2
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=2 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=3
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=3 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=4
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=4 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=5
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=5 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=6
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=6 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=7
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=7 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=8
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=8 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=9
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=9 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=10
+#   CYC tvalid=0 tdata=00 tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=10 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=ff tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=11
+#   CYC tvalid=0 tdata=ff tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=11 total=2680500
+#   BEAT total=2680500 tvalid=0 tdata=ff tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=12
+#   CYC tvalid=0 tdata=ff tlast=1 state=3 hdr_cnt=0 pay_left=0 ipg_cnt=12 total=2680500
+#   BEAT total=2680501 tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=0 pay_left=0 ipg_cnt=13
+#   CYC tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=0 pay_left=0 ipg_cnt=13 total=2680501
+#   BEAT total=2680502 tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=1 pay_left=0 ipg_cnt=0
+#   CYC tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=1 pay_left=0 ipg_cnt=0 total=2680502
+#   BEAT total=2680503 tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=2 pay_left=0 ipg_cnt=0
+#   CYC tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=2 pay_left=0 ipg_cnt=0 total=2680503
+#   BEAT total=2680504 tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=3 pay_left=0 ipg_cnt=0
+#   CYC tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=3 pay_left=0 ipg_cnt=0 total=2680504
+#   CYC tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=4 pay_left=0 ipg_cnt=0 total=2680505
+#   CYC tvalid=1 tdata=ff tlast=0 state=1 hdr_cnt=5 pay_left=0 ipg_cnt=0 total=2680506
+# [TB] captured 8044200 bytes, frames_seen=3
+# [DUMP] p0 tail + p1 head:
+#   [1494] 83 tlast=0
+#   [1495] 21 tlast=0
+#   [1496] 08 tlast=0
+#   [1497] 52 tlast=0
+#   [1498] 18 tlast=0
+#   [1499] 87 tlast=1
+#   [1500] ff tlast=0
+#   [1501] ff tlast=0
+#   [1502] ff tlast=0
+#   [1503] ff tlast=0
+#   [1504] ff tlast=0
+#   [1505] ff tlast=0
+#   [1506] ea tlast=0
+#   [1507] e8 tlast=0
+#   [1508] 5e tlast=0
+#   [1509] 00 tlast=0
+#   [1510] 60 tlast=0
+#   [1511] c8 tlast=0
+#   [1512] 08 tlast=0
+#   [1513] 00 tlast=0
+#   [1514] 45 tlast=0
+#   [1515] 00 tlast=0
+#   [1516] 05 tlast=0
+#   [1517] ce tlast=0
+#   [1518] 00 tlast=0
+#   [1519] 01 tlast=0
+#   [1520] 00 tlast=0
+#   [1521] 00 tlast=0
+#   [1522] 40 tlast=0
+#   [1523] 11 tlast=0
+#   [1524] 61 tlast=0
+#   [1525] 15 tlast=0
+#   [1526] 0a tlast=0
+#   [1527] 00 tlast=0
+#   [1528] 00 tlast=0
+#   [1529] 08 tlast=0
+#   [1530] 0a tlast=0
+#   [1531] 00 tlast=0
+#   [1532] 00 tlast=0
+#   [1533] 02 tlast=0
+#   [1534] 02 tlast=0
+#   [1535] 09 tlast=0
+#   [1536] 0a tlast=0
+#   [1537] 9b tlast=0
+#   [1538] 05 tlast=0
+#   [1539] ba tlast=0
+#   [1540] 00 tlast=0
+#   [1541] 00 tlast=0
+#   [1542] 00 tlast=0
+#   [1543] 00 tlast=0
+#   [1544] 00 tlast=0
+#   [1545] 00 tlast=0
+#   [1546] 00 tlast=0
+#   [1547] 00 tlast=0
+#   [1548] 05 tlast=0
+#   [1549] aa tlast=0
+#   [1550] 22 tlast=0
+#   [1551] 08 tlast=0
+#   [1552] 92 tlast=0
+#   [1553] 28 tlast=0
+#   [1554] 8b tlast=0
+#   [1555] 23 tlast=0
+#   [1556] 08 tlast=0
+#   [1557] d2 tlast=0
+#   [1558] 38 tlast=0
+#   [1559] 8f tlast=0
+#   [1560] 24 tlast=0
+# [DUMP] p0 tlast positions:
+#   tlast at 1499 (data=87)
+# [DUMP] p1786 tail + p1787 head (f0):
+#   [2680490] 54 tlast=0
+#   [2680491] 15 tlast=0
+#   [2680492] 15 tlast=0
+#   [2680493] 49 tlast=0
+#   [2680494] 53 tlast=0
+#   [2680495] 55 tlast=0
+#   [2680496] 15 tlast=0
+#   [2680497] 55 tlast=0
+#   [2680498] 59 tlast=0
+#   [2680499] 57 tlast=1
+#   [2680500] ff tlast=0
+#   [2680501] ff tlast=0
+#   [2680502] ff tlast=0
+#   [2680503] ff tlast=0
+#   [2680504] ff tlast=0
+#   [2680505] ff tlast=0
+#   [2680506] ea tlast=0
+#   [2680507] e8 tlast=0
+#   [2680508] 5e tlast=0
+#   [2680509] 00 tlast=0
+#   [2680510] 60 tlast=0
+#   [2680511] c8 tlast=0
+#   [2680512] 08 tlast=0
+#   [2680513] 00 tlast=0
+#   [2680514] 45 tlast=0
+#   [2680515] 00 tlast=0
+#   [2680516] 03 tlast=0
+#   [2680517] 76 tlast=0
+#   [2680518] 06 tlast=0
+#   [2680519] fb tlast=0
+#   [2680520] 00 tlast=0
+#   [2680521] 00 tlast=0
+#   [2680522] 40 tlast=0
+#   [2680523] 11 tlast=0
+#   [2680524] 5c tlast=0
+#   [2680525] 73 tlast=0
+# [DUMP] frame0 wire total check: last tlast at:
+#   tlast at 2681399
+# [DUMP] frame0 ALL tlast positions (count + first 10):
+#   tlast #1 at 1499
+#   tlast #2 at 2999
+#   tlast #3 at 4499
+#   tlast #4 at 5999
+#   tlast #5 at 7499
+#   tlast #6 at 8999
+#   tlast #7 at 10499
+#   tlast #8 at 11999
+#   tlast #9 at 13499
+#   tlast #10 at 14999
+#   frame0 tlast total=1788
+# === TB_UDP_V2: ALL CHECKS PASSED (8044200 bytes, 3 frames) ===
+# ** Note: $finish    : tb_udp_v2.v(277)
+#    Time: 88304324 ns  Iteration: 2  Instance: /tb_udp_v2
+# End time: 23:28:00 on Nov 05,2026, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 3

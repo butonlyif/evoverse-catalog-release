@@ -1,0 +1,4 @@
+# BSP bundles are delivered as GitHub Release assets (see manifest.json
+# "release"), not as git objects — catalog sync (tag checkout) does not carry
+# them and committing ~332MB binaries here would bloat repo history.
+*.bundle

@@ -1,0 +1,40 @@
+# =============================================================================
+# TJ375 Stage0 jacket — IO bank voltage constraints
+# Board : SOM TBS2009 (TJ375 SOM) + carrier TJ375_RK3588J_EVM
+# Device: TJ375N1156X (Efinity 2026.1)
+#
+# Evidence:
+#   - _device/TJ375N1156X.peri.xml  iobank_info (device default iostd per bank)
+#   - SOM p32/p33 + EVM p23/p24 connector extraction rail nets:
+#       BANK2_VCC_2{A..E}_OUT / BANK4D_VCC_ADJ / VCC1V8_PMU_DDR_S3 -> 1.8 V
+#       VCCIO33_{TL,TR,BL,BR}* / VCCA_3V3_S0                       -> 3.3 V
+#   - Cross-check: verify_report.json item D — no mixed voltage per section
+# All 24 IO banks of this package are declared explicitly.
+# =============================================================================
+# HSIO banks (bank 2x / 4x) — 1.8 V
+design.set_iobank_voltage("2A", "1.8")
+design.set_iobank_voltage("2B", "1.8")
+design.set_iobank_voltage("2C", "1.8")
+design.set_iobank_voltage("2D", "1.8")
+design.set_iobank_voltage("2E", "1.8")
+design.set_iobank_voltage("4A", "1.8")
+design.set_iobank_voltage("4B", "1.8")
+design.set_iobank_voltage("4C", "1.8")
+design.set_iobank_voltage("4D", "1.8")
+
+# General purpose IO banks (TL/TR/BL/BR) — 3.3 V
+design.set_iobank_voltage("TL0", "3.3")
+design.set_iobank_voltage("TL1_TL5", "3.3")
+design.set_iobank_voltage("TR0", "3.3")
+design.set_iobank_voltage("TR1", "3.3")
+design.set_iobank_voltage("TR2", "3.3")
+design.set_iobank_voltage("TR3", "3.3")
+design.set_iobank_voltage("TR5", "3.3")
+design.set_iobank_voltage("BL0", "3.3")
+design.set_iobank_voltage("BL1", "3.3")
+design.set_iobank_voltage("BL2", "3.3")
+design.set_iobank_voltage("BL3", "3.3")
+design.set_iobank_voltage("BR0", "3.3")
+design.set_iobank_voltage("BR1", "3.3")
+design.set_iobank_voltage("BR3", "3.3")
+design.set_iobank_voltage("BR4", "3.3")

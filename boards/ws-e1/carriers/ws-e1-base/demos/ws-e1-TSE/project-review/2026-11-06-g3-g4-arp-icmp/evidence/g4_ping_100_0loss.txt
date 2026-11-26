@@ -1,0 +1,19 @@
+G4 验收（2026-11-06）：ping 10.0.0.8 -n 100（64B 标准载荷）
+
+> ping -S 10.0.0.2 10.0.0.8 -n 100
+
+Reply from 10.0.0.8: bytes=32 time=6ms TTL=64
+
+Ping statistics for 10.0.0.8:
+    Packets: Sent = 100, Received = 100, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 5ms, Maximum = 7ms, Average = 5ms
+
+TTL=64 为固件 icmp.c 应答 TTL（请求 TTL=128），证明应答出自板子协议栈，
+非网上其它主机。
+
+同窗口板侧 UART 统计（115s 侦听窗，与 ping 重叠）：
+RX prints=105  ARP replies=3  ICMP echo replies=100（与请求严格 1:1）
+末次 [stat]: tx=0000013c rx=0000006e(110) ierr=0 drop=0 all=0000006e rxst=00000000
+→ aFramesReceivedOK = etherStatsPkts = 110（3 ARP + 100 ICMP + 7 杂帧），
+零坏帧、零过滤丢弃、RX FIFO 零溢出。

@@ -1,0 +1,21 @@
+修复后 boot 与验收统计（2026-11-06，yt8531 rgmii-id 修复版 bit）
+
+boot（节选）：
+YT8531 rgmii-id cfg=0x000000f1 chip=0x00008130
+（drv_init 与 post_link re-apply 各打印一次；PHY snap: CHIP_CFG=00008130 RGMII1=000000f1）
+Info : RXC PLL locked after ~0 ms
+Info : Set Mac Speed 4.
+net service mode: ARP reply + ICMP echo reply + IPv4 echo
+local 10.0.0.8 / ea:e8:5e:00:60:c8
+
+G2 复测（修复版 bit）：UDP 10005 端口 12 秒收到 13 包，
+payload 头 "54-53-45-2D-53-57-2D-54-58..." = "TSE-SW-TX-TICK-A..."，from 10.0.0.8。
+
+G3/G4 ping 验收同窗口板侧 UART 统计（115s 侦听窗与 100 包 ping 重叠）：
+RX prints=105  ARP replies=3  ICMP echo replies=100
+last: [stat] tx=0000013c rx=0000006e ierr=00000000 drop=00000000 all=0000006e rxst=00000000 dbg94=3def3dd3 lock=00000001 cfg=00040013
+
+判读：ICMP 应答数与 ping 请求严格 1:1（100/100）；aFramesReceivedOK =
+etherStatsPkts = 110（3 ARP + 100 ICMP + 7 杂帧），零坏帧、零过滤丢弃、
+RX FIFO 零溢出 → 板子独立完成 ARP/ICMP 应答，PC 侧证据（arp -a dynamic、
+ping TTL=64）与板侧计数互证。
