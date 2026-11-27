@@ -1,0 +1,35 @@
+RX 通路死因判别数据（2026-11-06，修复前 bit；诊断固件 [stat] 扩展计数）
+
+背景：G3+G4 固件首版上板后 ping 全丢（含静态 ARP 直发场景），G2 tick 正常。
+固件 [stat] 扩展输出（每 2s，bsp_printf 整型一律 8 位 hex）：
+
+[stat] tx=000000xx rx=00000000 ierr=00000000 drop=00000000 all=00000000 rxst=00000000 dbg94=c0dac0be lock=00000001 cfg=00040013
+[stat] tx=000000xx rx=00000000 ierr=00000000 drop=00000000 all=00000000 rxst=00000000 dbg94=3299327d lock=00000001 cfg=00040013
+[stat] tx=000000xx rx=00000000 ierr=00000000 drop=00000000 all=00000000 rxst=00000000 dbg94=fa93fa77 lock=00000001 cfg=00040013
+（连续多行 rx/all 恒 0，ping 期间同样为 0）
+
+判读：
+- dbg94={rxc引脚计数[15:0], pll输出计数[15:0]}，两半均持续翻转 → RXC 引脚时钟
+  正常到达 fabric、PLL 正常输出。
+- lock=00000001 → pll_rgmii_locked=1。
+- cfg=00040013 → COMMAND_CONFIG: tx_ena|rx_ena|promis_en(bit4)|ETH_SPEED(1G)。
+- all=etherStatsPkts=0 → MAC 连坏帧都没收到（ping 直发静态 MAC、无 ARP 参与）。
+- rxst={ovf,word_cnt}=0 → RX FIFO 无积压无溢出（帧根本没进来）。
+→ 故障定位在 RGMII 采样点上游（PHY→引脚→DDIO→MAC RX 输入），排除 ARP/ICMP
+  软件分发与 eth_pkt_fifo 写侧。
+
+PHY 配置对照（两次 boot 的 drv_init 打印）：
+- 修复前固件每次 boot 都把 PHY 写为 plain：
+    PHY ext chip=0x00008030 rgmii=0x000000f0
+    YT8531 rgmii plain cfg=0x000000f0 chip=0x00008030
+    PHY snap: CHIP_CFG=00008030 GATING=00008000 SLEEP=00002810 RGMII1=000000f0
+- 板上残留初值（写入前读到，echo 时代固件遗留）：
+    PHY ext chip=0x00008130 rgmii=0x000000f1   ← RXC_DLY_EN(bit8)=1 + RGMII_CFG1 RX delay step=1
+- ws_e1_tse.peri.xml: rgmii_rxc input_config delay="0"（FPGA 侧无输入延迟）
+
+结论：plain（PHY 延迟清零）+ FPGA 零延迟 = 1G RGMII 双端零延迟，采样点错位
+→ RX 全丢。yt8531fd.h 参考驱动移植（USE_PHY_RGMII_ID 默认 0）覆盖了
+11-02 echo 时代实测有效的 rgmii-id 配置，是 RX 死因。
+
+修复：yt8531fd.h 恢复 rgmii-id（CHIP_CFG bit8 RXC_DLY_EN + RGMII_CFG1=0x00F1，
+与 echo 实测残留值逐位一致），USE_PHY_RGMII_ID 默认改 1。纯固件改动，RTL 不动。

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "boardId": "ws-e2",
+    "carrierId": "rk3588j-evm",
+    "moduleId": "ws-e2",
+    "revision": "1"
+  },
+  "inputs": {
+    "bspManifest": "bsp/manifest.json",
+    "layout": "bsp/layouts/ws-e2-minimal-parameter.txt",
+    "interfaceCoverage": "interface-coverage.json"
+  },
+  "build": {
+    "br2External": "board-ws-e2",
+    "buildrootDefconfig": "ws-e2_rk3588j_defconfig",
+    "ubootDefconfig": "rk3588_defconfig",
+    "socFamily": "rk3588",
+    "imageDirectory": "ws-e2-image",
+    "parameterArtifact": "ws-e2-minimal-parameter.txt",
+    "ubootSource": "u-boot",
+    "rkbinSource": "rkbin",
+    "bl31": "bin/rk35/rk3588_bl31_v1.56.elf",
+    "bl32": "bin/rk35/rk3588_bl32_v1.23.bin",
+    "flashPackage": {
+      "format": "rkaf",
+      "model": "ws-e2-rk3588j-evm",
+      "manufacturer": "EvoVerse",
+      "entries": [
+        {"name": "bootloader", "artifact": "idbloader.img", "role": "loader"},
+        {"name": "parameter", "artifact": "ws-e2-minimal-parameter.txt", "role": "parameter"},
+        {"name": "uboot", "artifact": "u-boot.itb", "partition": "uboot"},
+        {"name": "boot", "artifact": "boot.img", "partition": "boot"},
+        {"name": "rootfs", "artifact": "rootfs.ext4", "partition": "rootfs"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,341 @@
+schema_version: '1.0'
+components:
+  - id: rtl8211fi-rk-phy
+    part: RTL8211FI-CG
+    role: ethernet_phy
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 10; RGMII PHY terminating module RK_GMAC1 RGMII0 to an RJ45
+  - id: rtl8211fi-ecat-phy
+    part: RTL8211FI-CG
+    role: ethernet_phy
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 19; PHY attached to LAN9252 EtherCAT slave
+  - id: lan9252-ecat
+    part: LAN9252I
+    role: industrial_ethernet
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 19; EtherCAT slave controller on FPGA-facing bus
+  - id: yt6801-nic
+    part: YT6801SH
+    role: ethernet_controller
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 10; PCIe GbE NIC
+  - id: rtl8111hs-nic
+    part: RTL8111HS
+    role: ethernet_controller
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: UNVERIFIED
+    notes: ERRATA 2026-11-13 - earlier CONFIRMED claim downgraded; RTL8111HS appears only in comment/reference text on carrier sheet 10, no fitted instance identifiable; fitted PCIe GbE NIC is YT6801SH
+  - id: es8388-codec
+    part: ES8388
+    role: audio_codec
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 6; RK I2S0 audio codec
+  - id: ft4232-jtag-uart
+    part: FT4232HL-REEL
+    role: usb_bridge
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 13; FPGA JTAG + debug UART adapter
+  - id: ft232-rk-debug
+    part: FT232RL
+    role: usb_bridge
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 4; RK UART2 debug USB bridge
+  - id: max3232-rs232-rk
+    part: MAX3232IPWR
+    role: line_transceiver
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 4; RK RS232
+  - id: max3232-rs232-fpga
+    part: MAX3232IPWR
+    role: line_transceiver
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 14; FPGA RS232
+  - id: cmt83085-rs485
+    part: CMT83085
+    role: line_transceiver
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 14; FPGA-side RS485
+  - id: tja1051-can0
+    part: TJA1051T/3/1J
+    role: can_transceiver
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 14; CAN transceivers (two instances, sheet 14)
+  - id: lmh1218-sdi
+    part: LMH1218RTWR
+    role: sdi_transceiver
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 18; 12G-SDI coax path with LMKDB1202 clock buffer
+  - id: lmh1219-sdi
+    part: LMH1219RTWR
+    role: sdi_transceiver
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 18; second SDI coax path
+  - id: femdrw032g-emmc
+    part: FEMDRW032G
+    role: storage
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 15; two eMMC devices terminating module F_EMMC_* nets (NOR-variant FPGA storage placed on carrier)
+  - id: xl9555-carrier
+    part: XL9555
+    role: io_expander
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 21; I2C GPIO expanders, interrupt to RK_XL9555_INT
+  - id: pi6c557-pcie-clk
+    part: PI6C557-05BLE
+    role: clock_buffer
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 11; PCIe reference clock distribution
+  - id: bl24c512-eeprom
+    part: BL24C512A-PARC
+    role: eeprom
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 19; I2C EEPROM near Ethernet section
+  - id: ina226-power-mon
+    part: INA226AIDGSR
+    role: power_monitor
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Carrier sheet 22; I2C power monitor ADDR 1000000x
+device_behaviors:
+  - id: btn-rk-maskrom
+    device_type: push_button
+    active_level: low
+    derivation: Carrier sheet 3 states RK_BOOT_SARADC_IN0=0V after power-on reset enters Maskrom mode and that SARADC_IN0 is internally pulled up to 1.8 V; the tact switch shorts the net to GND.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+  - id: led-rk-user0
+    device_type: led
+    active_level: UNVERIFIED
+    derivation: GREEN LED D1 with 22R series resistor on net RK_USER_LED0 (carrier sheet 3); LED anode/cathode orientation not recoverable from extracted text.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: UNVERIFIED
+  - id: led-rk-user1
+    device_type: led
+    active_level: UNVERIFIED
+    derivation: GREEN LED D2 with 22R series resistor on net RK_USER_LED1 (carrier sheet 3); orientation not recoverable from extracted text.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: UNVERIFIED
+  - id: led-f-user0
+    device_type: led
+    active_level: UNVERIFIED
+    derivation: GREEN LED D79 with 22R series resistor on net F_USER_LED0 (carrier sheet 12); orientation not recoverable from extracted text.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: UNVERIFIED
+  - id: led-f-user1
+    device_type: led
+    active_level: UNVERIFIED
+    derivation: GREEN LED D81 with 22R series resistor on net F_USER_LED1 (carrier sheet 12); orientation not recoverable from extracted text.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: UNVERIFIED
+  - id: dip-rk-user-sw0-3
+    device_type: dip_switch
+    active_level: UNVERIFIED
+    derivation: DSIC04LSGET 4-bit DIP drives RK_USER_SW0-3 through carrier level shifters (sheets 3, 21); per-bit active level not derivable from extracted text.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: UNVERIFIED
+  - id: dip-f-user-sw0-1
+    device_type: dip_switch
+    active_level: UNVERIFIED
+    derivation: DSIC02LSGET 2-bit DIP drives F_USER_SW0/1 (carrier sheet 12); active level not derivable from extracted text.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: UNVERIFIED
+  - id: fan-j1
+    device_type: fan
+    active_level: UNVERIFIED
+    derivation: 3-pin fan connector J1 2510-3A driven by RK_PWM11_IR_M2_1V8 through MMBT3904 low-side stages (carrier sheet 3); PWM polarity not derivable from extracted text.
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Fan presence and PWM control path confirmed; PWM active level unverified
+interfaces:
+  - id: rk-debug-usb
+    role: debug_uart_usb
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: FT232RL bridge on RK UART2 M0 debug pair (carrier sheet 4)
+  - id: fpga-jtag-usb
+    role: jtag_usb
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: FT4232HL with PZ254V header on F_TCK/TDI/TDO/TMS + F_CRESET_N (carrier sheets 13, 24)
+  - id: rk-sd-card
+    role: sd_storage
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: microSD slot LCK-TF-01AH1809-YLG on RK_SDMMC0_* group with DET/PWREN (carrier sheets 5, 23)
+  - id: rk-eth-rj45
+    role: ethernet
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: RK GMAC1 RGMII0 via RTL8211FI-CG PHY to RJ45 (carrier sheet 10)
+  - id: rk-pcie-gbe-nics
+    role: ethernet
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: PCIe GbE NIC YT6801SH fitted on the RK PCIe tree (carrier sheet 10); RTL8111HS comment-only, see errata under rtl8111hs-nic
+  - id: rk-audio
+    role: audio
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: ES8388 codec on RK I2S0/I2C group (carrier sheet 6)
+  - id: rk-usb-host
+    role: usb
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: USB2.0 HOST0/1 pairs with SY6280AAC power switches; TypeC0/1 OTG stacks (carrier sheets 9, 23)
+  - id: rk-hdmi-tx-rx
+    role: hdmi
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: HDMI-19PIN-043 connectors; HDMI1 TX/eDP1 D0-D3+AUX, HDMI RX D0-D2+CLK, TX0/TX1 DDC/CEC/HPD (carrier sheets 8, 23)
+  - id: rk-pcie-sata
+    role: pcie_sata
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: PCIe30X1_0/1 and PCIe20_0/1/2 (PCIe20_0 and PCIe20_2 share SATA30_0/2 muxing), PI6C557 refclk buffer (carrier sheets 11, 23)
+  - id: fpga-can
+    role: can
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: F_CAN0/1 TXD/RXD/S through TJA1051T transceivers with terminal blocks (carrier sheets 14, 23)
+  - id: fpga-rs485-rs232
+    role: serial
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: CMT83085 RS485 and MAX3232 RS232 on FPGA UART group (carrier sheet 14)
+  - id: fpga-sfp-plus
+    role: sfp_plus
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Two SFP+ cages on FPGA QSE SerDes TX/RX (carrier sheets 17, 24)
+  - id: fpga-sdi
+    role: sdi
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: SDI0/1 coax via LMH1218/LMH1219 and LMKDB1202; F_SDI0/1_IN_LOCK_N + F_SDI_CLK_SEL (carrier sheets 18, 24)
+  - id: fpga-ethercat
+    role: industrial_ethernet
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: LAN9252I EtherCAT slave with RTL8211FI-CG PHY and BL24C512A EEPROM (carrier sheet 19)
+  - id: fmc-a
+    role: fmc
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: FPGA Mezzanine Card connector; GBT CLK and DP4-7 transceivers plus LA bank; FMC_VADJ selectable 1.8/1.5/1.35/1.2 V (carrier sheets 20, 22, 24)
+  - id: mipi-qse-connectors
+    role: camera_display
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: QSE-020-01-L-D-A-K-TR connectors on RK MIPI DPHY0/1 and FPGA MIPI/QSE groups (carrier sheets 7, 16, 23-24)
+power_domains:
+  - id: vcc-12v-input
+    voltage: 12.0
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: DC jack J30 XDJK-060B-055 with SW16 switch, SMBJ15A TVS (carrier sheet 22)
+  - id: vcc-5v0-con
+    voltage: 5.0
+    provider: TPS56528DDAR
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Vout = 0.6*(1+220k/30k) = 5.0 V
+  - id: vcc-5v0-som
+    voltage: 5.0
+    provider: TPS548A28RWWR
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Dedicated module supply rail to BTB (VCC_5V0_SOM), with PGOOD
+  - id: vcc-3v3
+    voltage: 3.3
+    provider: TPS568230RJER
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Vout = 0.6*(1+45.3k/10k) = 3.318 V
+  - id: vcc-2v5
+    voltage: 2.5
+    provider: TPS548A28RWWR
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Vout = 0.6*(1+32.4k/10k) = 2.544 V
+  - id: vcc-1v8
+    voltage: 1.8
+    provider: TPS562211DRLR
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Vout = 0.6*(1+20k/10k) = 1.8 V
+  - id: vcc-1v2
+    voltage: 1.2
+    provider: TPS562211DRLR
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Vout = 0.6*(1+10k/10k) = 1.2 V
+  - id: fmc-vadj
+    voltage: 1.2
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Jumper-selectable 1.8/1.5/1.35/1.2 V (NC:1.8, 1/2:1.5, 3/4:1.35, 5/6:1.2)
+clocks:
+  - id: pcie-refclk-pi6c557
+    signal: PCIE_REFCLK
+    frequency_hz: 100000000
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: PI6C557-05BLE buffer on carrier sheet 11
+  - id: sdi-clk-lmkdb1202
+    signal: SDI_CLK
+    frequency_hz: UNVERIFIED
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: LMKDB1202REYT buffer on carrier sheet 18
+memories:
+  - id: fpga-emmc-carrier
+    device: FEMDRW032G
+    type: eMMC
+    bus_width: 8
+    modes: [HS400]
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Two devices on carrier sheet 15 terminating module F_EMMC D0-D7/CMD/CLKOUT/RSTN/DATA_STROBE
+debug_chains:
+  - id: rk-debug-console-carrier
+    device: RK3588J
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: RK UART2 M0 to FT232RL USB bridge (carrier sheet 4)
+  - id: fpga-jtag-carrier
+    device: TJ375N1156X
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: F_TCK/TDI/TDO/TMS to FT4232HL (carrier sheet 13); F_KEY_CRESET_N push button on sheet 12 routes to sheet 13
+capabilities:
+  - id: rk-maskrom-entry-carrier
+    kind: boot_storage
+    device: RK3588J
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: Maskrom button drives RK_BOOT_SARADC_IN0 low (carrier sheet 3)
+  - id: som-power-good
+    kind: power_supervision
+    device: RK3588J
+    source_refs: [ws-e2-mc-carrier-schematic]
+    validation_state: CONFIRMED
+    notes: SOM_PWR_GOOD crosses BTB to carrier sheet 22 and is internally pulled up with 3.3 V on SOM
+cross_chip_links: []

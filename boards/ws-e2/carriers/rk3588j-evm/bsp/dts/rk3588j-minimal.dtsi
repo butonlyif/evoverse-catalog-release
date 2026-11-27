@@ -1,0 +1,41 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * ws-e2 minimal Linux base: vendor SoC + RK806-1 PMIC + board bring-up.
+ * Materialized from the catalog reference project (minimal-linux) board DTSI;
+ * the BSP bundle's assembly round did not capture this file — restored 2026-11-11
+ * from boards/ws-e2/carriers/rk3588j-evm/reference-projects/rk3588/minimal-linux/dts/.
+ */
+
+#include "rk3588.dtsi"
+#include "rk3588-rk806-single.dtsi"
+
+/ {
+	chosen {
+		stdout-path = "serial2:1500000n8";
+	};
+
+	vcc5v0_sys: vcc5v0-sys {
+		compatible = "regulator-fixed";
+		regulator-name = "vcc5v0_sys";
+		regulator-always-on;
+		regulator-boot-on;
+		regulator-min-microvolt = <5000000>;
+		regulator-max-microvolt = <5000000>;
+	};
+};
+
+&uart2 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart2m0_xfer>;
+	status = "okay";
+};
+
+&sdhci {
+	bus-width = <8>;
+	no-sdio;
+	no-sd;
+	non-removable;
+	mmc-hs400-1_8v;
+	mmc-hs400-enhanced-strobe;
+	status = "okay";
+};

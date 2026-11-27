@@ -1,0 +1,22 @@
+# board.yaml - t20f256-xd-ps-eval (single-FPGA evaluation board)
+schema_version: '1.0'
+id: t20f256-xd-ps-eval
+kind: standalone
+display_name: T20F256 XD-PS Evaluation Board
+revision: '1'
+material_version: '1.0.0'
+status: validated
+composition:
+  mode: standalone
+development_targets:
+  - id: fpga
+    type: fpga
+    adapter: efinity
+    device: {manufacturer: Efinix, part: T20F256, family: Trion, timing_model: C4}
+    artifacts: {pinout: pinout/t20f256-xd-ps-eval-v1.csv}
+    source_refs: [t20f256-xd-ps-eval-schematic, t20f256-efinity-pinout]
+    validation_state: CONFIRMED
+artifacts:
+  hardware: hardware.yaml
+  sources: sources.yaml
+  generated_docs: docs/generated

@@ -1,0 +1,109 @@
+pin_name,ball,bank,default_io_std,direction,signal_class,function,notes,interface
+# ====== Jacket essentials (3) ======
+clk_50m,R3,4D,1.8V_LVCMOS,IN,CLK,main_clock,"100MHz HCSL osc Y3 -> R3=GPIOB_P_03_PLLIN0",OSC_100M
+arst_n,A3,4A_4B,1.8V_LVCMOS,IN,RST,reset,"Jacket reset GPIO -> spare A3=GPIOB_P_43_CSO_CLK10_P (10K pu to 1.8V)",POR
+led_user|flash_csn,C1,4A_4B,1.8V_LVCMOS,OUT,GP_IO,user_led,"Blue LED D6 via Q2 NPN + SPI Flash CS# -> C1=GPIOB_N_38_SSL_N",USER_LED_D6|QSPI_FLASH
+# ====== 100MHz Diff Clock Pair (1) ======
+clk100m_n,R2,4D,1.8V_LVCMOS,IN,CLK,clk100m_n,"100MHz HCSL N side -> R2=GPIOB_N_03_CDI31",OSC_100M
+# ====== Config / JTAG (5) ======
+creset_n,G10,4A_4B,1.8V_LVCMOS,IN,RST,creset_n,"CRESET_N config reset from TPS3840 POR -> ball G10 (hard IP)",CONFIG
+jtag_tdo,F6,BR3_BR4,3.3V_LVCMOS,OUT,JTAG,jtag_tdo,"JTAG TDO -> F6",JTAG
+jtag_tms,F7,BR3_BR4,3.3V_LVCMOS,IN,JTAG,jtag_tms,"JTAG TMS -> F7, 4.7K pullup",JTAG
+jtag_tck,F8,BR3_BR4,3.3V_LVCMOS,IN,JTAG,jtag_tck,"JTAG TCK -> F8, 4.7K pullup",JTAG
+cdone,H10,4A_4B,1.8V_LVCMOS,OUT,GP_IO,cdone,"CDONE -> green LED D4 -> H10",CONFIG
+# ====== SPI Flash GS12341 (5) on 4A_4B bank ======
+flash_clk,G4,4A_4B,1.8V_LVCMOS,OUT,GP_IO,flash_clk,"QSPI CLK -> G4=GPIOB_P_39_CCK_PLLIN0",QSPI_FLASH
+flash_io0,J4,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,flash_io0,"QSPI IO0 -> J4=GPIOB_N_40_CDI0",QSPI_FLASH
+flash_io1,J5,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,flash_io1,"QSPI IO1 -> J5=GPIOB_P_40_CDI1_EXTFB",QSPI_FLASH
+flash_io2,G3,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,flash_io2,"QSPI IO2 -> G3=GPIOB_N_39_CDI2",QSPI_FLASH
+flash_io3,C2,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,flash_io3,"QSPI IO3 -> C2=GPIOB_P_38_CDI3",QSPI_FLASH
+# ====== eMMC MT29F256G08 (4) on 2A_2B_2C bank ======
+emmc_dat0,T17,2A_2B_2C,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat0,"eMMC DAT0 -> T17=GPIOT_P_29",EMMC
+emmc_dat1,R16,2A_2B_2C,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat1,"eMMC DAT1 -> R16=GPIOT_N_29",EMMC
+emmc_dat2,N17,2A_2B_2C,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat2,"eMMC DAT2 -> N17=GPIOT_P_32",EMMC
+emmc_dat3,N16,2A_2B_2C,1.8V_LVCMOS,INOUT,GP_IO,emmc_dat3,"eMMC DAT3 -> N16=GPIOT_N_32",EMMC
+# ====== MIPI TX Lane 2 (11) on TR bank ======
+mipi2_txdp0,F22,TR,MIPI,OUT,MIPI,mipi2_txdp0,"MIPI2 TXD0P -> F22=MIPI2_TXDP0",MIPI2_TX
+mipi2_txdn0,F21,TR,MIPI,OUT,MIPI,mipi2_txdn0,"MIPI2 TXD0N -> F21=MIPI2_TXDN0",MIPI2_TX
+mipi2_txdp1,E22,TR,MIPI,OUT,MIPI,mipi2_txdp1,"MIPI2 TXD1P -> E22=MIPI2_TXDP1",MIPI2_TX
+mipi2_txdn1,E21,TR,MIPI,OUT,MIPI,mipi2_txdn1,"MIPI2 TXD1N -> E21=MIPI2_TXDN1",MIPI2_TX
+mipi2_txdp2,D21,TR,MIPI,OUT,MIPI,mipi2_txdp2,"MIPI2 TXD2P -> D21=MIPI2_TXDP2",MIPI2_TX
+mipi2_txdn2,C21,TR,MIPI,OUT,MIPI,mipi2_txdn2,"MIPI2 TXD2N -> C21=MIPI2_TXDN2",MIPI2_TX
+mipi2_txdp3,C22,TR,MIPI,OUT,MIPI,mipi2_txdp3,"MIPI2 TXD3P -> C22=MIPI2_TXDP3",MIPI2_TX
+mipi2_txdn3,B22,TR,MIPI,OUT,MIPI,mipi2_txdn3,"MIPI2 TXD3N -> B22=MIPI2_TXDN3",MIPI2_TX
+mipi2_txdp4,B21,TR,MIPI,OUT,MIPI,mipi2_txdp4,"MIPI2 CLKP -> B21=MIPI2_TXDP4",MIPI2_TX
+mipi2_txdn4,A21,TR,MIPI,OUT,MIPI,mipi2_txdn4,"MIPI2 CLKN -> A21=MIPI2_TXDN4",MIPI2_TX
+mipi2_rxdp4,G20,TR,MIPI,IN,MIPI,mipi2_rxdp4,"MIPI2 RXCLKP -> G20=MIPI2_RXDP4",MIPI2_RX
+# ====== REF_RES hardware reference (4) ======
+ref_res_2a,P16,2A_2B_2C,-,IN,-,ref_res_2a,"R69 10K to GND -> P16",CONFIG
+ref_res_4a,G5,4A_4B,-,IN,-,ref_res_4a,"R76 10K to GND -> G5",CONFIG
+ref_res_4b,H5,4A_4B,-,IN,-,ref_res_4b,"R47 10K to GND -> H5",CONFIG
+ref_res_4d,M7,4D,-,IN,-,ref_res_4d,"R57 10K to GND -> M7",CONFIG
+# ====== PCIe x4 Gen3 (Q2 SERDES Hard IP) (22) ======
+# M.2 Key M gold-finger x4 PCIe: Q2 is 1 of 2 PCIe-capable SERDES quads on TJ375
+pcie_tx0_p,C4,Q2,SERDES,OUT,SERDES,pcie_tx0_p,"Q2_TXDP0 -> C4, M.2 PETp0 (pin 49), 0.1uF AC-coupling near TX",PCIE
+pcie_tx0_n,D4,Q2,SERDES,OUT,SERDES,pcie_tx0_n,"Q2_TXDN0 -> D4, M.2 PETn0 (pin 47)",PCIE
+pcie_rx0_p,A5,Q2,SERDES,IN,SERDES,pcie_rx0_p,"Q2_RXDP0 -> A5, M.2 PERp0 (pin 43)",PCIE
+pcie_rx0_n,B5,Q2,SERDES,IN,SERDES,pcie_rx0_n,"Q2_RXDN0 -> B5, M.2 PERn0 (pin 41)",PCIE
+pcie_tx1_p,C6,Q2,SERDES,OUT,SERDES,pcie_tx1_p,"Q2_TXDP1 -> C6, M.2 PETp1 (pin 37)",PCIE
+pcie_tx1_n,D6,Q2,SERDES,OUT,SERDES,pcie_tx1_n,"Q2_TXDN1 -> D6, M.2 PETn1 (pin 35)",PCIE
+pcie_rx1_p,A7,Q2,SERDES,IN,SERDES,pcie_rx1_p,"Q2_RXDP1 -> A7, M.2 PERp1 (pin 31)",PCIE
+pcie_rx1_n,B7,Q2,SERDES,IN,SERDES,pcie_rx1_n,"Q2_RXDN1 -> B7, M.2 PERn1 (pin 29)",PCIE
+pcie_tx2_p,C8,Q2,SERDES,OUT,SERDES,pcie_tx2_p,"Q2_TXDP2 -> C8, M.2 PETp2 (pin 25)",PCIE
+pcie_tx2_n,D8,Q2,SERDES,OUT,SERDES,pcie_tx2_n,"Q2_TXDN2 -> D8, M.2 PETn2 (pin 23)",PCIE
+pcie_rx2_p,A9,Q2,SERDES,IN,SERDES,pcie_rx2_p,"Q2_RXDP2 -> A9, M.2 PERp2 (pin 19)",PCIE
+pcie_rx2_n,B9,Q2,SERDES,IN,SERDES,pcie_rx2_n,"Q2_RXDN2 -> B9, M.2 PERn2 (pin 17)",PCIE
+pcie_tx3_p,C10,Q2,SERDES,OUT,SERDES,pcie_tx3_p,"Q2_TXDP3 -> C10, M.2 PETp3 (pin 13)",PCIE
+pcie_tx3_n,D10,Q2,SERDES,OUT,SERDES,pcie_tx3_n,"Q2_TXDN3 -> D10, M.2 PETn3 (pin 11)",PCIE
+pcie_rx3_p,A11,Q2,SERDES,IN,SERDES,pcie_rx3_p,"Q2_RXDP3 -> A11, M.2 PERp3 (pin 7)",PCIE
+pcie_rx3_n,B11,Q2,SERDES,IN,SERDES,pcie_rx3_n,"Q2_RXDN3 -> B11, M.2 PERn3 (pin 5)",PCIE
+pcie_refclk0_p,E11,Q2,SERDES,IN,SERDES,pcie_refclk0_p,"Q2_REFCLK0_P -> E11, 100MHz HCSL osc Y2 (AX3HAF1), default PCIe",PCIE
+pcie_refclk0_n,F11,Q2,SERDES,IN,SERDES,pcie_refclk0_n,"Q2_REFCLK0_N -> F11, 100MHz HCSL osc Y2 (AX3HAF1)",PCIE
+pcie_refclk1_p,E13,Q2,SERDES,IN,SERDES,pcie_refclk1_p,"Q2_REFCLK1_P -> E13, M.2 REFCLKp (pin 55)",PCIE
+pcie_refclk1_n,F13,Q2,SERDES,IN,SERDES,pcie_refclk1_n,"Q2_REFCLK1_N -> F13, M.2 REFCLKn (pin 53)",PCIE
+pcie_cal_res,G13,Q2,-,IN,-,pcie_cal_res,"Q2_CAL_RES -> G13, 3.01K to GND (R15)",PCIE
+pcie_perst_n,J6,BR0,3.3V_LVCMOS,IN,GP_IO,pcie_perst_n,"PCIE_PERST_N -> J6=GPIOR_144_PERST_Q2_N, M.2 PERST# (pin 50)",PCIE
+# Note: PCIE_CLKREQ_N (M.2 pin 52) and PCIE_PEWAKE_N (M.2 pin 54) terminated at connector, not routed to FPGA
+# ====== M.2 connector GPIO 4D bank (18) ======
+gpio_m2_00,N1,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_00,"GPIOB_P_04_CDI30_EXTFB -> N1",M2_CONN
+gpio_m2_01,P1,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_01,"GPIOB_N_04_CDI29 -> P1",M2_CONN
+gpio_m2_02,P4,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_02,"GPIOB_P_05_CDI28_PLLIN0 -> P4",M2_CONN
+gpio_m2_03,P3,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_03,"GPIOB_N_05_CDI27 -> P3",M2_CONN
+gpio_m2_04,R6,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_04,"GPIOB_P_06_CDI26_EXTFB -> R6",M2_CONN
+gpio_m2_05,T6,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_05,"GPIOB_N_06_CDI25 -> T6",M2_CONN
+gpio_m2_06,L2,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_06,"GPIOB_P_07_CDI24_PLLIN0 -> L2",M2_CONN
+gpio_m2_07,M2,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_07,"GPIOB_N_07_CDI23 -> M2",M2_CONN
+gpio_m2_08,N7,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_08,"GPIOB_P_08_CDI22_EXTFB -> N7",M2_CONN
+gpio_m2_09,P6,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_09,"GPIOB_N_08 -> P6",M2_CONN
+gpio_m2_10,N6,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_10,"GPIOB_P_09 -> N6",M2_CONN
+gpio_m2_11,N5,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_11,"GPIOB_N_09 -> N5",M2_CONN
+gpio_m2_12,N3,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_12,"GPIOB_P_12 -> N3",M2_CONN
+gpio_m2_13,N2,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_13,"GPIOB_N_12 -> N2",M2_CONN
+gpio_m2_14,K1,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_14,"GPIOB_P_13_CDI21_CLK0_P -> K1",M2_CONN
+gpio_m2_15,L1,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_15,"GPIOB_N_13_CDI20_CLK0_N -> L1",M2_CONN
+gpio_m2_16,P5,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_16,"GPIOB_P_14_CDI19_CLK1_P -> P5",M2_CONN
+gpio_m2_17,R4,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_17,"GPIOB_N_14_CDI18_CLK1_N -> R4",M2_CONN
+# ====== M.2 connector GPIO 4A_4B bank (6) ======
+gpio_m2_18,E2,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_18,"GPIOB_P_36_CDI7 -> E2 -> S18",M2_CONN
+gpio_m2_19,D2,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_19,"GPIOB_N_36_CDI6 -> D2 -> S17",M2_CONN
+gpio_m2_20,F3,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_20,"GPIOB_P_37_CDI5 -> F3 -> S13",M2_CONN
+gpio_m2_21,F2,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_21,"GPIOB_N_37_CDI4 -> F2 -> S19",M2_CONN
+gpio_m2_22,B2,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_22,"GPIOB_P_41 -> B2 -> S16",M2_CONN
+gpio_m2_23,B1,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_23,"GPIOB_N_41 -> B1 -> S15",M2_CONN
+# ====== M.2 connector GPIO 2A_2B_2C bank (1) ======
+gpio_m2_24,T16,2A_2B_2C,1.8V_LVCMOS,INOUT,GP_IO,gpio_m2_24,"GPIOT_N_14 -> T16",M2_CONN
+# ====== M.2 connector GPIO BR0 bank (5) ======
+gpio_m2_25,L8,BR0,3.3V_LVCMOS,INOUT,GP_IO,gpio_m2_25,"GPIOR_140_PLLIN1 -> L8",M2_CONN
+gpio_m2_26,K8,BR0,3.3V_LVCMOS,INOUT,GP_IO,gpio_m2_26,"GPIOR_141 -> K8",M2_CONN
+gpio_m2_27,M8,BR0,3.3V_LVCMOS,INOUT,GP_IO,gpio_m2_27,"GPIOR_142_CLK8 -> M8",M2_CONN
+gpio_m2_28,K7,BR0,3.3V_LVCMOS,INOUT,GP_IO,gpio_m2_28,"GPIOR_143_CLK9 -> K7",M2_CONN
+gpio_m2_29,K6,BR0,3.3V_LVCMOS,IN,GP_IO,gpio_m2_29,"GPIOR_145_PLLIN1 -> K6 (OSC33_133M in)",M2_CONN
+# ====== M.2 connector GPIO TR1 bank (3) ======
+gpio_m2_30,M20,TR1,3.3V_LVCMOS,IN,GP_IO,gpio_m2_30,"GPIOR_93_PLLIN1 -> M20",M2_CONN
+gpio_m2_31,N20,TR1,3.3V_LVCMOS,IN,GP_IO,gpio_m2_31,"GPIOR_94 -> N20",M2_CONN
+gpio_m2_32,N21,TR1,3.3V_LVCMOS,IN,GP_IO,gpio_m2_32,"GPIOR_95_CLK12 -> N21",M2_CONN
+# ====== CLK-capable spare (2) ======
+gpio_spare_0,M4,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_spare_0,"GPIOB_P_15_CDI17_CLK2_P -> M4",SPARE
+gpio_spare_1,M3,4D,1.8V_LVCMOS,INOUT,GP_IO,gpio_spare_1,"GPIOB_N_15_CDI16_CLK2_N -> M3",SPARE
+# ====== Spare (1) ======
+gpio_spare_3,A2,4A_4B,1.8V_LVCMOS,INOUT,GP_IO,gpio_spare_3,"GPIOB_N_43_CSI_CLK10_N -> A2",SPARE

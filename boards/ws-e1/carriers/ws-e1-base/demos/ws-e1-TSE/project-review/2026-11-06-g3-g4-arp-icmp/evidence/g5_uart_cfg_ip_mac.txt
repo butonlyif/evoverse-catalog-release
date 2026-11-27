@@ -1,0 +1,35 @@
+G5 验收（2026-11-06）：UART 命令行运行时修改 IP/MAC，立即生效，无需重编固件
+
+命令行（UART 115200，回车执行，回显）：
+  ip a.b.c.d / mac xx:xx:xx:xx:xx:xx / gw a.b.c.d / mask a.b.c.d / show / help
+
+验收序列（PC ping -S 10.0.0.2，双网卡环境强制源地址）：
+
+1) 基线：ip 10.0.0.8 / mac ea:e8:5e:00:60:c8，ping .8 通（历史门控）。
+
+2) `ip 10.0.0.9`：
+   UART: "IP set." + "cfg: ip 10.0.0.9 mask 255.255.255.0 gw 10.0.0.1 mac ...c8"
+   PC:   ping 10.0.0.9 → 4/4, avg 10ms;  arp -a → "10.0.0.9 ea-e8-5e-00-60-c8 dynamic"
+   PC:   ping 10.0.0.8（旧 IP）→ "Reply from 10.0.0.2: Destination host unreachable."
+         （ARP 解析失败，PC 本地生成 unreachable，板子不再应答旧 IP ✓）
+
+3) `mac ea:e8:5e:00:60:c9`：
+   UART: "MAC set." + cfg 显示 mac ...c9
+   PC:   ping .9 3/3（ARP 缓存仍新鲜未重 ARP，故 arp -a 仍显示旧 MAC —— 缓存行为，
+         非板子问题）
+
+4) 决定性验证：`ip 10.0.0.77`（全新 IP，强制重新 ARP）：
+   PC:   ping 10.0.0.77 → 3/3, avg 11ms
+   PC:   arp -a → "10.0.0.77  ea-e8-5e-00-60-c9  dynamic"
+   → 全新 IP + 新 MAC 双双即时生效：ARP 应答源 MAC=c9、ICMP 目标匹配=77、
+     tick 帧 src=cfg（协议栈/MAC 过滤寄存器/pattern 源寄存器三处一致）
+
+5) 恢复：`ip 10.0.0.8` + `mac ea:e8:5e:00:60:c8`：
+   cfg: ip 10.0.0.8 ... mac ...c8;  ping .8 → 4/4, avg 10ms ✓
+
+实现要点：
+- net_config.c/h：net_config_set_ip/mac/gw/mask + net_config_apply()
+  （apply 同步 MAC_ADDR_LO/HI 过滤寄存器 + pattern 源寄存器 0x218/0x21c/0x224）
+- main.c：CmdPoll() 非阻塞轮询（uart_readOccupancy）挂入网络服务主循环，
+  64B 行缓冲，回显+退格；ICMP/ARP/tick 帧全部读 g_net_cfg（volatile）
+- 固件 RAM 18KB/32KB（55%）

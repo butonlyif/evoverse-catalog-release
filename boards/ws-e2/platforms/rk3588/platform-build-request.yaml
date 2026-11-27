@@ -1,0 +1,67 @@
+adapter:
+  id: rk3588
+  min_api_version: '1.2'
+  min_knowledge_version: '2026.11'
+board:
+  carrier: ws-e2-rk3588-mc
+  id: ws-e2
+  revision: '1'
+bsp_source_requirements:
+- component: buildroot
+  trusted_source_id: buildroot
+- component: kernel
+  trusted_source_id: kernel
+- component: rkbin
+  trusted_source_id: rkbin
+- component: u-boot
+  trusted_source_id: u-boot
+compatibility_set:
+  id: ws-e2-rk3588-minimal-compat
+  requirements:
+  - evoverse
+  - rk3588
+  - rockchip
+  - ws-e2-rk3588-mc
+firmware:
+  boot:
+  - boot.img
+  - idbloader.img
+  - u-boot.itb
+  kernel: rockchip-linux-6.1
+  partitions:
+  - boot
+  - idbloader
+  - resource
+  - rootfs
+  - uboot
+  rootfs: buildroot-minimal
+functions:
+- id: boot-emmc
+  material_digest: sha256:f9a4a6336db791b53b9b94e6c3c103f2ada65c4b876a0927f2047eea6cad106a
+  material_ref: functions/boot-emmc/function.yaml
+  required: true
+- id: debug-console
+  material_digest: sha256:0afafc52b773f5275e54f9ee9996660ec03f255fb4ca5a68f77b78c45d853f71
+  material_ref: functions/debug-console/function.yaml
+  required: true
+material_digest: sha256:02cf425d14e2164abaec009f34bece19cc23e63212a30a90bb279a4255bbaf35
+prohibited_capabilities: []
+schema_version: '1.0'
+target_pack:
+  exports:
+  - device-tree
+  - linux-headers
+  recovery:
+  - rkdeveloptool
+unresolved_items: []
+verification:
+  gates:
+  - BOOT_QUALIFIED
+  - FIRMWARE_BUILD
+  - MATERIAL_READY
+  - SOURCE_LOCK_APPROVED
+  matrix:
+  - boot-emmc-cold-boot@V7
+  - boot-emmc-maskrom-recovery@V7
+  - debug-console-boot-log@V7
+  - debug-console-loopback@V7

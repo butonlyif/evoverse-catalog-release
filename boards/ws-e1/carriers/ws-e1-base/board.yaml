@@ -1,0 +1,23 @@
+# board.yaml - ws-e1-base (carrier of ws-e1, 168-pin B2B P4 <-> core P10)
+schema_version: '1.0'
+id: ws-e1-base
+kind: carrier
+display_name: WS-E1 Base Carrier Board
+revision: '1'
+material_version: 1.0.0
+status: validated
+composition:
+  mode: carrier
+  parent_module: ws-e1
+development_targets:
+  - id: fpga
+    type: fpga
+    adapter: efinity
+    device: {manufacturer: Efinix, part: TJ180A484S, family: Titanium, timing_model: C4}
+    artifacts: {pinout: pinout/ws-e1-fpga-v1.csv}
+    source_refs: [ws-e1-schematic, tj180a484s-efinity-pinout]
+    validation_state: CONFIRMED
+artifacts:
+  hardware: hardware.yaml
+  sources: sources.yaml
+  generated_docs: docs/generated

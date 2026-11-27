@@ -1,0 +1,106 @@
+schema_version: '1.0'
+identity:
+  id: debug-console
+  function_type: serial_bus
+  target_id: rk3588
+  board_id: ws-e2
+  revision: '1'
+  adapter: rk3588
+  state: MATERIAL_READY
+  requirement_ids:
+    - REQ-WS-E2-CONSOLE-001
+hardware:
+  facts:
+    - name: uart2_controller
+      value: RK3588 UART2 in M0 IOMUX mode, console ttyS2
+      source_refs: [ws-e2-catalog-material-v1, ws-e2-mc-carrier-schematic]
+      validation_state: CONFIRMED
+    - name: uart2_bus
+      value: UART2 M0 TX/RX leaves the module over BTB connector 0 and reaches the carrier FT232RL USB-UART bridge
+      source_refs: [ws-e2-mc-carrier-schematic]
+      validation_state: CONFIRMED
+    - name: uart2_pins
+      value: RK_UART2_TX_M0_DEBUG_3V3 and RK_UART2_RX_M0_DEBUG_3V3
+      source_refs: [ws-e2-mc-carrier-schematic]
+      validation_state: CONFIRMED
+    - name: uart2_baud_rate
+      value: 1500000
+      source_refs: [ws-e2-catalog-material-v1]
+      validation_state: CONFIRMED
+    - name: uart2_interrupt
+      value: controller IRQ to the RK3588 GIC, number owned by the vendor dtsi uart2 node
+      source_refs: [rockchip-kernel-repo]
+      validation_state: CONFIRMED
+    - name: uart2_io_voltage
+      value: 3.3 V
+      source_refs: [ws-e2-mc-carrier-schematic]
+      validation_state: CONFIRMED
+  source_refs:
+    - rockchip-kernel-repo
+    - ws-e2-catalog-material-v1
+    - ws-e2-mc-carrier-schematic
+software:
+  interface:
+    kind: serial_console
+    device_node: /dev/ttyS2
+    subsystem: serial
+    uapi: termios
+  dts:
+    - compatible: rockchip,rk3588-uart
+  runtime:
+    - package: busybox
+      service: getty on ttyS2 at 1500000 baud
+  app_sdk_capability_id: debug-console
+resources:
+  allocations:
+    cpu: shared with application cores
+platform:
+  kernel:
+    config:
+      - CONFIG_SERIAL_8250=y
+      - CONFIG_SERIAL_8250_CONSOLE=y
+      - CONFIG_SERIAL_8250_DW=y
+    driver:
+      - 8250_dw
+  rootfs:
+    - package: busybox
+      service: getty
+verification:
+  requirement_ids:
+    - REQ-WS-E2-CONSOLE-001
+  levels: [V7]
+  cases:
+    - id: debug-console-boot-log
+      requirement_id: REQ-WS-E2-CONSOLE-001
+      level: V7
+      steps:
+        - Connect a USB-UART adapter to the carrier UART2 M0 header.
+        - Open the port at 1500000 8N1 and power-cycle the board.
+        - Type at the login prompt and confirm the echoed characters.
+      criteria:
+        - U-Boot and kernel output appears without framing errors.
+        - Typed characters are echoed back at the login prompt.
+      equipment:
+        - WS-E2 RK3588 MC carrier with the WS-E2 SOM fitted
+        - USB-UART adapter on UART2 M0
+      evidence_format: timestamped console log of the full boot and one interactive command
+      failure_rule: garbled output, a missing login prompt or no echo fails the case
+    - id: debug-console-loopback
+      requirement_id: REQ-WS-E2-CONSOLE-001
+      level: V7
+      steps:
+        - Short RK_UART2_TX_M0_DEBUG_3V3 to RK_UART2_RX_M0_DEBUG_3V3.
+        - Send a known byte pattern from the board and read it back.
+      criteria:
+        - The received pattern matches the transmitted pattern byte for byte.
+      equipment:
+        - WS-E2 RK3588 MC carrier with the WS-E2 SOM fitted
+        - jumper wire on the UART2 M0 pins
+      evidence_format: transmitter and receiver byte dump
+      failure_rule: any mismatched or dropped byte fails the case
+delivery:
+  firmware_files: [boot.img]
+  target_pack_interfaces: []
+  acceptance:
+    - ttyS2 opens at 1500000 8N1 and shows the boot log.
+    - The login prompt accepts and echoes typed input.

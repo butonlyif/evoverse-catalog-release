@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "1.0",
+  "target": {
+    "boardId": "ws-e2",
+    "carrierId": "rk3588j-evm",
+    "moduleId": "ws-e2",
+    "revision": "1"
+  },
+  "interfaces": [
+    {
+      "id": "pcie3-x4",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "pcie2",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "usb-type-c",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "usb2-host-otg",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "hdmi-tx-rx",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "displayport",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "gigabit-ethernet",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "sata",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "sdmmc",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "headphone-audio",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "saradc-tsadc",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "recovery-boot-key",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "platforms/rk3588/platform.yaml"
+      ]
+    },
+    {
+      "id": "mipi-csi-isp",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "rk3588j-evm.en.md"
+      ]
+    },
+    {
+      "id": "media-codec",
+      "hardware": "UNVERIFIED",
+      "firmware": "UNVERIFIED",
+      "rootfs": "UNVERIFIED",
+      "sysroot": "UNVERIFIED",
+      "hardwareTest": "NOT_RUN",
+      "evidence": [
+        "rk3588j-evm.en.md"
+      ]
+    }
+  ]
+}

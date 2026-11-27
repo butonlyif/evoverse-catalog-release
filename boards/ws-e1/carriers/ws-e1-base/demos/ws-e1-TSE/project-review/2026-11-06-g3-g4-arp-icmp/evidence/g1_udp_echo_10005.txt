@@ -1,0 +1,18 @@
+G1 关门复测（2026-11-06）：UDP 帧 echo（L2 MAC + L3 IP 对称交换，payload 原样回发）
+
+测试方式：PC socket 绑定 10005 → 板 10.0.0.8:10005，4 发 4 收，payload 逐字节一致：
+
+received=4/4
+len=54 from=10005 data=G1-BOUND-10005-ECHO-PAYLO
+len=54 from=10005 data=G1-BOUND-10005-ECHO-PAYLO
+len=54 from=10005 data=G1-BOUND-10005-ECHO-PAYLO
+len=54 from=10005 data=G1-BOUND-10005-ECHO-PAYLO
+
+重要观察（host 侧行为，非板子缺陷）：
+- PC 从临时端口发送（PC:ephemeral → board:10005）时，板子 echo 应答在 MAC
+  tx_ok 计数上确已发出（tx 增量 ≈ tick + ARP + echo），但 Windows 不将该 UDP
+  回包投递给发送 socket（连续两轮 0/10 与 0/5）。同一时段 ICMP（ping）100/100
+  正常；PC 绑定固定端口后 UDP echo 4/4 立即收到。
+- 2026-11-02 的 doc/test_udp_rx.ps1 仅单向收帧（tick 监听），"UDP echo 闭环"
+  此前无可复现的双向脚本；本轮以绑定端口方式完成 G1 正式关门。
+- 后续 UDP echo 测试一律用绑定端口方式（已记 DAYLOG 2026-11-06）。

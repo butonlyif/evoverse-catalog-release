@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "platformId": "rk3588-platform-development",
+  "version": "2026.11.24",
+  "manifestDigest": "sha256:2385cdbb84ccb2894ae8c89ba7a7cbb09d8c087039c6f2047407e6ce81c652af",
+  "manifestUrl": "https://github.com/butonlyif/evoverse-rockchip-platform-release/releases/download/platform-development-2026.11.24-candidate.1/platform-development-release.json",
+  "moduleId": "ws-e2",
+  "carrierId": "rk3588j-evm",
+  "boardRevision": "1",
+  "runtimeReferenceProjectId": "minimal-linux",
+  "runtimeRecipeRevision": "r1",
+  "applicationToolchainAddon": {
+    "schemaVersion": "1.0",
+    "envelopeUrl": "https://github.com/butonlyif/evoverse-rockchip-platform-release/releases/download/application-toolchain-2026.11.27-candidate.1/application-toolchain-addon.json",
+    "envelopeDigest": "sha256:17ab0302ad6fd6933e1e4c94b618913c5a7ffc9eff5252ebca3ae59a31a2738a",
+    "appBuilderUrl": "https://github.com/butonlyif/evoverse-rockchip-platform-release/releases/download/application-toolchain-2026.11.27-candidate.1/app-builder.tar",
+    "appBuilderDigest": "sha256:83cb0d81c7ff96c4a9f88d9b0bea4a553af5f9dd3ca2ea65e991cc1df59b8e98",
+    "appBuilderSize": 567282688,
+    "profileManifestUrl": "https://github.com/butonlyif/evoverse-rockchip-platform-release/releases/download/application-toolchain-2026.11.27-candidate.1/profiles-manifest.json",
+    "profileManifestDigest": "sha256:9f5b891102a9cde395371e7c09b8d1cb8dfc5824389b26a392042567eca9c6b1",
+    "capabilityPacks": [
+      {
+        "packId": "zlib",
+        "url": "https://github.com/butonlyif/evoverse-rockchip-platform-release/releases/download/application-toolchain-2026.11.27-candidate.1/zlib-capability-pack.tar.gz",
+        "digest": "sha256:5bacc81459b5ee5a9c2d65d23bafc620d2ee77b53014194a68bfc9c529245602",
+        "size": 94567
+      }
+    ]
+  },
+  "qualification": {
+    "software": "PASS",
+    "boot": "NOT_RUN",
+    "hardware": "NOT_RUN",
+    "reason": "NO_BOARD"
+  }
+}

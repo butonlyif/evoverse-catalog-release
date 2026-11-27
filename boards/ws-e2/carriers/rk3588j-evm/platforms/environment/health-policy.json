@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1",
+  "boardId": "ws-e2",
+  "bspVersion": "b8f5dda5",
+  "toolchainVersion": "2026.09",
+  "minimumFreeBytes": 8300000000,
+  "buildMutablePaths": ["u-boot", "kernel", "buildroot", ".evoverse-scratch"],
+  "bspSelection": {
+    "repositoryUri": "evoverse-offline://ws-e2/rk3588-bsp",
+    "commit": "b8f5dda574157e5f4545f5dc86eb967153fda6d7",
+    "family": "rockchip-linux",
+    "licenses": [
+      {"id": "linux-copying", "redistribution": "allowed", "source": "kernel/COPYING"},
+      {"id": "u-boot-licenses", "redistribution": "allowed", "source": "u-boot/Licenses/README"},
+      {"id": "rockchip-rkbin", "redistribution": "allowed", "source": "rkbin/LICENSE"},
+      {"id": "buildroot-copying", "redistribution": "allowed", "source": "buildroot/COPYING"}
+    ],
+    "loader": {
+      "path": "rkbin/bin/rk35/rk3588_spl_v1.14.bin",
+      "sha256": "b811b90b6847dc251838e82036c328f00eaacefe94659432265a0ccb0fc8f4e5"
+    },
+    "partitionLayout": {
+      "path": "layouts/ws-e2-minimal-parameter.txt",
+      "sha256": "d9f89ac62bc362cfc6d1208a121c82b1a2afbe9a05abb2078fb3372444279a9d"
+    },
+    "environment": {
+      "containerDigest": "sha256:0c63e4d2fe0684d396c4e2ff09a5d6d4a0c7f74fa721e3dcc27c2aca876b02b9",
+      "toolchainTriple": "aarch64-linux-gnu",
+      "toolchainSha256": "70a2d6626629079a8d94b97184b121d4e3a1bfe880c44e7db30670bb73e4028e"
+    }
+  }
+}
